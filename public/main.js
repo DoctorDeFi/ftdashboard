@@ -2,6 +2,7 @@ const updatedAtEl = document.getElementById("updatedAt");
 const summaryEl = document.getElementById("summary");
 const stackedBarEl = document.getElementById("stackedBar");
 const splitMetaEl = document.getElementById("splitMeta");
+const splitLegendEl = document.getElementById("splitLegend");
 const circulatingBreakdownEl = document.getElementById("circulatingBreakdown");
 const tradableByChainEl = document.getElementById("tradableByChain");
 const methodologyBodyEl = document.getElementById("methodologyBody");
@@ -53,15 +54,15 @@ function render(payload) {
   summaryEl.innerHTML = `
     <article class="summary-card burned">
       <p class="label">Burned</p>
-      <p class="value">${fmtWei(burned, decimals)} FT</p>
+      <p class="value">${fmtWei(burned, decimals)}</p>
     </article>
     <article class="summary-card circulating">
       <p class="label">Circulating</p>
-      <p class="value">${fmtWei(circulating, decimals)} FT</p>
+      <p class="value">${fmtWei(circulating, decimals)}</p>
     </article>
     <article class="summary-card noncirc">
       <p class="label">Non-circulating</p>
-      <p class="value">${fmtWei(nonCirculating, decimals)} FT</p>
+      <p class="value">${fmtWei(nonCirculating, decimals)}</p>
     </article>
   `;
 
@@ -72,13 +73,18 @@ function render(payload) {
   `;
 
   splitMetaEl.textContent = `Burned ${burnedPct.toFixed(2)}% | Circulating ${circulatingPct.toFixed(2)}% | Non-circulating ${nonCircPct.toFixed(2)}%`;
+  splitLegendEl.innerHTML = `
+    <span><i class="dot burned"></i>Burned</span>
+    <span><i class="dot circulating"></i>Circulating</span>
+    <span><i class="dot noncirc"></i>Non-circulating</span>
+  `;
 
   circulatingBreakdownEl.innerHTML = `
     <h2>Circulating Breakdown</h2>
     <div class="breakdown-grid">
       <article class="break-card">
         <p class="label">In PUTs</p>
-        <p class="value">${fmtWei(allocatedInPutsTotal, decimals)} FT</p>
+        <p class="value">${fmtWei(allocatedInPutsTotal, decimals)}</p>
         <p class="puts-sub">
           Direct Put Allocation: ${fmtWei(inPuts, decimals)} FT<br />
           VC multisig: ${fmtWei(vcMsig, decimals)} FT<br />
@@ -87,7 +93,7 @@ function render(payload) {
       </article>
       <article class="break-card">
         <p class="label">Tradable</p>
-        <p class="value">${fmtWei(tradable, decimals)} FT</p>
+        <p class="value">${fmtWei(tradable, decimals)}</p>
       </article>
     </div>
     <p class="formula">Circulating = In PUTs + Tradable</p>
@@ -148,6 +154,7 @@ async function loadDashboard() {
     updatedAtEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
     summaryEl.innerHTML = "";
     stackedBarEl.innerHTML = "";
+    splitLegendEl.innerHTML = "";
     circulatingBreakdownEl.innerHTML = "";
     tradableByChainEl.innerHTML = "";
     methodologyBodyEl.innerHTML = "";
