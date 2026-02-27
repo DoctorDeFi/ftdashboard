@@ -23,7 +23,26 @@ jobs:
           node-version: '20'
 
       - name: Run indexer
-        run: npm run index
+        run: |
+          set -e
+          attempts=0
+          until [ $attempts -ge 3 ]
+          do
+            attempts=$((attempts+1))
+            echo "Indexer attempt $attempts/3"
+            if npm run index; then
+              echo "Indexer succeeded"
+              break
+            fi
+            if [ $attempts -lt 3 ]; then
+              echo "Indexer failed, retrying in 20s..."
+              sleep 20
+            fi
+          done
+          if [ $attempts -ge 3 ]; then
+            echo "Indexer failed after 3 attempts"
+            exit 1
+          fi
 
       - name: Commit updated metrics
         run: |
