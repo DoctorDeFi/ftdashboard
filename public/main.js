@@ -1,5 +1,4 @@
 const metaEl = document.getElementById("meta");
-const refreshBtn = document.getElementById("refresh");
 const noncircEl = document.getElementById("noncirc");
 const circulatingEl = document.getElementById("circulating");
 const burnsEl = document.getElementById("burns");
@@ -159,11 +158,11 @@ function render(payload) {
     .map(([k, block]) => `${k}: ${Number(block).toLocaleString()}`)
     .join(" | ");
   const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString() : "n/a";
-  metaEl.textContent = `Updated: ${updatedAt}${latestText ? ` | Latest blocks -> ${latestText}` : ""}`;
+  metaEl.textContent = `Updated every 30 minutes | Last update: ${updatedAt}${latestText ? ` | Latest blocks -> ${latestText}` : ""}`;
 }
 
 async function loadDashboard() {
-  metaEl.textContent = "Loading metrics snapshot...";
+  metaEl.textContent = "Loading latest metrics snapshot...";
   try {
     const res = await fetch(`/data/metrics.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(`metrics fetch failed (${res.status})`);
@@ -177,9 +176,5 @@ async function loadDashboard() {
     if (finalNumbersEl) finalNumbersEl.textContent = "";
   }
 }
-
-refreshBtn.addEventListener("click", async () => {
-  await loadDashboard();
-});
 
 loadDashboard();
