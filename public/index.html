@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flying Tulip FT Onchain Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">Flying Tulip</p>
+        <h1>FT Onchain Supply Dashboard</h1>
+        <p class="subtitle">
+          FT allocation categories with full-history sync and incremental updates.
+        </p>
+      </header>
+
+      <section class="controls">
+        <button id="refresh">Refresh</button>
+      </section>
+
+      <section class="status-row">
+        <p id="meta">Connecting to chains…</p>
+      </section>
+
+      <section class="disclaimer">
+        <p><strong>Disclaimer:</strong> This is a community-made dashboard and is not an official Flying Tulip product. Onchain calculations can vary from official dashboards and may change as indexing catches up.</p>
+        <p>
+          Official links:
+          <a href="https://flyingtulip.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          |
+          <a href="https://docs.flyingtulip.com/" target="_blank" rel="noopener noreferrer">Docs</a>
+          |
+          <a href="https://x.com/flyingtulip_" target="_blank" rel="noopener noreferrer">X @flyingtulip_</a>
+        </p>
+      </section>
+
+      <section class="burns-standout" id="burns"></section>
+      <section class="noncirc" id="circulating"></section>
+      <section class="noncirc" id="noncirc"></section>
+      <section class="final-total">
+        <h2>
+          Burned + Circulating + Non-Circulating = 10B
+          <span id="finalNumbers" class="final-numbers"></span>
+        </h2>
+      </section>
+      <footer class="footnote">
+        <p>Built by <a href="https://x.com/doctordefi" target="_blank" rel="noopener noreferrer">@doctordefi</a></p>
+      </footer>
+    </main>
+    <script type="module" src="/main.js?v=20260227y"></script>
+  </body>
+</html>
