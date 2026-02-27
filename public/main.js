@@ -120,7 +120,11 @@ function render(payload) {
       <article class=\"noncirc-item\">
         <p class=\"label\">Allocated in PUTs</p>
         <p class=\"value\">${fmtWei(allocatedInPutsTotal, decimals)} FT</p>
-        <p class=\"breakdown\">${fmtWei(inPuts, decimals)} + ${fmtWei(vcMsig, decimals)} + ${fmtWei(institutional, decimals)}</p>
+        <div class=\"breakdown\">
+          <p><span>Direct Put Allocation</span><strong>${fmtWei(inPuts, decimals)} FT</strong></p>
+          <p><span>VC multisig</span><strong>${fmtWei(vcMsig, decimals)} FT</strong></p>
+          <p><span>Institution via SAFT</span><strong>${fmtWei(institutional, decimals)} FT</strong></p>
+        </div>
       </article>
       <article class=\"noncirc-item\">
         <p class=\"label\">Tradable</p>
