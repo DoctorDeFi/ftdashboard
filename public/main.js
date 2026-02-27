@@ -1,7 +1,11 @@
-const metaEl = document.getElementById("meta");
-const noncircEl = document.getElementById("noncirc");
-const circulatingEl = document.getElementById("circulating");
-const burnsEl = document.getElementById("burns");
+const updatedAtEl = document.getElementById("updatedAt");
+const summaryEl = document.getElementById("summary");
+const stackedBarEl = document.getElementById("stackedBar");
+const splitMetaEl = document.getElementById("splitMeta");
+const circulatingBreakdownEl = document.getElementById("circulatingBreakdown");
+const tradableByChainEl = document.getElementById("tradableByChain");
+const methodologyBodyEl = document.getElementById("methodologyBody");
+const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
 
 function fmtWei(wei, decimals = 18) {
@@ -14,167 +18,141 @@ function fmtWei(wei, decimals = 18) {
   return asNum.toLocaleString(undefined, { maximumFractionDigits: 2 });
 }
 
-function pieSlicePath(cx, cy, r, startAngle, endAngle) {
-  const start = ((startAngle - 90) * Math.PI) / 180;
-  const end = ((endAngle - 90) * Math.PI) / 180;
-  const x1 = cx + r * Math.cos(start);
-  const y1 = cy + r * Math.sin(start);
-  const x2 = cx + r * Math.cos(end);
-  const y2 = cy + r * Math.sin(end);
-  const largeArc = endAngle - startAngle > 180 ? 1 : 0;
-  return `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2} Z`;
-}
-
-function renderTradablePie(parts, decimals) {
-  const total = parts.reduce((sum, p) => sum + BigInt(p.value), 0n);
-  if (total <= 0n) return "<p class=\"kpi-hint\">No tradable FT found.</p>";
-
-  const colors = ["#1976d2", "#ef6c00", "#2e7d32", "#c2185b", "#6a1b9a"];
-  let angle = 0;
-  const slices = parts
-    .map((part, idx) => {
-      const v = BigInt(part.value);
-      const pct = Number(v) / Number(total || 1n);
-      const end = angle + pct * 360;
-      const path = pieSlicePath(60, 60, 58, angle, end);
-      const title = `${part.name}: ${fmtWei(part.value, decimals)} FT (${(pct * 100).toFixed(2)}%)`;
-      angle = end;
-      return `<path class=\"pie-slice\" data-hover=\"${title}\" d=\"${path}\" fill=\"${colors[idx % colors.length]}\"></path>`;
-    })
-    .join("");
-
-  const legend = parts
-    .map(
-      (part, idx) =>
-        `<div><span class=\"dot\" style=\"background:${colors[idx % colors.length]}\"></span>${part.name}</div>`
-    )
-    .join("");
-
-  return `
-    <div class=\"pie-wrap\"> 
-      <svg class=\"pie\" viewBox=\"0 0 120 120\" aria-label=\"Tradable distribution by chain\">${slices}</svg>
-      <div class=\"pie-legend\">${legend}</div>
-    </div>
-    <p class=\"pie-hover\">Hover a pie slice to see chain breakdown.</p>
-  `;
-}
-
-function wirePieHover() {
-  const hoverEl = circulatingEl.querySelector(".pie-hover");
-  const slices = circulatingEl.querySelectorAll(".pie-slice");
-  if (!hoverEl || !slices.length) return;
-  slices.forEach((slice) => {
-    slice.addEventListener("mouseenter", () => {
-      hoverEl.textContent = slice.getAttribute("data-hover") || "";
-      slice.setAttribute("opacity", "0.8");
-    });
-    slice.addEventListener("mouseleave", () => {
-      hoverEl.textContent = "Hover a pie slice to see chain breakdown.";
-      slice.setAttribute("opacity", "1");
-    });
-  });
+function pct(part, total) {
+  if (total <= 0n) return 0;
+  return Number((part * 10000n) / total) / 100;
 }
 
 function render(payload) {
   const decimals = Number(payload?.decimals || 18);
   const v = payload?.valuesWei || {};
 
-  const inPuts = v.inPuts || "0";
-  const tradable = v.tradable || "0";
-  const circulating = v.circulating || "0";
-  const nonCirculating = v.nonCirculating || "0";
-  const burned = v.burned || "0";
+  const inPuts = BigInt(v.inPuts || "0");
+  const tradable = BigInt(v.tradable || "0");
+  const burned = BigInt(v.burned || "0");
+  const unallocated = BigInt(v.unallocated || "0");
+  const vcMsig = BigInt(v.vcMsig || "0");
+  const institutional = BigInt(v.institutional || "0");
 
-  const unallocated = v.unallocated || "0";
-  const vcMsig = v.vcMsig || "0";
-  const institutional = v.institutional || "0";
+  const onEthereum = BigInt(v.onEthereum || "0");
+  const onSonic = BigInt(v.onSonic || "0");
+  const onBnb = BigInt(v.onBnb || "0");
+  const onAvalanche = BigInt(v.onAvalanche || "0");
+  const onBase = BigInt(v.onBase || "0");
 
-  const onEthereum = v.onEthereum || "0";
-  const onSonic = v.onSonic || "0";
-  const onBnb = v.onBnb || "0";
-  const onAvalanche = v.onAvalanche || "0";
-  const onBase = v.onBase || "0";
-  const allocatedInPutsTotal = (
-    BigInt(inPuts) + BigInt(vcMsig) + BigInt(institutional)
-  ).toString();
-  const circulatingTotal = (BigInt(allocatedInPutsTotal) + BigInt(tradable)).toString();
+  const allocatedInPutsTotal = inPuts + vcMsig + institutional;
+  const circulating = allocatedInPutsTotal + tradable;
+  const nonCirculating = unallocated;
 
-  const tradableParts = [
+  const totalSupply = BigInt(v.maxSupply || "10000000000000000000000000000");
+
+  const burnedPct = pct(burned, totalSupply);
+  const circulatingPct = pct(circulating, totalSupply);
+  const nonCircPct = Math.max(0, 100 - burnedPct - circulatingPct);
+
+  summaryEl.innerHTML = `
+    <article class="summary-card burned">
+      <p class="label">Burned</p>
+      <p class="value">${fmtWei(burned, decimals)} FT</p>
+    </article>
+    <article class="summary-card circulating">
+      <p class="label">Circulating</p>
+      <p class="value">${fmtWei(circulating, decimals)} FT</p>
+    </article>
+    <article class="summary-card noncirc">
+      <p class="label">Non-circulating</p>
+      <p class="value">${fmtWei(nonCirculating, decimals)} FT</p>
+    </article>
+  `;
+
+  stackedBarEl.innerHTML = `
+    <div class="seg burned" style="width:${burnedPct}%" title="Burned ${burnedPct.toFixed(2)}%"></div>
+    <div class="seg circulating" style="width:${circulatingPct}%" title="Circulating ${circulatingPct.toFixed(2)}%"></div>
+    <div class="seg noncirc" style="width:${nonCircPct}%" title="Non-circulating ${nonCircPct.toFixed(2)}%"></div>
+  `;
+
+  splitMetaEl.textContent = `Burned ${burnedPct.toFixed(2)}% | Circulating ${circulatingPct.toFixed(2)}% | Non-circulating ${nonCircPct.toFixed(2)}%`;
+
+  circulatingBreakdownEl.innerHTML = `
+    <h2>Circulating Breakdown</h2>
+    <div class="breakdown-grid">
+      <article class="break-card">
+        <p class="label">In PUTs</p>
+        <p class="value">${fmtWei(allocatedInPutsTotal, decimals)} FT</p>
+        <p class="puts-sub">
+          Direct Put Allocation: ${fmtWei(inPuts, decimals)} FT<br />
+          VC multisig: ${fmtWei(vcMsig, decimals)} FT<br />
+          Institution via SAFT: ${fmtWei(institutional, decimals)} FT
+        </p>
+      </article>
+      <article class="break-card">
+        <p class="label">Tradable</p>
+        <p class="value">${fmtWei(tradable, decimals)} FT</p>
+      </article>
+    </div>
+    <p class="formula">Circulating = In PUTs + Tradable</p>
+  `;
+
+  const chains = [
     { name: "Ethereum", value: onEthereum },
     { name: "Sonic", value: onSonic },
+    { name: "Base", value: onBase },
     { name: "BNB", value: onBnb },
-    { name: "Avalanche", value: onAvalanche },
-    { name: "Base", value: onBase }
+    { name: "Avalanche", value: onAvalanche }
   ];
 
-  burnsEl.innerHTML = `
-    <h2>Burned</h2>
-    <p class=\"burns-value\">${fmtWei(burned, decimals)} FT</p>
-  `;
-
-  circulatingEl.innerHTML = `
-    <h2>Circulating</h2>
-    <p class=\"noncirc-total\">${fmtWei(circulatingTotal, decimals)} FT</p>
-    <p class=\"formula\">= Allocated in PUTs + Tradable</p>
-    <div class=\"noncirc-grid\">
-      <article class=\"noncirc-item\">
-        <p class=\"label\">Allocated in PUTs</p>
-        <p class=\"value\">${fmtWei(allocatedInPutsTotal, decimals)} FT</p>
-        <div class=\"breakdown\">
-          <p><span>Direct Put Allocation</span><strong>${fmtWei(inPuts, decimals)} FT</strong></p>
-          <p><span>VC multisig</span><strong>${fmtWei(vcMsig, decimals)} FT</strong></p>
-          <p><span>Institution via SAFT</span><strong>${fmtWei(institutional, decimals)} FT</strong></p>
+  const chainRows = chains
+    .map((chain) => {
+      const p = pct(chain.value, tradable);
+      return `
+        <div class="chain-row">
+          <span class="chain-name">${chain.name}</span>
+          <div class="chain-bar-bg"><div class="chain-bar" style="width:${p}%"></div></div>
+          <span class="chain-val">${fmtWei(chain.value, decimals)} FT (${p.toFixed(2)}%)</span>
         </div>
-      </article>
-      <article class=\"noncirc-item\">
-        <p class=\"label\">Tradable</p>
-        <p class=\"value\">${fmtWei(tradable, decimals)} FT</p>
-      </article>
-      <article class=\"noncirc-item\">
-        <p class=\"label\">Tradable by Chain (hover pie)</p>
-        ${renderTradablePie(tradableParts, decimals)}
-      </article>
-    </div>
+      `;
+    })
+    .join("");
+
+  tradableByChainEl.innerHTML = `
+    <h2>Tradable by Chain</h2>
+    <div class="chain-list">${chainRows}</div>
   `;
-
-  noncircEl.innerHTML = `
-    <h2>Non-Circulating</h2>
-    <p class=\"noncirc-total\">${fmtWei(unallocated, decimals)} FT</p>
-    <div class=\"noncirc-grid\">
-      <article class=\"noncirc-item\">
-        <p class=\"label\">Unallocated</p>
-        <p class=\"value\">${fmtWei(unallocated, decimals)} FT</p>
-      </article>
-    </div>
-  `;
-
-  if (finalNumbersEl) {
-    finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulatingTotal, decimals)} + ${fmtWei(unallocated, decimals)}`;
-  }
-
-  wirePieHover();
 
   const latest = payload.latestBlocks || {};
-  const latestText = Object.entries(latest)
-    .map(([k, block]) => `${k}: ${Number(block).toLocaleString()}`)
-    .join(" | ");
+  const latestItems = Object.entries(latest)
+    .map(([k, block]) => `<div>${k}: ${Number(block).toLocaleString()}</div>`)
+    .join("");
+  blocksBodyEl.innerHTML = latestItems || "No block metadata available.";
+
+  methodologyBodyEl.innerHTML = `
+    <div>Community-made dashboard. Not official. Values may vary.</div>
+    <div>Data source: indexed onchain metrics snapshot.</div>
+    <div>Burned, circulating, non-circulating shown against 10B FT total supply.</div>
+  `;
+
   const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString() : "n/a";
-  metaEl.textContent = `Updated every 30 minutes | Last update: ${updatedAt}${latestText ? ` | Latest blocks -> ${latestText}` : ""}`;
+  updatedAtEl.textContent = `Updated: ${updatedAt}`;
+
+  finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulating, decimals)} + ${fmtWei(nonCirculating, decimals)}`;
 }
 
 async function loadDashboard() {
-  metaEl.textContent = "Loading latest metrics snapshot...";
+  updatedAtEl.textContent = "Updated: loading...";
   try {
     const res = await fetch(`/data/metrics.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(`metrics fetch failed (${res.status})`);
     const payload = await res.json();
     render(payload);
   } catch (error) {
-    metaEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
-    burnsEl.innerHTML = "";
-    circulatingEl.innerHTML = "";
-    noncircEl.innerHTML = "";
-    if (finalNumbersEl) finalNumbersEl.textContent = "";
+    updatedAtEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
+    summaryEl.innerHTML = "";
+    stackedBarEl.innerHTML = "";
+    circulatingBreakdownEl.innerHTML = "";
+    tradableByChainEl.innerHTML = "";
+    methodologyBodyEl.innerHTML = "";
+    blocksBodyEl.innerHTML = "";
+    finalNumbersEl.textContent = "";
   }
 }
 

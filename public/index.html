@@ -3,48 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flying Tulip FT Onchain Dashboard</title>
+    <title>FT Onchain Supply</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <main class="container">
-      <header class="hero">
-        <p class="eyebrow">Flying Tulip</p>
-        <h1>FT Onchain Supply Dashboard</h1>
-        <p class="subtitle">
-          FT allocation categories with full-history sync and incremental updates.
-        </p>
-      </header>
-
-      <section class="status-row">
-        <p id="meta">Connecting to chains…</p>
+      <section class="hero-card">
+        <div>
+          <h1>FT Onchain Supply</h1>
+          <p class="subtitle">Live view of the 10B FT supply</p>
+          <p class="total-label">Total Supply</p>
+          <p class="total-value">10B FT</p>
+        </div>
+        <div class="hero-meta">
+          <p id="updatedAt">Updated: --</p>
+          <p>Sync every 30m</p>
+          <p>ℹ Snapshot from indexed onchain data</p>
+        </div>
       </section>
 
-      <section class="disclaimer">
-        <p><strong>Disclaimer:</strong> This is a community-made dashboard and is not an official Flying Tulip product. Onchain calculations can vary from official dashboards and may change as indexing catches up.</p>
-        <p>
-          Official links:
-          <a href="https://flyingtulip.com/" target="_blank" rel="noopener noreferrer">Website</a>
-          |
-          <a href="https://docs.flyingtulip.com/" target="_blank" rel="noopener noreferrer">Docs</a>
-          |
-          <a href="https://x.com/flyingtulip_" target="_blank" rel="noopener noreferrer">X @flyingtulip_</a>
-        </p>
+      <section class="summary-grid" id="summary"></section>
+
+      <section class="split-card">
+        <div class="split-head">
+          <h2>Supply Split</h2>
+          <p id="splitMeta">Burned | Circulating | Non-circulating</p>
+        </div>
+        <div class="stacked" id="stackedBar"></div>
       </section>
 
-      <section class="burns-standout" id="burns"></section>
-      <section class="noncirc" id="circulating"></section>
-      <section class="noncirc" id="noncirc"></section>
-      <section class="final-total">
-        <h2>
-          Burned + Circulating + Non-Circulating = 10B
-          <span id="finalNumbers" class="final-numbers"></span>
-        </h2>
+      <section class="section-block" id="circulatingBreakdown"></section>
+
+      <section class="section-block" id="tradableByChain"></section>
+
+      <section class="accordion-wrap">
+        <details>
+          <summary>Methodology</summary>
+          <div class="details-body" id="methodologyBody"></div>
+        </details>
+        <details>
+          <summary>Latest indexed blocks</summary>
+          <div class="details-body" id="blocksBody"></div>
+        </details>
+        <details>
+          <summary>Official links</summary>
+          <div class="details-body">
+            <a href="https://flyingtulip.com/" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://docs.flyingtulip.com/" target="_blank" rel="noopener noreferrer">Docs</a>
+            <a href="https://x.com/flyingtulip_" target="_blank" rel="noopener noreferrer">X @flyingtulip_</a>
+          </div>
+        </details>
       </section>
+
       <footer class="footnote">
-        <p>Built by <a href="https://x.com/doctordefi" target="_blank" rel="noopener noreferrer">@doctordefi</a></p>
+        <p class="eq-title">Burned + Circulating + Non-Circulating = 10B</p>
+        <p class="eq-values" id="finalNumbers"></p>
+        <p class="credit">Built by <a href="https://x.com/doctordefi" target="_blank" rel="noopener noreferrer">@doctordefi</a></p>
       </footer>
     </main>
-    <script type="module" src="/main.js?v=20260227ab"></script>
+    <script type="module" src="/main.js?v=20260227ac"></script>
   </body>
 </html>
