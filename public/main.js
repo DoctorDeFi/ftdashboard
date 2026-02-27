@@ -94,6 +94,10 @@ function render(payload) {
   const onBnb = v.onBnb || "0";
   const onAvalanche = v.onAvalanche || "0";
   const onBase = v.onBase || "0";
+  const allocatedInPutsTotal = (
+    BigInt(inPuts) + BigInt(vcMsig) + BigInt(institutional)
+  ).toString();
+  const circulatingTotal = (BigInt(allocatedInPutsTotal) + BigInt(tradable)).toString();
 
   const tradableParts = [
     { name: "Ethereum", value: onEthereum },
@@ -110,12 +114,13 @@ function render(payload) {
 
   circulatingEl.innerHTML = `
     <h2>Circulating</h2>
-    <p class=\"noncirc-total\">${fmtWei(circulating, decimals)} FT</p>
-    <p class=\"formula\">= in PUTs + Tradable</p>
+    <p class=\"noncirc-total\">${fmtWei(circulatingTotal, decimals)} FT</p>
+    <p class=\"formula\">= Allocated in PUTs + Tradable</p>
     <div class=\"noncirc-grid\">
       <article class=\"noncirc-item\">
-        <p class=\"label\">In PUTs</p>
-        <p class=\"value\">${fmtWei(inPuts, decimals)} FT</p>
+        <p class=\"label\">Allocated in PUTs</p>
+        <p class=\"value\">${fmtWei(allocatedInPutsTotal, decimals)} FT</p>
+        <p class=\"breakdown\">${fmtWei(inPuts, decimals)} + ${fmtWei(vcMsig, decimals)} + ${fmtWei(institutional, decimals)}</p>
       </article>
       <article class=\"noncirc-item\">
         <p class=\"label\">Tradable</p>
@@ -130,25 +135,17 @@ function render(payload) {
 
   noncircEl.innerHTML = `
     <h2>Non-Circulating</h2>
-    <p class=\"noncirc-total\">${fmtWei(nonCirculating, decimals)} FT</p>
+    <p class=\"noncirc-total\">${fmtWei(unallocated, decimals)} FT</p>
     <div class=\"noncirc-grid\">
       <article class=\"noncirc-item\">
         <p class=\"label\">Unallocated</p>
         <p class=\"value\">${fmtWei(unallocated, decimals)} FT</p>
       </article>
-      <article class=\"noncirc-item\">
-        <p class=\"label\">VC MSIG (allocated against PUT via SAFT)</p>
-        <p class=\"value\">${fmtWei(vcMsig, decimals)} FT</p>
-      </article>
-      <article class=\"noncirc-item\">
-        <p class=\"label\">Institutional (allocated against PUT via SAFT)</p>
-        <p class=\"value\">${fmtWei(institutional, decimals)} FT</p>
-      </article>
     </div>
   `;
 
   if (finalNumbersEl) {
-    finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulating, decimals)} + ${fmtWei(nonCirculating, decimals)}`;
+    finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulatingTotal, decimals)} + ${fmtWei(unallocated, decimals)}`;
   }
 
   wirePieHover();
