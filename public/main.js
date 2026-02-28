@@ -6,7 +6,6 @@ const splitMetaEl = document.getElementById("splitMeta");
 const splitLegendEl = document.getElementById("splitLegend");
 const circulatingBreakdownEl = document.getElementById("circulatingBreakdown");
 const tradableByChainEl = document.getElementById("tradableByChain");
-const methodologyBodyEl = document.getElementById("methodologyBody");
 const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
 
@@ -133,12 +132,6 @@ function render(payload) {
     .join("");
   blocksBodyEl.innerHTML = latestItems || "No block metadata available.";
 
-  methodologyBodyEl.innerHTML = `
-    <div>Community-made dashboard. Not official. Values may vary.</div>
-    <div>Data source: indexed onchain metrics snapshot.</div>
-    <div>Burned, circulating, non-circulating shown against 10B FT total supply.</div>
-  `;
-
   const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString() : "n/a";
   updatedAtEl.textContent = `Updated: ${updatedAt}`;
   heroTotalSupplyEl.textContent = `${fmtWei(currentTotalSupply, decimals)}`;
@@ -161,7 +154,6 @@ async function loadDashboard() {
     splitLegendEl.innerHTML = "";
     circulatingBreakdownEl.innerHTML = "";
     tradableByChainEl.innerHTML = "";
-    methodologyBodyEl.innerHTML = "";
     blocksBodyEl.innerHTML = "";
     finalNumbersEl.textContent = "";
   }
