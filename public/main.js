@@ -98,7 +98,7 @@ function render(payload) {
         <p class="value">${fmtWei(tradable, decimals)}</p>
       </article>
     </div>
-    <p class="formula">Circulating includes VC multisig in the top summary.</p>
+    <p class="formula">Circulating = In PUTs + Tradable</p>
   `;
 
   const chains = [
