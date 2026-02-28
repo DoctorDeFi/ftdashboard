@@ -42,6 +42,7 @@ function render(payload) {
   const onBase = BigInt(v.onBase || "0");
 
   const allocatedInPutsTotal = inPuts + vcMsig + institutional;
+  const inPutsDisplay = inPuts + institutional;
   const circulating = allocatedInPutsTotal + tradable;
   const nonCirculating = unallocated;
 
@@ -85,11 +86,11 @@ function render(payload) {
     <div class="breakdown-grid">
       <article class="break-card">
         <p class="label">In PUTs</p>
-        <p class="value">${fmtWei(allocatedInPutsTotal, decimals)}</p>
+        <p class="value">${fmtWei(inPutsDisplay, decimals)}</p>
         <p class="puts-sub">
           Direct Put Allocation: ${fmtWei(inPuts, decimals)} FT<br />
-          VC multisig: ${fmtWei(vcMsig, decimals)} FT<br />
-          Institution via SAFT: ${fmtWei(institutional, decimals)} FT
+          Institution via SAFT: ${fmtWei(institutional, decimals)} FT<br />
+          VC multisig: ${fmtWei(vcMsig, decimals)} FT
         </p>
       </article>
       <article class="break-card">
@@ -97,7 +98,7 @@ function render(payload) {
         <p class="value">${fmtWei(tradable, decimals)}</p>
       </article>
     </div>
-    <p class="formula">Circulating = In PUTs + Tradable</p>
+    <p class="formula">Circulating includes VC multisig in the top summary.</p>
   `;
 
   const chains = [
