@@ -141,7 +141,7 @@ function render(payload) {
 
   const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString() : "n/a";
   updatedAtEl.textContent = `Updated: ${updatedAt}`;
-  heroTotalSupplyEl.textContent = `${fmtWei(currentTotalSupply, decimals)} FT`;
+  heroTotalSupplyEl.textContent = `${fmtWei(currentTotalSupply, decimals)}`;
 
   finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulating, decimals)} + ${fmtWei(nonCirculating, decimals)}`;
 }

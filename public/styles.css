@@ -48,7 +48,12 @@ body {
 
 .subtitle { margin: 0.25rem 0 0.9rem; color: var(--muted); }
 .total-label { margin: 0; color: var(--muted); font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.08em; }
-.total-value { margin: 0.16rem 0 0; font-size: clamp(2rem, 6vw, 3rem); font-weight: 750; }
+.total-value {
+  margin: 0.16rem 0 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
 
 .hero-meta {
   text-align: right;
