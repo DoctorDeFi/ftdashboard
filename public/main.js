@@ -1,4 +1,5 @@
 const updatedAtEl = document.getElementById("updatedAt");
+const heroTotalSupplyEl = document.getElementById("heroTotalSupply");
 const summaryEl = document.getElementById("summary");
 const stackedBarEl = document.getElementById("stackedBar");
 const splitMetaEl = document.getElementById("splitMeta");
@@ -46,6 +47,7 @@ function render(payload) {
   const nonCirculating = unallocated;
 
   const totalSupply = BigInt(v.maxSupply || "10000000000000000000000000000");
+  const currentTotalSupply = totalSupply - burned;
 
   const burnedPct = pct(burned, totalSupply);
   const circulatingPct = pct(circulating, totalSupply);
@@ -139,6 +141,7 @@ function render(payload) {
 
   const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString() : "n/a";
   updatedAtEl.textContent = `Updated: ${updatedAt}`;
+  heroTotalSupplyEl.textContent = `${fmtWei(currentTotalSupply, decimals)} FT`;
 
   finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulating, decimals)} + ${fmtWei(nonCirculating, decimals)}`;
 }
@@ -152,6 +155,7 @@ async function loadDashboard() {
     render(payload);
   } catch (error) {
     updatedAtEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
+    heroTotalSupplyEl.textContent = "--";
     summaryEl.innerHTML = "";
     stackedBarEl.innerHTML = "";
     splitLegendEl.innerHTML = "";

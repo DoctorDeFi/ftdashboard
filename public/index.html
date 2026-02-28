@@ -13,7 +13,7 @@
     <meta property="og:title" content="FT Onchain Supply Dashboard" />
     <meta
       property="og:description"
-      content="Live view of the 10B FT supply across burned, circulating, and non-circulating buckets."
+      content="Live view of current FT supply across burned, circulating, and non-circulating buckets."
     />
     <meta property="og:url" content="https://ftdashboard.xyz/" />
     <meta property="og:image" content="https://ftdashboard.xyz/og-image.png" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="FT Onchain Supply Dashboard" />
     <meta
       name="twitter:description"
-      content="Live view of the 10B FT supply across burned, circulating, and non-circulating buckets."
+      content="Live view of current FT supply across burned, circulating, and non-circulating buckets."
     />
     <meta name="twitter:image" content="https://ftdashboard.xyz/og-image.png" />
     <link rel="stylesheet" href="/styles.css" />
@@ -36,9 +36,9 @@
       <section class="hero-card">
         <div>
           <h1>FT Onchain Supply</h1>
-          <p class="subtitle">Live view of the 10B FT supply</p>
+          <p class="subtitle">Live view of Current Total Supply</p>
           <p class="total-label">Total Supply</p>
-          <p class="total-value">10B FT</p>
+          <p class="total-value" id="heroTotalSupply">--</p>
         </div>
         <div class="hero-meta">
           <p id="updatedAt">Updated: --</p>
@@ -87,6 +87,6 @@
         <p class="credit">Built by <a href="https://x.com/doctordefi" target="_blank" rel="noopener noreferrer">@doctordefi</a></p>
       </footer>
     </main>
-    <script type="module" src="/main.js?v=20260227ad"></script>
+    <script type="module" src="/main.js?v=20260228aa"></script>
   </body>
 </html>
