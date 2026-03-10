@@ -10,6 +10,7 @@ const countLabelEl = document.getElementById("countLabel");
 const searchInputEl = document.getElementById("searchInput");
 const collateralSelectEl = document.getElementById("collateralSelect");
 const sortSelectEl = document.getElementById("sortSelect");
+const listingsWrapEl = document.getElementById("listingsWrap");
 const buyModalBackdropEl = document.getElementById("buyModalBackdrop");
 const buyModalCloseEl = document.getElementById("buyModalClose");
 const buyModalPutLabelEl = document.getElementById("buyModalPutLabel");
@@ -18,6 +19,9 @@ const buyModalLinkEl = document.getElementById("buyModalLink");
 
 let allListings = [];
 const visibleListingMap = new Map();
+let sortedListingsCache = [];
+let renderedListingsCount = 0;
+const LISTINGS_BATCH_SIZE = 40;
 let oracleState = {
   ethUsd: null,
   ethUsdDecimals: null
@@ -48,6 +52,10 @@ function fmtDateIso(iso) {
 
 function etherscanTx(hash) {
   return `https://etherscan.io/tx/${hash}`;
+}
+
+function etherscanAddress(address) {
+  return `https://etherscan.io/address/${address}`;
 }
 
 function formatUnitsFromWei(value, decimals = 18, maxFraction = 4) {
@@ -282,7 +290,6 @@ function sortListings(rows, mode) {
 function renderListings() {
   const q = searchInputEl.value.trim().toLowerCase();
   const selectedCollateral = String(collateralSelectEl.value || "all").toLowerCase();
-  visibleListingMap.clear();
 
   const filtered = allListings.filter((row) => {
     if (row.derivedStatus !== "active") return false;
@@ -305,30 +312,51 @@ function renderListings() {
   });
 
   const sorted = sortListings(filtered, sortSelectEl.value);
-
-  listingsBodyEl.innerHTML = sorted
-    .map((x) => {
-      visibleListingMap.set(String(x.tokenId), x);
-      const premium = premiumPct(x);
-      const premiumText = premium === null ? "--" : `${premium >= 0 ? "+" : ""}${premium.toFixed(2)}%`;
-      const premiumClass = premium === null ? "" : premium >= 0 ? "premium up" : "premium down";
-      return `
-        <tr>
-          <td>PUT #${x.tokenId}<br /><small>${shortAddr(x.seller)}</small></td>
-          <td>${x.put?.amountDisplay || "--"} ${x.put?.collateralMeta?.symbol || ""}</td>
-          <td>${x.put?.collateralMeta?.symbol || "--"}</td>
-          <td>${x.put?.amountRemainingDisplay || "--"}</td>
-          <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
-          <td><span class="${premiumClass}">${premiumText}</span></td>
-          <td>${fmtDateFromUnix(x.expires)}</td>
-          <td>${x.put?.ftDisplay || "--"}</td>
-          <td><button class="buy-btn" data-token-id="${x.tokenId}" type="button">Buy</button></td>
-        </tr>
-      `;
-    })
-    .join("");
-
+  sortedListingsCache = sorted;
+  renderedListingsCount = 0;
+  visibleListingMap.clear();
+  listingsBodyEl.innerHTML = "";
+  appendListingsBatch();
   countLabelEl.textContent = `Rows: ${sorted.length}`;
+}
+
+function listingRowHtml(x) {
+  const premium = premiumPct(x);
+  const premiumText = premium === null ? "--" : `${premium >= 0 ? "+" : ""}${premium.toFixed(2)}%`;
+  const premiumClass = premium === null ? "" : premium >= 0 ? "premium up" : "premium down";
+  return `
+    <tr>
+      <td>
+        PUT #${x.tokenId}<br />
+        <small>
+          <a href="${etherscanAddress(x.seller)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.seller)}</a>
+        </small>
+      </td>
+      <td>${x.put?.amountDisplay || "--"} ${x.put?.collateralMeta?.symbol || ""}</td>
+      <td>${x.put?.collateralMeta?.symbol || "--"}</td>
+      <td>${x.put?.amountRemainingDisplay || "--"}</td>
+      <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
+      <td><span class="${premiumClass}">${premiumText}</span></td>
+      <td>${fmtDateFromUnix(x.expires)}</td>
+      <td>${x.put?.ftDisplay || "--"}</td>
+      <td><button class="buy-btn" data-token-id="${x.tokenId}" type="button">Buy</button></td>
+    </tr>
+  `;
+}
+
+function appendListingsBatch() {
+  if (!sortedListingsCache.length) return;
+  if (renderedListingsCount >= sortedListingsCache.length) return;
+
+  const next = sortedListingsCache.slice(
+    renderedListingsCount,
+    renderedListingsCount + LISTINGS_BATCH_SIZE
+  );
+  for (const row of next) {
+    visibleListingMap.set(String(row.tokenId), row);
+  }
+  listingsBodyEl.insertAdjacentHTML("beforeend", next.map(listingRowHtml).join(""));
+  renderedListingsCount += next.length;
 }
 
 function addFilterRow(label, value, key = false) {
@@ -466,6 +494,11 @@ async function loadDashboard() {
 searchInputEl.addEventListener("input", renderListings);
 collateralSelectEl.addEventListener("change", renderListings);
 sortSelectEl.addEventListener("change", renderListings);
+listingsWrapEl.addEventListener("scroll", () => {
+  const nearBottom =
+    listingsWrapEl.scrollTop + listingsWrapEl.clientHeight >= listingsWrapEl.scrollHeight - 120;
+  if (nearBottom) appendListingsBatch();
+});
 listingsBodyEl.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof HTMLElement)) return;

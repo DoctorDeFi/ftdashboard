@@ -68,6 +68,32 @@ h1 {
   font-size: 1.02rem;
 }
 
+.back-cta {
+  margin: 0.45rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.46rem 0.55rem 0.46rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(18, 7, 38, 0.72);
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.back-cta-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.34rem 0.72rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.back-cta-link:hover {
+  filter: brightness(1.06);
+}
+
 .hero-meta {
   text-align: right;
   color: var(--muted);
@@ -174,6 +200,17 @@ input::placeholder { color: #8f80bd; }
   margin-top: 0.85rem;
   overflow-x: auto;
   background: #13052a;
+}
+
+.listings-wrap {
+  max-height: 560px;
+  overflow: auto;
+}
+
+.listings-wrap thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .table-wrap h2 { margin: 0 0 0.65rem; font-size: 1.02rem; }
