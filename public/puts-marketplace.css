@@ -210,7 +210,9 @@ input::placeholder { color: #8f80bd; }
 .listings-wrap thead th {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
+  background: #1f1040;
+  box-shadow: 0 1px 0 rgba(173, 149, 233, 0.22);
 }
 
 .table-wrap h2 { margin: 0 0 0.65rem; font-size: 1.02rem; }
@@ -232,8 +234,9 @@ th,
 td {
   border-bottom: 1px solid rgba(173, 149, 233, 0.14);
   text-align: left;
-  padding: 0.62rem;
+  padding: 0.72rem 0.62rem;
   font-size: 0.9rem;
+  line-height: 1.25;
 }
 
 thead { background: #1f1040; }
