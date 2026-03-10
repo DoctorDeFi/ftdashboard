@@ -297,6 +297,21 @@ td a:hover { text-decoration: underline; }
   margin-top: 0.13rem;
 }
 
+.filter-row.key {
+  border-color: rgba(127, 91, 255, 0.75);
+  background: linear-gradient(145deg, rgba(39, 17, 79, 0.95), rgba(28, 12, 59, 0.95));
+  box-shadow: inset 0 0 0 1px rgba(127, 91, 255, 0.25);
+}
+
+.filter-row.key span {
+  color: #cdb9ff;
+}
+
+.filter-row.key strong {
+  color: #ffffff;
+  font-size: 1.02rem;
+}
+
 .modal-instructions {
   margin-top: 0.85rem;
   border: 1px solid var(--line);

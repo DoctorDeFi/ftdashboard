@@ -331,9 +331,10 @@ function renderListings() {
   countLabelEl.textContent = `Rows: ${sorted.length}`;
 }
 
-function addFilterRow(label, value) {
+function addFilterRow(label, value, key = false) {
+  const cls = key ? "filter-row key" : "filter-row";
   return `
-    <div class="filter-row">
+    <div class="${cls}">
       <span>${label}</span>
       <strong>${value || "--"}</strong>
     </div>
@@ -360,19 +361,27 @@ function openBuyModal(row) {
       ? formatUnitsFromWei(row.priceWei, Number(row.paymentTokenMeta.decimals || 18))
       : row.priceDisplay || "--";
   const deadlineDate = dateOnlyFromUnix(row.expires);
+  const recommendedMin = (() => {
+    try {
+      if (!row.priceWei || !row.paymentTokenMeta) return null;
+      const wei = BigInt(row.priceWei);
+      const minWei = (wei * 95n) / 100n;
+      return formatUnitsFromWei(minWei, Number(row.paymentTokenMeta.decimals || 18));
+    } catch {
+      return null;
+    }
+  })();
 
   buyModalPutLabelEl.textContent = `PUT #${row.tokenId}`;
   buyModalFiltersEl.innerHTML = [
-    addFilterRow("Remaining Min Amount", remainingValue),
-    addFilterRow("Remaining Max Amount", remainingValue),
-    addFilterRow("Investment Token", investmentToken),
-    addFilterRow("Investment Min Amount", investmentValue),
-    addFilterRow("Investment Max Amount", investmentValue),
-    addFilterRow("Current Price Token", priceToken),
-    addFilterRow("Current Price Min Amount", priceValue),
-    addFilterRow("Current Price Max Amount", priceValue),
-    addFilterRow("Sale Deadline From", deadlineDate),
-    addFilterRow("Sale Deadline To", deadlineDate),
+    addFilterRow("PUT ID", `PUT #${row.tokenId}`, true),
+    addFilterRow("Investment Token", investmentToken, true),
+    addFilterRow("Current Price Token", priceToken, true),
+    addFilterRow("Current Price Max Amount", priceValue, true),
+    addFilterRow("Current Price Min Amount (optional)", recommendedMin || "--"),
+    addFilterRow("Investment Amount", investmentValue),
+    addFilterRow("Remaining Amount", remainingValue),
+    addFilterRow("Sale Deadline", deadlineDate),
     addFilterRow("Reference Seller", shortAddr(row.seller))
   ].join("");
 
