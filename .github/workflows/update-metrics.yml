@@ -23,7 +23,7 @@ jobs:
           node-version: '20'
 
       - name: Install deps
-        run: npm ci
+        run: npm install
 
       - name: Run indexer
         id: indexer
