@@ -17,7 +17,21 @@ This setup is Vercel-friendly because the browser no longer runs heavy onchain i
 ```bash
 npm run dev
 npm run index
+npm run index:puts
 ```
+
+## PUTs Marketplace Dashboard
+
+- On-chain indexer: `npm run index:puts`
+- Output snapshot: `public/data/puts-marketplace.json`
+- Incremental state: `data/puts-state.json`
+- Frontend page: `/puts-marketplace.html`
+
+Suggested local flow:
+
+1. Run `npm run index:puts`
+2. Run `npm run dev`
+3. Open `http://localhost:3000/puts-marketplace.html`
 
 ## Publish flow (no paid RPC)
 

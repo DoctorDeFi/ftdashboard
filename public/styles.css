@@ -47,6 +47,31 @@ body {
 }
 
 .subtitle { margin: 0.25rem 0 0.9rem; color: var(--muted); }
+.puts-cta {
+  margin: 0.15rem 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.46rem 0.55rem 0.46rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(18, 7, 38, 0.72);
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.puts-cta-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.34rem 0.72rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6d4dff, #8b62ff);
+}
+
+.puts-cta-link:hover {
+  filter: brightness(1.06);
+}
 .total-label { margin: 0; color: var(--muted); font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .total-value {
   margin: 0.16rem 0 0;

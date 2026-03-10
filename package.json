@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
-    "index": "node scripts/indexer.js"
+    "index": "node scripts/indexer.js",
+    "index:puts": "node scripts/putsIndexer.js",
+    "index:puts:reset": "node scripts/putsIndexer.js --reset"
   }
 }

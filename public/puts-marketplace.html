@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUTs Marketplace Dashboard</title>
+    <meta
+      name="description"
+      content="On-chain indexed dashboard for Flying Tulip PUTs marketplace listings, sales, and protocol state."
+    />
+    <link rel="stylesheet" href="/puts-marketplace.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Flying Tulip</p>
+          <h1>PUTs Marketplace Dashboard</h1>
+          <p class="subtitle">Indexed on-chain from marketplace contract events</p>
+        </div>
+        <div class="hero-meta">
+          <p id="updatedAt">Updated: --</p>
+          <p id="indexedBlock">Indexed Block: --</p>
+          <p id="sourceAddr">Contract: --</p>
+        </div>
+      </header>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="panel" id="protocolState"></section>
+
+      <section class="controls">
+        <label>
+          Search
+          <input id="searchInput" type="search" placeholder="Token ID, seller, token symbol" />
+        </label>
+        <label>
+          Collateral
+          <select id="collateralSelect">
+            <option value="all">All Collateral</option>
+          </select>
+        </label>
+        <label>
+          Sort
+          <select id="sortSelect">
+            <option value="price_asc">Price (low to high)</option>
+            <option value="price_desc">Price (high to low)</option>
+            <option value="premium_desc">Premium % (high to low)</option>
+            <option value="premium_asc">Premium % (low to high)</option>
+            <option value="collateral_az">Collateral (A to Z)</option>
+            <option value="expiry_asc">Expiry (soonest)</option>
+            <option value="expiry_desc">Expiry (latest)</option>
+            <option value="token_asc">Token ID (asc)</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="table-wrap">
+        <h2>Active Listings</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Investment</th>
+              <th>Collateral</th>
+              <th>Amount Remaining</th>
+              <th>Current Price</th>
+              <th>Premium %</th>
+              <th>Sale Ends</th>
+              <th>FT</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="listingsBody"></tbody>
+        </table>
+      </section>
+      <p class="count" id="countLabel">Rows: 0</p>
+
+      <section class="table-wrap">
+        <h2>Recent Sales</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Token</th>
+              <th>Price</th>
+              <th>Seller</th>
+              <th>Buyer</th>
+              <th>Time</th>
+              <th>Tx</th>
+            </tr>
+          </thead>
+          <tbody id="salesBody"></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrap">
+        <h2>Recent Activity</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Token</th>
+              <th>Seller</th>
+              <th>Block</th>
+              <th>Time</th>
+              <th>Tx</th>
+            </tr>
+          </thead>
+          <tbody id="activityBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="buyModalBackdrop" hidden>
+      <section class="buy-modal" role="dialog" aria-modal="true" aria-labelledby="buyModalTitle">
+        <button class="modal-close" id="buyModalClose" type="button">x</button>
+        <h2 id="buyModalTitle">Buy On Official Marketplace</h2>
+        <p class="modal-sub" id="buyModalPutLabel">PUT #--</p>
+
+        <div class="modal-grid" id="buyModalFilters"></div>
+
+        <div class="modal-instructions">
+          <p>Instructions</p>
+          <ol>
+            <li>Click `Open Official Marketplace` below.</li>
+            <li>On official UI, open Filters and enter all values exactly as shown above.</li>
+            <li>Click `Apply`, then match by current price and seller shown above (no direct PUT ID filter).</li>
+          </ol>
+        </div>
+
+        <div class="modal-actions">
+          <a
+            id="buyModalLink"
+            class="button-link"
+            href="https://marketplace.flyingtulip.com/marketplace?tab=0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open Official Marketplace</a>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/puts-marketplace.js?v=onchain1"></script>
+  </body>
+</html>
