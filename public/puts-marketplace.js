@@ -6,6 +6,7 @@ const protocolStateEl = document.getElementById("protocolState");
 const listingsBodyEl = document.getElementById("listingsBody");
 const salesBodyEl = document.getElementById("salesBody");
 const activityBodyEl = document.getElementById("activityBody");
+const activityDetailsEl = document.getElementById("activityDetails");
 const countLabelEl = document.getElementById("countLabel");
 const searchInputEl = document.getElementById("searchInput");
 const collateralSelectEl = document.getElementById("collateralSelect");
@@ -22,6 +23,7 @@ const visibleListingMap = new Map();
 let sortedListingsCache = [];
 let renderedListingsCount = 0;
 const LISTINGS_BATCH_SIZE = 40;
+let activityRowsCache = [];
 let oracleState = {
   ethUsd: null,
   ethUsdDecimals: null
@@ -439,6 +441,12 @@ function renderSales(rows) {
 }
 
 function renderActivity(rows) {
+  activityRowsCache = Array.isArray(rows) ? rows : [];
+  if (!activityDetailsEl?.open) {
+    activityBodyEl.innerHTML = "";
+    return;
+  }
+
   activityBodyEl.innerHTML = rows
     .slice(0, 120)
     .map((x) => `
@@ -452,6 +460,10 @@ function renderActivity(rows) {
       </tr>
     `)
     .join("");
+}
+
+function renderActivityFromCache() {
+  renderActivity(activityRowsCache);
 }
 
 async function loadDashboard() {
@@ -498,6 +510,11 @@ listingsWrapEl.addEventListener("scroll", () => {
   const nearBottom =
     listingsWrapEl.scrollTop + listingsWrapEl.clientHeight >= listingsWrapEl.scrollHeight - 120;
   if (nearBottom) appendListingsBatch();
+});
+activityDetailsEl?.addEventListener("toggle", () => {
+  if (activityDetailsEl.open) {
+    renderActivityFromCache();
+  }
 });
 listingsBodyEl.addEventListener("click", (event) => {
   const target = event.target;
