@@ -22,36 +22,47 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install deps
+        run: npm ci
+
       - name: Run indexer
+        id: indexer
+        continue-on-error: true
         run: |
           set -e
           attempts=0
-          until [ $attempts -ge 3 ]
+          until [ $attempts -ge 5 ]
           do
             attempts=$((attempts+1))
-            echo "Indexer attempt $attempts/3"
-            if npm run index; then
+            echo "Indexer attempt $attempts/5"
+            if npm run index && npm run index:puts; then
               echo "Indexer succeeded"
               break
             fi
-            if [ $attempts -lt 3 ]; then
-              echo "Indexer failed, retrying in 20s..."
-              sleep 20
+            if [ $attempts -lt 5 ]; then
+              echo "Indexer failed, retrying in 30s..."
+              sleep 30
             fi
           done
-          if [ $attempts -ge 3 ]; then
-            echo "Indexer failed after 3 attempts"
+          if [ $attempts -ge 5 ]; then
+            echo "Indexer failed after 5 attempts"
             exit 1
           fi
 
       - name: Commit updated metrics
+        if: steps.indexer.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/metrics.json data/state.json
+          git add public/data/metrics.json data/state.json public/data/puts-marketplace.json data/puts-state.json
           if git diff --cached --quiet; then
             echo "No metric changes"
             exit 0
           fi
           git commit -m "chore: update dashboard metrics"
           git push
+
+      - name: Skip cycle on RPC failure
+        if: steps.indexer.outcome != 'success'
+        run: |
+          echo "::warning::Indexer failed this cycle due to RPC issues. Keeping last good metrics snapshot."
