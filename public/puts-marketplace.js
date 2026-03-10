@@ -38,11 +38,34 @@ function shortAddr(value) {
   return `${value.slice(0, 6)}...${value.slice(-4)}`;
 }
 
-function fmtDateFromUnix(unix) {
+function fmtTimeUntil(unix) {
   if (!unix) return "--";
-  const d = new Date(Number(unix) * 1000);
-  if (Number.isNaN(d.valueOf())) return "--";
-  return d.toLocaleString();
+  const now = Math.floor(Date.now() / 1000);
+  const diff = Number(unix) - now;
+  if (!Number.isFinite(diff)) return "--";
+  if (diff <= 0) return "Expired";
+
+  const days = Math.floor(diff / 86400);
+  const hours = Math.floor((diff % 86400) / 3600);
+  const mins = Math.floor((diff % 3600) / 60);
+  if (days > 0) return `${days}d ${hours}h ${mins}m`;
+  if (hours > 0) return `${hours}h ${mins}m`;
+  return `${Math.max(1, mins)}m`;
+}
+
+function fmtTimeAgo(unix) {
+  if (!unix) return "--";
+  const now = Math.floor(Date.now() / 1000);
+  const diff = now - Number(unix);
+  if (!Number.isFinite(diff)) return "--";
+  if (diff < 0) return "just now";
+
+  const days = Math.floor(diff / 86400);
+  const hours = Math.floor((diff % 86400) / 3600);
+  const mins = Math.floor((diff % 3600) / 60);
+  if (days > 0) return `${days}d ${hours}h ago`;
+  if (hours > 0) return `${hours}h ${mins}m ago`;
+  return `${Math.max(1, mins)}m ago`;
 }
 
 function fmtDateIso(iso) {
@@ -339,7 +362,7 @@ function listingRowHtml(x) {
       <td>${x.put?.amountRemainingDisplay || "--"}</td>
       <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
       <td><span class="${premiumClass}">${premiumText}</span></td>
-      <td>${fmtDateFromUnix(x.expires)}</td>
+      <td>${fmtTimeUntil(x.expires)}</td>
       <td>${x.put?.ftDisplay || "--"}</td>
       <td><button class="buy-btn" data-token-id="${x.tokenId}" type="button">Buy</button></td>
     </tr>
@@ -433,7 +456,7 @@ function renderSales(rows) {
         <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
         <td>${shortAddr(x.seller)}</td>
         <td>${shortAddr(x.buyer)}</td>
-        <td>${fmtDateFromUnix(x.atUnix)}</td>
+        <td>${fmtTimeAgo(x.atUnix)}</td>
         <td><a href="${etherscanTx(x.txHash)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.txHash)}</a></td>
       </tr>
     `)
@@ -455,7 +478,7 @@ function renderActivity(rows) {
         <td>${x.tokenId ? `#${x.tokenId}` : "--"}</td>
         <td>${shortAddr(x.seller)}</td>
         <td>${Number(x.blockNumber || 0).toLocaleString()}</td>
-        <td>${fmtDateFromUnix(x.atUnix)}</td>
+        <td>${fmtTimeAgo(x.atUnix)}</td>
         <td><a href="${etherscanTx(x.txHash)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.txHash)}</a></td>
       </tr>
     `)
