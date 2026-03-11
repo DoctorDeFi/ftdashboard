@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24634735",
+  "lastBlock": "24635043",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -3643,11 +3643,11 @@
       "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "priceWei": "29500000000",
       "expires": 1773449279,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x09298e94fdc09f56d79fc092840cc6831247b912914d34f180ec750999e5a0ff",
-      "lastBlockNumber": 24630745,
-      "lastLogIndex": 105
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0x854b998c7e59b4029d7f19414cb7b726562f32276d543df292a5479659bd2a20",
+      "lastBlockNumber": 24634910,
+      "lastLogIndex": 490
     },
     "900": {
       "tokenId": "900",
@@ -13096,23 +13096,6 @@
   },
   "sales": [],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x211ac96c60e1ead7c67851f81ffd0cf6b01be316bfc07f4fa5e399c75f34d58e",
-      "blockNumber": 24395972,
-      "logIndex": 439,
-      "tokenId": "2792",
-      "seller": "0xc3dca6c1a257fe21612682bf4e0fd1a9b4c4c757",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "12578000000",
-        "expires": 1770963848
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0x694e93feba3599d3b3143dc4fb4bee82667483120037c85617db7db2335bca08",
@@ -54426,6 +54409,20 @@
         "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "priceWei": "220000000",
         "expires": 1773495694
+      }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0x854b998c7e59b4029d7f19414cb7b726562f32276d543df292a5479659bd2a20",
+      "blockNumber": 24634910,
+      "logIndex": 490,
+      "tokenId": "896",
+      "seller": "0x05d2791028ef228895a73802b8493011f88c6d33",
+      "atUnix": 1773240347,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
       }
     }
   ],
