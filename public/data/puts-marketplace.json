@@ -8,16 +8,16 @@
     ],
     "marketplace": "0x31248663adccdbcad155555b7717697b76cf570c",
     "ftPut": "0xa4215daaf3745e14e96e169e0e7706c479ce04f2",
-    "indexedThroughBlock": "24639988"
+    "indexedThroughBlock": "24640176"
   },
-  "updatedAt": "2026-03-12T07:48:46.826Z",
+  "updatedAt": "2026-03-12T08:28:38.923Z",
   "stats": {
     "activeListings": 412,
-    "expiredListings": 413,
-    "totalTrackedListings": 1096,
-    "totalSalesTracked": 0,
+    "expiredListings": 414,
+    "totalTrackedListings": 1097,
+    "totalSalesTracked": 103,
     "acceptedTokens": 4,
-    "scannedLogsInRun": 4
+    "scannedLogsInRun": 3044
   },
   "config": {
     "makerFeeBps": 10,
@@ -26,10 +26,10 @@
     "emergencyPaused": null
   },
   "oracle": {
-    "ethUsd": "204007398894",
-    "ethUsdDisplay": "2040.0739",
+    "ethUsd": "205090650500",
+    "ethUsdDisplay": "2050.9065",
     "ethUsdDecimals": 8,
-    "updatedAt": 1773300899,
+    "updatedAt": 1773303515,
     "source": "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
   },
   "acceptedTokens": [
@@ -23292,6 +23292,43 @@
       }
     },
     {
+      "tokenId": "112",
+      "seller": "0xaffa6f347fd9b49cdf2a1b48c2b7d2b782c4f5a8",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10900000000",
+      "expires": 1773908326,
+      "status": "active",
+      "lastAction": "ListingUpdate(heuristic)",
+      "lastTxHash": "0x505f683f7ff7e2fa1fed4b59799b4b81a3bc9bdb137541cce4028266975944e5",
+      "lastBlockNumber": 24640146,
+      "lastLogIndex": 1256,
+      "derivedStatus": "active",
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10900",
+      "put": {
+        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amountWei": "20000000000",
+        "ftWei": "99887904000000000000000",
+        "ftBoughtWei": "199775808000000000000000",
+        "withdrawnWei": "0",
+        "burnedWei": "99887904000000000000000",
+        "strikeWei": "99887904",
+        "amountRemainingWei": "10000000000",
+        "ftPerUsdWei": "1000000000",
+        "collateralMeta": {
+          "symbol": "USDT",
+          "decimals": 6
+        },
+        "amountDisplay": "20000",
+        "amountRemainingDisplay": "10000",
+        "ftDisplay": "99887.904",
+        "strikeDisplay": "0"
+      }
+    },
+    {
       "tokenId": "1066",
       "seller": "0x796af836fcfb2a9be1ab6b552dc253a5de3f78cb",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
@@ -23362,43 +23399,6 @@
         "amountDisplay": "8000",
         "amountRemainingDisplay": "8000",
         "ftDisplay": "79910.3232",
-        "strikeDisplay": "0"
-      }
-    },
-    {
-      "tokenId": "112",
-      "seller": "0xaffa6f347fd9b49cdf2a1b48c2b7d2b782c4f5a8",
-      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "priceWei": "11000000000",
-      "expires": 1773247355,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x2af7a3894822b16ea6d00a361191d84a8a9c033150e1ed534e16652971ff4442",
-      "lastBlockNumber": 24614013,
-      "lastLogIndex": 506,
-      "derivedStatus": "expired",
-      "paymentTokenMeta": {
-        "symbol": "USDT",
-        "decimals": 6
-      },
-      "priceDisplay": "11000",
-      "put": {
-        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "amountWei": "20000000000",
-        "ftWei": "99887904000000000000000",
-        "ftBoughtWei": "199775808000000000000000",
-        "withdrawnWei": "0",
-        "burnedWei": "99887904000000000000000",
-        "strikeWei": "99887904",
-        "amountRemainingWei": "10000000000",
-        "ftPerUsdWei": "1000000000",
-        "collateralMeta": {
-          "symbol": "USDT",
-          "decimals": 6
-        },
-        "amountDisplay": "20000",
-        "amountRemainingDisplay": "10000",
-        "ftDisplay": "99887.904",
         "strikeDisplay": "0"
       }
     },
@@ -25263,7 +25263,7 @@
       "lastTxHash": "0xd560b1d5fa7225f39b906a805d88199b5e1c9426c3631466ce85c8dc73c575a8",
       "lastBlockNumber": 24590004,
       "lastLogIndex": 441,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -25781,7 +25781,7 @@
       "lastTxHash": "0x6b499f5e8687f256e1d9421edf6c94ba4b86c48d81ed029f3d24cecc957534c7",
       "lastBlockNumber": 24590009,
       "lastLogIndex": 517,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -29656,6 +29656,43 @@
       }
     },
     {
+      "tokenId": "2251",
+      "seller": "0xfb4334a5704e29df37efc9f16255759670018d9a",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "102500000000",
+      "expires": 1773907059,
+      "status": "active",
+      "lastAction": "ListingUpdate(heuristic)",
+      "lastTxHash": "0x28e4b41ba11a5fa957f454d476dcfc2e8979d3e979482969ea2449a8ff04b938",
+      "lastBlockNumber": 24640047,
+      "lastLogIndex": 26,
+      "derivedStatus": "active",
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "102500",
+      "put": {
+        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amountWei": "100000000000",
+        "ftWei": "998412020000000000000000",
+        "ftBoughtWei": "998412020000000000000000",
+        "withdrawnWei": "0",
+        "burnedWei": "0",
+        "strikeWei": "99841202",
+        "amountRemainingWei": "100000000000",
+        "ftPerUsdWei": "1000000000",
+        "collateralMeta": {
+          "symbol": "USDT",
+          "decimals": 6
+        },
+        "amountDisplay": "100000",
+        "amountRemainingDisplay": "100000",
+        "ftDisplay": "998412.02",
+        "strikeDisplay": "0"
+      }
+    },
+    {
       "tokenId": "8214",
       "seller": "0xe27f08a01a3b1380866919ff768dfcf8cd7f3488",
       "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -30581,10 +30618,2105 @@
       }
     }
   ],
-  "salesRecent": [],
+  "salesRecent": [
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x58214b8ddcb6bc0f34730c8d694738f1de881f44ecf24c6f9f32d62a4196b278",
+      "blockNumber": 24639961,
+      "tokenId": "2755",
+      "seller": "0x9d8dc28e9d9c4c5a387a858182edf9ab8b90f565",
+      "buyer": "0xfa41ac2fea41d9d600d8fadd00836b4df27129a2",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10200000",
+      "makerFeeWei": "10200",
+      "takerFeeWei": "30600",
+      "atUnix": 1773301331,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10.2",
+      "makerFeeDisplay": "0.0102",
+      "takerFeeDisplay": "0.0306"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x007b3ef8903d04f08113a23e30971c6a632c44c11090613232cdb034b415eada",
+      "blockNumber": 24639779,
+      "tokenId": "4364",
+      "seller": "0x2c9fd19e4198214f40498169d99a323b0c029881",
+      "buyer": "0xbad27029207ea4e3ebdaff1507f50e1df807b123",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "486000000",
+      "makerFeeWei": "486000",
+      "takerFeeWei": "1458000",
+      "atUnix": 1773299135,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "486",
+      "makerFeeDisplay": "0.486",
+      "takerFeeDisplay": "1.458"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xc89002429e40c494e453ebcb06e6c6568676f579b8490aa8279ead7b1ce05221",
+      "blockNumber": 24637486,
+      "tokenId": "2348",
+      "seller": "0x6897fab4a74ee1ca8f942438796ffbbcf5063d3d",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "3102000000",
+      "makerFeeWei": "3102000",
+      "takerFeeWei": "9306000",
+      "atUnix": 1773271487,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "3102",
+      "makerFeeDisplay": "3.102",
+      "takerFeeDisplay": "9.306"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd2f724a22dd2c8142d440c5a12ed35893500ecaca9d140c1e26b2e44077b8517",
+      "blockNumber": 24626887,
+      "tokenId": "8855",
+      "seller": "0x94529e56c235c7f433ae501c7fcc9f1e462e72cc",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1023000000",
+      "makerFeeWei": "1023000",
+      "takerFeeWei": "3069000",
+      "atUnix": 1773143495,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1023",
+      "makerFeeDisplay": "1.023",
+      "takerFeeDisplay": "3.069"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xbc1c86f00075f7543fe01aebbf4d4f4b4b3005c803e4ee63d37d71a863ef5cef",
+      "blockNumber": 24624690,
+      "tokenId": "3443",
+      "seller": "0xe4317cf98fc92b050cbcf47266b65f883d9fcc3f",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "299800000",
+      "makerFeeWei": "299800",
+      "takerFeeWei": "899400",
+      "atUnix": 1773116951,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "299.8",
+      "makerFeeDisplay": "0.2998",
+      "takerFeeDisplay": "0.8994"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x4229c7e1c6765cf45e8d55a2061252501a20a2d3199a40c60a1881638eacbb25",
+      "blockNumber": 24619899,
+      "tokenId": "5699",
+      "seller": "0xb56f4c6273fdb10be7ee79b626c6328d41d18348",
+      "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1050000000",
+      "makerFeeWei": "1050000",
+      "takerFeeWei": "3150000",
+      "atUnix": 1773059087,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1050",
+      "makerFeeDisplay": "1.05",
+      "takerFeeDisplay": "3.15"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd8192be48f5714adf59494cef4882d7c4e5cf4bb00bc5dfcbbef76ed6fd5ffb4",
+      "blockNumber": 24613546,
+      "tokenId": "5700",
+      "seller": "0xb56f4c6273fdb10be7ee79b626c6328d41d18348",
+      "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "2100000000",
+      "makerFeeWei": "2100000",
+      "takerFeeWei": "6300000",
+      "atUnix": 1772982551,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "2100",
+      "makerFeeDisplay": "2.1",
+      "takerFeeDisplay": "6.3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfd57fce264364dccd090d3388c80ae4170eec7fdbaa7cb1f012f1c07bca3cbea",
+      "blockNumber": 24608393,
+      "tokenId": "231",
+      "seller": "0x60818418dafd7556a194cf096f67ed7e49de21a2",
+      "buyer": "0xc3df60c8ff9da0168deebf0dfa58089fc247d819",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1069000000",
+      "makerFeeWei": "1069000",
+      "takerFeeWei": "3207000",
+      "atUnix": 1772920511,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1069",
+      "makerFeeDisplay": "1.069",
+      "takerFeeDisplay": "3.207"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x388d176a34d05a45bc23b25aee5d1249c2e3df3d610c9213bea7d719c02d17df",
+      "blockNumber": 24584930,
+      "tokenId": "5652",
+      "seller": "0xbb1d0b40619020b0e1e5fee7a12b70bf55970e23",
+      "buyer": "0x03f0cda88414b8da9cc7457e9760770858863c32",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "108000000",
+      "makerFeeWei": "108000",
+      "takerFeeWei": "324000",
+      "atUnix": 1772637359,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "108",
+      "makerFeeDisplay": "0.108",
+      "takerFeeDisplay": "0.324"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x77c302ac24fd89631350802190240f69f1b02ac7db6527c2ff3f3b2da06e9e93",
+      "blockNumber": 24578624,
+      "tokenId": "692",
+      "seller": "0x111a5fa62436b8291ba5aaf243e6f357a0e9d116",
+      "buyer": "0xe7bde32e06d06349652f3ce97ff1e97d0fb7d8e0",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "10300000000",
+      "makerFeeWei": "10300000",
+      "takerFeeWei": "30900000",
+      "atUnix": 1772561363,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "10300",
+      "makerFeeDisplay": "10.3",
+      "takerFeeDisplay": "30.9"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x596ac699a146c049f6d6da8e6742a505cdb2257f3593669bbd4986cc0b6d2a0f",
+      "blockNumber": 24577822,
+      "tokenId": "135",
+      "seller": "0x238cd0f5439de2f950cccea45ebbe40f515a75e9",
+      "buyer": "0xe88073519fabbdeab9ff0227d96113887d68ef00",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "5250000000",
+      "makerFeeWei": "5250000",
+      "takerFeeWei": "15750000",
+      "atUnix": 1772551691,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "5250",
+      "makerFeeDisplay": "5.25",
+      "takerFeeDisplay": "15.75"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xc9b54b85b6f5318985f5622b035088d6116e4ec2e825116eef4dff00c08f17ed",
+      "blockNumber": 24572541,
+      "tokenId": "7599",
+      "seller": "0x8601fd426c2253ed41d7eead5b098cb6b27f473e",
+      "buyer": "0xfa585025f0ac65a4c4bd3191b48c1ef576c844e9",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "217000000",
+      "makerFeeWei": "217000",
+      "takerFeeWei": "651000",
+      "atUnix": 1772488019,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "217",
+      "makerFeeDisplay": "0.217",
+      "takerFeeDisplay": "0.651"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x7e342fc93ebead2bccdd0433d573f12fe3c307bd6d76a61266b98c7716edfb69",
+      "blockNumber": 24570179,
+      "tokenId": "8257",
+      "seller": "0xfcd416b43f51c8a1ee2f966ef9c51392e9e83566",
+      "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "348000000",
+      "makerFeeWei": "348000",
+      "takerFeeWei": "1044000",
+      "atUnix": 1772459555,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "348",
+      "makerFeeDisplay": "0.348",
+      "takerFeeDisplay": "1.044"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x9c5fa7132dda1fdda09ef07332036a20f9dd7b4331aacf5921dee7d50cd09345",
+      "blockNumber": 24568220,
+      "tokenId": "7916",
+      "seller": "0xac4dd773b0e88caa7e5d1fa75d3605ab1bd557a7",
+      "buyer": "0xc3df60c8ff9da0168deebf0dfa58089fc247d819",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "750000000",
+      "makerFeeWei": "750000",
+      "takerFeeWei": "2250000",
+      "atUnix": 1772435927,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "750",
+      "makerFeeDisplay": "0.75",
+      "takerFeeDisplay": "2.25"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xaa1ea8f19013abed6661809ff52704335d86e8e0d84fe67945dc821394eb739f",
+      "blockNumber": 24564802,
+      "tokenId": "641",
+      "seller": "0x33d40133bf329746246c20877dba7644e20384b3",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "3020000000",
+      "makerFeeWei": "3020000",
+      "takerFeeWei": "9060000",
+      "atUnix": 1772394695,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "3020",
+      "makerFeeDisplay": "3.02",
+      "takerFeeDisplay": "9.06"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x9604110b5607498f88376fb86d53f197e1a8ec3dbf385707020892bce3262dcc",
+      "blockNumber": 24564722,
+      "tokenId": "7951",
+      "seller": "0x8b7269229dda5a3dad90bf09a39f8c77716eceeb",
+      "buyer": "0xc3df60c8ff9da0168deebf0dfa58089fc247d819",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "109000000",
+      "makerFeeWei": "109000",
+      "takerFeeWei": "327000",
+      "atUnix": 1772393735,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "109",
+      "makerFeeDisplay": "0.109",
+      "takerFeeDisplay": "0.327"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xeef78029065196c481864dab2fbd662521183b4b349fbe0141854d19b6bc2119",
+      "blockNumber": 24551408,
+      "tokenId": "3820",
+      "seller": "0xda2b19b47232f53806e5ddacfda027ecec5684e1",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "286000000",
+      "makerFeeWei": "286000",
+      "takerFeeWei": "858000",
+      "atUnix": 1772233163,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "286",
+      "makerFeeDisplay": "0.286",
+      "takerFeeDisplay": "0.858"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x25ff465182ffe625424e3d49fe88bcbfa85c08ec847db733318ef5b7044c62bf",
+      "blockNumber": 24551357,
+      "tokenId": "921",
+      "seller": "0x73bb3d7b734b1fff3625f1818cf8d5addb2a90d1",
+      "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "353760000",
+      "makerFeeWei": "353760",
+      "takerFeeWei": "1061280",
+      "atUnix": 1772232551,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "353.76",
+      "makerFeeDisplay": "0.3537",
+      "takerFeeDisplay": "1.0612"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x2824d3972fe853e2d8b52e865841cda421295b493ab44b1226ceacbf0d4dc938",
+      "blockNumber": 24547469,
+      "tokenId": "2764",
+      "seller": "0xdcfd705888f91a62782558535fac716cc9ae4b4d",
+      "buyer": "0x4df8ba330d1fadfd2c4ece1b464b38c34f900d72",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "90000000",
+      "makerFeeWei": "90000",
+      "takerFeeWei": "270000",
+      "atUnix": 1772185715,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "90",
+      "makerFeeDisplay": "0.09",
+      "takerFeeDisplay": "0.27"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x861a95666553eb854f817bab0fc53142be58aa525966780bd70ac64a03b1396c",
+      "blockNumber": 24534430,
+      "tokenId": "6328",
+      "seller": "0x56208b2dfa1743384ab81aabde83df8fc4e3c1f0",
+      "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1000000000",
+      "makerFeeWei": "1000000",
+      "takerFeeWei": "3000000",
+      "atUnix": 1772028527,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1000",
+      "makerFeeDisplay": "1",
+      "takerFeeDisplay": "3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xf67c8cf0e2639a694a13b2e657f7265c123aab91ede2164b8d9a09cb299dc39c",
+      "blockNumber": 24534324,
+      "tokenId": "5221",
+      "seller": "0x5a673293ec90e965bc57e5001a439bd7275eb05e",
+      "buyer": "0x7303ff5f13568aace1ab077e3f52d372e961b279",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "10100000000",
+      "makerFeeWei": "10100000",
+      "takerFeeWei": "30300000",
+      "atUnix": 1772027255,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "10100",
+      "makerFeeDisplay": "10.1",
+      "takerFeeDisplay": "30.3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x71a7ec49cb9782d9f473f1104ef4809028625e71572f234854507b30c732dda2",
+      "blockNumber": 24534250,
+      "tokenId": "4801",
+      "seller": "0xe462053d2fb0630b3336d9518adaace4f0657b2c",
+      "buyer": "0x1c1eee38fafcd3ad45acc24713a6986db7067e61",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1923000000",
+      "makerFeeWei": "1923000",
+      "takerFeeWei": "5769000",
+      "atUnix": 1772026367,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1923",
+      "makerFeeDisplay": "1.923",
+      "takerFeeDisplay": "5.769"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xa6bbe77471dee92dc5d2a3f6348e66007245e9042cb4ebe21be074328b5b7567",
+      "blockNumber": 24534233,
+      "tokenId": "5572",
+      "seller": "0xba0d95449b5e901cfb938fa6b6601281cef679a4",
+      "buyer": "0xa73eaf66656270cc2b27304a170a3acbd666b54b",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "26000000000",
+      "makerFeeWei": "26000000",
+      "takerFeeWei": "78000000",
+      "atUnix": 1772026163,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "26000",
+      "makerFeeDisplay": "26",
+      "takerFeeDisplay": "78"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x24978b0c2bde40fd030ab77d10eda84f5a504672138df5111df6d34c1d18685b",
+      "blockNumber": 24534150,
+      "tokenId": "5319",
+      "seller": "0x927733c4fd22e58fb5de4f64a8da91a1732f6b6e",
+      "buyer": "0xf85a264c080f51030aef2c05e1ab1485cc4b0118",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1400000000",
+      "makerFeeWei": "1400000",
+      "takerFeeWei": "4200000",
+      "atUnix": 1772025155,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1400",
+      "makerFeeDisplay": "1.4",
+      "takerFeeDisplay": "4.2"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x7f54ddb3e89c7550d64ca559fb66142f863deecf4adc3a62a524fe11d1ce32ad",
+      "blockNumber": 24534140,
+      "tokenId": "5040",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xf85a264c080f51030aef2c05e1ab1485cc4b0118",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "450000000",
+      "makerFeeWei": "450000",
+      "takerFeeWei": "1350000",
+      "atUnix": 1772025023,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "450",
+      "makerFeeDisplay": "0.45",
+      "takerFeeDisplay": "1.35"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x307174fe2499f18d5491c314bffd3dadb8f091745d35a23a440f87b0b75f5aa3",
+      "blockNumber": 24534136,
+      "tokenId": "5041",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xf85a264c080f51030aef2c05e1ab1485cc4b0118",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "350000000",
+      "makerFeeWei": "350000",
+      "takerFeeWei": "1050000",
+      "atUnix": 1772024975,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "350",
+      "makerFeeDisplay": "0.35",
+      "takerFeeDisplay": "1.05"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x96f249e9fcd1fc8e1d9d5c85ebe0017bc2f50a31f7a54a63ea9b751b23d9d07b",
+      "blockNumber": 24534133,
+      "tokenId": "5235",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xf85a264c080f51030aef2c05e1ab1485cc4b0118",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "225000000",
+      "makerFeeWei": "225000",
+      "takerFeeWei": "675000",
+      "atUnix": 1772024939,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "225",
+      "makerFeeDisplay": "0.225",
+      "takerFeeDisplay": "0.675"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xcacaec86f08fbed9f9f7949391fc61306dfee49648f9626f6c36790cd569d399",
+      "blockNumber": 24532666,
+      "tokenId": "7565",
+      "seller": "0xc2e926417df0866877cc67da49f728f4928c2c65",
+      "buyer": "0x183210a4599f04a8c8a2470d5d28eeb7020edb0c",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "196000000",
+      "makerFeeWei": "196000",
+      "takerFeeWei": "588000",
+      "atUnix": 1772007299,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "196",
+      "makerFeeDisplay": "0.196",
+      "takerFeeDisplay": "0.588"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x747984042a4b47d1e06a69996513ff9683c7e33eff3f44919bed3197aed59ddf",
+      "blockNumber": 24532412,
+      "tokenId": "8875",
+      "seller": "0x505042ff781ea1689e44e1d200efd691c30db86c",
+      "buyer": "0x0007e87816dda66aba6a6ff4c3c908429ba92775",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "495000000",
+      "makerFeeWei": "495000",
+      "takerFeeWei": "1485000",
+      "atUnix": 1772004239,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "495",
+      "makerFeeDisplay": "0.495",
+      "takerFeeDisplay": "1.485"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xefcf7ac2e075cff499e888cd62dde775e50fc1ad2ae44df563b241b796881896",
+      "blockNumber": 24530190,
+      "tokenId": "3879",
+      "seller": "0x0741cfb53bfce6e273bd48afe1f61e58999fc23f",
+      "buyer": "0x966bd381bba921b6728c5548f0bcd01ce3381974",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "200000000",
+      "makerFeeWei": "200000",
+      "takerFeeWei": "600000",
+      "atUnix": 1771977443,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "200",
+      "makerFeeDisplay": "0.2",
+      "takerFeeDisplay": "0.6"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xdc0d1eb7916dbee818eaa76e7f696433862fa72ef9c111aff4a958dd210feed9",
+      "blockNumber": 24528951,
+      "tokenId": "4211",
+      "seller": "0x4cae9e12ae14c3dc779143b15db297e7efc79573",
+      "buyer": "0x5a3d55f8acbcefb517bbeb181c612712904831c4",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "100000",
+      "makerFeeWei": "100",
+      "takerFeeWei": "300",
+      "atUnix": 1771962479,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "0.1",
+      "makerFeeDisplay": "0.0001",
+      "takerFeeDisplay": "0.0003"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xeb83dbc510f05bcd4534e85739ebb9381d264ce5e00943874f8a8de0a61f7fd7",
+      "blockNumber": 24528238,
+      "tokenId": "5889",
+      "seller": "0x894e8ebed5b42192f9520b88ad691ea2e61db3e5",
+      "buyer": "0x98c1803ff7ab06224b0042c191e7ce45da3307d3",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "82000000",
+      "makerFeeWei": "82000",
+      "takerFeeWei": "246000",
+      "atUnix": 1771953911,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "82",
+      "makerFeeDisplay": "0.082",
+      "takerFeeDisplay": "0.246"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x003da4446c25641c2d52aa158a473d2bbf1f7eef11d87523cc407350bcd8833e",
+      "blockNumber": 24526603,
+      "tokenId": "5556",
+      "seller": "0xe36bd2e26a159465384f28fa9468733d35f8924a",
+      "buyer": "0x125dbe70459b36a4c71664dcc97224eafeb4aee0",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "16250000000",
+      "makerFeeWei": "16250000",
+      "takerFeeWei": "48750000",
+      "atUnix": 1771934195,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "16250",
+      "makerFeeDisplay": "16.25",
+      "takerFeeDisplay": "48.75"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x878386421d297b991c4b127085aa4cfbb3eebaa6df924dfaf4714c08e8ef6273",
+      "blockNumber": 24526277,
+      "tokenId": "5655",
+      "seller": "0xc8785c18f948dbb4e27c64138e252f4e8c35ebbc",
+      "buyer": "0x125dbe70459b36a4c71664dcc97224eafeb4aee0",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "10000000000",
+      "makerFeeWei": "10000000",
+      "takerFeeWei": "30000000",
+      "atUnix": 1771930271,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "10000",
+      "makerFeeDisplay": "10",
+      "takerFeeDisplay": "30"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x4c8100853e1e2ae8a11a009ba5ac00ed6c89d3400fbe4d5e784eee301e0f1bae",
+      "blockNumber": 24523595,
+      "tokenId": "299",
+      "seller": "0x05ac1d2062a432784de978f17015fc0e21abb499",
+      "buyer": "0x305cd30360904ce2886642b64773ec52a5b50544",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "21250000000",
+      "makerFeeWei": "21250000",
+      "takerFeeWei": "63750000",
+      "atUnix": 1771898003,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "21250",
+      "makerFeeDisplay": "21.25",
+      "takerFeeDisplay": "63.75"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xbabca3b0da10b9b5b4034b144811d62588852e3f62f31a472dc757bbd67dfabc",
+      "blockNumber": 24523559,
+      "tokenId": "8502",
+      "seller": "0xf29f7fc9a7bf16ba05615df2adcdaf7f976f6849",
+      "buyer": "0x305cd30360904ce2886642b64773ec52a5b50544",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "50300000000",
+      "makerFeeWei": "50300000",
+      "takerFeeWei": "150900000",
+      "atUnix": 1771897571,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "50300",
+      "makerFeeDisplay": "50.3",
+      "takerFeeDisplay": "150.9"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x91a3e0efdb9b22997784591e53298c4b063a1f27a165fb4763d8ffdf7304335c",
+      "blockNumber": 24519436,
+      "tokenId": "5289",
+      "seller": "0x3f5414d4ac2495348dda268be08046110be853f0",
+      "buyer": "0xaa43599fbcd3c655f6fe6e69dba8477062f4efad",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "2100000",
+      "makerFeeWei": "2100",
+      "takerFeeWei": "6300",
+      "atUnix": 1771847867,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "2.1",
+      "makerFeeDisplay": "0.0021",
+      "takerFeeDisplay": "0.0063"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xeba1eb3e3d2172295d3cbb53af9a1cfd27ba57f2fdbfd34194891365d36ad6e8",
+      "blockNumber": 24519113,
+      "tokenId": "8996",
+      "seller": "0x9a0f53b736b41126f834eaf6d09813c7a652e83a",
+      "buyer": "0xb463d1668532d884245a301abdef9b35ed777701",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10000000",
+      "makerFeeWei": "10000",
+      "takerFeeWei": "30000",
+      "atUnix": 1771843967,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10",
+      "makerFeeDisplay": "0.01",
+      "takerFeeDisplay": "0.03"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xbc4fb380e3a0d55dbaf7c8a6f81d4d8947c0c0c8e9262cbc0ee1ab0197df5077",
+      "blockNumber": 24491578,
+      "tokenId": "4728",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xf3b1b489656b04f815c98224a051db96cb523aa2",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "220000000",
+      "makerFeeWei": "220000",
+      "takerFeeWei": "660000",
+      "atUnix": 1771512347,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "220",
+      "makerFeeDisplay": "0.22",
+      "takerFeeDisplay": "0.66"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x242696ed2e0663c083ba17d5d5e2a6e05ab4795582496deb5fdaecc20f9964a6",
+      "blockNumber": 24491537,
+      "tokenId": "4838",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xf3b1b489656b04f815c98224a051db96cb523aa2",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "150000000",
+      "makerFeeWei": "150000",
+      "takerFeeWei": "450000",
+      "atUnix": 1771511855,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "150",
+      "makerFeeDisplay": "0.15",
+      "takerFeeDisplay": "0.45"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x6c68bd31a00cdcf197375cc1ee751d08ba040a502d71bd4d01becb54e3bacef5",
+      "blockNumber": 24489197,
+      "tokenId": "5197",
+      "seller": "0xc8785c18f948dbb4e27c64138e252f4e8c35ebbc",
+      "buyer": "0xa5610d14159758172b052f44f9be1652a60b27b5",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "24900000",
+      "makerFeeWei": "24900",
+      "takerFeeWei": "74700",
+      "atUnix": 1771483691,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "24.9",
+      "makerFeeDisplay": "0.0249",
+      "takerFeeDisplay": "0.0747"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfa184febf84b3f2efd1f7eeda520c1f94330fca5d1d59a2d513d44a1b4c14ed1",
+      "blockNumber": 24486584,
+      "tokenId": "4531",
+      "seller": "0xcf7e33c0291f98751356e8fb22b5fa8206b24bd4",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1100000000",
+      "makerFeeWei": "1100000",
+      "takerFeeWei": "3300000",
+      "atUnix": 1771452167,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1100",
+      "makerFeeDisplay": "1.1",
+      "takerFeeDisplay": "3.3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xb0255d3b1a4af7b332204665499f06c230b498807349e3b1d9d9f9812b7a48af",
+      "blockNumber": 24465118,
+      "tokenId": "4724",
+      "seller": "0x63fefc73c8281b8034287c1e85aa459c78b291ed",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "290000000",
+      "makerFeeWei": "290000",
+      "takerFeeWei": "870000",
+      "atUnix": 1771193579,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "290",
+      "makerFeeDisplay": "0.29",
+      "takerFeeDisplay": "0.87"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfc8fadd8fb84f697e8bd29aaedde7bd0614c25d948b726d7563b8a28ae8526d5",
+      "blockNumber": 24464983,
+      "tokenId": "4420",
+      "seller": "0xe10464e5d54c6b192397ebbecef47cdcec435866",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "570000000",
+      "makerFeeWei": "570000",
+      "takerFeeWei": "1710000",
+      "atUnix": 1771191959,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "570",
+      "makerFeeDisplay": "0.57",
+      "takerFeeDisplay": "1.71"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfa1a3b0bb8aa8f45be8da3718b38f5a4a489be19572d20d5c436f029b0ce5a31",
+      "blockNumber": 24464981,
+      "tokenId": "5233",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "112000000",
+      "makerFeeWei": "112000",
+      "takerFeeWei": "336000",
+      "atUnix": 1771191935,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "112",
+      "makerFeeDisplay": "0.112",
+      "takerFeeDisplay": "0.336"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x0fd43208056f238207b96a82f063a493a56c219138175fea9978375f6ea72933",
+      "blockNumber": 24463115,
+      "tokenId": "5251",
+      "seller": "0x6c76639d0a0aaf9699c4ac84795b4e571865275a",
+      "buyer": "0xc8b2b6ed837c3f8c7487aaac051249937391763e",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1000000000",
+      "makerFeeWei": "1000000",
+      "takerFeeWei": "3000000",
+      "atUnix": 1771169471,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1000",
+      "makerFeeDisplay": "1",
+      "takerFeeDisplay": "3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xc840f64e412b5ddf8d5efc71b88be45e9364d957a63d362b663b3bb8f0a7e0b6",
+      "blockNumber": 24463088,
+      "tokenId": "5250",
+      "seller": "0x6c76639d0a0aaf9699c4ac84795b4e571865275a",
+      "buyer": "0xc8b2b6ed837c3f8c7487aaac051249937391763e",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1000000000",
+      "makerFeeWei": "1000000",
+      "takerFeeWei": "3000000",
+      "atUnix": 1771169135,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1000",
+      "makerFeeDisplay": "1",
+      "takerFeeDisplay": "3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x9eea9ab41ff182b7a56c564773cfe7217aece58527bd1c357f60d5ffc41974a4",
+      "blockNumber": 24462150,
+      "tokenId": "5042",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "225000000",
+      "makerFeeWei": "225000",
+      "takerFeeWei": "675000",
+      "atUnix": 1771157843,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "225",
+      "makerFeeDisplay": "0.225",
+      "takerFeeDisplay": "0.675"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x8b3eae164099b94de4666ac1d3a9f349e39a308bfa3a28cbaac34b0be033b299",
+      "blockNumber": 24462147,
+      "tokenId": "5043",
+      "seller": "0xa0e4c3f8b0d379c5e5cc0a954e6cb6f61ea341b3",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "111000000",
+      "makerFeeWei": "111000",
+      "takerFeeWei": "333000",
+      "atUnix": 1771157807,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "111",
+      "makerFeeDisplay": "0.111",
+      "takerFeeDisplay": "0.333"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x153ce24d44f1401783cbddadd5546f1564d78dd96f9cab0a39c203793ff240aa",
+      "blockNumber": 24461691,
+      "tokenId": "3149",
+      "seller": "0x15c19891936f73692c492a42c247cf4569fde7c4",
+      "buyer": "0xc8b2b6ed837c3f8c7487aaac051249937391763e",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "200000",
+      "makerFeeWei": "200",
+      "takerFeeWei": "600",
+      "atUnix": 1771152323,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "0.2",
+      "makerFeeDisplay": "0.0002",
+      "takerFeeDisplay": "0.0006"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xe9fb92d07dbab15083dfd7c83634f7bccb9f15335c04a76948a46a8f76a0b425",
+      "blockNumber": 24461343,
+      "tokenId": "4810",
+      "seller": "0x7166e150f90aea3d17259a5d82c92a07c9da773b",
+      "buyer": "0xa5610d14159758172b052f44f9be1652a60b27b5",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "15000000",
+      "makerFeeWei": "15000",
+      "takerFeeWei": "45000",
+      "atUnix": 1771148135,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "15",
+      "makerFeeDisplay": "0.015",
+      "takerFeeDisplay": "0.045"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x69efd8f0ea826c97311d348fb1eaba85348d7791d4a9c56fc50f94a09dd7a828",
+      "blockNumber": 24461283,
+      "tokenId": "5059",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0xa5610d14159758172b052f44f9be1652a60b27b5",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "106000000",
+      "makerFeeWei": "106000",
+      "takerFeeWei": "318000",
+      "atUnix": 1771147403,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "106",
+      "makerFeeDisplay": "0.106",
+      "takerFeeDisplay": "0.318"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x7a7cbdb2a320e8e54babae3f43116b4c68af069d14bc67d045f3f882953cb7a7",
+      "blockNumber": 24458535,
+      "tokenId": "2584",
+      "seller": "0x0b6d10c57f53efb9f1e92db5373263f69606a394",
+      "buyer": "0xfe5210e5123b68f15dc22ec7ebfd85015a8706ab",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "5800000",
+      "makerFeeWei": "5800",
+      "takerFeeWei": "17400",
+      "atUnix": 1771114319,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "5.8",
+      "makerFeeDisplay": "0.0058",
+      "takerFeeDisplay": "0.0174"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xe160a8de2716b3f969e496d6fca92a97ac5cb777b71a27b1ec8d01f901fd22c5",
+      "blockNumber": 24458380,
+      "tokenId": "5049",
+      "seller": "0x44494524f57dd2e3d9ab46a520aac74dd1d15876",
+      "buyer": "0xe84dcc9febd47c41583a7274ebbc06f2f0b12bb6",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "2100000000",
+      "makerFeeWei": "2100000",
+      "takerFeeWei": "6300000",
+      "atUnix": 1771112459,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "2100",
+      "makerFeeDisplay": "2.1",
+      "takerFeeDisplay": "6.3"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xe60052ea715b50172b51f94372ed440974761d9a15ae3acab70486e6ad4883d6",
+      "blockNumber": 24457450,
+      "tokenId": "4184",
+      "seller": "0x2e3341a5140f68d48aceaf44d94fe5b753d9fe2f",
+      "buyer": "0xfe5210e5123b68f15dc22ec7ebfd85015a8706ab",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "102000000",
+      "makerFeeWei": "102000",
+      "takerFeeWei": "306000",
+      "atUnix": 1771101263,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "102",
+      "makerFeeDisplay": "0.102",
+      "takerFeeDisplay": "0.306"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xc3e405b9396b6cf1df305cfc5bdf5dcd4815f0de866d7da1b7ebc9415391f4d2",
+      "blockNumber": 24457173,
+      "tokenId": "5115",
+      "seller": "0x3b1745629db898579390651ab9f53bef6a0ee421",
+      "buyer": "0xfe5210e5123b68f15dc22ec7ebfd85015a8706ab",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "15000000",
+      "makerFeeWei": "15000",
+      "takerFeeWei": "45000",
+      "atUnix": 1771097939,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "15",
+      "makerFeeDisplay": "0.015",
+      "takerFeeDisplay": "0.045"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x477ea88fecd666180419c2156f887c78ab3712234b5dee7e1f627737a39936b2",
+      "blockNumber": 24453607,
+      "tokenId": "3117",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x7717817ceef51dc93d68f33c00f2b561332dcf5c",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1045000000",
+      "makerFeeWei": "1045000",
+      "takerFeeWei": "3135000",
+      "atUnix": 1771054991,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1045",
+      "makerFeeDisplay": "1.045",
+      "takerFeeDisplay": "3.135"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xa43749b6901b8dc619993a721e0123309912f5505d2ff7d384befb1fbc38e93a",
+      "blockNumber": 24452403,
+      "tokenId": "4897",
+      "seller": "0x3b1745629db898579390651ab9f53bef6a0ee421",
+      "buyer": "0x8802784d4ef3819d9dfbb195bc571d771b31b342",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10000000",
+      "makerFeeWei": "10000",
+      "takerFeeWei": "30000",
+      "atUnix": 1771040495,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10",
+      "makerFeeDisplay": "0.01",
+      "takerFeeDisplay": "0.03"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x76c2418a70e9330d28aa840682a1820812a8a062a77f8143a545505735d73ed1",
+      "blockNumber": 24452168,
+      "tokenId": "4658",
+      "seller": "0xec0e3008415e92e4c6bdf81ce02b3e926990d950",
+      "buyer": "0x1cb984af1786f099adb903718976ed30cdef7d87",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "427000000",
+      "makerFeeWei": "427000",
+      "takerFeeWei": "1281000",
+      "atUnix": 1771037651,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "427",
+      "makerFeeDisplay": "0.427",
+      "takerFeeDisplay": "1.281"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x346a9c57116868d9a94239cca07d5bdc8351d37f084016ea555d0938951c3627",
+      "blockNumber": 24451950,
+      "tokenId": "3162",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x3d6991085ab1ae3926cb96f25684c40a364b6856",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "127000000",
+      "makerFeeWei": "127000",
+      "takerFeeWei": "381000",
+      "atUnix": 1771035035,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "127",
+      "makerFeeDisplay": "0.127",
+      "takerFeeDisplay": "0.381"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x4c11e93116413ede62d957a145c857adede2677750bb574f9031ef85bd2a0cca",
+      "blockNumber": 24451565,
+      "tokenId": "4946",
+      "seller": "0x1b403a8597683979d5fa85d0d04e4040356006a3",
+      "buyer": "0x497d28aed2704306797625418a4a587216301af1",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "115000000",
+      "makerFeeWei": "115000",
+      "takerFeeWei": "345000",
+      "atUnix": 1771030379,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "115",
+      "makerFeeDisplay": "0.115",
+      "takerFeeDisplay": "0.345"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xac7dbaae1291b5d494284cb6fbb4ba81f53135583726d18c76c561a1008f25c7",
+      "blockNumber": 24447058,
+      "tokenId": "4771",
+      "seller": "0xdb5c4e8cae41d3bc2d7153e929a9961a8897e959",
+      "buyer": "0x24357a72a8269c4ada906deaf7968483acc29755",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "60000000",
+      "makerFeeWei": "60000",
+      "takerFeeWei": "180000",
+      "atUnix": 1770976031,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "60",
+      "makerFeeDisplay": "0.06",
+      "takerFeeDisplay": "0.18"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x7fc9920b673193d74a62c8d7454be47ac741d41596a7eae920b0a1c69bcab35c",
+      "blockNumber": 24444123,
+      "tokenId": "2838",
+      "seller": "0xdef7c0edd5701da7ccc1730135238aa1eab8af36",
+      "buyer": "0x138ab55ffe712dd893675fbf58d9b4239a6dfe7d",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "60000000",
+      "makerFeeWei": "60000",
+      "takerFeeWei": "180000",
+      "atUnix": 1770940619,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "60",
+      "makerFeeDisplay": "0.06",
+      "takerFeeDisplay": "0.18"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x430fa07df30d910e3342774c143110fb0874ab753cbd018d29756a55b84e99ec",
+      "blockNumber": 24443620,
+      "tokenId": "4644",
+      "seller": "0x3b1745629db898579390651ab9f53bef6a0ee421",
+      "buyer": "0x138ab55ffe712dd893675fbf58d9b4239a6dfe7d",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "6000000",
+      "makerFeeWei": "6000",
+      "takerFeeWei": "18000",
+      "atUnix": 1770934583,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "6",
+      "makerFeeDisplay": "0.006",
+      "takerFeeDisplay": "0.018"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x216ebfbd63dc936f8c5ebc4bff694ae83b4dede5041c6b19071f4507de5154fc",
+      "blockNumber": 24439248,
+      "tokenId": "4702",
+      "seller": "0xdb5c4e8cae41d3bc2d7153e929a9961a8897e959",
+      "buyer": "0x1bb50ed66815a1fa436920f4bc5fee983b31a25e",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "20000000",
+      "makerFeeWei": "20000",
+      "takerFeeWei": "60000",
+      "atUnix": 1770881831,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "20",
+      "makerFeeDisplay": "0.02",
+      "takerFeeDisplay": "0.06"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfcebaf30c02a9cdef235c35b3344b8b0c78f47a8277ac7c115913243d4656c3f",
+      "blockNumber": 24436435,
+      "tokenId": "4683",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "399000000",
+      "makerFeeWei": "399000",
+      "takerFeeWei": "1197000",
+      "atUnix": 1770847931,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "399",
+      "makerFeeDisplay": "0.399",
+      "takerFeeDisplay": "1.197"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xa165f1fd045e1936015e46d21fbfae3614982f81e7f4aef876de10ecfe7b2064",
+      "blockNumber": 24436423,
+      "tokenId": "4710",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "175000000",
+      "makerFeeWei": "175000",
+      "takerFeeWei": "525000",
+      "atUnix": 1770847787,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "175",
+      "makerFeeDisplay": "0.175",
+      "takerFeeDisplay": "0.525"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xa587f670a2251cbfbc83afe60491e87fc398c83e09cf1660931636510b9ffa29",
+      "blockNumber": 24436418,
+      "tokenId": "4707",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "240000000",
+      "makerFeeWei": "240000",
+      "takerFeeWei": "720000",
+      "atUnix": 1770847727,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "240",
+      "makerFeeDisplay": "0.24",
+      "takerFeeDisplay": "0.72"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xbda92c2cfa314b5da75d6bde0993d1798c37b47adddef271beab7d81131842e0",
+      "blockNumber": 24435244,
+      "tokenId": "3307",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "160000000",
+      "makerFeeWei": "160000",
+      "takerFeeWei": "480000",
+      "atUnix": 1770833579,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "160",
+      "makerFeeDisplay": "0.16",
+      "takerFeeDisplay": "0.48"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x6a5c5ae0c18ac7882943bf7cf233bf665e685976d39f394f3e47eecc2064c130",
+      "blockNumber": 24435218,
+      "tokenId": "4682",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xd62ca14e0d1a4b7d00b47c71605b24eb29dd4921",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "220000000",
+      "makerFeeWei": "220000",
+      "takerFeeWei": "660000",
+      "atUnix": 1770833267,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "220",
+      "makerFeeDisplay": "0.22",
+      "takerFeeDisplay": "0.66"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x41a7b8033c4c3105f576198a6756b2f81df10479766c6053be39383ee5e376e9",
+      "blockNumber": 24433166,
+      "tokenId": "3000",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0x497d28aed2704306797625418a4a587216301af1",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "555000000",
+      "makerFeeWei": "555000",
+      "takerFeeWei": "1665000",
+      "atUnix": 1770808523,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "555",
+      "makerFeeDisplay": "0.555",
+      "takerFeeDisplay": "1.665"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xc08487a858fb02d958c924bf682095cd61097d8fd94bb0a3e0e841dea9a33036",
+      "blockNumber": 24432723,
+      "tokenId": "4434",
+      "seller": "0x61beefcd86e1750cc9376b79c651c204efebb9dc",
+      "buyer": "0x497d28aed2704306797625418a4a587216301af1",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "500000000",
+      "makerFeeWei": "500000",
+      "takerFeeWei": "1500000",
+      "atUnix": 1770803183,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "500",
+      "makerFeeDisplay": "0.5",
+      "takerFeeDisplay": "1.5"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x3d159fd968458e5e5362f19bc4438948042dce3abe1bb2f688353b11ad6ecc48",
+      "blockNumber": 24432719,
+      "tokenId": "4437",
+      "seller": "0xb554e7787280ad7e40f7e191ddb6e62817cf4953",
+      "buyer": "0x497d28aed2704306797625418a4a587216301af1",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "598000000",
+      "makerFeeWei": "598000",
+      "takerFeeWei": "1794000",
+      "atUnix": 1770803135,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "598",
+      "makerFeeDisplay": "0.598",
+      "takerFeeDisplay": "1.794"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x5fa35efe7c7156889c048a7e290dc8b7a1df1749e1eee23aeb87ab76487fd72d",
+      "blockNumber": 24429948,
+      "tokenId": "3161",
+      "seller": "0xc8bf340062975712b92398f82c341d6be4d5c063",
+      "buyer": "0x4df8ba330d1fadfd2c4ece1b464b38c34f900d72",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "238000000000",
+      "makerFeeWei": "238000000",
+      "takerFeeWei": "714000000",
+      "atUnix": 1770769715,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "238000",
+      "makerFeeDisplay": "238",
+      "takerFeeDisplay": "714"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x1c8b25b5e267304e8b404a744117aeaa1e9c7d3f20aac5ea468bcb224b46b58e",
+      "blockNumber": 24429621,
+      "tokenId": "3159",
+      "seller": "0xc8bf340062975712b92398f82c341d6be4d5c063",
+      "buyer": "0x4df8ba330d1fadfd2c4ece1b464b38c34f900d72",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "11111000000",
+      "makerFeeWei": "11111000",
+      "takerFeeWei": "33333000",
+      "atUnix": 1770765731,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "11111",
+      "makerFeeDisplay": "11.111",
+      "takerFeeDisplay": "33.333"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x08bc40d8de90056ec74f55df8096135e3128809f666cb956b13d6897cd0b0245",
+      "blockNumber": 24427715,
+      "tokenId": "689",
+      "seller": "0xe3d0dfd7dbc6d24f65f55cdc7f54d4cc72b6ec02",
+      "buyer": "0x3a39899dc78b7307acd83f51463c853fa79e1b09",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "5000000000",
+      "makerFeeWei": "5000000",
+      "takerFeeWei": "15000000",
+      "atUnix": 1770742667,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "5000",
+      "makerFeeDisplay": "5",
+      "takerFeeDisplay": "15"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x14f673ae8a0e19804f600d7f2baec362cfa3e7f772b2f6bd6ea99b641f9b4d02",
+      "blockNumber": 24426276,
+      "tokenId": "3158",
+      "seller": "0xc8bf340062975712b92398f82c341d6be4d5c063",
+      "buyer": "0xfc7150d10a541ee3c30d78934b3dd40e40cb7a11",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "9900000",
+      "makerFeeWei": "9900",
+      "takerFeeWei": "29700",
+      "atUnix": 1770725315,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "9.9",
+      "makerFeeDisplay": "0.0099",
+      "takerFeeDisplay": "0.0297"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd7ebae5eb526f2f949f936b9d5f0dcbc3620f88f2fa97a1e4f4faa9138fab64c",
+      "blockNumber": 24422405,
+      "tokenId": "287",
+      "seller": "0xd1c45c0e004558ed74810e4737804281e2d20479",
+      "buyer": "0xcf5236a94582f635db59686f327c0791e321a87d",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10090000000",
+      "makerFeeWei": "10090000",
+      "takerFeeWei": "30270000",
+      "atUnix": 1770678623,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10090",
+      "makerFeeDisplay": "10.09",
+      "takerFeeDisplay": "30.27"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xb843604b44d8dd32cf6749dd47864befa369fc96aaa28875b5f4a34ec917b37d",
+      "blockNumber": 24421309,
+      "tokenId": "2336",
+      "seller": "0xb554e7787280ad7e40f7e191ddb6e62817cf4953",
+      "buyer": "0xed9ca75f828747fe3da57f05b89665df6b1b54fe",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1280000000",
+      "makerFeeWei": "1280000",
+      "takerFeeWei": "3840000",
+      "atUnix": 1770665423,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1280",
+      "makerFeeDisplay": "1.28",
+      "takerFeeDisplay": "3.84"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x521dcb8c14296a31b04d6d90384d87dff51353fac955fe72888a36e8979186c0",
+      "blockNumber": 24413982,
+      "tokenId": "4459",
+      "seller": "0xbad568baf1b0ecfe3b6a73b5ecf519121504b36c",
+      "buyer": "0x7ab3d7c739b42603080886a9951bc6f70692bfef",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "75000000",
+      "makerFeeWei": "75000",
+      "takerFeeWei": "225000",
+      "atUnix": 1770576947,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "75",
+      "makerFeeDisplay": "0.075",
+      "takerFeeDisplay": "0.225"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x39705d1d200baaf6b35218375b36ea07e998ae86e1b790f48166c82f139ca2a1",
+      "blockNumber": 24391934,
+      "tokenId": "3002",
+      "seller": "0x43aabff36dffc9cbdf34b71344d6e3a1e0942f2c",
+      "buyer": "0xed9ca75f828747fe3da57f05b89665df6b1b54fe",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "120000000",
+      "makerFeeWei": "120000",
+      "takerFeeWei": "360000",
+      "atUnix": 1770310271,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "120",
+      "makerFeeDisplay": "0.12",
+      "takerFeeDisplay": "0.36"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x57b13ee92e1f51123d4c40b12e5260df8850e90334153006a2e110ff81eddcc9",
+      "blockNumber": 24391922,
+      "tokenId": "3013",
+      "seller": "0x02eaf6963c88951c3587e84647538949a6f430eb",
+      "buyer": "0xed9ca75f828747fe3da57f05b89665df6b1b54fe",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1200000000",
+      "makerFeeWei": "1200000",
+      "takerFeeWei": "3600000",
+      "atUnix": 1770310127,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1200",
+      "makerFeeDisplay": "1.2",
+      "takerFeeDisplay": "3.6"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xa33bc4099fc52b819b64ed61c1d5c22bb66a8d266eaea8ae06d6b567e032ba6e",
+      "blockNumber": 24391867,
+      "tokenId": "2047",
+      "seller": "0x40067d0736ff54789ab846b9a23ae7573a5d0cc9",
+      "buyer": "0xed9ca75f828747fe3da57f05b89665df6b1b54fe",
+      "paymentToken": null,
+      "priceWei": "50000000000000000",
+      "makerFeeWei": "50000000000000",
+      "takerFeeWei": "150000000000000",
+      "atUnix": 1770309455,
+      "paymentTokenMeta": {
+        "symbol": "TOKEN",
+        "decimals": 18
+      },
+      "priceDisplay": "0.05",
+      "makerFeeDisplay": "0",
+      "takerFeeDisplay": "0.0001"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x3df1f2bed7d28a9d877a749bc1489221919064f7f9d69073a1b35e78f1eb04b6",
+      "blockNumber": 24384927,
+      "tokenId": "3119",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x32371e31f48ead82c1e9668b6d33ff1d2b67ea6c",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "106000000",
+      "makerFeeWei": "106000",
+      "takerFeeWei": "318000",
+      "atUnix": 1770225455,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "106",
+      "makerFeeDisplay": "0.106",
+      "takerFeeDisplay": "0.318"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x2ffa9c3db2c36e8c562552abaf209481e5f743bfccd75d5892976562d210d3ec",
+      "blockNumber": 24379636,
+      "tokenId": "2955",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x54165740e7089fb4c48f3541633f1b9cf10e0c83",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "127000000",
+      "makerFeeWei": "127000",
+      "takerFeeWei": "381000",
+      "atUnix": 1770161675,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "127",
+      "makerFeeDisplay": "0.127",
+      "takerFeeDisplay": "0.381"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x624354db2ea39295c6ac917521aeb5fe289ac86d4008db3d92df583eca024aff",
+      "blockNumber": 24376137,
+      "tokenId": "3030",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x1035efae3e6c342d11ad577a7c57ab7fc8c14c37",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1046000000",
+      "makerFeeWei": "1046000",
+      "takerFeeWei": "3138000",
+      "atUnix": 1770119399,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1046",
+      "makerFeeDisplay": "1.046",
+      "takerFeeDisplay": "3.138"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x935e950de93693cc671ec6faeb276b4e0f8a8b5cb4752bccad72c31b74d2498c",
+      "blockNumber": 24375954,
+      "tokenId": "2954",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0xbd2b053e269b0c9b25a0b20445a7530134e8f2b7",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "127000000",
+      "makerFeeWei": "127000",
+      "takerFeeWei": "381000",
+      "atUnix": 1770117191,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "127",
+      "makerFeeDisplay": "0.127",
+      "takerFeeDisplay": "0.381"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x87f72c8839a51f6a37d236655f3146fa4737d00f66652d9dee117dae2f6e9363",
+      "blockNumber": 24373436,
+      "tokenId": "362",
+      "seller": "0x046736f80098e33e0e0af7a298ae1b3eb8b6979c",
+      "buyer": "0x6243b5c8d2af26e4523bac2930976f110da6dbf0",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "700000000",
+      "makerFeeWei": "700000",
+      "takerFeeWei": "2100000",
+      "atUnix": 1770086771,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "700",
+      "makerFeeDisplay": "0.7",
+      "takerFeeDisplay": "2.1"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x0d61a310671cc12d7486c89d749ddf758baa37fe6da7d726918d652dbdfdffe1",
+      "blockNumber": 24371426,
+      "tokenId": "3074",
+      "seller": "0xc90ac9d184b85f5b5aa8c9160dfbe4d51de54d50",
+      "buyer": "0xe10464e5d54c6b192397ebbecef47cdcec435866",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "1000000",
+      "makerFeeWei": "1000",
+      "takerFeeWei": "3000",
+      "atUnix": 1770062459,
+      "paymentTokenMeta": {
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "priceDisplay": "1",
+      "makerFeeDisplay": "0.001",
+      "takerFeeDisplay": "0.003"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x652ef9b88891d87abc07fccb568ed613c790c40e03d7c288290ae6d660fb1fc6",
+      "blockNumber": 24363500,
+      "tokenId": "2984",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x79aa14b1b5f042551c78549a6af98d5a6c4ee0e8",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "948000000",
+      "makerFeeWei": "948000",
+      "takerFeeWei": "2844000",
+      "atUnix": 1769966807,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "948",
+      "makerFeeDisplay": "0.948",
+      "takerFeeDisplay": "2.844"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x36387de1071398f1be432c41bb0f7195506375cb96ebcb55b2b346920fa6298d",
+      "blockNumber": 24360550,
+      "tokenId": "1025",
+      "seller": "0x1109c41b8c7da74cf5e293219b2bbd3ad262340d",
+      "buyer": "0x542c6b71bf501e36deb830704aa4d8df80054e75",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "9980000000",
+      "makerFeeWei": "9980000",
+      "takerFeeWei": "29940000",
+      "atUnix": 1769931251,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "9980",
+      "makerFeeDisplay": "9.98",
+      "takerFeeDisplay": "29.94"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x50d14e21ce798c2b8aefd7cd4229c3c91a6565d695ffbc482533de74698ba161",
+      "blockNumber": 24355556,
+      "tokenId": "2497",
+      "seller": "0x06e8f1eb43daef82064f0c2764fb2e3a75462c7e",
+      "buyer": "0x0741cfb53bfce6e273bd48afe1f61e58999fc23f",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "400000000",
+      "makerFeeWei": "400000",
+      "takerFeeWei": "1200000",
+      "atUnix": 1769870915,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "400",
+      "makerFeeDisplay": "0.4",
+      "takerFeeDisplay": "1.2"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x5d49c057d89058703a49507d71051a80d1d5228fd6c64f205a81b2e9662ca2ce",
+      "blockNumber": 24354646,
+      "tokenId": "2953",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x68ff1aad6634acb206525a0218dc4c28316c3016",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "953000000",
+      "makerFeeWei": "953000",
+      "takerFeeWei": "2859000",
+      "atUnix": 1769859971,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "953",
+      "makerFeeDisplay": "0.953",
+      "takerFeeDisplay": "2.859"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd782574f002ff1267281b8442b5c9afa086782562a62cca38e8fb53548a3f9ae",
+      "blockNumber": 24347289,
+      "tokenId": "2916",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0xdebc169753916a1b3f38bded0513744b5ae50b0a",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "130000000",
+      "makerFeeWei": "130000",
+      "takerFeeWei": "390000",
+      "atUnix": 1769771351,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "130",
+      "makerFeeDisplay": "0.13",
+      "takerFeeDisplay": "0.39"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x2d1514917d51c9a291604812e32dc1cc1e8d60170f27c786bb47040dcb311b3c",
+      "blockNumber": 24347079,
+      "tokenId": "2910",
+      "seller": "0xfbfef8fecc81d125460b44f2237d6fc915f2e17f",
+      "buyer": "0x0dcc88968c0289b2bfd8723858d60458af8925dc",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "11111000000",
+      "makerFeeWei": "11111000",
+      "takerFeeWei": "33333000",
+      "atUnix": 1769768831,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "11111",
+      "makerFeeDisplay": "11.111",
+      "takerFeeDisplay": "33.333"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xce21301cda141737c12c876a734ff6e8736d9a2abaa69fe72d6e82bac6bba6a1",
+      "blockNumber": 24346209,
+      "tokenId": "2923",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x3f5414d4ac2495348dda268be08046110be853f0",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "950000000",
+      "makerFeeWei": "950000",
+      "takerFeeWei": "2850000",
+      "atUnix": 1769758355,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "950",
+      "makerFeeDisplay": "0.95",
+      "takerFeeDisplay": "2.85"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x345abe70e7857d096c9c9311d6fa7f14e023adbe646ea59dae8c03181eb6c263",
+      "blockNumber": 24343187,
+      "tokenId": "2594",
+      "seller": "0x0dcc88968c0289b2bfd8723858d60458af8925dc",
+      "buyer": "0x33c74089e33ce17598edd785df15c09c0e5911b4",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "125000000",
+      "makerFeeWei": "125000",
+      "takerFeeWei": "375000",
+      "atUnix": 1769721923,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "125",
+      "makerFeeDisplay": "0.125",
+      "takerFeeDisplay": "0.375"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x2a8ef471bfb1be6408335d6800a18cacefac77f6a70de8c79122c52cf519b7c3",
+      "blockNumber": 24342834,
+      "tokenId": "2596",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x7717817ceef51dc93d68f33c00f2b561332dcf5c",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "950000000",
+      "makerFeeWei": "950000",
+      "takerFeeWei": "2850000",
+      "atUnix": 1769717675,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "950",
+      "makerFeeDisplay": "0.95",
+      "takerFeeDisplay": "2.85"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd378f7c5140ba5feea3b530ef5f84a4752313bb0314afdfc36cdaa87cb8a2983",
+      "blockNumber": 24342497,
+      "tokenId": "2594",
+      "seller": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
+      "buyer": "0x0dcc88968c0289b2bfd8723858d60458af8925dc",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "105000000",
+      "makerFeeWei": "105000",
+      "takerFeeWei": "315000",
+      "atUnix": 1769713619,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "105",
+      "makerFeeDisplay": "0.105",
+      "takerFeeDisplay": "0.315"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x02585dac58a0207f4820e1f3fc0535fcf3e805435e7590d23864847316bd9206",
+      "blockNumber": 24333021,
+      "tokenId": "2190",
+      "seller": "0x4bfc0f0db9a2e5bc04affcd1a53e548082d79859",
+      "buyer": "0x13febafd403ec13a19df014c69c386dc0511ba2b",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "1000000",
+      "makerFeeWei": "1000",
+      "takerFeeWei": "3000",
+      "atUnix": 1769599475,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "1",
+      "makerFeeDisplay": "0.001",
+      "takerFeeDisplay": "0.003"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x99d95e9bcd5b71d629c0eaee3f5e8941c43c3d180113382b3543c6d4968c369f",
+      "blockNumber": 24328258,
+      "tokenId": "2463",
+      "seller": "0xd0ca88388d1732594d611535314e9b6745396f5a",
+      "buyer": "0x13febafd403ec13a19df014c69c386dc0511ba2b",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "102000000",
+      "makerFeeWei": "102000",
+      "takerFeeWei": "306000",
+      "atUnix": 1769542055,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "102",
+      "makerFeeDisplay": "0.102",
+      "takerFeeDisplay": "0.306"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xfb69acb03aa8c3a7395f1fc94de073e1425d1b25abea2fd35882942a825f5341",
+      "blockNumber": 24327800,
+      "tokenId": "2463",
+      "seller": "0x38a564a38be5dfb6ef2ab765da1e4397d03c2d62",
+      "buyer": "0xd0ca88388d1732594d611535314e9b6745396f5a",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "98000000",
+      "makerFeeWei": "98000",
+      "takerFeeWei": "294000",
+      "atUnix": 1769536547,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "98",
+      "makerFeeDisplay": "0.098",
+      "takerFeeDisplay": "0.294"
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0xd37fdd78c6a52676ccbd89e72199f9b8d8826cd07697311d57d03287daec7150",
+      "blockNumber": 24327797,
+      "tokenId": "1596",
+      "seller": "0x5a301887f1e99bbbbfe1d6cdc8dbb9cb4400b8ff",
+      "buyer": "0x26b6de1588150414395b25853d3cf74d3361004d",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10000000",
+      "makerFeeWei": "10000",
+      "takerFeeWei": "30000",
+      "atUnix": 1769536511,
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "10",
+      "makerFeeDisplay": "0.01",
+      "takerFeeDisplay": "0.03"
+    }
+  ],
   "activityRecent": [
     {
-      "event": "Unknown",
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0x505f683f7ff7e2fa1fed4b59799b4b81a3bc9bdb137541cce4028266975944e5",
+      "blockNumber": 24640146,
+      "logIndex": 1256,
+      "tokenId": "112",
+      "seller": "0xaffa6f347fd9b49cdf2a1b48c2b7d2b782c4f5a8",
+      "atUnix": 1773303575,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "10900000000",
+        "expires": 1773908326
+      }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0x28e4b41ba11a5fa957f454d476dcfc2e8979d3e979482969ea2449a8ff04b938",
+      "blockNumber": 24640047,
+      "logIndex": 26,
+      "tokenId": "2251",
+      "seller": "0xfb4334a5704e29df37efc9f16255759670018d9a",
+      "atUnix": 1773302375,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "102500000000",
+        "expires": 1773907059
+      }
+    },
+    {
+      "event": "Sold(heuristic-v2)",
       "txHash": "0x58214b8ddcb6bc0f34730c8d694738f1de881f44ecf24c6f9f32d62a4196b278",
       "blockNumber": 24639961,
       "logIndex": 147,
@@ -30594,7 +32726,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0xfa41ac2fea41d9d600d8fadd00836b4df27129a2",
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "10200000",
+        "makerFeeWei": "10200",
+        "takerFeeWei": "30600"
       }
     },
     {
@@ -30632,7 +32769,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0x007b3ef8903d04f08113a23e30971c6a632c44c11090613232cdb034b415eada",
       "blockNumber": 24639779,
       "logIndex": 235,
@@ -30642,7 +32779,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0xbad27029207ea4e3ebdaff1507f50e1df807b123",
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "486000000",
+        "makerFeeWei": "486000",
+        "takerFeeWei": "1458000"
       }
     },
     {
@@ -30680,7 +32822,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0xc89002429e40c494e453ebcb06e6c6568676f579b8490aa8279ead7b1ce05221",
       "blockNumber": 24637486,
       "logIndex": 31,
@@ -30690,7 +32832,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "3102000000",
+        "makerFeeWei": "3102000",
+        "takerFeeWei": "9306000"
       }
     },
     {
@@ -32217,7 +34364,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0xd2f724a22dd2c8142d440c5a12ed35893500ecaca9d140c1e26b2e44077b8517",
       "blockNumber": 24626887,
       "logIndex": 515,
@@ -32227,7 +34374,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "priceWei": "1023000000",
+        "makerFeeWei": "1023000",
+        "takerFeeWei": "3069000"
       }
     },
     {
@@ -32636,7 +34788,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0xbc1c86f00075f7543fe01aebbf4d4f4b4b3005c803e4ee63d37d71a863ef5cef",
       "blockNumber": 24624690,
       "logIndex": 104,
@@ -32646,7 +34798,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0x78c1e84bddaf2b5e0fc63249bcdc00e87117e340",
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "299800000",
+        "makerFeeWei": "299800",
+        "takerFeeWei": "899400"
       }
     },
     {
@@ -34057,7 +36214,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0x4229c7e1c6765cf45e8d55a2061252501a20a2d3199a40c60a1881638eacbb25",
       "blockNumber": 24619899,
       "logIndex": 90,
@@ -34067,7 +36224,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "priceWei": "1050000000",
+        "makerFeeWei": "1050000",
+        "takerFeeWei": "3150000"
       }
     },
     {
@@ -35155,7 +37317,7 @@
       }
     },
     {
-      "event": "Unknown",
+      "event": "Sold(heuristic-v2)",
       "txHash": "0xd8192be48f5714adf59494cef4882d7c4e5cf4bb00bc5dfcbbef76ed6fd5ffb4",
       "blockNumber": 24613546,
       "logIndex": 340,
@@ -35165,7 +37327,12 @@
       "details": {
         "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
         "topicsCount": 3,
-        "dataWords": 4
+        "dataWords": 4,
+        "buyer": "0x3be0809b0018e6639c6e2c80eef4415b2b959056",
+        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "priceWei": "2100000000",
+        "makerFeeWei": "2100000",
+        "takerFeeWei": "6300000"
       }
     },
     {
@@ -35548,40 +37715,6 @@
         "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "priceWei": "14000000000",
         "expires": 1773560060
-      }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x81396232de531a305a508a44c7221f5fcd6f0dd5cc4831d1f67ed924cc72e062",
-      "blockNumber": 24611276,
-      "logIndex": 2244,
-      "tokenId": "2769",
-      "seller": "0xcdfb6b1072a0c522ba4e62059d9b83a064d91533",
-      "atUnix": 1772955155,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "5995000000",
-        "expires": 1773559936
-      }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x9071126ac567086d5a40f97ec72c1f1af4ce4d481357599b33d73fb70534ca86",
-      "blockNumber": 24611272,
-      "logIndex": 349,
-      "tokenId": "394",
-      "seller": "0xcdfb6b1072a0c522ba4e62059d9b83a064d91533",
-      "atUnix": 1772955107,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "11995000000",
-        "expires": 1773559876
       }
     }
   ]
