@@ -466,6 +466,10 @@ function applyLog(state, log, topicsByHash) {
     const third = uintFromWord(wordAt(log.data, 2));
     const fourth = uintFromWord(wordAt(log.data, 3));
     const maybeBuyer = log.topics?.[3] ? addressFromTopic(log.topics[3]) : null;
+    const buyerFromWord0 = addressFromWord(wordAt(log.data, 0));
+    const priceFromWord1 = uintFromWord(wordAt(log.data, 1));
+    const makerFeeFromWord2 = uintFromWord(wordAt(log.data, 2));
+    const takerFeeFromWord3 = uintFromWord(wordAt(log.data, 3));
 
     const looksLikeListingUpsert =
       tokenId !== null &&
@@ -502,6 +506,53 @@ function applyLog(state, log, topicsByHash) {
         expires: Number(third)
       };
     } else {
+      // Observed shape on FT marketplace: topics=3 (tokenId, seller), dataWords=4
+      // with buyer/payment/price/fee in data.
+      const looksLikeSaleV2 =
+        tokenId !== null &&
+        seller &&
+        dataWords === 4 &&
+        buyerFromWord0 &&
+        priceFromWord1 !== null &&
+        priceFromWord1 > 0n;
+
+      if (looksLikeSaleV2) {
+        const id = tokenId.toString();
+        const listingPaymentToken = String(state.listings[id]?.paymentToken || "").toLowerCase();
+        const paymentTokenResolved =
+          listingPaymentToken && listingPaymentToken !== ZERO ? listingPaymentToken : null;
+        if (state.listings[id]) {
+          state.listings[id].status = "sold";
+          state.listings[id].lastAction = "Sold(heuristic-v2)";
+          state.listings[id].lastTxHash = txHash;
+          state.listings[id].lastBlockNumber = blockNumber;
+          state.listings[id].lastLogIndex = logIndex;
+        }
+
+        pushCapped(state.sales, {
+          type: "sold-heuristic-v2",
+          txHash,
+          blockNumber,
+          tokenId: id,
+          seller,
+          buyer: buyerFromWord0,
+          paymentToken: paymentTokenResolved,
+          priceWei: priceFromWord1.toString(),
+          makerFeeWei: makerFeeFromWord2 ? makerFeeFromWord2.toString() : null,
+          takerFeeWei: takerFeeFromWord3 ? takerFeeFromWord3.toString() : null
+        });
+
+        activityRow.event = "Sold(heuristic-v2)";
+        activityRow.details = {
+          ...activityRow.details,
+          buyer: buyerFromWord0,
+          paymentToken: paymentTokenResolved,
+          priceWei: priceFromWord1.toString(),
+          makerFeeWei: makerFeeFromWord2 ? makerFeeFromWord2.toString() : null,
+          takerFeeWei: takerFeeFromWord3 ? takerFeeFromWord3.toString() : null
+        };
+      }
+
       const looksLikeSaleLike =
         tokenId !== null &&
         seller &&
@@ -514,7 +565,7 @@ function applyLog(state, log, topicsByHash) {
         fourth !== null &&
         dataWords >= 4;
 
-      if (looksLikeSaleLike) {
+      if (!looksLikeSaleV2 && looksLikeSaleLike) {
         const id = tokenId.toString();
         if (state.listings[id]) {
           state.listings[id].status = "sold";

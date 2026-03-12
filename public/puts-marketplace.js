@@ -12,6 +12,7 @@ const searchInputEl = document.getElementById("searchInput");
 const collateralSelectEl = document.getElementById("collateralSelect");
 const sortSelectEl = document.getElementById("sortSelect");
 const listingsWrapEl = document.getElementById("listingsWrap");
+const salesWrapEl = document.getElementById("salesWrap");
 const buyModalBackdropEl = document.getElementById("buyModalBackdrop");
 const buyModalCloseEl = document.getElementById("buyModalClose");
 const buyModalPutLabelEl = document.getElementById("buyModalPutLabel");
@@ -24,6 +25,9 @@ let sortedListingsCache = [];
 let renderedListingsCount = 0;
 const LISTINGS_BATCH_SIZE = 40;
 let activityRowsCache = [];
+let salesRowsCache = [];
+let renderedSalesCount = 0;
+const SALES_BATCH_SIZE = 20;
 let oracleState = {
   ethUsd: null,
   ethUsdDecimals: null
@@ -81,6 +85,15 @@ function etherscanTx(hash) {
 
 function etherscanAddress(address) {
   return `https://etherscan.io/address/${address}`;
+}
+
+function inferredTokenMeta(address) {
+  const a = String(address || "").toLowerCase();
+  if (a === "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48") return { symbol: "USDC", decimals: 6 };
+  if (a === "0xdac17f958d2ee523a2206206994597c13d831ec7") return { symbol: "USDT", decimals: 6 };
+  if (a === "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2") return { symbol: "WETH", decimals: 18 };
+  if (a === "0x0000000000000000000000000000000000000000") return { symbol: "ETH", decimals: 18 };
+  return { symbol: "TOKEN", decimals: 18 };
 }
 
 function formatUnitsFromWei(value, decimals = 18, maxFraction = 4) {
@@ -447,20 +460,51 @@ function closeBuyModal() {
 }
 
 function renderSales(rows) {
-  salesBodyEl.innerHTML = rows
-    .slice(0, 100)
-    .map((x) => `
-      <tr>
-        <td>${x.type}</td>
-        <td>${x.tokenId ? `#${x.tokenId}` : "--"}</td>
-        <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
-        <td>${shortAddr(x.seller)}</td>
-        <td>${shortAddr(x.buyer)}</td>
-        <td>${fmtTimeAgo(x.atUnix)}</td>
-        <td><a href="${etherscanTx(x.txHash)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.txHash)}</a></td>
-      </tr>
-    `)
-    .join("");
+  salesRowsCache = Array.isArray(rows) ? rows : [];
+  renderedSalesCount = 0;
+  salesBodyEl.innerHTML = "";
+  appendSalesBatch();
+}
+
+function saleAmountText(x) {
+  const inferred = inferredTokenMeta(x.paymentToken);
+  const symbol =
+    x.paymentTokenMeta?.symbol && x.paymentTokenMeta.symbol !== "TOKEN"
+      ? x.paymentTokenMeta.symbol
+      : inferred.symbol;
+  const decimals =
+    typeof x.paymentTokenMeta?.decimals === "number"
+      ? x.paymentTokenMeta.decimals
+      : inferred.decimals;
+
+  try {
+    const wei = BigInt(x.priceWei || 0);
+    if (wei <= 0n) return `-- ${symbol}`;
+    return `${formatUnitsFromWei(wei, decimals)} ${symbol}`;
+  } catch {
+    return `-- ${symbol}`;
+  }
+}
+
+function salesRowHtml(x) {
+  return `
+    <tr>
+      <td>${x.tokenId ? `#${x.tokenId}` : "--"}</td>
+      <td>${saleAmountText(x)}</td>
+      <td>${shortAddr(x.seller)}</td>
+      <td>${shortAddr(x.buyer)}</td>
+      <td>${fmtTimeAgo(x.atUnix)}</td>
+      <td><a href="${etherscanTx(x.txHash)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.txHash)}</a></td>
+    </tr>
+  `;
+}
+
+function appendSalesBatch() {
+  if (!salesRowsCache.length) return;
+  if (renderedSalesCount >= salesRowsCache.length) return;
+  const next = salesRowsCache.slice(renderedSalesCount, renderedSalesCount + SALES_BATCH_SIZE);
+  salesBodyEl.insertAdjacentHTML("beforeend", next.map(salesRowHtml).join(""));
+  renderedSalesCount += next.length;
 }
 
 function renderActivity(rows) {
@@ -533,6 +577,11 @@ listingsWrapEl.addEventListener("scroll", () => {
   const nearBottom =
     listingsWrapEl.scrollTop + listingsWrapEl.clientHeight >= listingsWrapEl.scrollHeight - 120;
   if (nearBottom) appendListingsBatch();
+});
+salesWrapEl.addEventListener("scroll", () => {
+  const nearBottom =
+    salesWrapEl.scrollTop + salesWrapEl.clientHeight >= salesWrapEl.scrollHeight - 120;
+  if (nearBottom) appendSalesBatch();
 });
 activityDetailsEl?.addEventListener("toggle", () => {
   if (activityDetailsEl.open) {
