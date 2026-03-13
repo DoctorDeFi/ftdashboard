@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24651261",
+  "lastBlock": "24651537",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -3763,11 +3763,11 @@
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "1050000000",
       "expires": 1774003753,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xe5dd8904d109ccc555a384d2624f96ff8b7c7a32b1dc80292a0e2120f23c0240",
-      "lastBlockNumber": 24648064,
-      "lastLogIndex": 541
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0xbbd7be8de7bf1b9c262d0cfdad1e75eca25f31f907b4f1a6d5c020afadc6a9ee",
+      "lastBlockNumber": 24651343,
+      "lastLogIndex": 210
     },
     "838": {
       "tokenId": "838",
@@ -15025,23 +15025,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0xfb9fda8bc628b27e8cc85d5b178e97434c9e04d23d3061015486ca88a31ef35d",
-      "blockNumber": 24439802,
-      "logIndex": 1155,
-      "tokenId": "928",
-      "seller": "0x7dc2b6afa14e44318d063d1df5d60802cd79274d",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "3300000000",
-        "expires": 1771493201
-      }
-    },
     {
       "event": "RemoveListing",
       "txHash": "0xcb219209ddb406ffefebfad8168275aeeef23ada7569f9dbe2827fda82048044",
@@ -56738,6 +56721,20 @@
         "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "priceWei": "2399000000",
         "expires": 1804674335
+      }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0xbbd7be8de7bf1b9c262d0cfdad1e75eca25f31f907b4f1a6d5c020afadc6a9ee",
+      "blockNumber": 24651343,
+      "logIndex": 210,
+      "tokenId": "829",
+      "seller": "0x89aa50bb57b3a8ca42f652a1b4eca82a9731b23e",
+      "atUnix": 1773438611,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
       }
     }
   ],
