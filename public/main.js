@@ -41,10 +41,10 @@ function render(payload) {
   const onAvalanche = BigInt(v.onAvalanche || "0");
   const onBase = BigInt(v.onBase || "0");
 
-  const allocatedInPutsTotal = inPuts + vcMsig + institutional;
+  const allocatedInPutsTotal = inPuts + institutional;
   const inPutsDisplay = inPuts + institutional;
   const circulating = allocatedInPutsTotal + tradable;
-  const nonCirculating = unallocated;
+  const nonCirculating = unallocated + vcMsig;
 
   const totalSupply = BigInt(v.maxSupply || "10000000000000000000000000000");
   const currentTotalSupply = totalSupply - burned;
@@ -87,18 +87,12 @@ function render(payload) {
       <article class="break-card">
         <p class="label">In PUTs</p>
         <p class="value">${fmtWei(inPutsDisplay, decimals)}</p>
-        <p class="puts-sub">
-          Direct Put Allocation: ${fmtWei(inPuts, decimals)} FT<br />
-          VC Contracts: ${fmtWei(institutional, decimals)} FT<br />
-          Multisig: ${fmtWei(vcMsig, decimals)} FT (Not included in "Put Manager" Contract)
-        </p>
       </article>
       <article class="break-card">
         <p class="label">Tradable</p>
         <p class="value">${fmtWei(tradable, decimals)}</p>
       </article>
     </div>
-    <p class="formula">Circulating = Direct Puts + VC Contracts + Multisig + Tradable</p>
   `;
 
   const chains = [
