@@ -89,8 +89,8 @@ function render(payload) {
         <p class="value">${fmtWei(inPutsDisplay, decimals)}</p>
         <p class="puts-sub">
           Direct Put Allocation: ${fmtWei(inPuts, decimals)} FT<br />
-          Institution via SAFT: ${fmtWei(institutional, decimals)} FT<br />
-          VC multisig: ${fmtWei(vcMsig, decimals)} FT
+          VC Contracts: ${fmtWei(institutional, decimals)} FT<br />
+          Multisig: ${fmtWei(vcMsig, decimals)} FT (Not included in "Put Manager" Contract)
         </p>
       </article>
       <article class="break-card">
@@ -98,7 +98,7 @@ function render(payload) {
         <p class="value">${fmtWei(tradable, decimals)}</p>
       </article>
     </div>
-    <p class="formula">Circulating = Direct Puts + Institutions + VC multisig + Tradable</p>
+    <p class="formula">Circulating = Direct Puts + VC Contracts + Multisig + Tradable</p>
   `;
 
   const chains = [
