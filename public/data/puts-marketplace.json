@@ -8,12 +8,12 @@
     ],
     "marketplace": "0x31248663adccdbcad155555b7717697b76cf570c",
     "ftPut": "0xa4215daaf3745e14e96e169e0e7706c479ce04f2",
-    "indexedThroughBlock": "24680361"
+    "indexedThroughBlock": "24680551"
   },
-  "updatedAt": "2026-03-17T23:05:32.537Z",
+  "updatedAt": "2026-03-17T23:42:14.329Z",
   "stats": {
-    "activeListings": 412,
-    "expiredListings": 485,
+    "activeListings": 413,
+    "expiredListings": 484,
     "totalTrackedListings": 1187,
     "totalSalesTracked": 107,
     "acceptedTokens": 4,
@@ -26,10 +26,10 @@
     "emergencyPaused": null
   },
   "oracle": {
-    "ethUsd": "231966589976",
-    "ethUsdDisplay": "2319.6658",
+    "ethUsd": "233137029000",
+    "ethUsdDisplay": "2331.3702",
     "ethUsdDecimals": 8,
-    "updatedAt": 1773787103,
+    "updatedAt": 1773789071,
     "source": "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
   },
   "acceptedTokens": [
@@ -28953,6 +28953,43 @@
       }
     },
     {
+      "tokenId": "1288",
+      "seller": "0x81f6b887657b679d9e23153ffcd703e111010240",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "17150000000",
+      "expires": 1774394870,
+      "status": "active",
+      "lastAction": "ListingUpdate(heuristic)",
+      "lastTxHash": "0x80b874725679f7372499c6910a95ce9cac04e5decd17e4e73c6f8299b94eb52a",
+      "lastBlockNumber": 24680493,
+      "lastLogIndex": 80,
+      "derivedStatus": "active",
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "17150",
+      "put": {
+        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amountWei": "16971000000",
+        "ftWei": "169526422995900000000000",
+        "ftBoughtWei": "169526422995900000000000",
+        "withdrawnWei": "0",
+        "burnedWei": "0",
+        "strikeWei": "99891829",
+        "amountRemainingWei": "16971000000",
+        "ftPerUsdWei": "1000000000",
+        "collateralMeta": {
+          "symbol": "USDT",
+          "decimals": 6
+        },
+        "amountDisplay": "16971",
+        "amountRemainingDisplay": "16971",
+        "ftDisplay": "169526.4229",
+        "strikeDisplay": "0"
+      }
+    },
+    {
       "tokenId": "575",
       "seller": "0xeffaa1e952dd3378520c04ac6cb2799203650de9",
       "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -29023,43 +29060,6 @@
         "amountDisplay": "11000",
         "amountRemainingDisplay": "11000",
         "ftDisplay": "109881.0119",
-        "strikeDisplay": "0"
-      }
-    },
-    {
-      "tokenId": "1288",
-      "seller": "0x81f6b887657b679d9e23153ffcd703e111010240",
-      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "priceWei": "17500000000",
-      "expires": 1773615205,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x403cc13dafe05c691d9e7c7e02930645b0963c6c53729de3c69cf47965ce25cd",
-      "lastBlockNumber": 24615860,
-      "lastLogIndex": 235,
-      "derivedStatus": "expired",
-      "paymentTokenMeta": {
-        "symbol": "USDC",
-        "decimals": 6
-      },
-      "priceDisplay": "17500",
-      "put": {
-        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "amountWei": "16971000000",
-        "ftWei": "169526422995900000000000",
-        "ftBoughtWei": "169526422995900000000000",
-        "withdrawnWei": "0",
-        "burnedWei": "0",
-        "strikeWei": "99891829",
-        "amountRemainingWei": "16971000000",
-        "ftPerUsdWei": "1000000000",
-        "collateralMeta": {
-          "symbol": "USDT",
-          "decimals": 6
-        },
-        "amountDisplay": "16971",
-        "amountRemainingDisplay": "16971",
-        "ftDisplay": "169526.4229",
         "strikeDisplay": "0"
       }
     },
@@ -35390,6 +35390,23 @@
   "activityRecent": [
     {
       "event": "ListingUpdate(heuristic)",
+      "txHash": "0x80b874725679f7372499c6910a95ce9cac04e5decd17e4e73c6f8299b94eb52a",
+      "blockNumber": 24680493,
+      "logIndex": 80,
+      "tokenId": "1288",
+      "seller": "0x81f6b887657b679d9e23153ffcd703e111010240",
+      "atUnix": 1773790139,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "17150000000",
+        "expires": 1774394870
+      }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
       "txHash": "0xd0346b2458591457525bcf6ee29b81972692bb7efe95f4dd812b659bbb9cc627",
       "blockNumber": 24680139,
       "logIndex": 11053,
@@ -40383,23 +40400,6 @@
         "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "priceWei": "10465000000",
         "expires": 1773569029
-      }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0xef66242b8f4cbdb104405367035f7a65510ee75bdd0b5e97473e9bb1c33addf0",
-      "blockNumber": 24654998,
-      "logIndex": 183,
-      "tokenId": "2361",
-      "seller": "0x513dd93d86aa4eb501e5c16b549f2d8c1e4f59d7",
-      "atUnix": 1773482579,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "8350000000",
-        "expires": 1773568964
       }
     }
   ]
