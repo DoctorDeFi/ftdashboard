@@ -8,16 +8,16 @@
     ],
     "marketplace": "0x31248663adccdbcad155555b7717697b76cf570c",
     "ftPut": "0xa4215daaf3745e14e96e169e0e7706c479ce04f2",
-    "indexedThroughBlock": "24679481"
+    "indexedThroughBlock": "24679775"
   },
-  "updatedAt": "2026-03-17T20:07:25.754Z",
+  "updatedAt": "2026-03-17T21:07:19.685Z",
   "stats": {
-    "activeListings": 419,
-    "expiredListings": 478,
+    "activeListings": 418,
+    "expiredListings": 479,
     "totalTrackedListings": 1187,
     "totalSalesTracked": 107,
     "acceptedTokens": 4,
-    "scannedLogsInRun": 15
+    "scannedLogsInRun": 1
   },
   "config": {
     "makerFeeBps": 10,
@@ -26,10 +26,10 @@
     "emergencyPaused": null
   },
   "oracle": {
-    "ethUsd": "232351045897",
-    "ethUsdDisplay": "2323.5104",
+    "ethUsd": "232778000000",
+    "ethUsdDisplay": "2327.78",
     "ethUsdDecimals": 8,
-    "updatedAt": 1773776915,
+    "updatedAt": 1773780527,
     "source": "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
   },
   "acceptedTokens": [
@@ -103,7 +103,7 @@
       "lastTxHash": "0xdfc12146cf0e48d2304a1fda77b35dfeffb4ed9fec18e2984057153dbdc63e21",
       "lastBlockNumber": 24658107,
       "lastLogIndex": 240,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -13016,7 +13016,7 @@
       "lastTxHash": "0x78213d29ef5bc15a4e8f39a36627dd354c4e2ab977775e805e037115a10b702b",
       "lastBlockNumber": 24658099,
       "lastLogIndex": 249,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -20077,13 +20077,13 @@
       "seller": "0x050b6913fac3f52d79491901a5d34fdbd49f31c5",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "5250000000",
-      "expires": 1773650385,
+      "expires": 1773865456,
       "status": "active",
       "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xc877f0f24321f87928f67d8843b81f165f5f5880e19396f6d97b88149091e3a6",
-      "lastBlockNumber": 24661753,
-      "lastLogIndex": 452,
-      "derivedStatus": "expired",
+      "lastTxHash": "0xbaa5d292947fccf2c653845de2a938e128eed4bf38b4cdd060db91e41250970a",
+      "lastBlockNumber": 24679578,
+      "lastLogIndex": 524,
+      "derivedStatus": "active",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -35389,6 +35389,23 @@
   ],
   "activityRecent": [
     {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0xbaa5d292947fccf2c653845de2a938e128eed4bf38b4cdd060db91e41250970a",
+      "blockNumber": 24679578,
+      "logIndex": 524,
+      "tokenId": "521",
+      "seller": "0x050b6913fac3f52d79491901a5d34fdbd49f31c5",
+      "atUnix": 1773779099,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "5250000000",
+        "expires": 1773865456
+      }
+    },
+    {
       "event": "RemoveListing",
       "txHash": "0x67fa7e76e340d3ebec1e9eff6e45e8bb1dd93441825ed770cf6cadfb02cec6b3",
       "blockNumber": 24679470,
@@ -40383,23 +40400,6 @@
         "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "priceWei": "16999000000",
         "expires": 1774085081
-      }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0xcfa043b0eae5d5230ac4452e3caca29ac6ae014e3f642765cf6f8b4b8fc08824",
-      "blockNumber": 24654702,
-      "logIndex": 165,
-      "tokenId": "464",
-      "seller": "0x4903bc0d67ccd6d8cd36b199388352d69a5b58d3",
-      "atUnix": 1773479027,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "5500000000",
-        "expires": 1774083784
       }
     }
   ]
