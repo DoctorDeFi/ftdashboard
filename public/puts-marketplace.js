@@ -31,7 +31,7 @@ let salesRowsCache = [];
 let renderedSalesCount = 0;
 const SALES_BATCH_SIZE = 20;
 let holdersRowsCache = [];
-let holdersSortKey = "putCount";
+let holdersSortKey = "totalUsdWei";
 let holdersSortDir = "desc";
 let oracleState = {
   ethUsd: null,
