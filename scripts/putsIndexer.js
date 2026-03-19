@@ -14,6 +14,8 @@ const MARKETPLACE = "0x31248663adccdbcad155555b7717697b76cf570c";
 const FT_PUT = "0xa4215daaf3745e14e96e169e0e7706c479ce04f2";
 const CHAINLINK_ETH_USD = "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419";
 const ZERO = "0x0000000000000000000000000000000000000000";
+const ERC721_TRANSFER_TOPIC =
+  "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef";
 
 const CHUNK = 25_000n;
 const LOOKBACK = 1_000_000n;
@@ -60,6 +62,10 @@ function defaultState() {
     listings: {},
     sales: [],
     activity: [],
+    holders: {
+      lastBlock: "-1",
+      tokenOwners: {}
+    },
     acceptedTokens: [],
     config: {
       makerFeeBps: null,
@@ -160,14 +166,18 @@ async function getBlockNumber() {
   return hexToBigInt(await rpc("eth_blockNumber", []));
 }
 
-async function getLogs(fromBlock, toBlock, topic0 = null) {
+async function getLogsFor(address, fromBlock, toBlock, topic0 = null) {
   const filter = {
-    address: MARKETPLACE,
+    address,
     fromBlock: toHex(fromBlock),
     toBlock: toHex(toBlock)
   };
   if (topic0) filter.topics = [topic0];
   return rpc("eth_getLogs", [filter]);
+}
+
+async function getLogs(fromBlock, toBlock, topic0 = null) {
+  return getLogsFor(MARKETPLACE, fromBlock, toBlock, topic0);
 }
 
 async function ethCall(to, data) {
@@ -613,6 +623,63 @@ function sortLogs(logs) {
   });
 }
 
+function normalizeHoldersState(state) {
+  if (!state.holders || typeof state.holders !== "object") {
+    state.holders = { lastBlock: "-1", tokenOwners: {} };
+    return;
+  }
+  if (typeof state.holders.lastBlock !== "string") state.holders.lastBlock = "-1";
+  if (!state.holders.tokenOwners || typeof state.holders.tokenOwners !== "object") {
+    state.holders.tokenOwners = {};
+  }
+}
+
+async function updateTokenOwnersFromTransfers(state, latestBlock) {
+  normalizeHoldersState(state);
+  const prevBlock = BigInt(state.holders.lastBlock || "-1");
+  const fromBlock = prevBlock >= 0n ? prevBlock + 1n : 0n;
+  if (fromBlock > latestBlock) return;
+
+  let start = fromBlock;
+  while (start <= latestBlock) {
+    const end = start + CHUNK < latestBlock ? start + CHUNK : latestBlock;
+    const logs = await getLogsFor(FT_PUT, start, end, ERC721_TRANSFER_TOPIC);
+    const sorted = sortLogs(logs || []);
+    for (const log of sorted) {
+      const from = addressFromTopic(log.topics?.[1]);
+      const to = addressFromTopic(log.topics?.[2]);
+      const tokenId = uintFromWord(log.topics?.[3]);
+      if (tokenId === null) continue;
+      const id = tokenId.toString();
+      if (!to || to === ZERO) {
+        delete state.holders.tokenOwners[id];
+      } else {
+        state.holders.tokenOwners[id] = to.toLowerCase();
+      }
+      if (from && from !== ZERO) {
+        // no-op; ownership map is tokenId->owner
+      }
+    }
+    start = end + 1n;
+  }
+  state.holders.lastBlock = latestBlock.toString();
+}
+
+function aggregateOwners(tokenOwners) {
+  const byHolder = new Map();
+  for (const [tokenId, owner] of Object.entries(tokenOwners || {})) {
+    const addr = String(owner || "").toLowerCase();
+    if (!addr || addr === ZERO) continue;
+    if (!byHolder.has(addr)) byHolder.set(addr, []);
+    byHolder.get(addr).push(tokenId);
+  }
+  return [...byHolder.entries()].map(([address, tokenIds]) => ({
+    address,
+    tokenIds,
+    putCount: tokenIds.length
+  }));
+}
+
 async function getUnixForBlock(blockNumber, cache) {
   const key = String(blockNumber);
   if (cache[key] !== undefined) return cache[key];
@@ -714,6 +781,7 @@ async function main() {
   }
 
   state.lastBlock = latestBlock.toString();
+  await updateTokenOwnersFromTransfers(state, latestBlock);
   // eslint-disable-next-line no-console
   console.log("[puts-index] event scan complete; building listing snapshots...");
 
@@ -845,6 +913,65 @@ async function main() {
     });
   const activityRecentResolved = await Promise.all(activityRecent);
 
+  const holdersAll = aggregateOwners(state.holders?.tokenOwners || {});
+  holdersAll.sort((a, b) => b.putCount - a.putCount || a.address.localeCompare(b.address));
+  const holdersTop = holdersAll.slice(0, 50);
+  const holdersTopResolved = [];
+  const ethUsdAnswer = oracle.ethUsd ? BigInt(oracle.ethUsd) : null;
+  const ethUsdDecimals = Number(oracle.ethUsdDecimals ?? 8);
+  const usdScale = 10n ** 18n;
+
+  for (const holder of holdersTop) {
+    let usdcWei = 0n;
+    let usdtWei = 0n;
+    let wethWei = 0n;
+    let totalUsdWei = 0n;
+
+    for (const tokenId of holder.tokenIds) {
+      try {
+        const putsData = encodeUintCall(selectors.puts, tokenId);
+        const put = decodePutsCall(await ethCall(FT_PUT, putsData));
+        const collateralToken = String(put.collateralToken || "").toLowerCase();
+        const collateralMeta = await getErc20Meta(collateralToken, selectors, tokenMetaCache);
+        const amountRemainingWei = BigInt(put.amountRemainingWei || "0");
+        if (amountRemainingWei <= 0n) continue;
+
+        const symbol = String(collateralMeta.symbol || "").toUpperCase();
+        const decimals = Number(collateralMeta.decimals ?? 18);
+
+        if (symbol === "USDC") {
+          usdcWei += amountRemainingWei;
+          totalUsdWei += (amountRemainingWei * usdScale) / 10n ** BigInt(decimals);
+        } else if (symbol === "USDT") {
+          usdtWei += amountRemainingWei;
+          totalUsdWei += (amountRemainingWei * usdScale) / 10n ** BigInt(decimals);
+        } else if (symbol === "WETH" || symbol === "ETH") {
+          wethWei += amountRemainingWei;
+          if (ethUsdAnswer && ethUsdAnswer > 0n) {
+            const usd = (amountRemainingWei * ethUsdAnswer * usdScale) /
+              (10n ** BigInt(decimals) * 10n ** BigInt(ethUsdDecimals));
+            totalUsdWei += usd;
+          }
+        }
+      } catch {
+        // Skip tokens that fail puts() read.
+      }
+    }
+
+    holdersTopResolved.push({
+      address: holder.address,
+      putCount: holder.putCount,
+      usdcWei: usdcWei.toString(),
+      usdtWei: usdtWei.toString(),
+      wethWei: wethWei.toString(),
+      usdcDisplay: formatUnits(usdcWei, 6),
+      usdtDisplay: formatUnits(usdtWei, 6),
+      wethDisplay: formatUnits(wethWei, 18),
+      totalUsdWei: totalUsdWei.toString(),
+      totalUsdDisplay: formatUnits(totalUsdWei, 18)
+    });
+  }
+
   const activeCount = enrichedActive.filter((x) => x.derivedStatus === "active").length;
   const expiredCount = enrichedActive.filter((x) => x.derivedStatus === "expired").length;
 
@@ -873,7 +1000,8 @@ async function main() {
     })),
     listingsActive: enrichedActive,
     salesRecent: salesRecentResolved,
-    activityRecent: activityRecentResolved
+    activityRecent: activityRecentResolved,
+    holdersTop50: holdersTopResolved
   };
 
   writeJson(STATE_PATH, state);

@@ -104,6 +104,23 @@
       </section>
       <p class="count" id="countLabel">Rows: 0</p>
 
+      <section class="table-wrap holders-wrap" id="holdersWrap">
+        <h2>Top 50 PUT Holders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Address</th>
+              <th><button class="sort-th" data-holder-sort="putCount" type="button">PUTs</button></th>
+              <th><button class="sort-th" data-holder-sort="usdcWei" type="button">USDC</button></th>
+              <th><button class="sort-th" data-holder-sort="usdtWei" type="button">USDT</button></th>
+              <th><button class="sort-th" data-holder-sort="wethWei" type="button">WETH</button></th>
+              <th><button class="sort-th" data-holder-sort="totalUsdWei" type="button">Total (USD)</button></th>
+            </tr>
+          </thead>
+          <tbody id="holdersBody"></tbody>
+        </table>
+      </section>
+
       <section class="table-wrap sales-wrap" id="salesWrap">
         <h2>Recent Sales</h2>
         <table>

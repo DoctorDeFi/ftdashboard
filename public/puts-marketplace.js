@@ -3,6 +3,8 @@ const indexedBlockEl = document.getElementById("indexedBlock");
 const sourceAddrEl = document.getElementById("sourceAddr");
 const statsEl = document.getElementById("stats");
 const protocolStateEl = document.getElementById("protocolState");
+const holdersWrapEl = document.getElementById("holdersWrap");
+const holdersBodyEl = document.getElementById("holdersBody");
 const listingsBodyEl = document.getElementById("listingsBody");
 const salesBodyEl = document.getElementById("salesBody");
 const activityBodyEl = document.getElementById("activityBody");
@@ -28,6 +30,9 @@ let activityRowsCache = [];
 let salesRowsCache = [];
 let renderedSalesCount = 0;
 const SALES_BATCH_SIZE = 20;
+let holdersRowsCache = [];
+let holdersSortKey = "putCount";
+let holdersSortDir = "desc";
 let oracleState = {
   ethUsd: null,
   ethUsdDecimals: null
@@ -261,6 +266,66 @@ function renderProtocol(config, acceptedTokens) {
     </div>
     <p class="tokens-line">${tokens || "No token config events indexed yet."}</p>
   `;
+}
+
+function fmtUsd(value) {
+  const n = Number(value || 0);
+  if (!Number.isFinite(n)) return "--";
+  return n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+}
+
+function holderSortValue(row, key) {
+  if (key === "putCount") return BigInt(row.putCount || 0);
+  try {
+    return BigInt(row[key] || 0);
+  } catch {
+    return 0n;
+  }
+}
+
+function refreshHolderSortHeadings() {
+  const buttons = holdersWrapEl?.querySelectorAll(".sort-th") || [];
+  for (const button of buttons) {
+    const key = button.getAttribute("data-holder-sort");
+    const label = button.textContent ? button.textContent.replace(/\s[▲▼]$/, "") : "";
+    const active = key === holdersSortKey;
+    const arrow = active ? (holdersSortDir === "asc" ? " ▲" : " ▼") : "";
+    button.textContent = `${label}${arrow}`;
+  }
+}
+
+function renderHolders(rows) {
+  if (Array.isArray(rows)) {
+    holdersRowsCache = rows;
+  }
+  const holders = [...holdersRowsCache];
+  if (!holders.length) {
+    holdersBodyEl.innerHTML = `<tr><td colspan="6">No holder snapshot available yet.</td></tr>`;
+    refreshHolderSortHeadings();
+    return;
+  }
+
+  holders.sort((a, b) => {
+    const av = holderSortValue(a, holdersSortKey);
+    const bv = holderSortValue(b, holdersSortKey);
+    if (av === bv) return String(a.address || "").localeCompare(String(b.address || ""));
+    if (holdersSortDir === "asc") return av < bv ? -1 : 1;
+    return av > bv ? -1 : 1;
+  });
+
+  holdersBodyEl.innerHTML = holders
+    .map((x) => `
+      <tr>
+        <td><a href="${etherscanAddress(x.address)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.address)}</a></td>
+        <td>${Number(x.putCount || 0).toLocaleString()}</td>
+        <td>${x.usdcDisplay || "0"}</td>
+        <td>${x.usdtDisplay || "0"}</td>
+        <td>${x.wethDisplay || "0"}</td>
+        <td>$${fmtUsd(x.totalUsdDisplay)}</td>
+      </tr>
+    `)
+    .join("");
+  refreshHolderSortHeadings();
 }
 
 function sortListings(rows, mode) {
@@ -553,6 +618,7 @@ async function loadDashboard() {
 
     renderStats(payload.stats || {});
     renderProtocol(payload.config || {}, payload.acceptedTokens || []);
+    renderHolders(payload.holdersTop50 || []);
     renderListings();
     renderSales(payload.salesRecent || []);
     renderActivity(payload.activityRecent || []);
@@ -563,6 +629,7 @@ async function loadDashboard() {
     sourceAddrEl.textContent = "Contract: --";
     statsEl.innerHTML = "";
     protocolStateEl.innerHTML = "";
+    holdersBodyEl.innerHTML = "";
     listingsBodyEl.innerHTML = `<tr><td colspan="9">${msg}. Run: npm run index:puts</td></tr>`;
     salesBodyEl.innerHTML = "";
     activityBodyEl.innerHTML = "";
@@ -587,6 +654,21 @@ activityDetailsEl?.addEventListener("toggle", () => {
   if (activityDetailsEl.open) {
     renderActivityFromCache();
   }
+});
+holdersWrapEl?.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof HTMLElement)) return;
+  const button = target.closest(".sort-th");
+  if (!(button instanceof HTMLButtonElement)) return;
+  const key = button.getAttribute("data-holder-sort");
+  if (!key) return;
+  if (holdersSortKey === key) {
+    holdersSortDir = holdersSortDir === "asc" ? "desc" : "asc";
+  } else {
+    holdersSortKey = key;
+    holdersSortDir = "desc";
+  }
+  renderHolders();
 });
 listingsBodyEl.addEventListener("click", (event) => {
   const target = event.target;

@@ -262,8 +262,50 @@ input::placeholder {
   overflow: auto;
 }
 
+.holders-wrap {
+  max-height: 620px;
+  overflow: auto;
+}
+
+/* Slim themed scrollbars */
+.listings-wrap,
+.sales-wrap,
+.holders-wrap {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(134, 170, 224, 0.5) rgba(18, 31, 50, 0.45);
+}
+
+.listings-wrap::-webkit-scrollbar,
+.sales-wrap::-webkit-scrollbar,
+.holders-wrap::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.listings-wrap::-webkit-scrollbar-track,
+.sales-wrap::-webkit-scrollbar-track,
+.holders-wrap::-webkit-scrollbar-track {
+  background: rgba(18, 31, 50, 0.45);
+  border-radius: 999px;
+}
+
+.listings-wrap::-webkit-scrollbar-thumb,
+.sales-wrap::-webkit-scrollbar-thumb,
+.holders-wrap::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(110, 162, 240, 0.65), rgba(94, 141, 214, 0.65));
+  border-radius: 999px;
+  border: 2px solid rgba(18, 31, 50, 0.45);
+}
+
+.listings-wrap::-webkit-scrollbar-thumb:hover,
+.sales-wrap::-webkit-scrollbar-thumb:hover,
+.holders-wrap::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(139, 190, 255, 0.75), rgba(110, 162, 240, 0.75));
+}
+
 .listings-wrap thead th,
-.sales-wrap thead th {
+.sales-wrap thead th,
+.holders-wrap thead th {
   position: sticky;
   top: 0;
   z-index: 4;
@@ -273,6 +315,24 @@ input::placeholder {
 
 .listings-wrap thead th {
   z-index: 5;
+}
+
+.holders-wrap thead th {
+  z-index: 5;
+}
+
+.sort-th {
+  border: 0;
+  background: transparent;
+  color: #d8e9ff;
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sort-th:hover {
+  color: #ffffff;
 }
 
 .table-wrap h2 {
