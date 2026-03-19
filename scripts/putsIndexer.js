@@ -914,14 +914,12 @@ async function main() {
   const activityRecentResolved = await Promise.all(activityRecent);
 
   const holdersAll = aggregateOwners(state.holders?.tokenOwners || {});
-  holdersAll.sort((a, b) => b.putCount - a.putCount || a.address.localeCompare(b.address));
-  const holdersTop = holdersAll.slice(0, 50);
-  const holdersTopResolved = [];
+  const holdersResolved = [];
   const ethUsdAnswer = oracle.ethUsd ? BigInt(oracle.ethUsd) : null;
   const ethUsdDecimals = Number(oracle.ethUsdDecimals ?? 8);
   const usdScale = 10n ** 18n;
 
-  for (const holder of holdersTop) {
+  for (const holder of holdersAll) {
     let usdcWei = 0n;
     let usdtWei = 0n;
     let wethWei = 0n;
@@ -958,7 +956,7 @@ async function main() {
       }
     }
 
-    holdersTopResolved.push({
+    holdersResolved.push({
       address: holder.address,
       putCount: holder.putCount,
       usdcWei: usdcWei.toString(),
@@ -971,6 +969,15 @@ async function main() {
       totalUsdDisplay: formatUnits(totalUsdWei, 18)
     });
   }
+
+  holdersResolved.sort((a, b) => {
+    const usdA = BigInt(a.totalUsdWei || "0");
+    const usdB = BigInt(b.totalUsdWei || "0");
+    if (usdA !== usdB) return usdA > usdB ? -1 : 1;
+    if ((a.putCount || 0) !== (b.putCount || 0)) return (b.putCount || 0) - (a.putCount || 0);
+    return String(a.address || "").localeCompare(String(b.address || ""));
+  });
+  const holdersTopResolved = holdersResolved.slice(0, 50);
 
   const activeCount = enrichedActive.filter((x) => x.derivedStatus === "active").length;
   const expiredCount = enrichedActive.filter((x) => x.derivedStatus === "expired").length;
