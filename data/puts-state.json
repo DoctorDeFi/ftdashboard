@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24720652",
+  "lastBlock": "24720947",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -12019,11 +12019,11 @@
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "550000000",
       "expires": 1774524863,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xce5b8e3cfbe7fb54dcf36ceec1969d3162af10364b775edb1fdadff539281fb8",
-      "lastBlockNumber": 24691270,
-      "lastLogIndex": 1199
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0xf95c57c06ea764f03045293905dc7cd532f694f462de397b82a8683349ada9cf",
+      "lastBlockNumber": 24720782,
+      "lastLogIndex": 1485
     },
     "5663": {
       "tokenId": "5663",
@@ -16066,23 +16066,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0xcabee7a003dc914cc3c9fd7807ffa0f1cab491106478934c3c1a71f40b5fb6b3",
-      "blockNumber": 24493231,
-      "logIndex": 300,
-      "tokenId": "18",
-      "seller": "0x001ccb4aee11e54217dc4b02b7bd252f5d420d1f",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "12900000000",
-        "expires": 1772137057
-      }
-    },
     {
       "event": "RemoveListing",
       "txHash": "0x09502ec54e45d5feee732dc64114ce37a3588901df4601fb45e627b7e031e750",
@@ -57803,6 +57786,20 @@
         "priceWei": "5150000000",
         "expires": 1774874149
       }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0xf95c57c06ea764f03045293905dc7cd532f694f462de397b82a8683349ada9cf",
+      "blockNumber": 24720782,
+      "logIndex": 1485,
+      "tokenId": "5658",
+      "seller": "0x15c2ea0b5c826e6917a3cfebf9109f14d6e264fd",
+      "atUnix": 1774275743,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
     }
   ],
   "acceptedTokens": [
@@ -57818,7 +57815,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24720652",
+    "lastBlock": "24720947",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -59205,7 +59202,6 @@
       "1976": "0xf8e12f6c6ca0368affcfbd33f463c9f2b927bf56",
       "1978": "0x537ab709b03c5c7623dbc2e92b632018e05f57d4",
       "1982": "0x8a688596c64ca7dd6a58f3b83a2cb0feba5b843e",
-      "1983": "0x2560e18187362f970b19c5e85f71e37fce5847f5",
       "1984": "0x7e2541d3f1ef8532b1a717a72ee09147b29b0c77",
       "1985": "0x4d1ea6dd17f1b1ccf9615a813ec1a469efd7a817",
       "1986": "0x10c0014602516a154f8883ae4cbf09322d84cb81",
@@ -61274,7 +61270,6 @@
       "5050": "0x69b50c531d52819d3dc34848da24b67f2da09c98",
       "5051": "0x0ca78ed9f48dfc2dbbff9e1d55227e52359776f0",
       "5052": "0x69b50c531d52819d3dc34848da24b67f2da09c98",
-      "5054": "0x651817b6b7464b61c6c6ef87da2bc84ee0e64377",
       "5055": "0xdedccbef563b370d8218f83a2e8453b648592772",
       "5056": "0x5897206d8274aba3ced394405d6eb15769696eff",
       "5058": "0x867e2d3ef64e24660338e07a2e3025e50927bb30",
@@ -62408,7 +62403,6 @@
       "6627": "0x1f6d6ef77810e91c95de58fd5b18f6f2ab8c6542",
       "6653": "0x712ec4447b0bfdae96c10b953cba1fe4ffbe4b78",
       "6658": "0x69ffe89e359385376ec1bee0124be5fca915e1bc",
-      "6659": "0x4a72d75138b0aa90e80af47fc1854748633ec1ea",
       "6660": "0x5e3cc6d6518f0bbd5f1efd54b4d0d826a35a8293",
       "6662": "0x50b881c7e689b051ddf6866f7cf8cb05265f2a66",
       "6668": "0xe3cd291606be362bf1132cfc0094a6298fa0b5f9",
@@ -63105,15 +63099,11 @@
       "8103": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8104": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8105": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8124": "0x8592f5686a75a8872db90a0a4151f3b6c561c126",
-      "8125": "0x201de702045eccb65e2e1acd8b08bef45f8fc31d",
       "8126": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8127": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8128": "0x83c3fa6d8194b9c2193a301ea9bbbf4b9e41c3ff",
       "8129": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8130": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8131": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8132": "0xe987f2b4fed66aada560a152e9114bf46988412b",
       "8133": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8134": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8135": "0xb431ff4948188587628d4c98185a5555179bd97e",
@@ -63122,15 +63112,12 @@
       "8138": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8139": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8140": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8141": "0xf733fb740d51289e52c0cf4a62451774ccf3563e",
       "8142": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8143": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8144": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8145": "0x034520da5633dbfcc56bcc33467c07293d768554",
       "8146": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8147": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8148": "0xb431ff4948188587628d4c98185a5555179bd97e",
-      "8149": "0xffa315176bdeb77f70ce90ed4f38869ded656cca",
       "8150": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8151": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8152": "0xd2ffde3b0618df6f14d31cc96769be877fcbf5c4",
@@ -63268,7 +63255,6 @@
       "8357": "0x0c5c585fd4ba99cf96c5678636d8e1ec5e3d1033",
       "8359": "0x15577452e22ff2e8251d7f0fdfba8a710f09f532",
       "8361": "0x6e34765aeb7353c79e27bde53c016e0dfa0fccdd",
-      "8362": "0xdf15aea4dab0a2daf752555b1d8ab855c0392d2d",
       "8363": "0x1c5e5389ccaec969634dacd40759312d4316f594",
       "8364": "0xa3cc2d84296bb93234e1e3929ac66cd9a62573c3",
       "8365": "0xfc5c9f44ea4b6c641f0d1acee4f98b51b7bdc8d3",
