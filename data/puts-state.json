@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24777285",
+  "lastBlock": "24777489",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -15007,11 +15007,11 @@
       "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "priceWei": "10100000000",
       "expires": 1775379934,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x59c14c587b074b9ab143bcbd2a1f9eca1482e90e687fc0f51ec582f9b419b2bd",
-      "lastBlockNumber": 24762245,
-      "lastLogIndex": 177
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0x51044a003dd755f959eb96b46aabba0195dbfbbfd9d1ca9695f291186e02a036",
+      "lastBlockNumber": 24777471,
+      "lastLogIndex": 314
     },
     "9116": {
       "tokenId": "9116",
@@ -16744,23 +16744,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x86d01aa665bb1187da56cba95d6bb0ac29a7d856b712c171f652b379b8bbf6d0",
-      "blockNumber": 24522080,
-      "logIndex": 831,
-      "tokenId": "1611",
-      "seller": "0xce485e854ef129d13dc1e25d103412bd25e97904",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "41500000000",
-        "expires": 1772138884
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0xbfba9f6835450f0336af0bc4b43d4dfdaf6f2f0fb5a71331baed929f36544693",
@@ -58630,6 +58613,20 @@
         "priceWei": "58970000",
         "expires": 1775007676
       }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0x51044a003dd755f959eb96b46aabba0195dbfbbfd9d1ca9695f291186e02a036",
+      "blockNumber": 24777471,
+      "logIndex": 314,
+      "tokenId": "9114",
+      "seller": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
+      "atUnix": 1774958687,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
     }
   ],
   "acceptedTokens": [
@@ -58645,7 +58642,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24777285",
+    "lastBlock": "24777489",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -64336,27 +64333,15 @@
       "9109": "0xcd365df3d51c7f9ac21a4231281016c2fc6bf475",
       "9112": "0x30dad810405dd0002fb4d3659397adceebce2cd4",
       "9113": "0x250a64de7cd5c7785800c700e1171c57e8bad0dd",
-      "9114": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9115": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9117": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9118": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9119": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9120": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9121": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9122": "0xe149c411656cadd2801d4cf4490a0bf75c581b0c",
-      "9123": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9124": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9127": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9128": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9129": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9130": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9132": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9133": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9134": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9135": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9136": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9137": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
-      "9138": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9139": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9140": "0x34abcfd624440f57e5ca958969799dc0a38e18b8",
       "9142": "0xd8605d5c167d2eb47edc2abdff18b49edc89639b",
