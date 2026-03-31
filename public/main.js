@@ -8,6 +8,8 @@ const circulatingBreakdownEl = document.getElementById("circulatingBreakdown");
 const tradableByChainEl = document.getElementById("tradableByChain");
 const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
+const systemNavEl = document.getElementById("systemNav");
+const withdrawalNavEl = document.getElementById("withdrawalNav");
 
 function fmtWei(wei, decimals = 18) {
   const n = BigInt(wei || "0");
@@ -22,6 +24,11 @@ function fmtWei(wei, decimals = 18) {
 function pct(part, total) {
   if (total <= 0n) return 0;
   return Number((part * 10000n) / total) / 100;
+}
+
+function formatNav(value) {
+  if (!Number.isFinite(value) || value <= 0) return "--";
+  return `$${value.toFixed(5)}`;
 }
 
 function render(payload) {
@@ -137,13 +144,41 @@ function render(payload) {
   finalNumbersEl.textContent = `${fmtWei(burned, decimals)} + ${fmtWei(circulating, decimals)} + ${fmtWei(nonCirculating, decimals)}`;
 }
 
+function renderNavs(navData) {
+  if (!systemNavEl || !withdrawalNavEl) return;
+  if (!navData) {
+    systemNavEl.textContent = "--";
+    withdrawalNavEl.textContent = "--";
+    return;
+  }
+
+  const { systemNav, withdrawalNav } = navData;
+  systemNavEl.textContent = formatNav(systemNav);
+  withdrawalNavEl.textContent = formatNav(withdrawalNav);
+}
+
+async function loadNavs() {
+  const res = await fetch(`/data/nav.json?t=${Date.now()}`);
+  if (!res.ok) throw new Error(`nav fetch failed (${res.status})`);
+  const payload = await res.json();
+  return {
+    systemNav: Number(payload?.systemNav?.value || 0),
+    withdrawalNav: Number(payload?.withdrawalNav?.value || 0)
+  };
+}
+
 async function loadDashboard() {
   updatedAtEl.textContent = "Updated: loading...";
+  renderNavs(null);
   try {
-    const res = await fetch(`/data/metrics.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`metrics fetch failed (${res.status})`);
-    const payload = await res.json();
+    const [metricsRes, navData] = await Promise.all([
+      fetch(`/data/metrics.json?t=${Date.now()}`),
+      loadNavs().catch(() => null)
+    ]);
+    if (!metricsRes.ok) throw new Error(`metrics fetch failed (${metricsRes.status})`);
+    const payload = await metricsRes.json();
     render(payload);
+    renderNavs(navData);
   } catch (error) {
     updatedAtEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
     heroTotalSupplyEl.textContent = "--";
@@ -154,6 +189,7 @@ async function loadDashboard() {
     tradableByChainEl.innerHTML = "";
     blocksBodyEl.innerHTML = "";
     finalNumbersEl.textContent = "";
+    renderNavs(null);
   }
 }
 

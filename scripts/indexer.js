@@ -20,13 +20,19 @@ const CALL_DATA = {
   ftAllocated: "0x70d8da31"
 };
 
+const ETH_RPC_URL = process.env.ETH_RPC_URL || process.env.ALCHEMY_ETH_RPC_URL || "";
+
 const CHAINS = [
   {
     key: "ethereum",
     label: "Ethereum",
     lookback: 220_000n,
     chunk: 40_000n,
-    rpcs: ["https://ethereum-rpc.publicnode.com", "https://cloudflare-eth.com"]
+    rpcs: [
+      ...(ETH_RPC_URL ? [ETH_RPC_URL] : []),
+      "https://ethereum-rpc.publicnode.com",
+      "https://cloudflare-eth.com"
+    ]
   },
   {
     key: "sonic",

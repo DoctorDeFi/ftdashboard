@@ -18,6 +18,7 @@ This setup is Vercel-friendly because the browser no longer runs heavy onchain i
 npm run dev
 npm run index
 npm run index:puts
+npm run index:nav
 ```
 
 ## PUTs Marketplace Dashboard
@@ -26,6 +27,14 @@ npm run index:puts
 - Output snapshot: `public/data/puts-marketplace.json`
 - Incremental state: `data/puts-state.json`
 - Frontend page: `/puts-marketplace.html`
+
+## NAV snapshot (System NAV + Withdrawal NAV)
+
+- Generator: `npm run index:nav`
+- Output snapshot: `public/data/nav.json`
+- Incremental state: `data/nav-state.json`
+- Source: `https://api.flyingtulip.com/status/put/dashboard`
+- Withdrawal NAV WETH leg uses historical event-time ETH/USD marks.
 
 Suggested local flow:
 
@@ -50,8 +59,16 @@ npm run index
 Workflow added: `.github/workflows/update-metrics.yml`
 
 - Runs every 30 minutes.
-- Executes `npm run index`.
+- Executes `npm run index`, `npm run index:puts`, and `npm run index:nav`.
 - Commits `public/data/metrics.json` and `data/state.json` when changed.
+
+### Ethereum RPC (paid endpoint)
+
+Set repository secret:
+
+- `ETH_RPC_URL` (recommended: your paid Alchemy mainnet URL)
+
+The indexers will use this endpoint first for Ethereum RPC calls.
 
 If your Vercel project is connected to this GitHub repo, each metrics commit auto-deploys.
 

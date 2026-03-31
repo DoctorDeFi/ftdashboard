@@ -8,6 +8,10 @@
     "start": "node src/server.js",
     "index": "node scripts/indexer.js",
     "index:puts": "node scripts/putsIndexer.js",
+    "index:nav": "node scripts/navIndexer.js",
     "index:puts:reset": "node scripts/putsIndexer.js --reset"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0"
   }
 }

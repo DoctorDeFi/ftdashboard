@@ -5,7 +5,9 @@ const ROOT = process.cwd();
 const STATE_PATH = path.join(ROOT, "data", "puts-state.json");
 const OUTPUT_PATH = path.join(ROOT, "public", "data", "puts-marketplace.json");
 
+const ETH_RPC_URL = process.env.ETH_RPC_URL || process.env.ALCHEMY_ETH_RPC_URL || "";
 const ETH_RPCS = [
+  ...(ETH_RPC_URL ? [ETH_RPC_URL] : []),
   "https://ethereum-rpc.publicnode.com",
   "https://cloudflare-eth.com",
   "https://rpc.flashbots.net"
