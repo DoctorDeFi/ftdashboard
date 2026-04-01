@@ -6,6 +6,7 @@ const splitMetaEl = document.getElementById("splitMeta");
 const splitLegendEl = document.getElementById("splitLegend");
 const circulatingBreakdownEl = document.getElementById("circulatingBreakdown");
 const tradableByChainEl = document.getElementById("tradableByChain");
+const protocolBuysSectionEl = document.getElementById("protocolBuysSection");
 const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
 const systemNavEl = document.getElementById("systemNav");
@@ -29,6 +30,85 @@ function pct(part, total) {
 function formatNav(value) {
   if (!Number.isFinite(value) || value <= 0) return "--";
   return `$${value.toFixed(5)}`;
+}
+
+function shortHash(v, a = 6, b = 4) {
+  const s = String(v || "");
+  if (s.length <= a + b + 3) return s;
+  return `${s.slice(0, a)}...${s.slice(-b)}`;
+}
+
+function renderProtocolBuys(payload) {
+  if (!protocolBuysSectionEl) return;
+  if (!payload || !payload.summary) {
+    protocolBuysSectionEl.innerHTML = `
+      <h2>Protocol FT Buys</h2>
+      <p class="puts-sub">No buy snapshot available yet.</p>
+    `;
+    return;
+  }
+
+  const s = payload.summary;
+  const totalFtNum = Number(s.totalFtBought || 0);
+  const avgPriceNum = Number(s.avgBuyPriceUsd || 0);
+  const estUsd = Number.isFinite(totalFtNum) && Number.isFinite(avgPriceNum) ? totalFtNum * avgPriceNum : 0;
+  const moduleWallet = new Map((payload.wallets || []).map((w) => [w.module, w]));
+  const moduleRows = (payload.moduleTotals || [])
+    .map(
+      (m) => `
+      <tr>
+        <td>
+          <div>${m.module}</div>
+          ${
+            moduleWallet.get(m.module)
+              ? `<a class="module-wallet-link" target="_blank" rel="noopener noreferrer" href="${
+                  moduleWallet.get(m.module).chainKey === "sonic"
+                    ? "https://sonicscan.org/address/"
+                    : "https://etherscan.io/address/"
+                }${moduleWallet.get(m.module).address}">${shortHash(moduleWallet.get(m.module).address, 8, 6)}</a>`
+              : ""
+          }
+        </td>
+        <td>${m.ftBought}</td>
+      </tr>
+    `
+    )
+    .join("");
+
+  protocolBuysSectionEl.innerHTML = `
+    <div class="split-head">
+      <h2>Protocol FT Buys (Rev/Distribution)</h2>
+    </div>
+    <p class="puts-sub">Excludes FT buybacks funded through PUT withdrawals.</p>
+    <article class="summary-card buys-highlight">
+      <p class="label">Total Protocol FT Bought</p>
+      <p class="value">${s.totalFtBought}</p>
+      <p class="buys-highlight-sub">$${estUsd.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+    </article>
+    <div class="summary-grid buys-grid buys-inline">
+      <article class="summary-card buys-stat">
+        <p class="label">Avg Buy Price (USD)</p>
+        <p class="value">$${s.avgBuyPriceUsd}</p>
+      </article>
+      <article class="summary-card buys-stat">
+        <p class="label">FT Bought 24h</p>
+        <p class="value">${s.ftBought24h}</p>
+      </article>
+      <article class="summary-card buys-stat">
+        <p class="label">Tracked Chains</p>
+        <p class="value">${(payload.chainTotals || []).length}</p>
+      </article>
+    </div>
+    <div class="table-wrap">
+      <h3 class="mini-h">Module Breakdown</h3>
+      <table class="mini-table">
+        <thead>
+          <tr><th>Module</th><th>FT Bought</th></tr>
+        </thead>
+        <tbody>${moduleRows || '<tr><td colspan="2">No rows</td></tr>'}</tbody>
+      </table>
+    </div>
+  `;
 }
 
 function render(payload) {
@@ -170,15 +250,23 @@ async function loadNavs() {
 async function loadDashboard() {
   updatedAtEl.textContent = "Updated: loading...";
   renderNavs(null);
+  renderProtocolBuys(null);
   try {
-    const [metricsRes, navData] = await Promise.all([
+    const [metricsRes, navData, buysRes] = await Promise.all([
       fetch(`/data/metrics.json?t=${Date.now()}`),
-      loadNavs().catch(() => null)
+      loadNavs().catch(() => null),
+      fetch(`/data/protocol-ft-buys.json?t=${Date.now()}`).catch(() => null)
     ]);
     if (!metricsRes.ok) throw new Error(`metrics fetch failed (${metricsRes.status})`);
     const payload = await metricsRes.json();
     render(payload);
     renderNavs(navData);
+    if (buysRes && buysRes.ok) {
+      const buysPayload = await buysRes.json();
+      renderProtocolBuys(buysPayload);
+    } else {
+      renderProtocolBuys(null);
+    }
   } catch (error) {
     updatedAtEl.textContent = `Error: ${error instanceof Error ? error.message : String(error)}`;
     heroTotalSupplyEl.textContent = "--";
@@ -187,6 +275,7 @@ async function loadDashboard() {
     splitLegendEl.innerHTML = "";
     circulatingBreakdownEl.innerHTML = "";
     tradableByChainEl.innerHTML = "";
+    protocolBuysSectionEl.innerHTML = "";
     blocksBodyEl.innerHTML = "";
     finalNumbersEl.textContent = "";
     renderNavs(null);

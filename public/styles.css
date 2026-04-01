@@ -458,6 +458,117 @@ summary {
   background: linear-gradient(135deg, rgba(53, 85, 133, 0.78), rgba(38, 63, 104, 0.94));
 }
 
+.buys-grid {
+  margin-top: 0.8rem;
+}
+
+.buys-highlight {
+  margin-top: 0.8rem;
+  border-color: rgba(92, 226, 152, 0.45);
+  background: linear-gradient(135deg, rgba(23, 52, 57, 0.95), rgba(17, 33, 45, 0.95));
+}
+
+.buys-highlight .label {
+  color: #b8f5d3;
+}
+
+.buys-highlight .value {
+  color: #69efab;
+  font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+}
+
+.buys-highlight-sub {
+  margin: 0.18rem 0 0;
+  color: #b7d9c8;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.buys-inline {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.buys-stat {
+  background: linear-gradient(180deg, rgba(20, 38, 67, 0.94), rgba(14, 29, 52, 0.95));
+  border-color: rgba(120, 156, 235, 0.3);
+}
+
+.wallet-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.wallet-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.64rem;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 175, 255, 0.35);
+  background: rgba(22, 41, 69, 0.88);
+  color: #b9dcff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.wallet-link:hover {
+  border-color: rgba(124, 240, 183, 0.6);
+  color: #d6ffea;
+}
+
+.module-wallet-link {
+  display: inline-block;
+  margin-top: 0.18rem;
+  color: #8fd8ff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.module-wallet-link:hover {
+  color: #b5ffe3;
+  text-decoration: underline;
+}
+
+.table-wrap {
+  margin-top: 0.9rem;
+}
+
+.mini-h {
+  margin: 0 0 0.5rem;
+  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size: 0.95rem;
+}
+
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  color: #dce9ff;
+}
+
+.mini-table th,
+.mini-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem 0.35rem;
+  text-align: left;
+}
+
+.mini-table th {
+  color: #b8c8e2;
+  font-weight: 700;
+}
+
+.mini-table a {
+  color: #8cd5ff;
+  text-decoration: none;
+}
+
+.mini-table a:hover {
+  text-decoration: underline;
+}
+
 .footnote {
   text-align: center;
   margin-top: 1rem;
@@ -501,6 +612,14 @@ summary {
   .breakdown-grid,
   .quick-links {
     grid-template-columns: 1fr;
+  }
+
+  .buys-inline {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-table {
+    font-size: 0.78rem;
   }
 
   .hero-card {

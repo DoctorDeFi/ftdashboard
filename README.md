@@ -19,6 +19,7 @@ npm run dev
 npm run index
 npm run index:puts
 npm run index:nav
+npm run index:buys
 ```
 
 ## PUTs Marketplace Dashboard
@@ -35,6 +36,16 @@ npm run index:nav
 - Incremental state: `data/nav-state.json`
 - Source: `https://api.flyingtulip.com/status/put/dashboard`
 - Withdrawal NAV WETH leg uses historical event-time ETH/USD marks.
+
+## Protocol FT buys snapshot
+
+- Generator: `npm run index:buys`
+- Output snapshot: `public/data/protocol-ft-buys.json`
+- Incremental state: `data/protocol-buys-state.json`
+- Tracked wallets:
+  - ETH ftUSD: `0xbae14f050fb8cda4d16ab47dbec67793c7c0b566`
+  - Sonic ftUSD: `0xed0077a9e26329327722a81df2db3450f100226f`
+  - Sonic Margin: `0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a`
 
 Suggested local flow:
 
@@ -59,7 +70,7 @@ npm run index
 Workflow added: `.github/workflows/update-metrics.yml`
 
 - Runs every 30 minutes.
-- Executes `npm run index`, `npm run index:puts`, and `npm run index:nav`.
+- Executes `npm run index`, `npm run index:puts`, `npm run index:nav`, and `npm run index:buys`.
 - Commits `public/data/metrics.json` and `data/state.json` when changed.
 
 ### Ethereum RPC (paid endpoint)

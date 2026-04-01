@@ -37,7 +37,7 @@ jobs:
           do
             attempts=$((attempts+1))
             echo "Indexer attempt $attempts/5"
-            if npm run index && npm run index:puts && npm run index:nav; then
+            if npm run index && npm run index:puts && npm run index:nav && npm run index:buys; then
               echo "Indexer succeeded"
               break
             fi
@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/metrics.json data/state.json public/data/puts-marketplace.json data/puts-state.json public/data/nav.json data/nav-state.json
+          git add public/data/metrics.json data/state.json public/data/puts-marketplace.json data/puts-state.json public/data/nav.json data/nav-state.json public/data/protocol-ft-buys.json data/protocol-buys-state.json
           if git diff --cached --quiet; then
             echo "No metric changes"
             exit 0
