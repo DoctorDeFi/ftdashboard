@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24784575",
+  "lastBlock": "24785013",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -192,6 +192,18 @@
       "lastTxHash": "0xfb636280cd5b646f01c5ce8562b655856193b4f4e102cbb3c3e67622dc8f5657",
       "lastBlockNumber": 24764229,
       "lastLogIndex": 1785
+    },
+    "39": {
+      "tokenId": "39",
+      "seller": "0xc405c67eaa84264393078940d6523689ad7f6735",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "10990000000",
+      "expires": 1777636584,
+      "status": "active",
+      "lastAction": "ListingUpdate(heuristic)",
+      "lastTxHash": "0x96cfaaba794f5eae8b06222b091d8f035609aa4b6abe49f08aa64af273ff8e90",
+      "lastBlockNumber": 24784594,
+      "lastLogIndex": 490
     },
     "42": {
       "tokenId": "42",
@@ -16845,25 +16857,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "Sold(heuristic-v2)",
-      "txHash": "0x878386421d297b991c4b127085aa4cfbb3eebaa6df924dfaf4714c08e8ef6273",
-      "blockNumber": 24526277,
-      "logIndex": 838,
-      "tokenId": "5655",
-      "seller": "0xc8785c18f948dbb4e27c64138e252f4e8c35ebbc",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
-        "topicsCount": 3,
-        "dataWords": 4,
-        "buyer": "0x125dbe70459b36a4c71664dcc97224eafeb4aee0",
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "10000000000",
-        "makerFeeWei": "10000000",
-        "takerFeeWei": "30000000"
-      }
-    },
     {
       "event": "RemoveListing",
       "txHash": "0xbb59cf79bb355216872fed125807ad8d90f77df04b3d3ad70c40d41b1354dfc1",
@@ -58761,6 +58754,23 @@
         "priceWei": "120000000",
         "expires": 1782901893
       }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0x96cfaaba794f5eae8b06222b091d8f035609aa4b6abe49f08aa64af273ff8e90",
+      "blockNumber": 24784594,
+      "logIndex": 490,
+      "tokenId": "39",
+      "seller": "0xc405c67eaa84264393078940d6523689ad7f6735",
+      "atUnix": 1775044667,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "10990000000",
+        "expires": 1777636584
+      }
     }
   ],
   "acceptedTokens": [
@@ -58776,7 +58786,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24784575",
+    "lastBlock": "24785013",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -60886,7 +60896,6 @@
       "3285": "0x0b77e18b1dbf63cf47e571b6c14f0921a7cf9099",
       "3286": "0x0b77e18b1dbf63cf47e571b6c14f0921a7cf9099",
       "3287": "0x05e7dcb4e7866045af77828b14276188630b3659",
-      "3288": "0x2b875dfda1c5e751fd51ee96d10370fe1fe04ee5",
       "3289": "0xa7bdd1e97491a997112a07af6adce00e09e12540",
       "3290": "0xa7bdd1e97491a997112a07af6adce00e09e12540",
       "3294": "0x1eb4517759364aa5282d0bb8775d654d32474a0e",
@@ -61068,7 +61077,6 @@
       "3575": "0x6899bb09ce6b16c646891dbf02a7b3641819eae1",
       "3576": "0x8f8cdb752de1fdb11b481cbfdd6d3d603813174e",
       "3577": "0xc6dbd82d6dd2de9a29e96686e801667d98044fae",
-      "3578": "0x8d6096d98be7847653bf78beb5a43618925082cb",
       "3579": "0x8b80b177725444fb37acebc383498ed55bef121d",
       "3580": "0x4f66e70c934e72d3b10730605665e04b1f13beb7",
       "3581": "0xebeb094e427d4ec9f5d9d8b036b23de2737e72fa",
@@ -63503,7 +63511,6 @@
       "7609": "0x4e18b37217b3a45b45039829a08aa5b62e760c5d",
       "7612": "0x70058e6793a8c8d47961568c05797b4a3ba53848",
       "7613": "0x31265d01e86190c5f97f6bba792c5656bf252972",
-      "7616": "0xee74356635a216a1fc89d4921495124c1533b0c8",
       "7618": "0xeb78c5217a235c3dd324ff4eaebd531b8bbd04e9",
       "7619": "0xdc90062b1202cf30cf2fc6b2cca007af94c8f231",
       "7620": "0xeb78c5217a235c3dd324ff4eaebd531b8bbd04e9",
