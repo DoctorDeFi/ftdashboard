@@ -53,6 +53,10 @@ function renderProtocolBuys(payload) {
   const avgPriceNum = Number(s.avgBuyPriceUsd || 0);
   const estUsd = Number.isFinite(totalFtNum) && Number.isFinite(avgPriceNum) ? totalFtNum * avgPriceNum : 0;
   const moduleWallet = new Map((payload.wallets || []).map((w) => [w.module, w]));
+  const daily = (payload.daily || [])
+    .map((d) => ({ day: d.day, ft: Number(d.ftBought || 0) }))
+    .filter((d) => Number.isFinite(d.ft))
+    .slice(-30);
   const moduleRows = (payload.moduleTotals || [])
     .map(
       (m) => `
@@ -74,6 +78,88 @@ function renderProtocolBuys(payload) {
     `
     )
     .join("");
+  const historyRows = daily
+    .slice()
+    .reverse()
+    .slice(0, 14)
+    .map(
+      (d) => `
+      <tr>
+        <td>${d.day}</td>
+        <td>${d.ft.toLocaleString(undefined, { maximumFractionDigits: 4 })}</td>
+      </tr>
+    `
+    )
+    .join("");
+
+  const chartW = 1200;
+  const chartH = 360;
+  const padL = 84;
+  const padR = 28;
+  const padT = 22;
+  const padB = 54;
+  const maxY = Math.max(...daily.map((d) => d.ft), 1);
+  const minY = 0;
+  const spanX = Math.max(daily.length - 1, 1);
+  const plotW = chartW - padL - padR;
+  const plotH = chartH - padT - padB;
+  const points = daily.map((d, i) => {
+    const x = padL + (i * plotW) / spanX;
+    const y = chartH - padB - ((d.ft - minY) / (maxY - minY || 1)) * plotH;
+    return [x, y];
+  });
+  const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(" ");
+  const areaPath =
+    points.length > 0
+      ? `${linePath} L${points[points.length - 1][0].toFixed(2)},${(chartH - padB).toFixed(2)} L${points[0][0].toFixed(2)},${(chartH - padB).toFixed(2)} Z`
+      : "";
+  const startDay = daily[0]?.day || "--";
+  const endDay = daily[daily.length - 1]?.day || "--";
+  const yTicks = [0, maxY * 0.5, maxY];
+  const yFormat = (n) =>
+    Number(n).toLocaleString(undefined, {
+      maximumFractionDigits: n >= 100 ? 0 : 2
+    });
+  const yGrid = yTicks
+    .map((v) => {
+      const y = chartH - padB - ((v - minY) / (maxY - minY || 1)) * plotH;
+      return `
+      <line x1="${padL}" y1="${y.toFixed(2)}" x2="${(chartW - padR).toFixed(2)}" y2="${y.toFixed(2)}" class="chart-grid-line"></line>
+      <text x="${(padL - 10).toFixed(2)}" y="${(y + 4).toFixed(2)}" text-anchor="end" class="chart-axis-text">${yFormat(v)}</text>
+    `;
+    })
+    .join("");
+  const xTickIndexes = Array.from(new Set([0, Math.floor((daily.length - 1) / 2), daily.length - 1])).filter(
+    (i) => i >= 0
+  );
+  const xTicks = xTickIndexes
+    .map((i) => {
+      const p = points[i];
+      const label = daily[i]?.day || "";
+      return `<text x="${p[0].toFixed(2)}" y="${(chartH - 20).toFixed(2)}" text-anchor="middle" class="chart-axis-text">${label}</text>`;
+    })
+    .join("");
+  const pointsMarkup = points
+    .map((p, i) => {
+      const d = daily[i];
+      const val = d.ft.toLocaleString(undefined, { maximumFractionDigits: 4 });
+      return `
+      <circle
+        class="chart-point"
+        data-idx="${i}"
+        cx="${p[0].toFixed(2)}"
+        cy="${p[1].toFixed(2)}"
+        r="5.5"
+        tabindex="0"
+        role="button"
+        aria-label="${d.day}: ${val} FT"
+      >
+        <title>${d.day}: ${val} FT</title>
+      </circle>
+    `;
+    })
+    .join("");
+  const defaultDetail = daily[daily.length - 1] || null;
 
   protocolBuysSectionEl.innerHTML = `
     <div class="split-head">
@@ -99,16 +185,90 @@ function renderProtocolBuys(payload) {
         <p class="value">${(payload.chainTotals || []).length}</p>
       </article>
     </div>
-    <div class="table-wrap">
-      <h3 class="mini-h">Module Breakdown</h3>
-      <table class="mini-table">
-        <thead>
-          <tr><th>Module</th><th>FT Bought</th></tr>
-        </thead>
-        <tbody>${moduleRows || '<tr><td colspan="2">No rows</td></tr>'}</tbody>
-      </table>
+    <div class="table-wrap buys-chart-wrap buys-chart-block">
+        <h3 class="mini-h">Daily FT Buys (30D)</h3>
+        <div class="buys-chart-meta">${startDay} → ${endDay}</div>
+        ${
+          daily.length
+            ? `
+          <div class="buys-chart-shell">
+          <svg class="buys-chart" viewBox="0 0 ${chartW} ${chartH}" preserveAspectRatio="none" aria-label="Daily FT buys line chart">
+            <defs>
+              <linearGradient id="buysArea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(88, 255, 171, 0.36)" />
+                <stop offset="100%" stop-color="rgba(88, 255, 171, 0.03)" />
+              </linearGradient>
+            </defs>
+            ${yGrid}
+            <line x1="${padL}" y1="${(chartH - padB).toFixed(2)}" x2="${(chartW - padR).toFixed(2)}" y2="${(
+                chartH - padB
+              ).toFixed(2)}" class="chart-axis-line"></line>
+            <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${(chartH - padB).toFixed(2)}" class="chart-axis-line"></line>
+            <path d="${areaPath}" fill="url(#buysArea)"></path>
+            <path d="${linePath}" fill="none" stroke="#56eca5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            ${pointsMarkup}
+            ${xTicks}
+            <text x="${((padL + chartW - padR) / 2).toFixed(2)}" y="${(chartH - 8).toFixed(2)}" text-anchor="middle" class="chart-axis-label">Day</text>
+            <text x="${(padL - 10).toFixed(2)}" y="${(padT - 6).toFixed(2)}" text-anchor="end" class="chart-axis-label">FT Bought</text>
+          </svg>
+          <div class="chart-tooltip" data-chart-tooltip></div>
+          </div>
+        `
+            : `<div class="puts-sub">No daily data yet.</div>`
+        }
+      </div>
+    <div class="buys-lower-grid">
+      <div class="table-wrap">
+        <h3 class="mini-h history-head">History</h3>
+        <table class="mini-table history-table">
+          <thead><tr><th>Day</th><th>FT Bought</th></tr></thead>
+          <tbody>${historyRows || '<tr><td colspan="2">No rows</td></tr>'}</tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <h3 class="mini-h">Module Breakdown</h3>
+        <table class="mini-table">
+          <thead>
+            <tr><th>Module</th><th>FT Bought</th></tr>
+          </thead>
+          <tbody>${moduleRows || '<tr><td colspan="2">No rows</td></tr>'}</tbody>
+        </table>
+      </div>
     </div>
   `;
+
+  if (daily.length) {
+    const shellEl = protocolBuysSectionEl.querySelector(".buys-chart-shell");
+    const svgEl = protocolBuysSectionEl.querySelector(".buys-chart");
+    const tooltipEl = protocolBuysSectionEl.querySelector("[data-chart-tooltip]");
+    const pointEls = Array.from(protocolBuysSectionEl.querySelectorAll(".chart-point"));
+    const setDetail = (idx) => {
+      const item = daily[idx];
+      if (!item || !tooltipEl || !svgEl || !shellEl) return;
+      const pointEl = pointEls[idx];
+      if (!pointEl) return;
+      const x = Number(pointEl.getAttribute("cx"));
+      const y = Number(pointEl.getAttribute("cy"));
+      const left = (x / chartW) * svgEl.clientWidth;
+      const top = (y / chartH) * svgEl.clientHeight;
+      tooltipEl.innerHTML = `<span>${item.day}</span><strong>${item.ft.toLocaleString(undefined, {
+        maximumFractionDigits: 4
+      })} FT</strong>`;
+      tooltipEl.style.left = `${Math.min(Math.max(left, 88), svgEl.clientWidth - 88)}px`;
+      tooltipEl.style.top = `${Math.max(top - 14, 26)}px`;
+      tooltipEl.classList.add("visible");
+      pointEls.forEach((el, i) => el.classList.toggle("active", i === idx));
+    };
+    pointEls.forEach((el) => {
+      const idx = Number(el.getAttribute("data-idx"));
+      el.addEventListener("mouseenter", () => setDetail(idx));
+      el.addEventListener("focus", () => setDetail(idx));
+      el.addEventListener("click", () => setDetail(idx));
+    });
+    if (defaultDetail) {
+      setDetail(daily.length - 1);
+    }
+  }
 }
 
 function render(payload) {
