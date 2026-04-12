@@ -2,6 +2,7 @@ const updatedAtEl = document.getElementById("updatedAt");
 const indexedBlockEl = document.getElementById("indexedBlock");
 const sourceAddrEl = document.getElementById("sourceAddr");
 const statsEl = document.getElementById("stats");
+const volumeFeeChartEl = document.getElementById("volumeFeeChart");
 const protocolStateEl = document.getElementById("protocolState");
 const holdersWrapEl = document.getElementById("holdersWrap");
 const holdersBodyEl = document.getElementById("holdersBody");
@@ -241,14 +242,174 @@ function populateCollateralOptions(rows) {
 }
 
 function renderStats(stats = {}) {
+  const totalVolume = fmtUsd(stats.totalSalesVolumeUsdEstimate || 0);
+  const totalRevenue = fmtUsd(stats.totalRevenueUsdEstimate || 0);
   statsEl.innerHTML = `
     <article class="card"><p class="label">Active Listings</p><p class="value">${stats.activeListings || 0}</p></article>
-    <article class="card"><p class="label">Expired Listings</p><p class="value">${stats.expiredListings || 0}</p></article>
     <article class="card"><p class="label">Tracked Listings</p><p class="value">${stats.totalTrackedListings || 0}</p></article>
     <article class="card"><p class="label">Tracked Sales</p><p class="value">${stats.totalSalesTracked || 0}</p></article>
-    <article class="card"><p class="label">Accepted Tokens</p><p class="value">${stats.acceptedTokens || 0}</p></article>
+    <article class="card"><p class="label">Total Volume (USD est.)</p><p class="value">$${totalVolume}</p></article>
+    <article class="card"><p class="label">Revenue (USD est.)</p><p class="value">$${totalRevenue}</p></article>
     <article class="card"><p class="label">Logs In Last Run</p><p class="value">${stats.scannedLogsInRun || 0}</p></article>
   `;
+}
+
+function fmtCompactUsd(value) {
+  const n = Number(value || 0);
+  if (!Number.isFinite(n)) return "--";
+  return `$${n.toLocaleString(undefined, { maximumFractionDigits: 2 })}`;
+}
+
+function renderVolumeFeeChart(rows) {
+  if (!volumeFeeChartEl) return;
+  const pointsAll = (Array.isArray(rows) ? rows : [])
+    .map((x) => ({
+      day: x.day,
+      volume: Number(x.volumeUsd || 0),
+      revenue: Number(x.revenueUsd || 0),
+      salesCount: Number(x.salesCount || 0)
+    }))
+    .filter((x) => Number.isFinite(x.volume) && Number.isFinite(x.revenue));
+
+  if (!pointsAll.length) {
+    volumeFeeChartEl.innerHTML = `<h2>Daily Volume & Fee</h2><p class="tokens-line">No daily series available yet.</p>`;
+    return;
+  }
+
+  volumeFeeChartEl.innerHTML = `
+    <div class="split-head">
+      <h2>Daily Volume & Fee</h2>
+      <div class="vf-range" id="vfRange">
+        <button class="vf-range-btn active" data-range="7" type="button">7D</button>
+        <button class="vf-range-btn" data-range="30" type="button">30D</button>
+        <button class="vf-range-btn" data-range="all" type="button">All</button>
+      </div>
+    </div>
+    <p class="vf-sub" id="vfSub">--</p>
+    <div class="vf-legend">
+      <span><i class="dot-volume"></i> Volume (USD est.)</span>
+      <span><i class="dot-revenue"></i> Fee / Revenue (USD est.)</span>
+    </div>
+    <div class="vf-shell">
+      <svg class="vf-chart" id="vfChart" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-label="Daily volume and fee chart"></svg>
+      <div class="vf-tooltip" id="vfTooltip"></div>
+    </div>
+  `;
+
+  const vfSubEl = volumeFeeChartEl.querySelector("#vfSub");
+  const rangeWrapEl = volumeFeeChartEl.querySelector("#vfRange");
+  const svgEl = volumeFeeChartEl.querySelector("#vfChart");
+  const tooltipEl = volumeFeeChartEl.querySelector("#vfTooltip");
+  const chartW = 1200;
+  const chartH = 320;
+  const padL = 78;
+  const padR = 78;
+  const padT = 24;
+  const padB = 44;
+  const plotW = chartW - padL - padR;
+  const plotH = chartH - padT - padB;
+
+  const setTooltip = (points, volPts, revPts, idx) => {
+    const point = points[idx];
+    const vol = fmtCompactUsd(point.volume);
+    const rev = fmtCompactUsd(point.revenue);
+    const x = Number(volPts[idx][0]);
+    const y = Math.min(volPts[idx][1], revPts[idx][1]);
+    const left = (x / chartW) * svgEl.clientWidth;
+    const top = (y / chartH) * svgEl.clientHeight;
+    tooltipEl.innerHTML = `
+      <span>${point.day}</span>
+      <strong>Volume: ${vol}</strong>
+      <strong>Fee: ${rev}</strong>
+      <small>Sales: ${point.salesCount}</small>
+    `;
+    tooltipEl.style.left = `${Math.min(Math.max(left, 110), svgEl.clientWidth - 110)}px`;
+    tooltipEl.style.top = `${Math.max(top - 12, 28)}px`;
+    tooltipEl.classList.add("visible");
+  };
+
+  const draw = (range) => {
+    let points = pointsAll;
+    if (range === "7") points = pointsAll.slice(-7);
+    else if (range === "30") points = pointsAll.slice(-30);
+    const maxVol = Math.max(...points.map((x) => x.volume), 1);
+    const maxRev = Math.max(...points.map((x) => x.revenue), 1);
+    const spanX = Math.max(points.length - 1, 1);
+
+    const volPts = points.map((x, i) => {
+      const px = padL + (i * plotW) / spanX;
+      const py = chartH - padB - (x.volume / maxVol) * plotH;
+      return [px, py];
+    });
+    const revPts = points.map((x, i) => {
+      const px = padL + (i * plotW) / spanX;
+      const py = chartH - padB - (x.revenue / maxRev) * plotH;
+      return [px, py];
+    });
+    const toPath = (arr) =>
+      arr.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(" ");
+    const volumePath = toPath(volPts);
+    const revenuePath = toPath(revPts);
+    const xTickIdx = Array.from(new Set([0, Math.floor((points.length - 1) / 2), points.length - 1]));
+    const xTicks = xTickIdx
+      .map((idx) => {
+        const p = volPts[idx];
+        return `<text x="${p[0].toFixed(2)}" y="${(chartH - 10).toFixed(2)}" text-anchor="middle" class="vf-axis">${points[idx].day}</text>`;
+      })
+      .join("");
+    const yVolTicks = [0, maxVol / 2, maxVol]
+      .map((v) => {
+        const y = chartH - padB - (v / maxVol) * plotH;
+        return `
+          <line x1="${padL}" y1="${y.toFixed(2)}" x2="${(chartW - padR).toFixed(2)}" y2="${y.toFixed(2)}" class="vf-grid" />
+          <text x="${(padL - 10).toFixed(2)}" y="${(y + 4).toFixed(2)}" text-anchor="end" class="vf-axis">${fmtCompactUsd(v)}</text>
+        `;
+      })
+      .join("");
+    const yRevTicks = [0, maxRev / 2, maxRev]
+      .map((v) => {
+        const y = chartH - padB - (v / maxRev) * plotH;
+        return `<text x="${(chartW - padR + 10).toFixed(2)}" y="${(y + 4).toFixed(2)}" text-anchor="start" class="vf-axis">${fmtCompactUsd(v)}</text>`;
+      })
+      .join("");
+    const hitTargets = volPts
+      .map((p, i) => {
+        const x = p[0];
+        return `<line x1="${x.toFixed(2)}" y1="${padT}" x2="${x.toFixed(2)}" y2="${(chartH - padB).toFixed(2)}" class="vf-hit" data-i="${i}" />`;
+      })
+      .join("");
+
+    svgEl.innerHTML = `
+      ${yVolTicks}
+      <line x1="${padL}" y1="${(chartH - padB).toFixed(2)}" x2="${(chartW - padR).toFixed(2)}" y2="${(chartH - padB).toFixed(2)}" class="vf-axis-line" />
+      <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${(chartH - padB).toFixed(2)}" class="vf-axis-line" />
+      <line x1="${(chartW - padR).toFixed(2)}" y1="${padT}" x2="${(chartW - padR).toFixed(2)}" y2="${(chartH - padB).toFixed(2)}" class="vf-axis-line" />
+      <path d="${volumePath}" class="vf-volume-line" />
+      <path d="${revenuePath}" class="vf-revenue-line" />
+      ${xTicks}
+      ${yRevTicks}
+      ${hitTargets}
+    `;
+    vfSubEl.textContent = `${points[0].day} → ${points[points.length - 1].day} (${points.length} days)`;
+    svgEl.querySelectorAll(".vf-hit").forEach((el) => {
+      const idx = Number(el.getAttribute("data-i"));
+      el.addEventListener("mouseenter", () => setTooltip(points, volPts, revPts, idx));
+      el.addEventListener("click", () => setTooltip(points, volPts, revPts, idx));
+    });
+    setTooltip(points, volPts, revPts, points.length - 1);
+  };
+
+  rangeWrapEl?.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLButtonElement)) return;
+    const range = target.getAttribute("data-range");
+    if (!range) return;
+    rangeWrapEl.querySelectorAll(".vf-range-btn").forEach((btn) => btn.classList.remove("active"));
+    target.classList.add("active");
+    draw(range);
+  });
+
+  draw("30");
 }
 
 function renderProtocol(config, acceptedTokens) {
@@ -617,6 +778,7 @@ async function loadDashboard() {
     sourceAddrEl.textContent = `Contract: ${shortAddr(payload.source?.marketplace)}`;
 
     renderStats(payload.stats || {});
+    renderVolumeFeeChart(payload.dailyVolumeRevenue || []);
     renderProtocol(payload.config || {}, payload.acceptedTokens || []);
     renderHolders(payload.holdersTop50 || []);
     renderListings();

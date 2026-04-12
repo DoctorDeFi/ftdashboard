@@ -45,6 +45,8 @@ const EVENT_SIGS = {
   TakerFeeUpdated: "TakerFeeUpdated(uint16)",
   EmergencyPaused: "EmergencyPaused(bool)"
 };
+const USD_LIKE = new Set(["USDC", "USDT", "DAI", "USDE", "USDS", "USDtb", "FDUSD", "TUSD", "USDP"]);
+const ETH_LIKE = new Set(["WETH", "ETH"]);
 
 function readJson(filePath, fallback) {
   try {
@@ -157,11 +159,34 @@ function formatUnits(value, decimals = 18) {
   return `${whole.toString()}.${fracStr}`;
 }
 
+function dayKeyFromUnix(unix) {
+  if (!Number.isFinite(Number(unix))) return null;
+  return new Date(Number(unix) * 1000).toISOString().slice(0, 10);
+}
+
 function pushCapped(list, value, max = 1000) {
   list.push(value);
   if (list.length > max) {
     list.splice(0, list.length - max);
   }
+}
+
+function dedupeSales(rows) {
+  const seen = new Set();
+  const out = [];
+  for (const row of rows || []) {
+    const key = [
+      row.txHash || "",
+      row.tokenId || "",
+      row.blockNumber || "",
+      row.priceWei || "",
+      row.paymentToken || ""
+    ].join("|");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(row);
+  }
+  return out;
 }
 
 async function getBlockNumber() {
@@ -801,6 +826,9 @@ async function main() {
   for (const row of activeListings) {
     if (row.paymentToken) tokenAddresses.add(row.paymentToken.toLowerCase());
   }
+  for (const row of state.sales || []) {
+    if (row.paymentToken) tokenAddresses.add(String(row.paymentToken).toLowerCase());
+  }
   for (const token of state.acceptedTokens || []) {
     if (token) tokenAddresses.add(token.toLowerCase());
   }
@@ -876,9 +904,11 @@ async function main() {
     return String(a.tokenId).localeCompare(String(b.tokenId));
   });
 
+  const dedupedSales = dedupeSales(state.sales);
+
   // eslint-disable-next-line no-console
-  console.log(`[puts-index] building recent sales from total=${state.sales.length}`);
-  const salesRecent = [...state.sales]
+  console.log(`[puts-index] building recent sales from total=${dedupedSales.length}`);
+  const salesRecent = [...dedupedSales]
     .sort((a, b) => {
       if (a.blockNumber !== b.blockNumber) return b.blockNumber - a.blockNumber;
       return String(b.txHash).localeCompare(String(a.txHash));
@@ -898,6 +928,94 @@ async function main() {
       };
     });
   const salesRecentResolved = await Promise.all(salesRecent);
+  const ethUsdAnswer = oracle.ethUsd ? BigInt(oracle.ethUsd) : null;
+  const ethUsdDecimals = Number(oracle.ethUsdDecimals ?? 8);
+  const usdScale = 10n ** 18n;
+
+  let totalSalesVolumeUsdWei = 0n;
+  let salesVolumePricedCount = 0;
+  let totalRevenueUsdWei = 0n;
+  let revenuePricedCount = 0;
+  const dailyVolumeRevenueMap = new Map();
+  for (const row of dedupedSales) {
+    try {
+      const priceWei = BigInt(row.priceWei || "0");
+      const makerFeeWei = BigInt(row.makerFeeWei || "0");
+      const takerFeeWei = BigInt(row.takerFeeWei || "0");
+      const feeWei = makerFeeWei + takerFeeWei;
+      if (priceWei <= 0n && feeWei <= 0n) continue;
+      if (row.atUnix === undefined || row.atUnix === null) {
+        row.atUnix = await getUnixForBlock(row.blockNumber, blockTimeCache);
+      }
+      const day = dayKeyFromUnix(row.atUnix);
+      const token = String(row.paymentToken || "").toLowerCase();
+      const meta = tokenMetaCache[token] || { symbol: "TOKEN", decimals: 18 };
+      const symbol = String(meta.symbol || "").toUpperCase();
+      const decimals = Number(meta.decimals ?? 18);
+      const base = 10n ** BigInt(decimals);
+      if (base <= 0n) continue;
+
+      if (USD_LIKE.has(symbol)) {
+        let dayVolumeWei = 0n;
+        let dayRevenueWei = 0n;
+        if (priceWei > 0n) {
+          dayVolumeWei = (priceWei * usdScale) / base;
+          totalSalesVolumeUsdWei += dayVolumeWei;
+          salesVolumePricedCount += 1;
+        }
+        if (feeWei > 0n) {
+          dayRevenueWei = (feeWei * usdScale) / base;
+          totalRevenueUsdWei += dayRevenueWei;
+          revenuePricedCount += 1;
+        }
+        if (day && (dayVolumeWei > 0n || dayRevenueWei > 0n)) {
+          const prev = dailyVolumeRevenueMap.get(day) || { volumeUsdWei: 0n, revenueUsdWei: 0n, salesCount: 0 };
+          dailyVolumeRevenueMap.set(day, {
+            volumeUsdWei: prev.volumeUsdWei + dayVolumeWei,
+            revenueUsdWei: prev.revenueUsdWei + dayRevenueWei,
+            salesCount: prev.salesCount + 1
+          });
+        }
+        continue;
+      }
+      if (ETH_LIKE.has(symbol) && ethUsdAnswer && ethUsdAnswer > 0n) {
+        let dayVolumeWei = 0n;
+        let dayRevenueWei = 0n;
+        if (priceWei > 0n) {
+          dayVolumeWei = (priceWei * ethUsdAnswer * usdScale) /
+            (base * 10n ** BigInt(ethUsdDecimals));
+          totalSalesVolumeUsdWei += dayVolumeWei;
+          salesVolumePricedCount += 1;
+        }
+        if (feeWei > 0n) {
+          dayRevenueWei = (feeWei * ethUsdAnswer * usdScale) /
+            (base * 10n ** BigInt(ethUsdDecimals));
+          totalRevenueUsdWei += dayRevenueWei;
+          revenuePricedCount += 1;
+        }
+        if (day && (dayVolumeWei > 0n || dayRevenueWei > 0n)) {
+          const prev = dailyVolumeRevenueMap.get(day) || { volumeUsdWei: 0n, revenueUsdWei: 0n, salesCount: 0 };
+          dailyVolumeRevenueMap.set(day, {
+            volumeUsdWei: prev.volumeUsdWei + dayVolumeWei,
+            revenueUsdWei: prev.revenueUsdWei + dayRevenueWei,
+            salesCount: prev.salesCount + 1
+          });
+        }
+      }
+    } catch {
+      // Skip rows with malformed numeric data.
+    }
+  }
+  const dailyVolumeRevenue = [...dailyVolumeRevenueMap.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([day, value]) => ({
+      day,
+      volumeUsdWei: value.volumeUsdWei.toString(),
+      revenueUsdWei: value.revenueUsdWei.toString(),
+      volumeUsd: formatUnits(value.volumeUsdWei, 18),
+      revenueUsd: formatUnits(value.revenueUsdWei, 18),
+      salesCount: value.salesCount
+    }));
 
   // eslint-disable-next-line no-console
   console.log(`[puts-index] building recent activity from total=${state.activity.length}`);
@@ -917,9 +1035,6 @@ async function main() {
 
   const holdersAll = aggregateOwners(state.holders?.tokenOwners || {});
   const holdersResolved = [];
-  const ethUsdAnswer = oracle.ethUsd ? BigInt(oracle.ethUsd) : null;
-  const ethUsdDecimals = Number(oracle.ethUsdDecimals ?? 8);
-  const usdScale = 10n ** 18n;
 
   for (const holder of holdersAll) {
     let usdcWei = 0n;
@@ -997,7 +1112,13 @@ async function main() {
       activeListings: activeCount,
       expiredListings: expiredCount,
       totalTrackedListings: allListings.length,
-      totalSalesTracked: state.sales.length,
+      totalSalesTracked: dedupedSales.length,
+      totalSalesVolumeUsdEstimate: formatUnits(totalSalesVolumeUsdWei, 18),
+      totalSalesVolumeUsdWei: totalSalesVolumeUsdWei.toString(),
+      salesVolumePricedCount,
+      totalRevenueUsdEstimate: formatUnits(totalRevenueUsdWei, 18),
+      totalRevenueUsdWei: totalRevenueUsdWei.toString(),
+      revenuePricedCount,
       acceptedTokens: state.acceptedTokens.length,
       scannedLogsInRun: scannedLogs
     },
@@ -1010,7 +1131,8 @@ async function main() {
     listingsActive: enrichedActive,
     salesRecent: salesRecentResolved,
     activityRecent: activityRecentResolved,
-    holdersTop50: holdersTopResolved
+    holdersTop50: holdersTopResolved,
+    dailyVolumeRevenue
   };
 
   writeJson(STATE_PATH, state);
