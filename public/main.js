@@ -281,7 +281,7 @@ function render(payload) {
   const unallocated = BigInt(v.unallocated || "0");
   const vcMsig = BigInt(v.vcMsig || "0");
   const institutional = BigInt(v.institutional || "0");
-  const vcShiftToNonCirculating = 20_000_000n * 10n ** 18n;
+  const institutionalExcludedFromPuts = 61_429_141_850000000000000000n;
 
   const onEthereum = BigInt(v.onEthereum || "0");
   const onSonic = BigInt(v.onSonic || "0");
@@ -289,12 +289,11 @@ function render(payload) {
   const onAvalanche = BigInt(v.onAvalanche || "0");
   const onBase = BigInt(v.onBase || "0");
 
-  const vcEffectiveInPuts =
-    institutional > vcShiftToNonCirculating ? institutional - vcShiftToNonCirculating : 0n;
-  const allocatedInPutsTotal = inPuts + vcEffectiveInPuts;
-  const inPutsDisplay = inPuts + vcEffectiveInPuts;
-  const circulating = allocatedInPutsTotal + tradable;
-  const nonCirculating = unallocated + vcMsig + vcShiftToNonCirculating;
+  const institutionalIncludedInPuts =
+    institutional > institutionalExcludedFromPuts ? institutional - institutionalExcludedFromPuts : 0n;
+  const inPutsDisplay = inPuts + institutionalIncludedInPuts;
+  const circulating = inPutsDisplay + tradable;
+  const nonCirculating = unallocated + vcMsig + institutionalExcludedFromPuts;
 
   const totalSupply = BigInt(v.maxSupply || "10000000000000000000000000000");
   const currentTotalSupply = totalSupply - burned;
