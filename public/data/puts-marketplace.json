@@ -9,12 +9,12 @@
     ],
     "marketplace": "0x31248663adccdbcad155555b7717697b76cf570c",
     "ftPut": "0xa4215daaf3745e14e96e169e0e7706c479ce04f2",
-    "indexedThroughBlock": "24885054"
+    "indexedThroughBlock": "24885504"
   },
-  "updatedAt": "2026-04-15T12:00:28.959Z",
+  "updatedAt": "2026-04-15T13:29:44.872Z",
   "stats": {
-    "activeListings": 252,
-    "expiredListings": 632,
+    "activeListings": 251,
+    "expiredListings": 633,
     "totalTrackedListings": 1313,
     "totalSalesTracked": 170,
     "totalSalesVolumeUsdEstimate": "1117906.307",
@@ -24,7 +24,7 @@
     "totalRevenueUsdWei": "4471625228000000000000",
     "revenuePricedCount": 169,
     "acceptedTokens": 4,
-    "scannedLogsInRun": 3
+    "scannedLogsInRun": 1
   },
   "config": {
     "makerFeeBps": 10,
@@ -33,10 +33,10 @@
     "emergencyPaused": null
   },
   "oracle": {
-    "ethUsd": "233010380000",
-    "ethUsdDisplay": "2330.1038",
+    "ethUsd": "233595287000",
+    "ethUsdDisplay": "2335.9528",
     "ethUsdDecimals": 8,
-    "updatedAt": 1776253571,
+    "updatedAt": 1776257207,
     "source": "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
   },
   "acceptedTokens": [
@@ -10389,19 +10389,19 @@
       "tokenId": "681",
       "seller": "0xef732b669cc87402ede9d7bb34b888fbd74d5684",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "priceWei": "1066000000",
-      "expires": 1776187454,
+      "priceWei": "1060000000",
+      "expires": 1776342912,
       "status": "active",
       "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x84141253ae57f3db0b2a58f4a41dcdedd62abb5def766a14085070732ce8bf39",
-      "lastBlockNumber": 24877163,
-      "lastLogIndex": 973,
-      "derivedStatus": "expired",
+      "lastTxHash": "0xa8656f3c226c6b1c82e3f89fd7a9ce1247800e658f1d47c9db8860b699218de0",
+      "lastBlockNumber": 24885251,
+      "lastLogIndex": 406,
+      "derivedStatus": "active",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
       },
-      "priceDisplay": "1066",
+      "priceDisplay": "1060",
       "put": {
         "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "amountWei": "1000000000",
@@ -11543,7 +11543,7 @@
       "lastTxHash": "0x620de72dd21f5e2d9669a1b6d2d84c8110215402f15f0e895fcf096cc71f09af",
       "lastBlockNumber": 24670346,
       "lastLogIndex": 498,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDC",
         "decimals": 6
@@ -11885,20 +11885,20 @@
       "put": {
         "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "amountWei": "847500000",
-        "ftWei": "3471104664000000000000",
+        "ftWei": "1871104664000000000000",
         "ftBoughtWei": "8465499864000000000000",
         "withdrawnWei": "0",
-        "burnedWei": "4994395200000000000000",
+        "burnedWei": "6594395200000000000000",
         "strikeWei": "99887904",
-        "amountRemainingWei": "347500000",
+        "amountRemainingWei": "187320446",
         "ftPerUsdWei": "1000000000",
         "collateralMeta": {
           "symbol": "USDT",
           "decimals": 6
         },
         "amountDisplay": "847.5",
-        "amountRemainingDisplay": "347.5",
-        "ftDisplay": "3471.1046",
+        "amountRemainingDisplay": "187.3204",
+        "ftDisplay": "1871.1046",
         "strikeDisplay": "0"
       }
     },
@@ -23494,7 +23494,7 @@
       "lastTxHash": "0xea28bea64b8a1e3df657ef6181f4d4e90f719e34d1976c2b5e2be1197d88244e",
       "lastBlockNumber": 24835233,
       "lastLogIndex": 595,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDC",
         "decimals": 6
@@ -25020,20 +25020,20 @@
       "put": {
         "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
         "amountWei": "10000000000",
-        "ftWei": "99887904000000000000000",
+        "ftWei": "0",
         "ftBoughtWei": "99887904000000000000000",
         "withdrawnWei": "0",
-        "burnedWei": "0",
+        "burnedWei": "99887904000000000000000",
         "strikeWei": "99887904",
-        "amountRemainingWei": "10000000000",
+        "amountRemainingWei": "0",
         "ftPerUsdWei": "1000000000",
         "collateralMeta": {
           "symbol": "USDT",
           "decimals": 6
         },
         "amountDisplay": "10000",
-        "amountRemainingDisplay": "10000",
-        "ftDisplay": "99887.904",
+        "amountRemainingDisplay": "0",
+        "ftDisplay": "0",
         "strikeDisplay": "0"
       }
     },
@@ -36176,6 +36176,23 @@
   "activityRecent": [
     {
       "event": "ListingUpdate(heuristic)",
+      "txHash": "0xa8656f3c226c6b1c82e3f89fd7a9ce1247800e658f1d47c9db8860b699218de0",
+      "blockNumber": 24885251,
+      "logIndex": 406,
+      "tokenId": "681",
+      "seller": "0xef732b669cc87402ede9d7bb34b888fbd74d5684",
+      "atUnix": 1776256523,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "1060000000",
+        "expires": 1776342912
+      }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
       "txHash": "0xda0e3eb827c08aa4a4be69746e5b83f97304ab26232a465b2698f0d6f8595d94",
       "blockNumber": 24884840,
       "logIndex": 709,
@@ -41231,20 +41248,6 @@
         "priceWei": "35000000",
         "expires": 1776248742
       }
-    },
-    {
-      "event": "RemoveListing",
-      "txHash": "0x4f02ac0024983a3516a161baeaf83cb0e9525ce33cd214db1d7d903540399d7c",
-      "blockNumber": 24834353,
-      "logIndex": 554,
-      "tokenId": "6482",
-      "seller": "0x58377d249a4a6c9a00aae2bd250861f154cb732b",
-      "atUnix": 1775643659,
-      "details": {
-        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
-        "topicsCount": 3,
-        "dataWords": 0
-      }
     }
   ],
   "holdersTop50": [
@@ -41305,8 +41308,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1025.6545",
-      "totalUsdWei": "2389881474759924343212980",
-      "totalUsdDisplay": "2389881.4747"
+      "totalUsdWei": "2395880599793570496950061",
+      "totalUsdDisplay": "2395880.5997"
     },
     {
       "address": "0x3c5c85761de3b05bd4126148f3463512ff9b2366",
@@ -41317,8 +41320,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "952.0127",
-      "totalUsdWei": "2218288626174867895918953",
-      "totalUsdDisplay": "2218288.6261"
+      "totalUsdWei": "2223857015640908264834699",
+      "totalUsdDisplay": "2223857.0156"
     },
     {
       "address": "0xf6b5f92367b49ece26144e0b5664b32b49f26627",
@@ -41353,8 +41356,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "637.1576",
-      "totalUsdWei": "1484643458954548207400000",
-      "totalUsdDisplay": "1484643.4589"
+      "totalUsdWei": "1488370238644134259010000",
+      "totalUsdDisplay": "1488370.2386"
     },
     {
       "address": "0x47a761bb9e970ac93cb571c4614c4ca643714e4f",
@@ -41365,8 +41368,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "606.7069",
-      "totalUsdWei": "1413690285198757660939254",
-      "totalUsdDisplay": "1413690.2851"
+      "totalUsdWei": "1417238956908767960682926",
+      "totalUsdDisplay": "1417238.9569"
     },
     {
       "address": "0x628b302579adee111d15cb7a609131b86b356344",
@@ -41377,8 +41380,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "503.1403",
-      "totalUsdWei": "1172369245662516840000000",
-      "totalUsdDisplay": "1172369.2456"
+      "totalUsdWei": "1175312148800019666000000",
+      "totalUsdDisplay": "1175312.1488"
     },
     {
       "address": "0x323f1a69550e3deddea7a86505d12acfbe38db87",
@@ -41437,8 +41440,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "398.6113",
-      "totalUsdWei": "928805881171894546000000",
-      "totalUsdDisplay": "928805.8811"
+      "totalUsdWei": "931137387010984672900000",
+      "totalUsdDisplay": "931137.387"
     },
     {
       "address": "0xdea611a2f605fe63962e0151e724e9ce4c8a1d5c",
@@ -41449,8 +41452,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "390",
-      "totalUsdWei": "908740482000000000000000",
-      "totalUsdDisplay": "908740.482"
+      "totalUsdWei": "911021619300000000000000",
+      "totalUsdDisplay": "911021.6193"
     },
     {
       "address": "0xcd365df3d51c7f9ac21a4231281016c2fc6bf475",
@@ -41497,8 +41500,8 @@
       "usdcDisplay": "200000",
       "usdtDisplay": "0",
       "wethDisplay": "250.9807",
-      "totalUsdWei": "784811176295957601831770",
-      "totalUsdDisplay": "784811.1762"
+      "totalUsdWei": "786279180213610281824029",
+      "totalUsdDisplay": "786279.1802"
     },
     {
       "address": "0xe6b9ac396e0f1a885da06b9a6c21dc7c499b51de",
@@ -41509,8 +41512,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "330.0826",
-      "totalUsdWei": "769126905657328762606195",
-      "totalUsdDisplay": "769126.9056"
+      "totalUsdWei": "771057582355110686289379",
+      "totalUsdDisplay": "771057.5823"
     },
     {
       "address": "0x6a41278687f2e431b034d209ae3c9dc16840f24f",
@@ -41521,8 +41524,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "303.8596",
-      "totalUsdWei": "708024484454624599272399",
-      "totalUsdDisplay": "708024.4844"
+      "totalUsdWei": "709801780715541821545873",
+      "totalUsdDisplay": "709801.7807"
     },
     {
       "address": "0x38a564a38be5dfb6ef2ab765da1e4397d03c2d62",
@@ -41545,8 +41548,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "265.9318",
-      "totalUsdWei": "619648839935996782865838",
-      "totalUsdDisplay": "619648.8399"
+      "totalUsdWei": "621204294006413920807400",
+      "totalUsdDisplay": "621204.294"
     },
     {
       "address": "0xebb8d559b2acf465cf98b94039422869dbe8abe4",
@@ -41569,8 +41572,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "215",
-      "totalUsdWei": "500972317000000000000000",
-      "totalUsdDisplay": "500972.317"
+      "totalUsdWei": "502229867050000000000000",
+      "totalUsdDisplay": "502229.867"
     },
     {
       "address": "0x37793b862b0e22973ecd351137fd6ad9f1602ab0",
@@ -41605,8 +41608,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "371372.9518",
       "wethDisplay": "43.05",
-      "totalUsdWei": "471683931136525067429718",
-      "totalUsdDisplay": "471683.9311"
+      "totalUsdWei": "471935733626860622762554",
+      "totalUsdDisplay": "471935.7336"
     },
     {
       "address": "0x640588c53a60328ed9834af839132a3918336830",
@@ -41641,8 +41644,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "157",
-      "totalUsdWei": "365826296600000000000000",
-      "totalUsdDisplay": "365826.2966"
+      "totalUsdWei": "366744600590000000000000",
+      "totalUsdDisplay": "366744.6005"
     },
     {
       "address": "0x546d241f237b98bb2b807625744af279d54272d0",
@@ -41677,8 +41680,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "147.7",
-      "totalUsdWei": "344156331260000000000000",
-      "totalUsdDisplay": "344156.3312"
+      "totalUsdWei": "345020238899000000000000",
+      "totalUsdDisplay": "345020.2388"
     },
     {
       "address": "0x125dbe70459b36a4c71664dcc97224eafeb4aee0",
@@ -41689,8 +41692,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "97500",
       "wethDisplay": "95.376",
-      "totalUsdWei": "319736002500347495984543",
-      "totalUsdDisplay": "319736.0025"
+      "totalUsdWei": "320293863457075993456775",
+      "totalUsdDisplay": "320293.8634"
     },
     {
       "address": "0x1e6e1d5ebafaa9deb3844b71b0f82a1eef3fcb5c",
@@ -41809,8 +41812,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "100",
-      "totalUsdWei": "233010380000000000000000",
-      "totalUsdDisplay": "233010.38"
+      "totalUsdWei": "233595287000000000000000",
+      "totalUsdDisplay": "233595.287"
     },
     {
       "address": "0xbc8b74c6c89734e0a26ef762f1193975c8be64ac",
@@ -41821,8 +41824,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "100",
-      "totalUsdWei": "233010380000000000000000",
-      "totalUsdDisplay": "233010.38"
+      "totalUsdWei": "233595287000000000000000",
+      "totalUsdDisplay": "233595.287"
     },
     {
       "address": "0x643e4ea2718efa5897f5eb655d767e4193695987",
