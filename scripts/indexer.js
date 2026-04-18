@@ -21,6 +21,8 @@ const CALL_DATA = {
 };
 
 const ETH_RPC_URL = process.env.ETH_RPC_URL || process.env.ALCHEMY_ETH_RPC_URL || "";
+const FT_STATUS_PUT_DASHBOARD_URL =
+  process.env.FT_STATUS_PUT_DASHBOARD_URL || "https://api.flyingtulip.com/status/put/dashboard";
 
 const CHAINS = [
   {
@@ -82,6 +84,27 @@ function defaultState() {
     vc: { lastBlock: "-1", addresses: [] },
     ftAlloc: { lastBlock: "-1", investedWei: "0", divestedWei: "0", withdrawnWei: "0" }
   };
+}
+
+async function fetchOfficialFtAllocatedWei() {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12_000);
+    const res = await fetch(FT_STATUS_PUT_DASHBOARD_URL, {
+      method: "GET",
+      signal: controller.signal
+    }).finally(() => clearTimeout(timeout));
+    if (!res.ok) return null;
+    const json = await res.json();
+    const chains = Array.isArray(json?.chains) ? json.chains : [];
+    const eth = chains.find((x) => Number(x?.chainId) === 1) || chains[0];
+    const raw = String(eth?.putManager?.ftAllocated || "");
+    if (!/^\d+$/.test(raw)) return null;
+    const v = BigInt(raw);
+    return v > 0n ? v : null;
+  } catch {
+    return null;
+  }
 }
 
 function toHex(n) {
@@ -388,6 +411,13 @@ async function main() {
         break;
       }
     }
+  }
+
+  // Prefer official status API value when available to stay consistent with official dashboard.
+  const officialFtAllocated = await fetchOfficialFtAllocatedWei();
+  if (officialFtAllocated !== null) {
+    inPuts = officialFtAllocated;
+    allocatedSource = "official-status-ftAllocated";
   }
 
   // Final fallback: ftPUT balance on Ethereum.

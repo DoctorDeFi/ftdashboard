@@ -559,6 +559,35 @@ summary {
   font-size: 0.75rem;
 }
 
+.range-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: -0.06rem 0 0.42rem;
+}
+
+.range-tab {
+  border: 1px solid rgba(117, 148, 206, 0.4);
+  background: rgba(23, 39, 67, 0.82);
+  color: #c2d2ec;
+  border-radius: 999px;
+  padding: 0.2rem 0.64rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.range-tab.active {
+  color: #f2f8ff;
+  border-color: rgba(123, 174, 255, 0.72);
+  background: linear-gradient(135deg, rgba(92, 142, 235, 0.9), rgba(74, 122, 218, 0.88));
+}
+
+.range-tab:hover {
+  filter: brightness(1.05);
+}
+
 .buys-chart-shell {
   position: relative;
 }

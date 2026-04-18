@@ -11,6 +11,7 @@ const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
 const systemNavEl = document.getElementById("systemNav");
 const withdrawalNavEl = document.getElementById("withdrawalNav");
+let buysChartRange = "30D";
 
 function fmtWei(wei, decimals = 18) {
   const n = BigInt(wei || "0");
@@ -53,10 +54,11 @@ function renderProtocolBuys(payload) {
   const avgPriceNum = Number(s.avgBuyPriceUsd || 0);
   const estUsd = Number.isFinite(totalFtNum) && Number.isFinite(avgPriceNum) ? totalFtNum * avgPriceNum : 0;
   const moduleWallet = new Map((payload.wallets || []).map((w) => [w.module, w]));
-  const daily = (payload.daily || [])
+  const allDaily = (payload.daily || [])
     .map((d) => ({ day: d.day, ft: Number(d.ftBought || 0) }))
-    .filter((d) => Number.isFinite(d.ft))
-    .slice(-30);
+    .filter((d) => Number.isFinite(d.ft));
+  const rangeDays = buysChartRange === "7D" ? 7 : buysChartRange === "30D" ? 30 : null;
+  const daily = rangeDays ? allDaily.slice(-rangeDays) : allDaily.slice();
   const moduleRows = (payload.moduleTotals || [])
     .map(
       (m) => `
@@ -186,8 +188,13 @@ function renderProtocolBuys(payload) {
       </article>
     </div>
     <div class="table-wrap buys-chart-wrap buys-chart-block">
-        <h3 class="mini-h">Daily FT Buys (30D)</h3>
-        <div class="buys-chart-meta">${startDay} → ${endDay}</div>
+        <h3 class="mini-h">Daily FT Buys (${buysChartRange})</h3>
+        <div class="range-tabs">
+          <button type="button" class="range-tab ${buysChartRange === "7D" ? "active" : ""}" data-buys-range="7D">7D</button>
+          <button type="button" class="range-tab ${buysChartRange === "30D" ? "active" : ""}" data-buys-range="30D">30D</button>
+          <button type="button" class="range-tab ${buysChartRange === "ALL" ? "active" : ""}" data-buys-range="ALL">All</button>
+        </div>
+        <div class="buys-chart-meta">${startDay} → ${endDay} (${daily.length} day${daily.length === 1 ? "" : "s"})</div>
         ${
           daily.length
             ? `
@@ -269,6 +276,16 @@ function renderProtocolBuys(payload) {
       setDetail(daily.length - 1);
     }
   }
+
+  const rangeButtons = Array.from(protocolBuysSectionEl.querySelectorAll("[data-buys-range]"));
+  rangeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const next = button.getAttribute("data-buys-range");
+      if (!next || next === buysChartRange) return;
+      buysChartRange = next;
+      renderProtocolBuys(payload);
+    });
+  });
 }
 
 function render(payload) {
@@ -281,7 +298,6 @@ function render(payload) {
   const unallocated = BigInt(v.unallocated || "0");
   const vcMsig = BigInt(v.vcMsig || "0");
   const institutional = BigInt(v.institutional || "0");
-  const institutionalExcludedFromPuts = 61_429_141_850000000000000000n;
 
   const onEthereum = BigInt(v.onEthereum || "0");
   const onSonic = BigInt(v.onSonic || "0");
@@ -289,11 +305,9 @@ function render(payload) {
   const onAvalanche = BigInt(v.onAvalanche || "0");
   const onBase = BigInt(v.onBase || "0");
 
-  const institutionalIncludedInPuts =
-    institutional > institutionalExcludedFromPuts ? institutional - institutionalExcludedFromPuts : 0n;
-  const inPutsDisplay = inPuts + institutionalIncludedInPuts;
+  const inPutsDisplay = inPuts;
   const circulating = inPutsDisplay + tradable;
-  const nonCirculating = unallocated + vcMsig + institutionalExcludedFromPuts;
+  const nonCirculating = unallocated + vcMsig + institutional;
 
   const totalSupply = BigInt(v.maxSupply || "10000000000000000000000000000");
   const currentTotalSupply = totalSupply - burned;
