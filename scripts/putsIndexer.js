@@ -45,7 +45,7 @@ const EVENT_SIGS = {
   TakerFeeUpdated: "TakerFeeUpdated(uint16)",
   EmergencyPaused: "EmergencyPaused(bool)"
 };
-const USD_LIKE = new Set(["USDC", "USDT", "DAI", "USDE", "USDS", "USDtb", "FDUSD", "TUSD", "USDP"]);
+const USD_LIKE = new Set(["USDC", "USDT", "DAI", "USDE", "USDS", "USDTB", "FDUSD", "TUSD", "USDP"]);
 const ETH_LIKE = new Set(["WETH", "ETH"]);
 
 function readJson(filePath, fallback) {

@@ -132,7 +132,7 @@ function pow10(decimals) {
 
 function isUsdLikeSymbol(symbol) {
   const s = String(symbol || "").toUpperCase();
-  return ["USDT", "USDC", "DAI", "USDE", "USDS", "FDUSD", "TUSD", "USDP"].includes(s);
+  return ["USDT", "USDC", "DAI", "USDE", "USDS", "USDTB", "FDUSD", "TUSD", "USDP"].includes(s);
 }
 
 function isEthLikeSymbol(symbol) {
