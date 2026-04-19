@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24910999",
+  "lastBlock": "24911842",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -6691,11 +6691,11 @@
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "10000000000",
       "expires": 1777085784,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x0c32d20f83f49ad4881821d89318726933be909ee3f3d2ad618b1fd772027f86",
-      "lastBlockNumber": 24903909,
-      "lastLogIndex": 1056
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0x8d690bef1ada45b80cfaccd0a012b8b6e1734cbfc72d543aee03610ba9dd9bf9",
+      "lastBlockNumber": 24911714,
+      "lastLogIndex": 1442
     },
     "2188": {
       "tokenId": "2188",
@@ -18096,23 +18096,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x81cffd0f48bf68cb22e7d48a31ce85103dedcc203dee8bf81efbebcd411a138d",
-      "blockNumber": 24606472,
-      "logIndex": 471,
-      "tokenId": "141",
-      "seller": "0x1f8a19b8870a3f509543a32f156f0e4181d90d74",
-      "atUnix": null,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "25000000000",
-        "expires": 1773502127
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0xcdefd7b90d11caf1a45d83eb72d8bdfdd2a21966fb1f7ed3484bf11f9a71e659",
@@ -60143,6 +60126,20 @@
         "priceWei": "6500000000",
         "expires": 1776815625
       }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0x8d690bef1ada45b80cfaccd0a012b8b6e1734cbfc72d543aee03610ba9dd9bf9",
+      "blockNumber": 24911714,
+      "logIndex": 1442,
+      "tokenId": "2146",
+      "seller": "0x7018b9ab744cd438de14e9186de43698a29a7aaa",
+      "atUnix": 1776575003,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
     }
   ],
   "acceptedTokens": [
@@ -60158,7 +60155,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24910999",
+    "lastBlock": "24911842",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -60444,7 +60441,6 @@
       "388": "0x25ff499e9d659537ff372cb992e61d370333de7a",
       "390": "0xb34d2a61898de49e1a1ab179d396ac26361e846f",
       "391": "0x1897fd5d8c0ada3e366d85870cb0a7ac1e707dc2",
-      "392": "0xa33965ace3f8b19617a18f07c943122495b5d3ab",
       "393": "0x3d54c0891ec65e79c49f56110322b113053bedea",
       "395": "0xaa0417bcbf597092d570c05337eb3d684dd29cc9",
       "396": "0x32073daeebdd48e5fd4d0f18bdf3f6173142e3b4",
@@ -61107,7 +61103,6 @@
       "1593": "0xb44dbf91b0331992a2a1003f8310abf15b1801d8",
       "1594": "0x8bf5ca9a60558bd7ef4bae8be0b2ff3700297e8a",
       "1596": "0x26b6de1588150414395b25853d3cf74d3361004d",
-      "1599": "0x970b3b1fe3393fc60656bb57ed4336edb3f74f29",
       "1600": "0x311591b44392feaa125e2003a1c45edbce52a748",
       "1601": "0xbe836bf050418a7f3cbf54284d49daca491fe3a3",
       "1602": "0x013ad739e054fc48a01817bf7cac84e2103c7ef2",
@@ -62243,7 +62238,6 @@
       "3659": "0x7fac75bd13d2b6f7a430b7a5ec5bf4d90a116c6b",
       "3660": "0x82a22e02bce3426219f9d57507c0e229dad7e284",
       "3661": "0x5ad0a4a890e2c98d6f8c85e67082e8418b123a59",
-      "3662": "0x51ba05662a3b00731d451014540049b08a4e9ea5",
       "3663": "0x513bb2a1d6fd2009a708be45759eda01dc607f12",
       "3664": "0xcded98a3f60a7ba1579dc9fe41a603ce6096d846",
       "3665": "0x894d75da0c3f50ffe7da1f4d77d11edbcde2c008",
@@ -62392,7 +62386,6 @@
       "3912": "0x5eb404d1b2c8dd203396c1db1655f9473301b2cd",
       "3913": "0x65cde86f17e77f5ad11f1216db1944a2722a7911",
       "3916": "0xf4b6d983da7f4004eaae001dcf7e4a365c32c195",
-      "3917": "0xd683cbeb396b460e1866c1504ab2661b544d74af",
       "3920": "0x6ee030566aaf26296e252f6bcbc571b4248ff7f5",
       "3921": "0x48e11af10d85bef1f7db5b46122c80bb2b806d84",
       "3923": "0x2256ad55984870e1b5672df4c0f2e99cd3828601",
@@ -64593,8 +64586,6 @@
       "7960": "0x13e2eee81a6da28dba1a3bf8a0343c93ab2e75ef",
       "7986": "0xd2ffde3b0618df6f14d31cc96769be877fcbf5c4",
       "7989": "0xfdaa604603ef315823b91af78aa9ebf3f333f6c3",
-      "8021": "0xf9fcd53a5044c58c8dbec6ab432390a6bedcd12a",
-      "8024": "0xf9fcd53a5044c58c8dbec6ab432390a6bedcd12a",
       "8025": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8026": "0xb431ff4948188587628d4c98185a5555179bd97e",
       "8027": "0xb431ff4948188587628d4c98185a5555179bd97e",
