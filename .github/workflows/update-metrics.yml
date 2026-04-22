@@ -30,6 +30,10 @@ jobs:
         continue-on-error: true
         env:
           ETH_RPC_URL: ${{ secrets.ETH_RPC_URL }}
+          BASE_RPC_URL: ${{ secrets.BASE_RPC_URL }}
+          SONIC_RPC_URL: ${{ secrets.SONIC_RPC_URL }}
+          AVAX_RPC_URL: ${{ secrets.AVAX_RPC_URL }}
+          BNB_RPC_URL: ${{ secrets.BNB_RPC_URL }}
         run: |
           set -e
           attempts=0

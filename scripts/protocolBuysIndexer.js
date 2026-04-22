@@ -10,6 +10,7 @@ const TRANSFER_TOPIC =
   "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef";
 
 const ETH_RPC_URL = process.env.ETH_RPC_URL || process.env.ALCHEMY_ETH_RPC_URL || "";
+const SONIC_RPC_URL = process.env.SONIC_RPC_URL || process.env.ALCHEMY_SONIC_RPC_URL || "";
 
 const CHAINS = [
   {
@@ -33,8 +34,8 @@ const CHAINS = [
     key: "sonic",
     label: "Sonic",
     lookback: 3_000_000n,
-    chunk: 45_000n,
-    rpcs: ["https://rpc.soniclabs.com"],
+    chunk: 9_000n,
+    rpcs: [...(SONIC_RPC_URL ? [SONIC_RPC_URL] : []), "https://rpc.soniclabs.com"],
     wallets: [
       {
         address: "0xed0077a9e26329327722a81df2db3450f100226f",

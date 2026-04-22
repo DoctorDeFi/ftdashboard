@@ -21,6 +21,10 @@ const CALL_DATA = {
 };
 
 const ETH_RPC_URL = process.env.ETH_RPC_URL || process.env.ALCHEMY_ETH_RPC_URL || "";
+const BASE_RPC_URL = process.env.BASE_RPC_URL || process.env.ALCHEMY_BASE_RPC_URL || "";
+const SONIC_RPC_URL = process.env.SONIC_RPC_URL || process.env.ALCHEMY_SONIC_RPC_URL || "";
+const BNB_RPC_URL = process.env.BNB_RPC_URL || process.env.ALCHEMY_BNB_RPC_URL || "";
+const AVAX_RPC_URL = process.env.AVAX_RPC_URL || process.env.ALCHEMY_AVAX_RPC_URL || "";
 const FT_STATUS_PUT_DASHBOARD_URL =
   process.env.FT_STATUS_PUT_DASHBOARD_URL || "https://api.flyingtulip.com/status/put/dashboard";
 
@@ -40,29 +44,41 @@ const CHAINS = [
     key: "sonic",
     label: "Sonic",
     lookback: 900_000n,
-    chunk: 45_000n,
-    rpcs: ["https://rpc.soniclabs.com"]
+    chunk: 9_000n,
+    rpcs: [...(SONIC_RPC_URL ? [SONIC_RPC_URL] : []), "https://rpc.soniclabs.com"]
   },
   {
     key: "base",
     label: "Base",
     lookback: 900_000n,
-    chunk: 40_000n,
-    rpcs: ["https://base-rpc.publicnode.com", "https://mainnet.base.org"]
+    chunk: 9_000n,
+    rpcs: [
+      ...(BASE_RPC_URL ? [BASE_RPC_URL] : []),
+      "https://base-rpc.publicnode.com",
+      "https://mainnet.base.org"
+    ]
   },
   {
     key: "bnb",
     label: "BNB",
     lookback: 80_000n,
     chunk: 8_000n,
-    rpcs: ["https://bsc-rpc.publicnode.com", "https://bsc-dataseed.binance.org"]
+    rpcs: [
+      ...(BNB_RPC_URL ? [BNB_RPC_URL] : []),
+      "https://bsc-rpc.publicnode.com",
+      "https://bsc-dataseed.binance.org"
+    ]
   },
   {
     key: "avalanche",
     label: "Avalanche",
     lookback: 700_000n,
-    chunk: 40_000n,
-    rpcs: ["https://avalanche-c-chain-rpc.publicnode.com", "https://api.avax.network/ext/bc/C/rpc"]
+    chunk: 9_000n,
+    rpcs: [
+      ...(AVAX_RPC_URL ? [AVAX_RPC_URL] : []),
+      "https://avalanche-c-chain-rpc.publicnode.com",
+      "https://api.avax.network/ext/bc/C/rpc"
+    ]
   }
 ];
 
