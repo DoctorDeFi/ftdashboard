@@ -11,7 +11,37 @@ const blocksBodyEl = document.getElementById("blocksBody");
 const finalNumbersEl = document.getElementById("finalNumbers");
 const systemNavEl = document.getElementById("systemNav");
 const withdrawalNavEl = document.getElementById("withdrawalNav");
+const themeToggleEl = document.getElementById("themeToggle");
 let buysChartRange = "30D";
+
+function getPreferredTheme() {
+  try {
+    const stored = localStorage.getItem("ft-theme");
+    if (stored === "light" || stored === "dark") return stored;
+  } catch {}
+  return "light";
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  if (themeToggleEl) {
+    themeToggleEl.textContent = theme === "light" ? "Dark mode" : "Light mode";
+  }
+}
+
+function initThemeToggle() {
+  const initial = getPreferredTheme();
+  setTheme(initial);
+  if (!themeToggleEl) return;
+  themeToggleEl.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    setTheme(next);
+    try {
+      localStorage.setItem("ft-theme", next);
+    } catch {}
+  });
+}
 
 function fmtWei(wei, decimals = 18) {
   const n = BigInt(wei || "0");
@@ -39,6 +69,10 @@ function shortHash(v, a = 6, b = 4) {
   return `${s.slice(0, a)}...${s.slice(-b)}`;
 }
 
+function withLogo(label) {
+  return String(label || "");
+}
+
 function renderProtocolBuys(payload) {
   if (!protocolBuysSectionEl) return;
   if (!payload || !payload.summary) {
@@ -64,7 +98,7 @@ function renderProtocolBuys(payload) {
       (m) => `
       <tr>
         <td>
-          <div>${m.module}</div>
+          <div>${withLogo(m.module)}</div>
           ${
             moduleWallet.get(m.module)
               ? `<a class="module-wallet-link" target="_blank" rel="noopener noreferrer" href="${
@@ -371,7 +405,7 @@ function render(payload) {
       const p = pct(chain.value, tradable);
       return `
         <div class="chain-row">
-          <span class="chain-name">${chain.name}</span>
+          <span class="chain-name">${withLogo(chain.name)}</span>
           <div class="chain-bar-bg"><div class="chain-bar" style="width:${p}%"></div></div>
           <span class="chain-val">${fmtWei(chain.value, decimals)} FT (${p.toFixed(2)}%)</span>
         </div>
@@ -455,4 +489,5 @@ async function loadDashboard() {
   }
 }
 
+initThemeToggle();
 loadDashboard();

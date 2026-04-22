@@ -21,6 +21,7 @@ const buyModalCloseEl = document.getElementById("buyModalClose");
 const buyModalPutLabelEl = document.getElementById("buyModalPutLabel");
 const buyModalFiltersEl = document.getElementById("buyModalFilters");
 const buyModalLinkEl = document.getElementById("buyModalLink");
+const themeToggleEl = document.getElementById("themeToggle");
 
 let allListings = [];
 const visibleListingMap = new Map();
@@ -39,6 +40,35 @@ let oracleState = {
   ethUsdDecimals: null
 };
 
+function getPreferredTheme() {
+  try {
+    const stored = localStorage.getItem("ft-theme");
+    if (stored === "light" || stored === "dark") return stored;
+  } catch {}
+  return "light";
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  if (themeToggleEl) {
+    themeToggleEl.textContent = theme === "light" ? "Dark mode" : "Light mode";
+  }
+}
+
+function initThemeToggle() {
+  const initial = getPreferredTheme();
+  setTheme(initial);
+  if (!themeToggleEl) return;
+  themeToggleEl.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    setTheme(next);
+    try {
+      localStorage.setItem("ft-theme", next);
+    } catch {}
+  });
+}
+
 if (buyModalBackdropEl) {
   buyModalBackdropEl.hidden = true;
 }
@@ -46,6 +76,10 @@ if (buyModalBackdropEl) {
 function shortAddr(value) {
   if (!value || value.length < 10) return value || "--";
   return `${value.slice(0, 6)}...${value.slice(-4)}`;
+}
+
+function withLogo(label) {
+  return String(label || "");
 }
 
 function fmtTimeUntil(unix) {
@@ -414,7 +448,7 @@ function renderVolumeFeeChart(rows) {
 
 function renderProtocol(config, acceptedTokens) {
   const tokens = (acceptedTokens || [])
-    .map((x) => `<span class="pill">${x.symbol} <small>${shortAddr(x.address)}</small></span>`)
+    .map((x) => `<span class="pill">${withLogo(x.symbol)} <small>${shortAddr(x.address)}</small></span>`)
     .join(" ");
 
   protocolStateEl.innerHTML = `
@@ -588,6 +622,8 @@ function listingRowHtml(x) {
   const premium = premiumPct(x);
   const premiumText = premium === null ? "--" : `${premium >= 0 ? "+" : ""}${premium.toFixed(2)}%`;
   const premiumClass = premium === null ? "" : premium >= 0 ? "premium up" : "premium down";
+  const collateralSymbol = x.put?.collateralMeta?.symbol || "--";
+  const paymentSymbol = x.paymentTokenMeta?.symbol || "";
   return `
     <tr>
       <td>
@@ -596,10 +632,10 @@ function listingRowHtml(x) {
           <a href="${etherscanAddress(x.seller)}" target="_blank" rel="noopener noreferrer">${shortAddr(x.seller)}</a>
         </small>
       </td>
-      <td>${x.put?.amountDisplay || "--"} ${x.put?.collateralMeta?.symbol || ""}</td>
-      <td>${x.put?.collateralMeta?.symbol || "--"}</td>
+      <td>${x.put?.amountDisplay || "--"} ${withLogo(collateralSymbol)}</td>
+      <td>${withLogo(collateralSymbol)}</td>
       <td>${x.put?.amountRemainingDisplay || "--"}</td>
-      <td>${x.priceDisplay || "--"} ${x.paymentTokenMeta?.symbol || ""}</td>
+      <td>${x.priceDisplay || "--"} ${withLogo(paymentSymbol)}</td>
       <td><span class="${premiumClass}">${premiumText}</span></td>
       <td>${fmtTimeUntil(x.expires)}</td>
       <td>${x.put?.ftDisplay || "--"}</td>
@@ -667,8 +703,8 @@ function openBuyModal(row) {
   buyModalPutLabelEl.textContent = `PUT #${row.tokenId}`;
   buyModalFiltersEl.innerHTML = [
     addFilterRow("PUT ID", `PUT #${row.tokenId}`, true),
-    addFilterRow("Investment Token", investmentToken, true),
-    addFilterRow("Current Price Token", priceToken, true),
+    addFilterRow("Investment Token", withLogo(investmentToken), true),
+    addFilterRow("Current Price Token", withLogo(priceToken), true),
     addFilterRow("Current Price Max Amount", priceValue, true),
     addFilterRow("Current Price Min Amount (optional)", recommendedMin || "--"),
     addFilterRow("Investment Amount", investmentValue),
@@ -851,4 +887,5 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !buyModalBackdropEl.hidden) closeBuyModal();
 });
 
+initThemeToggle();
 loadDashboard();

@@ -1,21 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --bg-0: #070b12;
-  --bg-1: #0d1420;
-  --surface: #121b2a;
-  --surface-soft: #18243a;
-  --surface-elev: #1d2d47;
-  --ink: #f2f7ff;
-  --muted: #a8b8d3;
-  --line: rgba(148, 174, 219, 0.22);
-  --line-strong: rgba(171, 196, 235, 0.35);
-  --accent: #4f8cff;
-  --accent-2: #45d2ff;
+  --bg-0: #05070d;
+  --bg-1: #0a0f1d;
+  --surface: #0f1628;
+  --surface-soft: #131b32;
+  --surface-elev: #18223b;
+  --ink: #f4f7ff;
+  --muted: #9cadcc;
+  --line: rgba(119, 138, 176, 0.28);
+  --line-strong: rgba(154, 176, 214, 0.42);
+  --accent: #6e8dff;
+  --accent-2: #5ec2ff;
   --brand: #a7c9ff;
   --active: #87b8ff;
   --expired: #ff9a67;
-  --shadow: 0 16px 36px rgba(5, 10, 18, 0.45);
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+
+:root[data-theme="light"] {
+  --bg-0: #eef3fb;
+  --bg-1: #f8fbff;
+  --surface: #ffffff;
+  --surface-soft: #f4f7fd;
+  --surface-elev: #eef3fb;
+  --ink: #0f172a;
+  --muted: #5e6b84;
+  --line: rgba(120, 140, 180, 0.28);
+  --line-strong: rgba(90, 116, 165, 0.38);
+  --accent: #4f7dff;
+  --accent-2: #3db5ff;
+  --brand: #32508f;
+  --active: #2f62bf;
+  --expired: #de6d38;
+  --shadow: 0 8px 20px rgba(28, 45, 82, 0.14);
 }
 
 * {
@@ -30,11 +48,28 @@ body {
 
 body {
   color: var(--ink);
-  font-family: 'Manrope', 'Segoe UI', sans-serif;
-  background:
-    radial-gradient(1200px 460px at 6% -12%, rgba(79, 140, 255, 0.26), transparent 58%),
-    radial-gradient(860px 420px at 104% 6%, rgba(69, 210, 255, 0.2), transparent 55%),
-    linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 65%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+}
+
+.theme-toggle {
+  margin-top: 0.52rem;
+  border: 1px solid var(--line-strong);
+  background: rgba(18, 31, 54, 0.48);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.34rem 0.72rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  filter: brightness(1.06);
+}
+
+:root[data-theme="light"] .theme-toggle {
+  background: rgba(237, 243, 254, 0.96);
 }
 
 .container {
@@ -46,9 +81,9 @@ body {
 .hero,
 .panel,
 .table-wrap {
-  background: linear-gradient(180deg, rgba(20, 31, 50, 0.94), rgba(16, 24, 40, 0.95));
+  background: linear-gradient(180deg, rgba(15, 23, 40, 0.96), rgba(11, 17, 30, 0.98));
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 1rem;
   box-shadow: var(--shadow);
 }
@@ -68,9 +103,56 @@ body {
   font-weight: 700;
 }
 
+.brand-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.brand-logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-name {
+  margin: 0;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.logo-inline {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  vertical-align: -2px;
+  margin-right: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inline svg {
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
   margin: 0.2rem 0 0;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   font-size: clamp(1.7rem, 3.8vw, 2.8rem);
   letter-spacing: -0.02em;
 }
@@ -102,7 +184,7 @@ h1 {
   padding: 0.42rem 0.9rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16), 0 10px 22px rgba(40, 113, 251, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
 }
 
 .back-cta-link:hover {
@@ -147,7 +229,7 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 0.75rem;
-  background: linear-gradient(180deg, rgba(24, 35, 56, 0.9), rgba(17, 27, 42, 0.95));
+  background: linear-gradient(180deg, rgba(17, 27, 46, 0.94), rgba(13, 20, 35, 0.96));
 }
 
 .card .label {
@@ -160,7 +242,7 @@ h1 {
 
 .card .value {
   margin: 0.2rem 0 0;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   font-size: 1.34rem;
   font-weight: 800;
 }
@@ -176,7 +258,7 @@ h1 {
 .panel h2 {
   margin: 0;
   font-size: 1.08rem;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .kv-grid {
@@ -504,7 +586,7 @@ input::placeholder {
 .table-wrap h2 {
   margin: 0 0 0.65rem;
   font-size: 1.06rem;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 details summary {
@@ -512,7 +594,7 @@ details summary {
   font-size: 1.02rem;
   font-weight: 800;
   margin-bottom: 0.7rem;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 table {
@@ -606,7 +688,7 @@ td a:hover {
   width: min(760px, 100%);
   background: linear-gradient(180deg, rgba(20, 31, 50, 0.98), rgba(16, 24, 40, 0.98));
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 1rem;
   position: relative;
 }
@@ -625,7 +707,7 @@ td a:hover {
 .buy-modal h2 {
   margin: 0;
   font-size: 1.2rem;
-  font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .modal-sub {
@@ -779,10 +861,207 @@ td a:hover {
 
   .back-cta {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.45rem;
   }
 
   .back-cta-link {
-    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
   }
+}
+
+:root[data-theme="light"] .hero,
+:root[data-theme="light"] .panel,
+:root[data-theme="light"] .table-wrap,
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .buy-modal {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+  border-color: rgba(109, 132, 173, 0.3);
+}
+
+:root[data-theme="light"] .back-cta {
+  background: #f1f6ff;
+  color: #51617d;
+}
+
+:root[data-theme="light"] .hero-meta,
+:root[data-theme="light"] .subtitle,
+:root[data-theme="light"] .card .label,
+:root[data-theme="light"] .table-wrap h2,
+:root[data-theme="light"] .count,
+:root[data-theme="light"] .disclaimer-bottom,
+:root[data-theme="light"] .credit {
+  color: #5a6a85;
+}
+
+:root[data-theme="light"] h1,
+:root[data-theme="light"] .card .value,
+:root[data-theme="light"] th,
+:root[data-theme="light"] td,
+:root[data-theme="light"] .modal-sub,
+:root[data-theme="light"] .modal-instructions p {
+  color: #0f172a;
+}
+
+:root[data-theme="light"] .controls input,
+:root[data-theme="light"] .controls select {
+  background: #f3f7ff;
+  border-color: rgba(110, 135, 178, 0.35);
+  color: #0f172a;
+}
+
+/* Enforce readable contrast in light mode for PUT marketplace */
+:root[data-theme="light"] .table-wrap,
+:root[data-theme="light"] .table-wrap h2,
+:root[data-theme="light"] th,
+:root[data-theme="light"] td,
+:root[data-theme="light"] td small,
+:root[data-theme="light"] details summary,
+:root[data-theme="light"] .count,
+:root[data-theme="light"] .vf-sub,
+:root[data-theme="light"] .vf-legend span,
+:root[data-theme="light"] .vf-axis,
+:root[data-theme="light"] .modal-instructions ol,
+:root[data-theme="light"] .modal-sub,
+:root[data-theme="light"] .disclaimer-bottom,
+:root[data-theme="light"] .credit {
+  color: #1a2740 !important;
+}
+
+:root[data-theme="light"] td a,
+:root[data-theme="light"] .module-wallet-link,
+:root[data-theme="light"] .credit a {
+  color: #2458b5 !important;
+}
+
+:root[data-theme="light"] .premium.up {
+  color: #0d8a51 !important;
+  background: rgba(16, 151, 89, 0.14) !important;
+}
+
+:root[data-theme="light"] .premium.down {
+  color: #bc4b1a !important;
+  background: rgba(210, 88, 39, 0.14) !important;
+}
+
+:root[data-theme="light"] .vf-chart {
+  background: linear-gradient(180deg, #f4f8ff, #ecf3fd) !important;
+  border-color: rgba(116, 141, 184, 0.35) !important;
+}
+
+:root[data-theme="light"] .vf-grid {
+  stroke: rgba(122, 145, 182, 0.28) !important;
+}
+
+:root[data-theme="light"] .vf-axis-line {
+  stroke: rgba(103, 126, 166, 0.42) !important;
+}
+
+:root[data-theme="light"] .vf-tooltip {
+  border-color: rgba(91, 117, 161, 0.35) !important;
+  background: rgba(247, 251, 255, 0.98) !important;
+  color: #112039 !important;
+  box-shadow: 0 8px 18px rgba(30, 50, 84, 0.16) !important;
+}
+
+/* Final light-mode readability override */
+:root[data-theme="light"] body,
+:root[data-theme="light"] .container {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .hero,
+:root[data-theme="light"] .panel,
+:root[data-theme="light"] .table-wrap,
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .buy-modal {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%) !important;
+  border-color: rgba(109, 132, 173, 0.34) !important;
+}
+
+:root[data-theme="light"] .kv-grid div,
+:root[data-theme="light"] .filter-row,
+:root[data-theme="light"] .modal-instructions,
+:root[data-theme="light"] .controls input,
+:root[data-theme="light"] .controls select,
+:root[data-theme="light"] .pill {
+  background: #eef3ff !important;
+  border-color: rgba(105, 130, 174, 0.38) !important;
+  color: #12243f !important;
+}
+
+:root[data-theme="light"] .kv-grid span,
+:root[data-theme="light"] .filter-row span,
+:root[data-theme="light"] .pill small,
+:root[data-theme="light"] label,
+:root[data-theme="light"] .vf-sub,
+:root[data-theme="light"] .vf-legend,
+:root[data-theme="light"] .count,
+:root[data-theme="light"] .subtitle,
+:root[data-theme="light"] .hero-meta,
+:root[data-theme="light"] .disclaimer-bottom,
+:root[data-theme="light"] .credit {
+  color: #3b4d6d !important;
+}
+
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] .card .value,
+:root[data-theme="light"] .kv-grid strong,
+:root[data-theme="light"] .filter-row strong,
+:root[data-theme="light"] details summary,
+:root[data-theme="light"] .modal-sub,
+:root[data-theme="light"] .modal-instructions p,
+:root[data-theme="light"] .modal-instructions ol,
+:root[data-theme="light"] .modal-close {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] thead,
+:root[data-theme="light"] .listings-wrap thead th,
+:root[data-theme="light"] .sales-wrap thead th,
+:root[data-theme="light"] .holders-wrap thead th {
+  background: #e8f0ff !important;
+  box-shadow: 0 1px 0 rgba(129, 151, 191, 0.34) !important;
+}
+
+:root[data-theme="light"] th,
+:root[data-theme="light"] .sort-th {
+  color: #142644 !important;
+}
+
+:root[data-theme="light"] td,
+:root[data-theme="light"] td small {
+  color: #162a48 !important;
+}
+
+:root[data-theme="light"] th,
+:root[data-theme="light"] td {
+  border-bottom-color: rgba(125, 148, 188, 0.26) !important;
+}
+
+:root[data-theme="light"] td a,
+:root[data-theme="light"] .module-wallet-link,
+:root[data-theme="light"] .credit a {
+  color: #2458b5 !important;
+}
+
+:root[data-theme="light"] .modal-instructions {
+  background: #ecf3ff !important;
+}
+
+:root[data-theme="light"] .vf-range-btn {
+  background: #e7eefb !important;
+  border-color: rgba(105, 130, 174, 0.42) !important;
+  color: #415677 !important;
+}
+
+:root[data-theme="light"] .vf-range-btn.active {
+  background: linear-gradient(145deg, #6ea4ff, #5a86ef) !important;
+  border-color: rgba(74, 112, 186, 0.6) !important;
+  color: #ffffff !important;
 }
