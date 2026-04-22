@@ -16,7 +16,7 @@ const CHAINS = [
     key: "ethereum",
     label: "Ethereum",
     lookback: 1_500_000n,
-    chunk: 12_000n,
+    chunk: 9_000n,
     rpcs: [
       ...(ETH_RPC_URL ? [ETH_RPC_URL] : []),
       "https://ethereum-rpc.publicnode.com",
