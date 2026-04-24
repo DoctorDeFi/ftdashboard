@@ -326,6 +326,7 @@ function buildOutput(state) {
   });
 
   let ftTotalWei = 0n;
+  let ftPricedWei = 0n;
   let usdSpent1e6 = 0n;
   const moduleTotals = {};
   const chainTotals = {};
@@ -336,6 +337,7 @@ function buildOutput(state) {
     const usd = BigInt(r.stableSpentUsd1e6 || "0");
     ftTotalWei += ft;
     usdSpent1e6 += usd;
+    if (usd > 0n) ftPricedWei += ft;
 
     const m = r.module || "Unknown";
     if (!moduleTotals[m]) moduleTotals[m] = { ftWei: 0n, usd1e6: 0n, txCount: 0 };
@@ -358,7 +360,8 @@ function buildOutput(state) {
     }
   }
 
-  const avgBuyPrice = ftTotalWei > 0n ? Number(usdSpent1e6 * 10n ** 18n / ftTotalWei) / 1e6 : 0;
+  const avgBuyPrice = ftPricedWei > 0n ? Number((usdSpent1e6 * 10n ** 18n) / ftPricedWei) / 1e6 : 0;
+  const pricedCoveragePct = ftTotalWei > 0n ? Number((ftPricedWei * 10000n) / ftTotalWei) / 100 : 0;
   const now = Date.now();
   const t24 = now - 24 * 60 * 60 * 1000;
   const t7d = now - 7 * 24 * 60 * 60 * 1000;
@@ -381,6 +384,8 @@ function buildOutput(state) {
       totalFtBought: formatUnits(ftTotalWei, 18, 4),
       totalUsdSpentStableEstimate: formatUnits(usdSpent1e6, 6, 2),
       avgBuyPriceUsd: avgBuyPrice ? avgBuyPrice.toFixed(5) : "0",
+      pricedFtBought: formatUnits(ftPricedWei, 18, 4),
+      pricedCoveragePct: pricedCoveragePct.toFixed(2),
       ftBought24h: formatUnits(ft24Wei, 18, 4),
       ftBought7d: formatUnits(ft7dWei, 18, 4),
       txCount: rows.length
