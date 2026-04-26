@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24965742",
+  "lastBlock": "24966121",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -8947,11 +8947,11 @@
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "11499000000",
       "expires": 1777441886,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xc35f47be975bd108a6fca6b0599151829f980c976ff8a5d559e8b31b30dd7cf2",
-      "lastBlockNumber": 24933493,
-      "lastLogIndex": 1043
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0x97bdcea7026752b35c5e2b2119dc8f790532c1af27bd9eb4cbd43ba048d49f32",
+      "lastBlockNumber": 24966090,
+      "lastLogIndex": 417
     },
     "3204": {
       "tokenId": "3204",
@@ -18464,20 +18464,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "RemoveListing",
-      "txHash": "0xd480c1f67d72223465bed69410a0b8709d2a01c197c11d704073e04db5939879",
-      "blockNumber": 24624661,
-      "logIndex": 476,
-      "tokenId": "2310",
-      "seller": "0x7f3e244e9d8fda47db77d7a24e21bfb21894fc38",
-      "atUnix": 1773116603,
-      "details": {
-        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
-        "topicsCount": 3,
-        "dataWords": 0
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0xb89c75309f9899db9f19da0d37b8e086743c4c1b15e1eb1c0cee488d9eff95fb",
@@ -60518,6 +60504,20 @@
         "priceWei": "400000000",
         "expires": 1793038026
       }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0x97bdcea7026752b35c5e2b2119dc8f790532c1af27bd9eb4cbd43ba048d49f32",
+      "blockNumber": 24966090,
+      "logIndex": 417,
+      "tokenId": "3183",
+      "seller": "0x46e0a9a8c9ddebfc0a143a4d7cff4295cf9ef9fd",
+      "atUnix": 1777229291,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
     }
   ],
   "acceptedTokens": [
@@ -60533,7 +60533,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24965742",
+    "lastBlock": "24966121",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
