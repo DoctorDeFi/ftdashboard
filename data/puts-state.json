@@ -1,5 +1,5 @@
 {
-  "lastBlock": "24974190",
+  "lastBlock": "24974487",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -6979,11 +6979,11 @@
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "priceWei": "1650000000",
       "expires": 1784239703,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x6d6aacbaf43697608db847b7934efe118d08532b91beba97e95b44634076e904",
-      "lastBlockNumber": 24902470,
-      "lastLogIndex": 496
+      "status": "removed",
+      "lastAction": "RemoveListing",
+      "lastTxHash": "0xf96988241e9abd8d3034bf7fc273602bb31c3bbc7a1ede3775415ef8a09f3605",
+      "lastBlockNumber": 24974230,
+      "lastLogIndex": 732
     },
     "2306": {
       "tokenId": "2306",
@@ -18528,23 +18528,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0xe466c70829a5efdce555791597b18dfc96aff7595c3d4b731cb8a763a9cc8edc",
-      "blockNumber": 24628301,
-      "logIndex": 449,
-      "tokenId": "2904",
-      "seller": "0xdef7c0edd5701da7ccc1730135238aa1eab8af36",
-      "atUnix": 1773160619,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "3000000000",
-        "expires": 1773765393
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0x43e2fb8224e5b322a679746b838c99d8bcd93419282185f8ef9661f4cce62989",
@@ -60583,6 +60566,20 @@
         "priceWei": "750000000",
         "expires": 1777584361
       }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0xf96988241e9abd8d3034bf7fc273602bb31c3bbc7a1ede3775415ef8a09f3605",
+      "blockNumber": 24974230,
+      "logIndex": 732,
+      "tokenId": "2302",
+      "seller": "0x5a301887f1e99bbbbfe1d6cdc8dbb9cb4400b8ff",
+      "atUnix": 1777327211,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
     }
   ],
   "acceptedTokens": [
@@ -60598,7 +60595,7 @@
     "emergencyPaused": null
   },
   "holders": {
-    "lastBlock": "24974190",
+    "lastBlock": "24974487",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -61722,7 +61719,6 @@
       "2092": "0xa461c9a9867c2f27b68d54b8fe2833805bbb10df",
       "2093": "0xa461c9a9867c2f27b68d54b8fe2833805bbb10df",
       "2095": "0x8543c406b689cdde1a3705ed07428020e908ca19",
-      "2099": "0x4d41db4556fc7b9fd765475753e7b2483385778a",
       "2101": "0xaaac34d30d6938787c653aafb922bc20bfa9c512",
       "2106": "0x2972964e4c3d38a99c2e27097acd2e9638e12b0b",
       "2107": "0x104db84171ec5da4cfaecd2490f57dbfaff540c7",
