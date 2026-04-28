@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-28T21:09:36.428Z",
+  "updatedAt": "2026-04-28T22:32:55.870Z",
   "source": "onchain_transfer_inflow",
   "wallets": [
     {
@@ -22,27 +22,27 @@
     }
   ],
   "summary": {
-    "totalFtBought": "39491.0862",
-    "totalUsdSpentStableEstimate": "2225.77",
-    "avgBuyPriceUsd": "0.07524",
-    "pricedFtBought": "29583.577",
-    "pricedCoveragePct": "74.91",
-    "ftBought24h": "2185.6177",
-    "ftBought7d": "14945.1713",
-    "txCount": 211
+    "totalFtBought": "39817.3786",
+    "totalUsdSpentStableEstimate": "2232.65",
+    "avgBuyPriceUsd": "0.07465",
+    "pricedFtBought": "29909.8694",
+    "pricedCoveragePct": "75.11",
+    "ftBought24h": "2511.9101",
+    "ftBought7d": "15271.4637",
+    "txCount": 212
   },
   "moduleTotals": [
+    {
+      "module": "Margin Sonic",
+      "ftBought": "4411.4797",
+      "usdSpentStableEstimate": "161.28",
+      "txCount": 75
+    },
     {
       "module": "ftUSD Sonic",
       "ftBought": "10097.636",
       "usdSpentStableEstimate": "676.57",
       "txCount": 86
-    },
-    {
-      "module": "Margin Sonic",
-      "ftBought": "4085.1873",
-      "usdSpentStableEstimate": "154.4",
-      "txCount": 74
     },
     {
       "module": "ftUSD ETH",
@@ -54,9 +54,9 @@
   "chainTotals": [
     {
       "chain": "Sonic",
-      "ftBought": "14182.8233",
-      "usdSpentStableEstimate": "830.97",
-      "txCount": 160
+      "ftBought": "14509.1157",
+      "usdSpentStableEstimate": "837.85",
+      "txCount": 161
     },
     {
       "chain": "Ethereum",
@@ -303,11 +303,33 @@
     },
     {
       "day": "2026-04-28",
-      "ftBought": "1536.2801",
-      "usdSpentStableEstimate": "25.97"
+      "ftBought": "1862.5725",
+      "usdSpentStableEstimate": "32.84"
     }
   ],
   "recentBuys": [
+    {
+      "chain": "Sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x42417e9960e23d3b540352f67fb0bd146d817f187b4d8b32df522c99227077d4",
+      "blockNumber": 69054668,
+      "time": "2026-04-28T21:18:55.000Z",
+      "ftBought": "326.2923",
+      "usdSpentStableEstimate": "6.87",
+      "tokenOutflows": [
+        {
+          "token": "0x578ee1ca3a8e1b54554da1bf7c583506c4cd11c6",
+          "symbol": "ASONUSDC",
+          "amount": "6.874983"
+        },
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "24.73575"
+        }
+      ]
+    },
     {
       "chain": "Sonic",
       "module": "ftUSD Sonic",
@@ -2688,33 +2710,6 @@
           "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
           "symbol": "USDC",
           "amount": "12.531742"
-        }
-      ]
-    },
-    {
-      "chain": "Sonic",
-      "module": "Margin Sonic",
-      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
-      "txHash": "0x072d7ea52dfaee2b418082f412fef50329aed145fb5e8fd94fe9b3cd9d235b1f",
-      "blockNumber": 66589593,
-      "time": "2026-04-03T16:15:53.000Z",
-      "ftBought": "11.1981",
-      "usdSpentStableEstimate": "0",
-      "tokenOutflows": [
-        {
-          "token": "0x6c5e14a212c1c3e4baf6f871ac9b1a969918c131",
-          "symbol": "ASONWS",
-          "amount": "25.623488"
-        },
-        {
-          "token": "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38",
-          "symbol": "WS",
-          "amount": "25.66973"
-        },
-        {
-          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
-          "symbol": "USDC",
-          "amount": "1.080856"
         }
       ]
     }
