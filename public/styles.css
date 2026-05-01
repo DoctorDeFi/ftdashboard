@@ -75,9 +75,9 @@ body {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 1.6rem 1rem 2.6rem;
+  padding: 1.1rem 1rem 2.6rem;
 }
 
 .hero-card {
@@ -155,6 +155,7 @@ body {
   margin: 0.1rem 0 1rem;
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.55rem;
   padding: 0.38rem 0.4rem 0.38rem 0.68rem;
   border: 1px solid var(--line);
@@ -903,6 +904,7 @@ summary {
 
   .puts-cta-link {
     width: 100%;
+    display: block;
     text-align: center;
     white-space: normal;
   }
