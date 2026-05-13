@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25082203"
+      "lastBlock": "25082920"
     },
     "sonic": {
-      "lastBlock": "70338621"
+      "lastBlock": "70349499"
     }
   },
   "txs": {
@@ -7652,6 +7652,29 @@
       "ftBoughtWei": "723422592523511275351",
       "stableSpentUsd1e6": "0",
       "tokenOutflows": []
+    },
+    "sonic:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0x3954dd08fd16bf69a480fa826fc364690edbe27c20acb5ee63783a926adc3e1b": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x3954dd08fd16bf69a480fa826fc364690edbe27c20acb5ee63783a926adc3e1b",
+      "blockNumber": 70344464,
+      "timestamp": 1778631600,
+      "ftBoughtWei": "293879459041033511255",
+      "stableSpentUsd1e6": "20635029",
+      "tokenOutflows": [
+        {
+          "token": "0x578ee1ca3a8e1b54554da1bf7c583506c4cd11c6",
+          "symbol": "ASONUSDC",
+          "amount": "20.635029"
+        },
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "28.686008"
+        }
+      ]
     }
   }
 }
