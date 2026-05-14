@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25093373"
+      "lastBlock": "25094165"
     },
     "sonic": {
-      "lastBlock": "70547290"
+      "lastBlock": "70564765"
     }
   },
   "txs": {
@@ -7861,6 +7861,46 @@
           "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
           "symbol": "USDC",
           "amount": "23.927895"
+        }
+      ]
+    },
+    "sonic:0xed0077a9e26329327722a81df2db3450f100226f:0x7876d937944bcfed3a805111ea81d2fc8056ccd7caec6286eddfc0bf3c718c3d": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "ftUSD Sonic",
+      "wallet": "0xed0077a9e26329327722a81df2db3450f100226f",
+      "txHash": "0x7876d937944bcfed3a805111ea81d2fc8056ccd7caec6286eddfc0bf3c718c3d",
+      "blockNumber": 70557028,
+      "timestamp": 1778766998,
+      "ftBoughtWei": "1013863914050877137044",
+      "stableSpentUsd1e6": "0",
+      "tokenOutflows": []
+    },
+    "sonic:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0x719e857ef16e32d60077f1dccc4662278a3fd5ab4437190bd9bec4da1204a514": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x719e857ef16e32d60077f1dccc4662278a3fd5ab4437190bd9bec4da1204a514",
+      "blockNumber": 70553248,
+      "timestamp": 1778764907,
+      "ftBoughtWei": "310881189399456570384",
+      "stableSpentUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0x6c5e14a212c1c3e4baf6f871ac9b1a969918c131",
+          "symbol": "ASONWS",
+          "amount": "400.592743"
+        },
+        {
+          "token": "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38",
+          "symbol": "WS",
+          "amount": "607.49733"
+        },
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "29.873935"
         }
       ]
     }
