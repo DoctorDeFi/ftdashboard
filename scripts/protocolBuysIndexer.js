@@ -294,8 +294,11 @@ async function scanChain(chain, state) {
         }
       }
     }
+    // Use gross stable outflow from tracked wallets as spend basis.
+    // Internal wrap/unwrap or routing legs can create matching stable inflows
+    // in the same tx and would undercount buyback spend when netted.
     const netStableOut1e6 = stableOut1e6 > stableIn1e6 ? stableOut1e6 - stableIn1e6 : 0n;
-    stableSpentUsd1e6 = aTokenStableOut1e6 + netStableOut1e6;
+    stableSpentUsd1e6 = aTokenStableOut1e6 + stableOut1e6;
 
     const blockHex = toHex(BigInt(row.blockNumber));
     if (!blockCache.has(blockHex)) blockCache.set(blockHex, await getBlock(chain, blockHex));
@@ -312,6 +315,10 @@ async function scanChain(chain, state) {
       timestamp: ts,
       ftBoughtWei: row.ftBoughtWei.toString(),
       stableSpentUsd1e6: stableSpentUsd1e6.toString(),
+      stableOutUsd1e6: stableOut1e6.toString(),
+      stableInUsd1e6: stableIn1e6.toString(),
+      netStableOutUsd1e6: netStableOut1e6.toString(),
+      aTokenStableOutUsd1e6: aTokenStableOut1e6.toString(),
       tokenOutflows: tokenBreakdown
     };
   }
@@ -376,7 +383,7 @@ function buildOutput(state) {
 
   return {
     updatedAt: new Date().toISOString(),
-    source: "onchain_transfer_inflow",
+    source: "onchain_transfer_inflow_gross_stable_out",
     wallets: CHAINS.flatMap((c) =>
       c.wallets.map((w) => ({ chain: c.label, chainKey: c.key, address: w.address, module: w.module }))
     ),
@@ -418,6 +425,10 @@ function buildOutput(state) {
       time: r.timestamp ? new Date(r.timestamp * 1000).toISOString() : null,
       ftBought: formatUnits(BigInt(r.ftBoughtWei || "0"), 18, 4),
       usdSpentStableEstimate: formatUnits(BigInt(r.stableSpentUsd1e6 || "0"), 6, 2),
+      stableOutUsd: formatUnits(BigInt(r.stableOutUsd1e6 || "0"), 6, 2),
+      stableInUsd: formatUnits(BigInt(r.stableInUsd1e6 || "0"), 6, 2),
+      netStableOutUsd: formatUnits(BigInt(r.netStableOutUsd1e6 || "0"), 6, 2),
+      aTokenStableOutUsd: formatUnits(BigInt(r.aTokenStableOutUsd1e6 || "0"), 6, 2),
       tokenOutflows: r.tokenOutflows || []
     }))
   };
