@@ -1094,8 +1094,6 @@ async function main() {
     if ((a.putCount || 0) !== (b.putCount || 0)) return (b.putCount || 0) - (a.putCount || 0);
     return String(a.address || "").localeCompare(String(b.address || ""));
   });
-  const holdersTopResolved = holdersResolved.slice(0, 50);
-
   const activeCount = enrichedActive.filter((x) => x.derivedStatus === "active").length;
   const expiredCount = enrichedActive.filter((x) => x.derivedStatus === "expired").length;
 
@@ -1131,7 +1129,7 @@ async function main() {
     listingsActive: enrichedActive,
     salesRecent: salesRecentResolved,
     activityRecent: activityRecentResolved,
-    holdersTop50: holdersTopResolved,
+    holders: holdersResolved,
     dailyVolumeRevenue
   };
 

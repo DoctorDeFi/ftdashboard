@@ -816,7 +816,7 @@ async function loadDashboard() {
     renderStats(payload.stats || {});
     renderVolumeFeeChart(payload.dailyVolumeRevenue || []);
     renderProtocol(payload.config || {}, payload.acceptedTokens || []);
-    renderHolders(payload.holdersTop50 || []);
+    renderHolders(payload.holders || payload.holdersTop50 || []);
     renderListings();
     renderSales(payload.salesRecent || []);
     renderActivity(payload.activityRecent || []);
