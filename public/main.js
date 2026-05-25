@@ -209,10 +209,6 @@ function renderProtocolBuys(payload) {
     </article>
     <div class="summary-grid buys-grid buys-inline">
       <article class="summary-card buys-stat">
-        <p class="label">Avg Buy Price (USD)</p>
-        <p class="value">$${s.avgBuyPriceUsd}</p>
-      </article>
-      <article class="summary-card buys-stat">
         <p class="label">FT Bought 24h</p>
         <p class="value">${s.ftBought24h}</p>
       </article>
