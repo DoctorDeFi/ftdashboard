@@ -27,6 +27,10 @@ const CHAINS = [
       {
         address: "0xbae14f050fb8cda4d16ab47dbec67793c7c0b566",
         module: "ftUSD ETH"
+      },
+      {
+        address: "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+        module: "Margin Ethereum"
       }
     ]
   },
