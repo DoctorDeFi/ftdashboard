@@ -1,5 +1,5 @@
 {
-  "lastBlock": "25238835",
+  "lastBlock": "25239755",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -509,13 +509,13 @@
       "tokenId": "79",
       "seller": "0x2fb2a46cebaabff3e8f12cc9a84b5a0c3d9a4076",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "priceWei": "5500000000",
+      "priceWei": "5100000000",
       "expires": 1782338797,
       "status": "active",
       "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xb5bffe753fbe55b27444fba8f3fd6ffd80372715b7ff59321e33c39d37846230",
-      "lastBlockNumber": 25168034,
-      "lastLogIndex": 430
+      "lastTxHash": "0x1f2f96a46f736a9047de1b85a2e5912955aaac00f8026d49ea92ebd47456d502",
+      "lastBlockNumber": 25239003,
+      "lastLogIndex": 546
     },
     "80": {
       "tokenId": "80",
@@ -2765,13 +2765,13 @@
       "tokenId": "448",
       "seller": "0x15e87a4c611c64fbb31b4e9636c409d9c0e27ecf",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "priceWei": "19950000000",
-      "expires": 1780343913,
+      "priceWei": "19999000000",
+      "expires": 1781119972,
       "status": "active",
       "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0xfbc72b5f55e90b1af7f16a70ae4977b971c872a63adee2a9e22ae5678c8ae170",
-      "lastBlockNumber": 25174560,
-      "lastLogIndex": 183
+      "lastTxHash": "0xf891bfb223ee637fbf2f823240e6150413b10cac10ff59ffa92c8bc4dad7e5aa",
+      "lastBlockNumber": 25238975,
+      "lastLogIndex": 413
     },
     "449": {
       "tokenId": "449",
@@ -19760,39 +19760,6 @@
     }
   ],
   "activity": [
-    {
-      "event": "RemoveListing",
-      "txHash": "0xe6c6aa62b2626d05fef3de81dfbb903ac35d7d2f4f3559a809afc1b427f40623",
-      "blockNumber": 24691872,
-      "logIndex": 720,
-      "tokenId": "9116",
-      "seller": "0xb055600e0da3f2d629b8874f1be95c2568524591",
-      "atUnix": 1773927383,
-      "details": {
-        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
-        "topicsCount": 3,
-        "dataWords": 0
-      }
-    },
-    {
-      "event": "Sold(heuristic-v2)",
-      "txHash": "0x40d0e6846b0027b387a8c63724990fac87f83b92ae9ec32a8556ec213117bc21",
-      "blockNumber": 24691987,
-      "logIndex": 179,
-      "tokenId": "1992",
-      "seller": "0x7d7f249ffe00e6823300e6bd7e83745a95a84244",
-      "atUnix": 1773928763,
-      "details": {
-        "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
-        "topicsCount": 3,
-        "dataWords": 4,
-        "buyer": "0x3f91b8ee050b73f450cc894883870d09e08ed8c7",
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "250000000",
-        "makerFeeWei": "250000",
-        "takerFeeWei": "750000"
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0xf558ab477fa15ebfeaa33eb722dfccd794051e55dde50489e8f732c8e9b2f3d3",
@@ -61933,6 +61900,40 @@
         "priceWei": "499000000",
         "expires": 1781118147
       }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0xf891bfb223ee637fbf2f823240e6150413b10cac10ff59ffa92c8bc4dad7e5aa",
+      "blockNumber": 25238975,
+      "logIndex": 413,
+      "tokenId": "448",
+      "seller": "0x15e87a4c611c64fbb31b4e9636c409d9c0e27ecf",
+      "atUnix": 1780515203,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "19999000000",
+        "expires": 1781119972
+      }
+    },
+    {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0x1f2f96a46f736a9047de1b85a2e5912955aaac00f8026d49ea92ebd47456d502",
+      "blockNumber": 25239003,
+      "logIndex": 546,
+      "tokenId": "79",
+      "seller": "0x2fb2a46cebaabff3e8f12cc9a84b5a0c3d9a4076",
+      "atUnix": 1780515539,
+      "details": {
+        "topic0": "0xf2648ef342d2b50b43db824fe52ca9c99a9dd91ed878a04b77cc9db7fa9f87e3",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "5100000000",
+        "expires": 1782338797
+      }
     }
   ],
   "acceptedTokens": [
@@ -61948,7 +61949,7 @@
     "emergencyPaused": false
   },
   "holders": {
-    "lastBlock": "25238835",
+    "lastBlock": "25239755",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
