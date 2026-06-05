@@ -87,14 +87,14 @@ function renderSummary(puts, buys, fees) {
 
   summaryCardsEl.innerHTML = `
     <div class="summary-card summary-total">
-      <p class="label">Total Revenue (USD)</p>
+      <p class="label">Total Revenue & Distribution Flow (USD)</p>
       <p class="value">${fmtUsd(totalRevenue)}</p>
-      <p class="sub">PUT marketplace + core product + ftUSD mint/redeem</p>
+      <p class="sub">PUT marketplace fees + buyback-funded distributions + ftUSD mint/redeem fees</p>
     </div>
     <div class="summary-grid-small">
-      ${card("PUT Marketplace Revenue", fmtUsd(putsRevenue), `Sales tracked: ${puts?.stats?.totalSalesTracked ?? 0}`)}
-      ${card("Core Product Revenue", fmtUsd(coreProductRevenue), "ftUSD on ETH & Sonic, Margin Lending on Sonic")}
-      ${card("ftUSD Minting/Redemption Revenue", fmtUsd(ftusdFeesUsd), "Gross fee generation from mint + redeem")}
+      ${card("PUT Marketplace", fmtUsd(putsRevenue), `Sales tracked: ${puts?.stats?.totalSalesTracked ?? 0}`)}
+      ${card("Core Protocol Value Flow (Rev/Distro)", fmtUsd(coreProductRevenue), "ftUSD on ETH & Sonic, Margin Lending on Sonic")}
+      ${card("ftUSD Mint/Redeem", fmtUsd(ftusdFeesUsd), "Gross fee flow from mint + redeem")}
     </div>
   `;
 }
@@ -191,7 +191,7 @@ function drawRevenueChart(allRows) {
     const r = rows[i];
     if (!r || !chartTooltipEl) return;
     chartTooltipEl.hidden = false;
-    chartTooltipEl.innerHTML = `<strong>${r.day}</strong><br/>Total: ${fmtUsd(r.total)}<br/>PUT: ${fmtUsd(r.puts)}<br/>Core: ${fmtUsd(r.core)}<br/>ftUSD fees: ${fmtUsd(r.fees)}`;
+    chartTooltipEl.innerHTML = `<strong>${r.day}</strong><br/>Total: ${fmtUsd(r.total)}<br/>PUT Marketplace: ${fmtUsd(r.puts)}<br/>Core Protocol Value Flow: ${fmtUsd(r.core)}<br/>ftUSD Mint/Redeem: ${fmtUsd(r.fees)}`;
     const rect = chartSvgEl.getBoundingClientRect();
     const cx = Number(el.getAttribute("cx"));
     const cy = Number(el.getAttribute("cy"));
