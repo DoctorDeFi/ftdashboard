@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T05:12:57.960Z",
+  "updatedAt": "2026-06-08T10:05:18.924Z",
   "source": "onchain_transfer_inflow_gross_stable_out",
   "wallets": [
     {
@@ -28,21 +28,21 @@
     }
   ],
   "summary": {
-    "totalFtBought": "172078.7274",
-    "totalUsdSpentStableEstimate": "12734.04",
-    "avgBuyPriceUsd": "0.11010",
-    "pricedFtBought": "115657.3991",
-    "pricedCoveragePct": "67.21",
-    "ftBought24h": "2036.649",
-    "ftBought7d": "31445.9355",
-    "txCount": 473
+    "totalFtBought": "173674.0835",
+    "totalUsdSpentStableEstimate": "12990.21",
+    "avgBuyPriceUsd": "0.11079",
+    "pricedFtBought": "117252.7551",
+    "pricedCoveragePct": "67.51",
+    "ftBought24h": "3632.005",
+    "ftBought7d": "33041.2916",
+    "txCount": 475
   },
   "moduleTotals": [
     {
       "module": "Margin Sonic",
-      "ftBought": "52950.7581",
-      "usdSpentStableEstimate": "5330.78",
-      "txCount": 248
+      "ftBought": "53186.356",
+      "usdSpentStableEstimate": "5354.89",
+      "txCount": 249
     },
     {
       "module": "ftUSD Sonic",
@@ -52,9 +52,9 @@
     },
     {
       "module": "ftUSD ETH",
-      "ftBought": "61783.5258",
-      "usdSpentStableEstimate": "4761.18",
-      "txCount": 93
+      "ftBought": "63143.284",
+      "usdSpentStableEstimate": "4993.24",
+      "txCount": 94
     },
     {
       "module": "Margin Ethereum",
@@ -66,15 +66,15 @@
   "chainTotals": [
     {
       "chain": "Sonic",
-      "ftBought": "101675.4724",
-      "usdSpentStableEstimate": "6391.34",
-      "txCount": 372
+      "ftBought": "101911.0703",
+      "usdSpentStableEstimate": "6415.45",
+      "txCount": 373
     },
     {
       "chain": "Ethereum",
-      "ftBought": "70403.2549",
-      "usdSpentStableEstimate": "6342.69",
-      "txCount": 101
+      "ftBought": "71763.0131",
+      "usdSpentStableEstimate": "6574.75",
+      "txCount": 102
     }
   ],
   "daily": [
@@ -517,9 +517,40 @@
       "day": "2026-06-07",
       "ftBought": "3456.7278",
       "usdSpentStableEstimate": "545.51"
+    },
+    {
+      "day": "2026-06-08",
+      "ftBought": "1595.356",
+      "usdSpentStableEstimate": "256.16"
     }
   ],
   "recentBuys": [
+    {
+      "chain": "Sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x078b3458eef0e181edecfcc3946af63af3ab2951fa54f8eadf11a27b2ebf9040",
+      "blockNumber": 73056785,
+      "time": "2026-06-08T06:38:58.000Z",
+      "ftBought": "235.5978",
+      "usdSpentStableEstimate": "24.11",
+      "stableOutUsd": "23.23",
+      "stableInUsd": "23.23",
+      "netStableOutUsd": "0",
+      "aTokenStableOutUsd": "0.87",
+      "tokenOutflows": [
+        {
+          "token": "0x578ee1ca3a8e1b54554da1bf7c583506c4cd11c6",
+          "symbol": "ASONUSDC",
+          "amount": "0.873273"
+        },
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "23.237612"
+        }
+      ]
+    },
     {
       "chain": "Sonic",
       "module": "Margin Sonic",
@@ -3085,32 +3116,6 @@
           "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
           "symbol": "USDC",
           "amount": "22.971793"
-        }
-      ]
-    },
-    {
-      "chain": "Sonic",
-      "module": "Margin Sonic",
-      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
-      "txHash": "0xd7cfc88ed47ac515fc2c8f4bb1fc132cad83090c265f60119f9540c357cfc47e",
-      "blockNumber": 71100860,
-      "time": "2026-05-21T01:50:30.000Z",
-      "ftBought": "215.0967",
-      "usdSpentStableEstimate": "39.57",
-      "stableOutUsd": "20.97",
-      "stableInUsd": "20.97",
-      "netStableOutUsd": "0",
-      "aTokenStableOutUsd": "18.59",
-      "tokenOutflows": [
-        {
-          "token": "0x578ee1ca3a8e1b54554da1bf7c583506c4cd11c6",
-          "symbol": "ASONUSDC",
-          "amount": "18.591951"
-        },
-        {
-          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
-          "symbol": "USDC",
-          "amount": "20.979958"
         }
       ]
     }
