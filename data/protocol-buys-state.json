@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25343681"
+      "lastBlock": "25344577"
     },
     "sonic": {
-      "lastBlock": "74213579"
+      "lastBlock": "74219189"
     }
   },
   "txs": {
@@ -15271,6 +15271,70 @@
           "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
           "symbol": "USDC",
           "amount": "21.602923"
+        }
+      ]
+    },
+    "ethereum:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0xddc4d834768d5dc9ce64729571fd1a6c1aa1c4bd480fda8f50c13bf80f86b224": {
+      "chain": "Ethereum",
+      "chainKey": "ethereum",
+      "module": "Margin Ethereum",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0xddc4d834768d5dc9ce64729571fd1a6c1aa1c4bd480fda8f50c13bf80f86b224",
+      "blockNumber": 25343906,
+      "timestamp": 1781779163,
+      "ftBoughtWei": "984998063447917109474",
+      "stableSpentUsd1e6": "100371308",
+      "stableOutUsd1e6": "100371308",
+      "stableInUsd1e6": "100371308",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0xfe6eb3b609a7c8352a241f7f3a21cea4e9209b8f",
+          "symbol": "SPETH",
+          "amount": "0.057145"
+        },
+        {
+          "token": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "symbol": "WETH",
+          "amount": "0.057705"
+        },
+        {
+          "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "symbol": "USDC",
+          "amount": "100.371308"
+        }
+      ]
+    },
+    "sonic:0xed0077a9e26329327722a81df2db3450f100226f:0x3903baa7dad4c059cd72934af3d168483a2bdfff7cbe6607044f9c39ea1e85b4": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "ftUSD Sonic",
+      "wallet": "0xed0077a9e26329327722a81df2db3450f100226f",
+      "txHash": "0x3903baa7dad4c059cd72934af3d168483a2bdfff7cbe6607044f9c39ea1e85b4",
+      "blockNumber": 74215049,
+      "timestamp": 1781779154,
+      "ftBoughtWei": "195767571200889992613",
+      "stableSpentUsd1e6": "1588747",
+      "stableOutUsd1e6": "1588747",
+      "stableInUsd1e6": "1588747",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0xe5da20f15420ad15de0fa650600afc998bbe3955",
+          "symbol": "STS",
+          "amount": "46.843599"
+        },
+        {
+          "token": "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38",
+          "symbol": "WS",
+          "amount": "50.062776"
+        },
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "1.588747"
         }
       ]
     }
