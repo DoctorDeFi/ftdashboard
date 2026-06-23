@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25380336"
+      "lastBlock": "25381321"
     },
     "sonic": {
-      "lastBlock": "74519111"
+      "lastBlock": "74528715"
     }
   },
   "txs": {
@@ -16688,6 +16688,33 @@
       "netStableOutUsd1e6": "0",
       "aTokenStableOutUsd1e6": "0",
       "tokenOutflows": []
+    },
+    "ethereum:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0x966f8f7484407b86334e74823830f5e5d86fa39dcd00360970a4aa0f25a5c5ab": {
+      "chain": "Ethereum",
+      "chainKey": "ethereum",
+      "module": "Margin Ethereum",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x966f8f7484407b86334e74823830f5e5d86fa39dcd00360970a4aa0f25a5c5ab",
+      "blockNumber": 25380370,
+      "timestamp": 1782218387,
+      "ftBoughtWei": "1256781684596648229108",
+      "stableSpentUsd1e6": "125295985",
+      "stableOutUsd1e6": "125295985",
+      "stableInUsd1e6": "125295985",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
+          "symbol": "SPUSDC",
+          "amount": "120.760238"
+        },
+        {
+          "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "symbol": "USDC",
+          "amount": "125.295985"
+        }
+      ]
     }
   }
 }
