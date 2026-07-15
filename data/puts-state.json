@@ -1,5 +1,5 @@
 {
-  "lastBlock": "25534320",
+  "lastBlock": "25535322",
   "listings": {
     "3": {
       "tokenId": "3",
@@ -9859,11 +9859,11 @@
       "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "priceWei": "102000000",
       "expires": 1784655285,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x73499c7d59e4c9c8ffee4bd08300c06c75af63ad24144d80bc69f473dc4fce30",
-      "lastBlockNumber": 25532412,
-      "lastLogIndex": 777
+      "status": "sold",
+      "lastAction": "Sold(heuristic-v2)",
+      "lastTxHash": "0x6538894ab629c1804cdf0b5db99f052aa2ce197c4697c09c0caf499f9a6d54bb",
+      "lastBlockNumber": 25534707,
+      "lastLogIndex": 188
     },
     "3666": {
       "tokenId": "3666",
@@ -20729,28 +20729,22 @@
       "makerFeeWei": "4044000",
       "takerFeeWei": "12132000",
       "atUnix": 1783653647
+    },
+    {
+      "type": "sold-heuristic-v2",
+      "txHash": "0x6538894ab629c1804cdf0b5db99f052aa2ce197c4697c09c0caf499f9a6d54bb",
+      "blockNumber": 25534707,
+      "tokenId": "3656",
+      "seller": "0x6d4d6a6d15bb9e4fa4fdd0e5fa1730f7a35f372b",
+      "buyer": "0x98c1803ff7ab06224b0042c191e7ce45da3307d3",
+      "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "priceWei": "102000000",
+      "makerFeeWei": "102000",
+      "takerFeeWei": "306000",
+      "atUnix": 1784078195
     }
   ],
   "activity": [
-    {
-      "event": "Sold(heuristic-v2)",
-      "txHash": "0x2a90e9e3469a77ff1185ef7e8c3dd3ec6ae20f4638239076be764c3ec30870ae",
-      "blockNumber": 24741130,
-      "logIndex": 19,
-      "tokenId": "5619",
-      "seller": "0x2f2871d5be2d7c6aad1d0595b1abca015f401825",
-      "atUnix": 1774520807,
-      "details": {
-        "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
-        "topicsCount": 3,
-        "dataWords": 4,
-        "buyer": "0x4df8ba330d1fadfd2c4ece1b464b38c34f900d72",
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "1600000000",
-        "makerFeeWei": "1600000",
-        "takerFeeWei": "4800000"
-      }
-    },
     {
       "event": "ListingUpdate(heuristic)",
       "txHash": "0xa19cc8f0c090199062db96fa12e4971801a4823e21bb66b7694eab677e20261e",
@@ -62891,6 +62885,25 @@
         "priceWei": "6776000000",
         "expires": 1785275521
       }
+    },
+    {
+      "event": "Sold(heuristic-v2)",
+      "txHash": "0x6538894ab629c1804cdf0b5db99f052aa2ce197c4697c09c0caf499f9a6d54bb",
+      "blockNumber": 25534707,
+      "logIndex": 188,
+      "tokenId": "3656",
+      "seller": "0x6d4d6a6d15bb9e4fa4fdd0e5fa1730f7a35f372b",
+      "atUnix": 1784078195,
+      "details": {
+        "topic0": "0x2938a0a3a4a7c19c3a1fe6ef25340b7acd26dfac11de87836084d42fccc18656",
+        "topicsCount": 3,
+        "dataWords": 4,
+        "buyer": "0x98c1803ff7ab06224b0042c191e7ce45da3307d3",
+        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "priceWei": "102000000",
+        "makerFeeWei": "102000",
+        "takerFeeWei": "306000"
+      }
     }
   ],
   "acceptedTokens": [
@@ -62906,7 +62919,7 @@
     "emergencyPaused": false
   },
   "holders": {
-    "lastBlock": "25534320",
+    "lastBlock": "25535322",
     "tokenOwners": {
       "0": "0xe5dab7ec38f91f97c34f9f35eee683150a15eb6a",
       "1": "0x09e2b49280f1879172b2c3345d08896921707881",
@@ -64567,7 +64580,7 @@
       "3648": "0x2ab6dad743b0d2980668257d421643ca128be75d",
       "3650": "0xea3785aba7940a1950a6ae5e847014d5a68e0065",
       "3653": "0x0b49ccb145ca5e70ff7664c6dd301a2c514b01f5",
-      "3656": "0x6d4d6a6d15bb9e4fa4fdd0e5fa1730f7a35f372b",
+      "3656": "0x98c1803ff7ab06224b0042c191e7ce45da3307d3",
       "3658": "0x1747ce4a4dab91512daedf356e9626f90ff40236",
       "3660": "0x82a22e02bce3426219f9d57507c0e229dad7e284",
       "3661": "0x5ad0a4a890e2c98d6f8c85e67082e8418b123a59",
