@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T09:59:23.930Z",
+  "updatedAt": "2026-07-18T11:06:47.200Z",
   "source": "onchain_transfer_inflow_gross_stable_out",
   "wallets": [
     {
@@ -28,16 +28,22 @@
     }
   ],
   "summary": {
-    "totalFtBought": "473823.5218",
-    "totalUsdSpentStableEstimate": "35845.57",
-    "avgBuyPriceUsd": "0.10920",
-    "pricedFtBought": "328246.4388",
-    "pricedCoveragePct": "69.27",
-    "ftBought24h": "11108.0003",
-    "ftBought7d": "68038.7643",
-    "txCount": 838
+    "totalFtBought": "476333.6029",
+    "totalUsdSpentStableEstimate": "35876.08",
+    "avgBuyPriceUsd": "0.10919",
+    "pricedFtBought": "328576.5479",
+    "pricedCoveragePct": "68.98",
+    "ftBought24h": "11348.2841",
+    "ftBought7d": "66792.6741",
+    "txCount": 840
   },
   "moduleTotals": [
+    {
+      "module": "Margin Sonic",
+      "ftBought": "81645.5913",
+      "usdSpentStableEstimate": "8233.08",
+      "txCount": 360
+    },
     {
       "module": "ftUSD Sonic",
       "ftBought": "69789.4521",
@@ -45,36 +51,30 @@
       "txCount": 190
     },
     {
-      "module": "Margin Sonic",
-      "ftBought": "81315.4822",
-      "usdSpentStableEstimate": "8202.57",
-      "txCount": 359
+      "module": "ftUSD ETH",
+      "ftBought": "177199.4609",
+      "usdSpentStableEstimate": "7621.7",
+      "txCount": 160
     },
     {
       "module": "Margin Ethereum",
       "ftBought": "147699.0984",
       "usdSpentStableEstimate": "18885.46",
       "txCount": 130
-    },
-    {
-      "module": "ftUSD ETH",
-      "ftBought": "175019.4889",
-      "usdSpentStableEstimate": "7621.7",
-      "txCount": 159
     }
   ],
   "chainTotals": [
     {
       "chain": "Sonic",
-      "ftBought": "151104.9344",
-      "usdSpentStableEstimate": "9338.4",
-      "txCount": 549
+      "ftBought": "151435.0435",
+      "usdSpentStableEstimate": "9368.91",
+      "txCount": 550
     },
     {
       "chain": "Ethereum",
-      "ftBought": "322718.5873",
+      "ftBought": "324898.5593",
       "usdSpentStableEstimate": "26507.16",
-      "txCount": 289
+      "txCount": 290
     }
   ],
   "daily": [
@@ -720,11 +720,32 @@
     },
     {
       "day": "2026-07-18",
-      "ftBought": "4582.105",
-      "usdSpentStableEstimate": "427.33"
+      "ftBought": "7092.1861",
+      "usdSpentStableEstimate": "457.84"
     }
   ],
   "recentBuys": [
+    {
+      "chain": "Sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x177bbf6b6cb48260163e4e64ae7d5ca3dc6b7e31c4ae02175ecf2c4fb3bd7ec9",
+      "blockNumber": 76134056,
+      "time": "2026-07-18T10:39:11.000Z",
+      "ftBought": "330.109",
+      "usdSpentStableEstimate": "30.51",
+      "stableOutUsd": "30.51",
+      "stableInUsd": "30.51",
+      "netStableOutUsd": "0",
+      "aTokenStableOutUsd": "0",
+      "tokenOutflows": [
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "30.513379"
+        }
+      ]
+    },
     {
       "chain": "Sonic",
       "module": "ftUSD Sonic",
@@ -3172,32 +3193,6 @@
       "netStableOutUsd": "0",
       "aTokenStableOutUsd": "0",
       "tokenOutflows": []
-    },
-    {
-      "chain": "Sonic",
-      "module": "Margin Sonic",
-      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
-      "txHash": "0x17a14a8772959f42524900fd5e8e1b20c55743adf4dc761fd263a267fd23fd65",
-      "blockNumber": 74668753,
-      "time": "2026-06-25T16:39:02.000Z",
-      "ftBought": "209.3826",
-      "usdSpentStableEstimate": "21.46",
-      "stableOutUsd": "21.01",
-      "stableInUsd": "21.01",
-      "netStableOutUsd": "0",
-      "aTokenStableOutUsd": "0.44",
-      "tokenOutflows": [
-        {
-          "token": "0x578ee1ca3a8e1b54554da1bf7c583506c4cd11c6",
-          "symbol": "ASONUSDC",
-          "amount": "0.448449"
-        },
-        {
-          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
-          "symbol": "USDC",
-          "amount": "21.016547"
-        }
-      ]
     }
   ]
 }
