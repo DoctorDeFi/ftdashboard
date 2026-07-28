@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25630608"
+      "lastBlock": "25631290"
     },
     "sonic": {
-      "lastBlock": "76643172"
+      "lastBlock": "76648253"
     }
   },
   "txs": {
@@ -25289,6 +25289,54 @@
           "amount": "123.060076"
         }
       ]
+    },
+    "ethereum:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0xe691c96bbae8f0641ad4e474ed7e7b75857de6c7e2d1afc09f2d2b10b3a3c4fb": {
+      "chain": "Ethereum",
+      "chainKey": "ethereum",
+      "module": "Margin Ethereum",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0xe691c96bbae8f0641ad4e474ed7e7b75857de6c7e2d1afc09f2d2b10b3a3c4fb",
+      "blockNumber": 25630777,
+      "timestamp": 1785235175,
+      "ftBoughtWei": "1050962675816904528228",
+      "stableSpentUsd1e6": "102258263",
+      "stableOutUsd1e6": "102258263",
+      "stableInUsd1e6": "102258263",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0xfe6eb3b609a7c8352a241f7f3a21cea4e9209b8f",
+          "symbol": "SPETH",
+          "amount": "0.053878"
+        },
+        {
+          "token": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "symbol": "WETH",
+          "amount": "0.054515"
+        },
+        {
+          "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "symbol": "USDC",
+          "amount": "102.258263"
+        }
+      ]
+    },
+    "sonic:0xed0077a9e26329327722a81df2db3450f100226f:0x9fdf5110fe25ecc38c82d59a4bf7be1e38fd5d343d7799e04cecc27ca55f02f0": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "ftUSD Sonic",
+      "wallet": "0xed0077a9e26329327722a81df2db3450f100226f",
+      "txHash": "0x9fdf5110fe25ecc38c82d59a4bf7be1e38fd5d343d7799e04cecc27ca55f02f0",
+      "blockNumber": 76644163,
+      "timestamp": 1785234588,
+      "ftBoughtWei": "144137260725475876288",
+      "stableSpentUsd1e6": "0",
+      "stableOutUsd1e6": "0",
+      "stableInUsd1e6": "0",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": []
     }
   }
 }
