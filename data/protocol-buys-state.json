@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25627873"
+      "lastBlock": "25628835"
     },
     "sonic": {
-      "lastBlock": "76615607"
+      "lastBlock": "76625592"
     }
   },
   "txs": {
@@ -25192,6 +25192,54 @@
           "amount": "24.188809"
         }
       ]
+    },
+    "ethereum:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0xd60213c1021a74a7e33f5862a07591979b89e3411e31c84e147752cb83d6f67f": {
+      "chain": "Ethereum",
+      "chainKey": "ethereum",
+      "module": "Margin Ethereum",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0xd60213c1021a74a7e33f5862a07591979b89e3411e31c84e147752cb83d6f67f",
+      "blockNumber": 25628383,
+      "timestamp": 1785206351,
+      "ftBoughtWei": "1028079823927835072107",
+      "stableSpentUsd1e6": "200597412",
+      "stableOutUsd1e6": "200597412",
+      "stableInUsd1e6": "200597412",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0xe2e7a17dff93280dec073c995595155283e3c372",
+          "symbol": "SPUSDT",
+          "amount": "77.56723"
+        },
+        {
+          "token": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "symbol": "USDT",
+          "amount": "100.344478"
+        },
+        {
+          "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "symbol": "USDC",
+          "amount": "100.252934"
+        }
+      ]
+    },
+    "sonic:0xed0077a9e26329327722a81df2db3450f100226f:0xdfb246c4394fc82cdaf4f696ef5ee6a1499d5c44ac7099dcaf3a1d11a6fb2ba9": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "ftUSD Sonic",
+      "wallet": "0xed0077a9e26329327722a81df2db3450f100226f",
+      "txHash": "0xdfb246c4394fc82cdaf4f696ef5ee6a1499d5c44ac7099dcaf3a1d11a6fb2ba9",
+      "blockNumber": 76620442,
+      "timestamp": 1785205788,
+      "ftBoughtWei": "382402790593813999513",
+      "stableSpentUsd1e6": "0",
+      "stableOutUsd1e6": "0",
+      "stableInUsd1e6": "0",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": []
     }
   }
 }
