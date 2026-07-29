@@ -1,10 +1,10 @@
 {
   "chains": {
     "ethereum": {
-      "lastBlock": "25635653"
+      "lastBlock": "25636539"
     },
     "sonic": {
-      "lastBlock": "76683050"
+      "lastBlock": "76689711"
     }
   },
   "txs": {
@@ -25515,6 +25515,55 @@
       "netStableOutUsd1e6": "0",
       "aTokenStableOutUsd1e6": "0",
       "tokenOutflows": []
+    },
+    "ethereum:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0x7b04bf7ff79ddf9a3c99d90c27f4fa4895816bcfca61e9b26b3f97bf40ad1499": {
+      "chain": "Ethereum",
+      "chainKey": "ethereum",
+      "module": "Margin Ethereum",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x7b04bf7ff79ddf9a3c99d90c27f4fa4895816bcfca61e9b26b3f97bf40ad1499",
+      "blockNumber": 25636155,
+      "timestamp": 1785299963,
+      "ftBoughtWei": "1211281303595830463900",
+      "stableSpentUsd1e6": "117883992",
+      "stableOutUsd1e6": "117883992",
+      "stableInUsd1e6": "117883992",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
+          "symbol": "SPUSDC",
+          "amount": "109.512987"
+        },
+        {
+          "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "symbol": "USDC",
+          "amount": "117.883992"
+        }
+      ]
+    },
+    "sonic:0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a:0x263ea524e21b27e2d429b981a3d88bca71e4ca2ff1208bbb8362585613887363": {
+      "chain": "Sonic",
+      "chainKey": "sonic",
+      "module": "Margin Sonic",
+      "wallet": "0x5cd6abe67f8af1c0c699df36d90a6469eaf1958a",
+      "txHash": "0x263ea524e21b27e2d429b981a3d88bca71e4ca2ff1208bbb8362585613887363",
+      "blockNumber": 76687086,
+      "timestamp": 1785299945,
+      "ftBoughtWei": "248531486747196611142",
+      "stableSpentUsd1e6": "25007952",
+      "stableOutUsd1e6": "25007952",
+      "stableInUsd1e6": "25007952",
+      "netStableOutUsd1e6": "0",
+      "aTokenStableOutUsd1e6": "0",
+      "tokenOutflows": [
+        {
+          "token": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+          "symbol": "USDC",
+          "amount": "25.007952"
+        }
+      ]
     }
   }
 }
