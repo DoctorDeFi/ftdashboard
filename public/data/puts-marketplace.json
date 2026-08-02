@@ -9,13 +9,13 @@
     ],
     "marketplace": "0x31248663adccdbcad155555b7717697b76cf570c",
     "ftPut": "0xa4215daaf3745e14e96e169e0e7706c479ce04f2",
-    "indexedThroughBlock": "25665351"
+    "indexedThroughBlock": "25666079"
   },
-  "updatedAt": "2026-08-02T06:20:26.345Z",
+  "updatedAt": "2026-08-02T08:45:59.432Z",
   "stats": {
-    "activeListings": 99,
-    "expiredListings": 696,
-    "totalTrackedListings": 1429,
+    "activeListings": 98,
+    "expiredListings": 697,
+    "totalTrackedListings": 1430,
     "totalSalesTracked": 311,
     "totalSalesVolumeUsdEstimate": "1806594.966",
     "totalSalesVolumeUsdWei": "1806594966000000000000000",
@@ -24,7 +24,7 @@
     "totalRevenueUsdWei": "7226379864000000000000",
     "revenuePricedCount": 310,
     "acceptedTokens": 4,
-    "scannedLogsInRun": 0
+    "scannedLogsInRun": 2
   },
   "config": {
     "makerFeeBps": 10,
@@ -33,10 +33,10 @@
     "emergencyPaused": false
   },
   "oracle": {
-    "ethUsd": "187431000000",
-    "ethUsdDisplay": "1874.31",
+    "ethUsd": "187447000000",
+    "ethUsdDisplay": "1874.47",
     "ethUsdDecimals": 8,
-    "updatedAt": 1785649031,
+    "updatedAt": 1785657635,
     "source": "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
   },
   "acceptedTokens": [
@@ -4536,6 +4536,43 @@
         "amountDisplay": "200",
         "amountRemainingDisplay": "200",
         "ftDisplay": "1997.758",
+        "strikeDisplay": "0"
+      }
+    },
+    {
+      "tokenId": "4816",
+      "seller": "0xf3def1261a7756bdeb35acec923cdf93fd5041e1",
+      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "priceWei": "220000000",
+      "expires": 1785917346,
+      "status": "active",
+      "lastAction": "ListingUpdate(heuristic)",
+      "lastTxHash": "0x2835c7725de104d910642307938c086c7324a7ff76fb7d9176c43a742c8bdfd9",
+      "lastBlockNumber": 25665912,
+      "lastLogIndex": 251,
+      "derivedStatus": "active",
+      "paymentTokenMeta": {
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "priceDisplay": "220",
+      "put": {
+        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amountWei": "199890000",
+        "ftWei": "1997640493110000000000",
+        "ftBoughtWei": "1997640493110000000000",
+        "withdrawnWei": "0",
+        "burnedWei": "0",
+        "strikeWei": "99936990",
+        "amountRemainingWei": "199890000",
+        "ftPerUsdWei": "1000000000",
+        "collateralMeta": {
+          "symbol": "USDT",
+          "decimals": 6
+        },
+        "amountDisplay": "199.89",
+        "amountRemainingDisplay": "199.89",
+        "ftDisplay": "1997.6404",
         "strikeDisplay": "0"
       }
     },
@@ -15465,7 +15502,7 @@
       "lastTxHash": "0x4f96a103bc748087c8cf1eaf44794ea20196ad789eaaa33c55902c2ca439be08",
       "lastBlockNumber": 25450390,
       "lastLogIndex": 228,
-      "derivedStatus": "active",
+      "derivedStatus": "expired",
       "paymentTokenMeta": {
         "symbol": "USDT",
         "decimals": 6
@@ -25297,43 +25334,6 @@
       }
     },
     {
-      "tokenId": "209",
-      "seller": "0x8cbcd064879613f31f937a7cdc6b256c1fa219bc",
-      "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "priceWei": "16000000000",
-      "expires": 1788024523,
-      "status": "active",
-      "lastAction": "ListingUpdate(heuristic)",
-      "lastTxHash": "0x8a064e0658df1ed7be7e067b52ddf1085e0c9188553b1cc9d3704049c0670c91",
-      "lastBlockNumber": 25647170,
-      "lastLogIndex": 203,
-      "derivedStatus": "active",
-      "paymentTokenMeta": {
-        "symbol": "USDT",
-        "decimals": 6
-      },
-      "priceDisplay": "16000",
-      "put": {
-        "collateralToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "amountWei": "15000000000",
-        "ftWei": "149831856000000000000000",
-        "ftBoughtWei": "149831856000000000000000",
-        "withdrawnWei": "0",
-        "burnedWei": "0",
-        "strikeWei": "99887904",
-        "amountRemainingWei": "15000000000",
-        "ftPerUsdWei": "1000000000",
-        "collateralMeta": {
-          "symbol": "USDT",
-          "decimals": 6
-        },
-        "amountDisplay": "15000",
-        "amountRemainingDisplay": "15000",
-        "ftDisplay": "149831.856",
-        "strikeDisplay": "0"
-      }
-    },
-    {
       "tokenId": "19",
       "seller": "0x38e1c4c1d5dd7af7e93ff9ea977213f19d6a3549",
       "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
@@ -33491,6 +33491,37 @@
   ],
   "activityRecent": [
     {
+      "event": "ListingUpdate(heuristic)",
+      "txHash": "0x2835c7725de104d910642307938c086c7324a7ff76fb7d9176c43a742c8bdfd9",
+      "blockNumber": 25665912,
+      "logIndex": 251,
+      "tokenId": "4816",
+      "seller": "0xf3def1261a7756bdeb35acec923cdf93fd5041e1",
+      "atUnix": 1785658187,
+      "details": {
+        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
+        "topicsCount": 3,
+        "dataWords": 3,
+        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "priceWei": "220000000",
+        "expires": 1785917346
+      }
+    },
+    {
+      "event": "RemoveListing",
+      "txHash": "0x35bdf2f281a2983e18033a79669fb25a0c36db3031dc04c213c515d2ec5bd8e0",
+      "blockNumber": 25665886,
+      "logIndex": 306,
+      "tokenId": "209",
+      "seller": "0x8cbcd064879613f31f937a7cdc6b256c1fa219bc",
+      "atUnix": 1785657875,
+      "details": {
+        "topic0": "0xc20893f589e35994e2f614639149f09bf3fc2a2f072f967288248cc3fe3a89b1",
+        "topicsCount": 3,
+        "dataWords": 0
+      }
+    },
+    {
       "event": "RemoveListing",
       "txHash": "0x4c4cf7feed0e2115c2caa015e070bd41d334b6bcf847db72b0dadf66951f0d8b",
       "blockNumber": 25659864,
@@ -38536,40 +38567,6 @@
         "priceWei": "386000000",
         "expires": 1782773721
       }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x09f8ae442e7edd9d80562126c91deb03e6f7302a817c64a4018d640f0afd8f4e",
-      "blockNumber": 25375679,
-      "logIndex": 70,
-      "tokenId": "1422",
-      "seller": "0x8946f8fe050ee7b942593e14935c4158d9133290",
-      "atUnix": 1782161879,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "priceWei": "10550000000",
-        "expires": 1782766662
-      }
-    },
-    {
-      "event": "ListingUpdate(heuristic)",
-      "txHash": "0x16a2bcb9c018646f9a5bb4e564cce69635b18164d9411788d0c11ce7a14ce827",
-      "blockNumber": 25374975,
-      "logIndex": 199,
-      "tokenId": "398",
-      "seller": "0xb6b2ea3ee9bfcddd182120899e46a97c1923bd64",
-      "atUnix": 1782153371,
-      "details": {
-        "topic0": "0x4117355ae75fd7902feff7851584f7f631655ed4776b9bfc293e8674b483cb2b",
-        "topicsCount": 3,
-        "dataWords": 3,
-        "paymentToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "priceWei": "1189000000",
-        "expires": 1784745363
-      }
     }
   ],
   "holders": [
@@ -38618,8 +38615,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1024.4212",
-      "totalUsdWei": "1920083041504967128007877",
-      "totalUsdDisplay": "1920083.0415"
+      "totalUsdWei": "1920246948909100272866775",
+      "totalUsdDisplay": "1920246.9489"
     },
     {
       "address": "0xa953199f569b65977b649c428df7883cb2378e13",
@@ -38630,8 +38627,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "637.1576",
-      "totalUsdWei": "1194230952952868130000000",
-      "totalUsdDisplay": "1194230.9529"
+      "totalUsdWei": "1194332898176695810000000",
+      "totalUsdDisplay": "1194332.8981"
     },
     {
       "address": "0xf1e40a5901b77fef32fb218dad053ee6e5d47881",
@@ -38690,8 +38687,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "502.164",
-      "totalUsdWei": "941211134926538380845050",
-      "totalUsdDisplay": "941211.1349"
+      "totalUsdWei": "941291481177472455859821",
+      "totalUsdDisplay": "941291.4811"
     },
     {
       "address": "0xcd365df3d51c7f9ac21a4231281016c2fc6bf475",
@@ -38738,8 +38735,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "398.6113",
-      "totalUsdWei": "747121287532037700000000",
-      "totalUsdDisplay": "747121.2875"
+      "totalUsdWei": "747185065352144900000000",
+      "totalUsdDisplay": "747185.0653"
     },
     {
       "address": "0xdea611a2f605fe63962e0151e724e9ce4c8a1d5c",
@@ -38750,8 +38747,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "390",
-      "totalUsdWei": "730980900000000000000000",
-      "totalUsdDisplay": "730980.9"
+      "totalUsdWei": "731043300000000000000000",
+      "totalUsdDisplay": "731043.3"
     },
     {
       "address": "0x38a564a38be5dfb6ef2ab765da1e4397d03c2d62",
@@ -38774,8 +38771,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "303.8596",
-      "totalUsdWei": "569527147871329780528340",
-      "totalUsdDisplay": "569527.1478"
+      "totalUsdWei": "569575765412536631457420",
+      "totalUsdDisplay": "569575.7654"
     },
     {
       "address": "0x37793b862b0e22973ecd351137fd6ad9f1602ab0",
@@ -38822,8 +38819,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "371372.9518",
       "wethDisplay": "43.05",
-      "totalUsdWei": "452062005955341385192451",
-      "totalUsdDisplay": "452062.0059"
+      "totalUsdWei": "452068893956075465798984",
+      "totalUsdDisplay": "452068.8939"
     },
     {
       "address": "0x69c509e9765c49cc6b9b4568b90aa47b89f4992f",
@@ -38834,8 +38831,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "224.38",
-      "totalUsdWei": "420557692320829085933691",
-      "totalUsdDisplay": "420557.6923"
+      "totalUsdWei": "420593593122068652842980",
+      "totalUsdDisplay": "420593.5931"
     },
     {
       "address": "0x546d241f237b98bb2b807625744af279d54272d0",
@@ -38882,8 +38879,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "157",
-      "totalUsdWei": "294266670000000000000000",
-      "totalUsdDisplay": "294266.67"
+      "totalUsdWei": "294291790000000000000000",
+      "totalUsdDisplay": "294291.79"
     },
     {
       "address": "0x2ad6d1d17f42290640271552aa405c257cca55bf",
@@ -38906,8 +38903,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "36000",
       "wethDisplay": "95.376",
-      "totalUsdWei": "214764208635866915112876",
-      "totalUsdDisplay": "214764.2086"
+      "totalUsdWei": "214779468797409956929020",
+      "totalUsdDisplay": "214779.4687"
     },
     {
       "address": "0x1724a92f01893aa109db08b4e545c938b16be0e6",
@@ -38966,8 +38963,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "100.0826",
-      "totalUsdWei": "187585966882785235182779",
-      "totalUsdDisplay": "187585.9668"
+      "totalUsdWei": "187601980111494064371990",
+      "totalUsdDisplay": "187601.9801"
     },
     {
       "address": "0xbc8b74c6c89734e0a26ef762f1193975c8be64ac",
@@ -38978,8 +38975,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "100",
-      "totalUsdWei": "187431000000000000000000",
-      "totalUsdDisplay": "187431"
+      "totalUsdWei": "187447000000000000000000",
+      "totalUsdDisplay": "187447"
     },
     {
       "address": "0x2972964e4c3d38a99c2e27097acd2e9638e12b0b",
@@ -38990,8 +38987,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "99.4925",
-      "totalUsdWei": "186479963030366584242726",
-      "totalUsdDisplay": "186479.963"
+      "totalUsdWei": "186495881845335750844558",
+      "totalUsdDisplay": "186495.8818"
     },
     {
       "address": "0x939c88325be283b9d7a4365988624c28e82973b7",
@@ -39002,8 +38999,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "95",
-      "totalUsdWei": "178059450000000000000000",
-      "totalUsdDisplay": "178059.45"
+      "totalUsdWei": "178074650000000000000000",
+      "totalUsdDisplay": "178074.65"
     },
     {
       "address": "0x7d2806aee918a807d1a3f97488cc035a4353abe0",
@@ -39014,8 +39011,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "83.371",
-      "totalUsdWei": "156263195187038905862229",
-      "totalUsdDisplay": "156263.1951"
+      "totalUsdWei": "156276534555249034509538",
+      "totalUsdDisplay": "156276.5345"
     },
     {
       "address": "0x00626cdf7e383067dfbd9a77fd712f78acc861ee",
@@ -39050,8 +39047,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "75",
-      "totalUsdWei": "140573250187431000000000",
-      "totalUsdDisplay": "140573.2501"
+      "totalUsdWei": "140585250187447000000000",
+      "totalUsdDisplay": "140585.2501"
     },
     {
       "address": "0x47f717e8f7c1047291d8ab95a689e00d01c798ec",
@@ -39074,8 +39071,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0.0712",
       "wethDisplay": "72.4858",
-      "totalUsdWei": "135860936301284588044332",
-      "totalUsdDisplay": "135860.9363"
+      "totalUsdWei": "135872534029730813873618",
+      "totalUsdDisplay": "135872.534"
     },
     {
       "address": "0xbc4685ce1102fccb0f1d04f801c08db99bb2ddad",
@@ -39098,8 +39095,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "68",
-      "totalUsdWei": "127453080000000000000000",
-      "totalUsdDisplay": "127453.08"
+      "totalUsdWei": "127463960000000000000000",
+      "totalUsdDisplay": "127463.96"
     },
     {
       "address": "0x3f6795119303e6faecf1be774e6146652c19fb93",
@@ -39122,8 +39119,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "74000",
       "wethDisplay": "26.5206",
-      "totalUsdWei": "123707858753342165928150",
-      "totalUsdDisplay": "123707.8587"
+      "totalUsdWei": "123712102052156414769883",
+      "totalUsdDisplay": "123712.102"
     },
     {
       "address": "0xc011be69f6907df9ed51c34c58c1d3974bdd64ea",
@@ -39674,8 +39671,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "30.48",
-      "totalUsdWei": "57128969096885795974943",
-      "totalUsdDisplay": "57128.969"
+      "totalUsdWei": "57133845896911139555970",
+      "totalUsdDisplay": "57133.8458"
     },
     {
       "address": "0x5dd0cddc27a069205203cc2471d3058b8eed3a40",
@@ -40010,8 +40007,8 @@
       "usdcDisplay": "14312.9909",
       "usdtDisplay": "9000",
       "wethDisplay": "10.1756",
-      "totalUsdWei": "42385289204545036057194",
-      "totalUsdDisplay": "42385.2892"
+      "totalUsdWei": "42386917306472810654656",
+      "totalUsdDisplay": "42386.9173"
     },
     {
       "address": "0x5a945741f5c367410678e1513b939f7adafbacf0",
@@ -40298,8 +40295,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "20",
-      "totalUsdWei": "37486200000000000000000",
-      "totalUsdDisplay": "37486.2"
+      "totalUsdWei": "37489400000000000000000",
+      "totalUsdDisplay": "37489.4"
     },
     {
       "address": "0xf3b7179199e5549a0ec04932e872930e07c25f40",
@@ -40334,8 +40331,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "18.9905",
-      "totalUsdWei": "35594084242431000000000",
-      "totalUsdDisplay": "35594.0842"
+      "totalUsdWei": "35597122722447000000000",
+      "totalUsdDisplay": "35597.1227"
     },
     {
       "address": "0x5c822b45018ddb90ab2d5983c1f67410b845adb0",
@@ -40394,8 +40391,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "17.5",
-      "totalUsdWei": "32800425000000000000000",
-      "totalUsdDisplay": "32800.425"
+      "totalUsdWei": "32803225000000000000000",
+      "totalUsdDisplay": "32803.225"
     },
     {
       "address": "0xa6ed26749cb54591291b4550a82f15ff64ae98d9",
@@ -40418,8 +40415,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "16.82",
-      "totalUsdWei": "31525894200000000000000",
-      "totalUsdDisplay": "31525.8942"
+      "totalUsdWei": "31528585400000000000000",
+      "totalUsdDisplay": "31528.5854"
     },
     {
       "address": "0x06e0fe46a6590d32377eb0d9a8ad6f9d9adfd74c",
@@ -40430,8 +40427,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "11852.9069",
       "wethDisplay": "9.75",
-      "totalUsdWei": "30127429482000000000000",
-      "totalUsdDisplay": "30127.4294"
+      "totalUsdWei": "30128989482000000000000",
+      "totalUsdDisplay": "30128.9894"
     },
     {
       "address": "0x399652775728bb27bcf01fc6dc1219b4580943c4",
@@ -40586,8 +40583,8 @@
       "usdcDisplay": "8289.1541",
       "usdtDisplay": "0",
       "wethDisplay": "10.8602",
-      "totalUsdWei": "28644602777738931980711",
-      "totalUsdDisplay": "28644.6027"
+      "totalUsdWei": "28646340415469957386923",
+      "totalUsdDisplay": "28646.3404"
     },
     {
       "address": "0x3fd8cbecf036c935ac441ce5910448ffb8bcf6e9",
@@ -40670,8 +40667,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "13.8457",
-      "totalUsdWei": "25951173162226876111757",
-      "totalUsdDisplay": "25951.1731"
+      "totalUsdWei": "25953388477572766759611",
+      "totalUsdDisplay": "25953.3884"
     },
     {
       "address": "0x72d26e83c35d26b439d790c6e71b9f7506683d0c",
@@ -41402,8 +41399,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "10.1",
-      "totalUsdWei": "18930531000000000000000",
-      "totalUsdDisplay": "18930.531"
+      "totalUsdWei": "18932147000000000000000",
+      "totalUsdDisplay": "18932.147"
     },
     {
       "address": "0xb89b2b9a2b7c55081fe31220b455685cd217512b",
@@ -41414,8 +41411,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "10",
-      "totalUsdWei": "18743100000000000000000",
-      "totalUsdDisplay": "18743.1"
+      "totalUsdWei": "18744700000000000000000",
+      "totalUsdDisplay": "18744.7"
     },
     {
       "address": "0x4f1dd824aa61b5cf0f863d0889b7c3a0cde64ac1",
@@ -41486,8 +41483,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "8.6314",
-      "totalUsdWei": "16177928110880458477830",
-      "totalUsdDisplay": "16177.9281"
+      "totalUsdWei": "16179309135629694662536",
+      "totalUsdDisplay": "16179.3091"
     },
     {
       "address": "0xd6f8f76ef075e9b585a847b730c0531c1354671a",
@@ -42042,18 +42039,6 @@
       "totalUsdDisplay": "15000"
     },
     {
-      "address": "0x8cbcd064879613f31f937a7cdc6b256c1fa219bc",
-      "putCount": 1,
-      "usdcWei": "0",
-      "usdtWei": "15000000000",
-      "wethWei": "0",
-      "usdcDisplay": "0",
-      "usdtDisplay": "15000",
-      "wethDisplay": "0",
-      "totalUsdWei": "15000000000000000000000",
-      "totalUsdDisplay": "15000"
-    },
-    {
       "address": "0x91f73bf2228fd1745b6c8feb3c2a48ac62bbba32",
       "putCount": 1,
       "usdcWei": "0",
@@ -42410,8 +42395,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "7.156",
-      "totalUsdWei": "13412621460446762359258",
-      "totalUsdDisplay": "13412.6214"
+      "totalUsdWei": "13413766425491857077836",
+      "totalUsdDisplay": "13413.7664"
     },
     {
       "address": "0x600eb73cb462da9c19235de1e9a27da827c9c80d",
@@ -42578,8 +42563,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "10143",
       "wethDisplay": "1",
-      "totalUsdWei": "12017310000000000000000",
-      "totalUsdDisplay": "12017.31"
+      "totalUsdWei": "12017470000000000000000",
+      "totalUsdDisplay": "12017.47"
     },
     {
       "address": "0x93d13ac3a0d481aacd7b6569b612399f29b8ad53",
@@ -42650,8 +42635,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "6.1277",
-      "totalUsdWei": "11485215110419279289051",
-      "totalUsdDisplay": "11485.2151"
+      "totalUsdWei": "11486195542907857531010",
+      "totalUsdDisplay": "11486.1955"
     },
     {
       "address": "0x323f1a69550e3deddea7a86505d12acfbe38db87",
@@ -42698,8 +42683,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "6",
-      "totalUsdWei": "11245860000000000000000",
-      "totalUsdDisplay": "11245.86"
+      "totalUsdWei": "11246820000000000000000",
+      "totalUsdDisplay": "11246.82"
     },
     {
       "address": "0x292ed85ced3ca2f9ba5d42d36b883af015c90c65",
@@ -42734,8 +42719,8 @@
       "usdcDisplay": "7083.87",
       "usdtDisplay": "1000",
       "wethDisplay": "1.55",
-      "totalUsdWei": "10989050500000000000000",
-      "totalUsdDisplay": "10989.0505"
+      "totalUsdWei": "10989298500000000000000",
+      "totalUsdDisplay": "10989.2985"
     },
     {
       "address": "0x907be5882608700b4b94a7b6d8e8741734c30021",
@@ -42770,8 +42755,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "9799.9891",
       "wethDisplay": "0.375",
-      "totalUsdWei": "10502855423000000000000",
-      "totalUsdDisplay": "10502.8554"
+      "totalUsdWei": "10502915423000000000000",
+      "totalUsdDisplay": "10502.9154"
     },
     {
       "address": "0x9077354c6685e7a79538ef1cd59129c985019e28",
@@ -43646,8 +43631,8 @@
       "usdcDisplay": "5000",
       "usdtDisplay": "0",
       "wethDisplay": "2.6",
-      "totalUsdWei": "9873206000000000000000",
-      "totalUsdDisplay": "9873.206"
+      "totalUsdWei": "9873622000000000000000",
+      "totalUsdDisplay": "9873.622"
     },
     {
       "address": "0x55d52363ae3a4b537e797992dfbdeaaf43e2d922",
@@ -43754,8 +43739,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "4.9393",
-      "totalUsdWei": "9257842265190497716621",
-      "totalUsdDisplay": "9257.8422"
+      "totalUsdWei": "9258632558558420034506",
+      "totalUsdDisplay": "9258.6325"
     },
     {
       "address": "0x3bf86c384c0801cac54150a0e9d87af318650d4f",
@@ -44006,8 +43991,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "100.0662",
       "wethDisplay": "4.0825",
-      "totalUsdWei": "7751977089026800664463",
-      "totalUsdDisplay": "7751.977"
+      "totalUsdWei": "7752630292461112111399",
+      "totalUsdDisplay": "7752.6302"
     },
     {
       "address": "0x864519dfaa3f0c6b52fa8bca02c5bf64cc0ed76b",
@@ -44030,8 +44015,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "6486.99",
       "wethDisplay": "0.636",
-      "totalUsdWei": "7679051170000000000000",
-      "totalUsdDisplay": "7679.0511"
+      "totalUsdWei": "7679152930000000000000",
+      "totalUsdDisplay": "7679.1529"
     },
     {
       "address": "0x39ae6011e2c3576a513943dad325e9f76889c7cb",
@@ -44138,8 +44123,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3.9997",
-      "totalUsdWei": "7496812392693440854995",
-      "totalUsdDisplay": "7496.8123"
+      "totalUsdWei": "7497452356190851075576",
+      "totalUsdDisplay": "7497.4523"
     },
     {
       "address": "0x63173cb94164cc4c5e7d28889fa15b81efe07bee",
@@ -44414,8 +44399,8 @@
       "usdcDisplay": "4656.6795",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "6530989522000000007497",
-      "totalUsdDisplay": "6530.9895"
+      "totalUsdWei": "6531149522000000007497",
+      "totalUsdDisplay": "6531.1495"
     },
     {
       "address": "0xc9a02d14528c9a5327c8ddee8b84d4bdc4d2f7e3",
@@ -44774,8 +44759,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930187431000000000",
-      "totalUsdDisplay": "5622.9301"
+      "totalUsdWei": "5623410187447000000000",
+      "totalUsdDisplay": "5623.4101"
     },
     {
       "address": "0x904eb7e86e4b30819b6882a11f92ed46342feb06",
@@ -44786,8 +44771,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930000000001797463",
-      "totalUsdDisplay": "5622.93"
+      "totalUsdWei": "5623410000000001797616",
+      "totalUsdDisplay": "5623.41"
     },
     {
       "address": "0x3ad6a7608056aa931721cb6268854ea5e319683e",
@@ -44798,8 +44783,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930000000000000000",
-      "totalUsdDisplay": "5622.93"
+      "totalUsdWei": "5623410000000000000000",
+      "totalUsdDisplay": "5623.41"
     },
     {
       "address": "0x49a323cc2fa5f9a138f30794b9348e43065d8da2",
@@ -44810,8 +44795,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930000000000000000",
-      "totalUsdDisplay": "5622.93"
+      "totalUsdWei": "5623410000000000000000",
+      "totalUsdDisplay": "5623.41"
     },
     {
       "address": "0x607f4329899e7e3c0076037b2afad7a245f756ce",
@@ -44822,8 +44807,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930000000000000000",
-      "totalUsdDisplay": "5622.93"
+      "totalUsdWei": "5623410000000000000000",
+      "totalUsdDisplay": "5623.41"
     },
     {
       "address": "0xbbb6064cadb3db9c185776c47ee1fff3cb440cc4",
@@ -44834,8 +44819,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "3",
-      "totalUsdWei": "5622930000000000000000",
-      "totalUsdDisplay": "5622.93"
+      "totalUsdWei": "5623410000000000000000",
+      "totalUsdDisplay": "5623.41"
     },
     {
       "address": "0x52d0fc347560cc997f87984200f4a9344ecdc597",
@@ -44846,8 +44831,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "1098.901",
       "wethDisplay": "2.4",
-      "totalUsdWei": "5597245000000000000000",
-      "totalUsdDisplay": "5597.245"
+      "totalUsdWei": "5597629000000000000000",
+      "totalUsdDisplay": "5597.629"
     },
     {
       "address": "0xbe64f1597ac518cd141136164d84e7c1cf19d7bc",
@@ -45014,8 +44999,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "4400",
       "wethDisplay": "0.4",
-      "totalUsdWei": "5149724000000000000000",
-      "totalUsdDisplay": "5149.724"
+      "totalUsdWei": "5149788000000000000000",
+      "totalUsdDisplay": "5149.788"
     },
     {
       "address": "0xb1032e0280e0298ca12bb068e351f112aad4c3f9",
@@ -46370,8 +46355,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "2.5",
-      "totalUsdWei": "4685775000000000000000",
-      "totalUsdDisplay": "4685.775"
+      "totalUsdWei": "4686175000000000000000",
+      "totalUsdDisplay": "4686.175"
     },
     {
       "address": "0xe08ceb08e92c6ed636202dcfc92f1bae72fe1e0f",
@@ -46394,8 +46379,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "4173",
       "wethDisplay": "0.25",
-      "totalUsdWei": "4641577500000000000000",
-      "totalUsdDisplay": "4641.5775"
+      "totalUsdWei": "4641617500000000000000",
+      "totalUsdDisplay": "4641.6175"
     },
     {
       "address": "0xe2c121ba6292428e8ea71e7cefcee7aca3b7d138",
@@ -46406,8 +46391,8 @@
       "usdcDisplay": "4000.8382",
       "usdtDisplay": "0",
       "wethDisplay": "0.33",
-      "totalUsdWei": "4619360549000000000000",
-      "totalUsdDisplay": "4619.3605"
+      "totalUsdWei": "4619413349000000000000",
+      "totalUsdDisplay": "4619.4133"
     },
     {
       "address": "0xd96944925185abc97daeb58195b18ebd97333898",
@@ -46430,8 +46415,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "2.434",
-      "totalUsdWei": "4562070540000000000000",
-      "totalUsdDisplay": "4562.0705"
+      "totalUsdWei": "4562459980000000000000",
+      "totalUsdDisplay": "4562.4599"
     },
     {
       "address": "0x022e9e5d0ec061b29e6fdc24b185de12a850fac2",
@@ -46490,8 +46475,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "2.4006",
-      "totalUsdWei": "4499569374879405264641",
-      "totalUsdDisplay": "4499.5693"
+      "totalUsdWei": "4499953479483222511970",
+      "totalUsdDisplay": "4499.9534"
     },
     {
       "address": "0x9945bb7c601352b6fac6c72e8b22dae2c5931b45",
@@ -46514,8 +46499,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "2.38",
-      "totalUsdWei": "4460857800000000000000",
-      "totalUsdDisplay": "4460.8578"
+      "totalUsdWei": "4461238600000000000000",
+      "totalUsdDisplay": "4461.2386"
     },
     {
       "address": "0x819efbe98914adb5153af20f0435bedb7dea5e00",
@@ -46598,8 +46583,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "4000",
       "wethDisplay": "0.042",
-      "totalUsdWei": "4078721020000000005622",
-      "totalUsdDisplay": "4078.721"
+      "totalUsdWei": "4078727740000000005623",
+      "totalUsdDisplay": "4078.7277"
     },
     {
       "address": "0xf8b7b61338283ad636615f365437bb7b31f632d2",
@@ -47174,8 +47159,8 @@
       "usdcDisplay": "1990.2999",
       "usdtDisplay": "322.1679",
       "wethDisplay": "0.4976",
-      "totalUsdWei": "3245207778116925342036",
-      "totalUsdDisplay": "3245.2077"
+      "totalUsdWei": "3245287401222013992288",
+      "totalUsdDisplay": "3245.2874"
     },
     {
       "address": "0x59fd13c316a2837952565214f6b8e50490d5312d",
@@ -47198,8 +47183,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.72",
-      "totalUsdWei": "3223813200000000000000",
-      "totalUsdDisplay": "3223.8132"
+      "totalUsdWei": "3224088400000000000000",
+      "totalUsdDisplay": "3224.0884"
     },
     {
       "address": "0x22939cc4607a59d32d0ffcdbfc87691e41fe322c",
@@ -47246,8 +47231,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.6863",
-      "totalUsdWei": "3160648953000000000000",
-      "totalUsdDisplay": "3160.6489"
+      "totalUsdWei": "3160918761000000000000",
+      "totalUsdDisplay": "3160.9187"
     },
     {
       "address": "0xad3259f8155d8f8873690a74da89b3a004acfb4d",
@@ -48062,8 +48047,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.5208",
-      "totalUsdWei": "2850450648000000626019",
-      "totalUsdDisplay": "2850.4506"
+      "totalUsdWei": "2850693976000000626072",
+      "totalUsdDisplay": "2850.6939"
     },
     {
       "address": "0xbad568baf1b0ecfe3b6a73b5ecf519121504b36c",
@@ -48146,8 +48131,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.4",
-      "totalUsdWei": "2624034000000000000000",
-      "totalUsdDisplay": "2624.034"
+      "totalUsdWei": "2624258000000000000000",
+      "totalUsdDisplay": "2624.258"
     },
     {
       "address": "0x5edf60c9dc63efa6b9cd41d0aed34ea1c7e7f603",
@@ -48566,8 +48551,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.25",
-      "totalUsdWei": "2342887500000000000000",
-      "totalUsdDisplay": "2342.8875"
+      "totalUsdWei": "2343087500000000000000",
+      "totalUsdDisplay": "2343.0875"
     },
     {
       "address": "0xbb889bda6f4f940fff7c422c7777b318ea839057",
@@ -48578,8 +48563,8 @@
       "usdcDisplay": "2250",
       "usdtDisplay": "0",
       "wethDisplay": "0.042",
-      "totalUsdWei": "2328721020000000005622",
-      "totalUsdDisplay": "2328.721"
+      "totalUsdWei": "2328727740000000005623",
+      "totalUsdDisplay": "2328.7277"
     },
     {
       "address": "0x2e42031fbabfb1a24f3ad50c5703028645f4f3c1",
@@ -48674,8 +48659,8 @@
       "usdcDisplay": "400",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "2274310000000000000000",
-      "totalUsdDisplay": "2274.31"
+      "totalUsdWei": "2274470000000000000000",
+      "totalUsdDisplay": "2274.47"
     },
     {
       "address": "0xb6e219d3076bf85cff0e1221bfa44dd326cfc188",
@@ -48722,8 +48707,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.2",
-      "totalUsdWei": "2249172000000000000000",
-      "totalUsdDisplay": "2249.172"
+      "totalUsdWei": "2249364000000000000000",
+      "totalUsdDisplay": "2249.364"
     },
     {
       "address": "0x15eb0902868092b48e229490d46741253e6356f7",
@@ -48926,8 +48911,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.1087",
-      "totalUsdWei": "2078207551885634909084",
-      "totalUsdDisplay": "2078.2075"
+      "totalUsdWei": "2078384957548679817122",
+      "totalUsdDisplay": "2078.3849"
     },
     {
       "address": "0x9ae794673c288772aabb094e2a9ea35f82b997ef",
@@ -49994,8 +49979,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1.0232",
-      "totalUsdWei": "1917859847125346254292",
-      "totalUsdDisplay": "1917.8598"
+      "totalUsdWei": "1918023564747052405036",
+      "totalUsdDisplay": "1918.0235"
     },
     {
       "address": "0x608874dc5e805ce6f74f92b6209233d3545a9101",
@@ -50030,8 +50015,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "1874310000000000000000",
-      "totalUsdDisplay": "1874.31"
+      "totalUsdWei": "1874470000000000000000",
+      "totalUsdDisplay": "1874.47"
     },
     {
       "address": "0x13ab5e30deac9cff34be7cad126f8b464a8b7450",
@@ -50042,8 +50027,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "1874310000000000000000",
-      "totalUsdDisplay": "1874.31"
+      "totalUsdWei": "1874470000000000000000",
+      "totalUsdDisplay": "1874.47"
     },
     {
       "address": "0x2dc8c2ec64a5dff670bc4ad3ab2ca6cf0b09a13e",
@@ -50054,8 +50039,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "1874310000000000000000",
-      "totalUsdDisplay": "1874.31"
+      "totalUsdWei": "1874470000000000000000",
+      "totalUsdDisplay": "1874.47"
     },
     {
       "address": "0x48f1e1b49d63e1967ddfee54e4c259e66dc773ff",
@@ -50066,8 +50051,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "1874310000000000000000",
-      "totalUsdDisplay": "1874.31"
+      "totalUsdWei": "1874470000000000000000",
+      "totalUsdDisplay": "1874.47"
     },
     {
       "address": "0x78d9920f95967a1d1f280b9ad6b4518319f7b2a9",
@@ -50078,8 +50063,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "1",
-      "totalUsdWei": "1874310000000000000000",
-      "totalUsdDisplay": "1874.31"
+      "totalUsdWei": "1874470000000000000000",
+      "totalUsdDisplay": "1874.47"
     },
     {
       "address": "0xc56276481245f47ae96d7574094e7cc31f59e8b6",
@@ -50654,8 +50639,8 @@
       "usdcDisplay": "783.5149",
       "usdtDisplay": "0",
       "wethDisplay": "0.3592",
-      "totalUsdWei": "1456767087000000000000",
-      "totalUsdDisplay": "1456.767"
+      "totalUsdWei": "1456824559000000000000",
+      "totalUsdDisplay": "1456.8245"
     },
     {
       "address": "0xa8c395123fd6081426a4bbb98fd4b3c3243ff2c1",
@@ -50882,8 +50867,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "231.6789",
       "wethDisplay": "0.525",
-      "totalUsdWei": "1215691689000000000000",
-      "totalUsdDisplay": "1215.6916"
+      "totalUsdWei": "1215775689000000000000",
+      "totalUsdDisplay": "1215.7756"
     },
     {
       "address": "0x8729cfa4d8e03dae19e6bcc9435a93df69b24a75",
@@ -51014,8 +50999,8 @@
       "usdcDisplay": "205.7743",
       "usdtDisplay": "0",
       "wethDisplay": "0.5",
-      "totalUsdWei": "1142929336000000000000",
-      "totalUsdDisplay": "1142.9293"
+      "totalUsdWei": "1143009336000000000000",
+      "totalUsdDisplay": "1143.0093"
     },
     {
       "address": "0x700ff6c397caf8d3365cbbc59de0fb18ad363d81",
@@ -51038,8 +51023,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.6007",
-      "totalUsdWei": "1126059033735298694829",
-      "totalUsdDisplay": "1126.059"
+      "totalUsdWei": "1126155159480451656608",
+      "totalUsdDisplay": "1126.1551"
     },
     {
       "address": "0x15577452e22ff2e8251d7f0fdfba8a710f09f532",
@@ -51050,8 +51035,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.6",
-      "totalUsdWei": "1124586000000000000000",
-      "totalUsdDisplay": "1124.586"
+      "totalUsdWei": "1124682000000000000000",
+      "totalUsdDisplay": "1124.682"
     },
     {
       "address": "0x02c07322bfd5dbc6aa58dd1ea55eb9bbfffdd11b",
@@ -52766,8 +52751,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.5108",
-      "totalUsdWei": "957506807186754469324",
-      "totalUsdDisplay": "957.5068"
+      "totalUsdWei": "957588544513637365278",
+      "totalUsdDisplay": "957.5885"
     },
     {
       "address": "0x003a6f516cf816aca297ad3a50b9e781065e9c42",
@@ -52874,8 +52859,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.5064",
-      "totalUsdWei": "949176824340000000000",
-      "totalUsdDisplay": "949.1768"
+      "totalUsdWei": "949257850580000000000",
+      "totalUsdDisplay": "949.2578"
     },
     {
       "address": "0x5a49158481df2e3c4c26f1c60a3f49e61cec6849",
@@ -52886,8 +52871,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.503",
-      "totalUsdWei": "942784713450580476188",
-      "totalUsdDisplay": "942.7847"
+      "totalUsdWei": "942865194029648022579",
+      "totalUsdDisplay": "942.8651"
     },
     {
       "address": "0x1949f7f04f9db3473fbb5e7cba946c99f56ee2c7",
@@ -52910,8 +52895,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.5",
-      "totalUsdWei": "937155000000000000000",
-      "totalUsdDisplay": "937.155"
+      "totalUsdWei": "937235000000000000000",
+      "totalUsdDisplay": "937.235"
     },
     {
       "address": "0x97d1b6f105729bdf700b92b6b92ebb6d56b80dcd",
@@ -52934,8 +52919,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.49",
-      "totalUsdWei": "918411900000000000000",
-      "totalUsdDisplay": "918.4119"
+      "totalUsdWei": "918490300000000000000",
+      "totalUsdDisplay": "918.4903"
     },
     {
       "address": "0x61baf9247340b788ae9392344e059cd760ee8c2e",
@@ -52970,8 +52955,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.4824",
-      "totalUsdWei": "904286432829155584524",
-      "totalUsdDisplay": "904.2864"
+      "totalUsdWei": "904363627012216372171",
+      "totalUsdDisplay": "904.3636"
     },
     {
       "address": "0x3f5414d4ac2495348dda268be08046110be853f0",
@@ -53054,8 +53039,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "600",
       "wethDisplay": "0.15",
-      "totalUsdWei": "881146500000000000000",
-      "totalUsdDisplay": "881.1465"
+      "totalUsdWei": "881170500000000000000",
+      "totalUsdDisplay": "881.1705"
     },
     {
       "address": "0x40fe90836bfb888b21cd7a30ea7078b66f1480e4",
@@ -53090,8 +53075,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.4594",
-      "totalUsdWei": "861140817837994994626",
-      "totalUsdDisplay": "861.1408"
+      "totalUsdWei": "861214328906523722104",
+      "totalUsdDisplay": "861.2143"
     },
     {
       "address": "0x9ae4324ed1749a2b43f2beeff50d9499663a4c47",
@@ -53294,8 +53279,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.4",
-      "totalUsdWei": "749724000000000000000",
-      "totalUsdDisplay": "749.724"
+      "totalUsdWei": "749788000000000000000",
+      "totalUsdDisplay": "749.788"
     },
     {
       "address": "0xf0c3ca4bf305262b8f571950b2375c775f1999b1",
@@ -53594,8 +53579,8 @@
       "usdcDisplay": "222.222",
       "usdtDisplay": "0",
       "wethDisplay": "0.222",
-      "totalUsdWei": "638318820000000000000",
-      "totalUsdDisplay": "638.3188"
+      "totalUsdWei": "638354340000000000000",
+      "totalUsdDisplay": "638.3543"
     },
     {
       "address": "0x2dbf845f9f865352a694830abf338bd5e8593431",
@@ -53690,8 +53675,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.33",
-      "totalUsdWei": "618522300000000000000",
-      "totalUsdDisplay": "618.5223"
+      "totalUsdWei": "618575100000000000000",
+      "totalUsdDisplay": "618.5751"
     },
     {
       "address": "0x1268614678b48c2f17b06176c40ad284df196146",
@@ -53870,8 +53855,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.31",
-      "totalUsdWei": "581036100000000000000",
-      "totalUsdDisplay": "581.0361"
+      "totalUsdWei": "581085700000000000000",
+      "totalUsdDisplay": "581.0857"
     },
     {
       "address": "0xf6e2f1995256c1c91809955f7318086fc093ef98",
@@ -53954,8 +53939,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.3",
-      "totalUsdWei": "562293000000000000000",
-      "totalUsdDisplay": "562.293"
+      "totalUsdWei": "562341000000000000000",
+      "totalUsdDisplay": "562.341"
     },
     {
       "address": "0x82ec19bbd640020df0340c4132ddb511b90e872a",
@@ -53966,8 +53951,8 @@
       "usdcDisplay": "61.95",
       "usdtDisplay": "448.43",
       "wethDisplay": "0.0254",
-      "totalUsdWei": "557990881593066330573",
-      "totalUsdDisplay": "557.9908"
+      "totalUsdWei": "557994945883954652469",
+      "totalUsdDisplay": "557.9949"
     },
     {
       "address": "0xeb82e492610d8dd0af7b763ae9098a2deabb12cd",
@@ -53978,8 +53963,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.2918",
-      "totalUsdWei": "546933674591108079146",
-      "totalUsdDisplay": "546.9336"
+      "totalUsdWei": "546980363446171850504",
+      "totalUsdDisplay": "546.9803"
     },
     {
       "address": "0xf59ab029fce9a3d6919505fa30081663b7f8e3ac",
@@ -54014,8 +53999,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "225.1",
       "wethDisplay": "0.1639",
-      "totalUsdWei": "532413115896748295055",
-      "totalUsdDisplay": "532.4131"
+      "totalUsdWei": "532439349603308831854",
+      "totalUsdDisplay": "532.4393"
     },
     {
       "address": "0x337774f48f6225ce34caf1eb87ab9cf14df697eb",
@@ -55262,8 +55247,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.25",
-      "totalUsdWei": "468577500000000000000",
-      "totalUsdDisplay": "468.5775"
+      "totalUsdWei": "468617500000000000000",
+      "totalUsdDisplay": "468.6175"
     },
     {
       "address": "0xfc794a131889a8af8b7fcb14b523cd61764596ea",
@@ -55358,8 +55343,8 @@
       "usdcDisplay": "276.6498",
       "usdtDisplay": "0",
       "wethDisplay": "0.0845",
-      "totalUsdWei": "435215382613328734989",
-      "totalUsdDisplay": "435.2153"
+      "totalUsdWei": "435228918520504246295",
+      "totalUsdDisplay": "435.2289"
     },
     {
       "address": "0xbea653f4e8f72cc7f7ac2079f297510ccc71f8bc",
@@ -55406,8 +55391,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.2237",
-      "totalUsdWei": "419470093386877983184",
-      "totalUsdDisplay": "419.47"
+      "totalUsdWei": "419505901345509106359",
+      "totalUsdDisplay": "419.5059"
     },
     {
       "address": "0x481843a82fbb4a9f0fac77efceb3342078cceafc",
@@ -55682,8 +55667,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.2107",
-      "totalUsdWei": "394917117000000000000",
-      "totalUsdDisplay": "394.9171"
+      "totalUsdWei": "394950829000000000000",
+      "totalUsdDisplay": "394.9508"
     },
     {
       "address": "0x79daeed5bf9000f1fe3f4cedb8f2d8e8d9b0a571",
@@ -55718,8 +55703,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.2061",
-      "totalUsdWei": "386315409664847715468",
-      "totalUsdDisplay": "386.3154"
+      "totalUsdWei": "386348387382272461447",
+      "totalUsdDisplay": "386.3483"
     },
     {
       "address": "0xd69e2d0b9dbe04e5fb0aa61f2dc571e7c0141535",
@@ -55730,8 +55715,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.2049",
-      "totalUsdWei": "384057111932086382330",
-      "totalUsdDisplay": "384.0571"
+      "totalUsdWei": "384089896870495254833",
+      "totalUsdDisplay": "384.0898"
     },
     {
       "address": "0xe9a2c1a1789ca427653a93323623b405e1728f07",
@@ -55742,8 +55727,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.204",
-      "totalUsdWei": "382359240000000000000",
-      "totalUsdDisplay": "382.3592"
+      "totalUsdWei": "382391880000000000000",
+      "totalUsdDisplay": "382.3918"
     },
     {
       "address": "0x947068bc89234fdb3c6a7526551ed46b82d5ecc6",
@@ -56606,8 +56591,8 @@
       "usdcDisplay": "181.6566",
       "usdtDisplay": "0",
       "wethDisplay": "0.061",
-      "totalUsdWei": "296002188592500000000",
-      "totalUsdDisplay": "296.0021"
+      "totalUsdWei": "296011949672500000000",
+      "totalUsdDisplay": "296.0119"
     },
     {
       "address": "0x66c56bb6201e732774c6bf6dd6e03b49d4a5b52f",
@@ -56714,8 +56699,8 @@
       "usdcDisplay": "87.8959",
       "usdtDisplay": "0",
       "wethDisplay": "0.1046",
-      "totalUsdWei": "284026328926643982737",
-      "totalUsdDisplay": "284.0263"
+      "totalUsdWei": "284043071546076340798",
+      "totalUsdDisplay": "284.043"
     },
     {
       "address": "0x8e988bdbc28a8817ecb797f401f7b3f9510891a6",
@@ -56762,8 +56747,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.1469",
-      "totalUsdWei": "275505954856443421463",
-      "totalUsdDisplay": "275.5059"
+      "totalUsdWei": "275529473352731138515",
+      "totalUsdDisplay": "275.5294"
     },
     {
       "address": "0x5ee3d3bc73b256dda59f6359be8037f4affccd00",
@@ -56834,8 +56819,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.1386",
-      "totalUsdWei": "259922291358687626223",
-      "totalUsdDisplay": "259.9222"
+      "totalUsdWei": "259944479559474790577",
+      "totalUsdDisplay": "259.9444"
     },
     {
       "address": "0x6ee030566aaf26296e252f6bcbc571b4248ff7f5",
@@ -57278,8 +57263,8 @@
       "usdcDisplay": "154.0256",
       "usdtDisplay": "25.3432",
       "wethDisplay": "0.025",
-      "totalUsdWei": "226226643000000000000",
-      "totalUsdDisplay": "226.2266"
+      "totalUsdWei": "226230643000000000000",
+      "totalUsdDisplay": "226.2306"
     },
     {
       "address": "0x7691afcd9a83b5fec3fe7291448b6e72eda4659e",
@@ -57770,8 +57755,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.1069",
-      "totalUsdWei": "200363739000000000000",
-      "totalUsdDisplay": "200.3637"
+      "totalUsdWei": "200380843000000000000",
+      "totalUsdDisplay": "200.3808"
     },
     {
       "address": "0x27107dd841ea4fd7535c9f7905be3a5d0cad374d",
@@ -58574,8 +58559,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.1",
-      "totalUsdWei": "187431000000000000000",
-      "totalUsdDisplay": "187.431"
+      "totalUsdWei": "187447000000000000000",
+      "totalUsdDisplay": "187.447"
     },
     {
       "address": "0x0c999f497985f6b045cd75aef773f324546faa61",
@@ -60126,18 +60111,6 @@
       "totalUsdDisplay": "101"
     },
     {
-      "address": "0x97163afe2b6370913236e22d84a058be6947aa6b",
-      "putCount": 1,
-      "usdcWei": "101000000",
-      "usdtWei": "0",
-      "wethWei": "0",
-      "usdcDisplay": "101",
-      "usdtDisplay": "0",
-      "wethDisplay": "0",
-      "totalUsdWei": "101000000000000000000",
-      "totalUsdDisplay": "101"
-    },
-    {
       "address": "0xb4e0df19433f3740fae222c49c4d470dade49853",
       "putCount": 1,
       "usdcWei": "0",
@@ -61358,8 +61331,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0528",
-      "totalUsdWei": "98963568000000000000",
-      "totalUsdDisplay": "98.9635"
+      "totalUsdWei": "98972016000000000000",
+      "totalUsdDisplay": "98.972"
     },
     {
       "address": "0x050050fa351c3de8a342fbbca883dd81624d8f19",
@@ -61418,8 +61391,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.052",
-      "totalUsdWei": "97464120000000000000",
-      "totalUsdDisplay": "97.4641"
+      "totalUsdWei": "97472440000000000000",
+      "totalUsdDisplay": "97.4724"
     },
     {
       "address": "0x047d3a2654e5bd2b5292fa2124a1adefda0b460a",
@@ -61454,8 +61427,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.05",
-      "totalUsdWei": "93715687431000000000",
-      "totalUsdDisplay": "93.7156"
+      "totalUsdWei": "93723687447000000000",
+      "totalUsdDisplay": "93.7236"
     },
     {
       "address": "0xeb78c5217a235c3dd324ff4eaebd531b8bbd04e9",
@@ -61646,8 +61619,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.042",
-      "totalUsdWei": "78721020000000005622",
-      "totalUsdDisplay": "78.721"
+      "totalUsdWei": "78727740000000005623",
+      "totalUsdDisplay": "78.7277"
     },
     {
       "address": "0x3a52456581fb6e491c211c2620f6821ea7d8ceff",
@@ -61958,8 +61931,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.031",
-      "totalUsdWei": "58103610000000000000",
-      "totalUsdDisplay": "58.1036"
+      "totalUsdWei": "58108570000000000000",
+      "totalUsdDisplay": "58.1085"
     },
     {
       "address": "0x78d9ea794726266d2930c76aa1bd8fef636feece",
@@ -62474,8 +62447,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.025",
-      "totalUsdWei": "46857750000000000000",
-      "totalUsdDisplay": "46.8577"
+      "totalUsdWei": "46861750000000000000",
+      "totalUsdDisplay": "46.8617"
     },
     {
       "address": "0xc1eb55181df35fd280d264f7497efbe6ea84c135",
@@ -62798,8 +62771,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "4.7482",
       "wethDisplay": "0.0146",
-      "totalUsdWei": "32135717436864891509",
-      "totalUsdDisplay": "32.1357"
+      "totalUsdWei": "32138055361108959130",
+      "totalUsdDisplay": "32.138"
     },
     {
       "address": "0xdea3d504c484ecdae67d4a398d1944fd1510742a",
@@ -62978,8 +62951,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.015",
-      "totalUsdWei": "28181619924180166692",
-      "totalUsdDisplay": "28.1816"
+      "totalUsdWei": "28184025641050838473",
+      "totalUsdDisplay": "28.184"
     },
     {
       "address": "0x94428ce627d373075f7a96eb2e0a340c309c8ae5",
@@ -63302,8 +63275,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0101",
-      "totalUsdWei": "19044352637226532229",
-      "totalUsdDisplay": "19.0443"
+      "totalUsdWei": "19045978353581860987",
+      "totalUsdDisplay": "19.0459"
     },
     {
       "address": "0x7543d38b8d4ad74a9cdf7c26de385fb4e05b92c5",
@@ -63338,8 +63311,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.01",
-      "totalUsdWei": "18743100000000000000",
-      "totalUsdDisplay": "18.7431"
+      "totalUsdWei": "18744700000000000000",
+      "totalUsdDisplay": "18.7447"
     },
     {
       "address": "0x8a641df3ecc1374b44150b23ba902c34ca0f1cc7",
@@ -63530,8 +63503,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0055",
-      "totalUsdWei": "10308705000000000000",
-      "totalUsdDisplay": "10.3087"
+      "totalUsdWei": "10309585000000000000",
+      "totalUsdDisplay": "10.3095"
     },
     {
       "address": "0x000650a5d400f004435daacb611672cde0e6cecb",
@@ -63722,8 +63695,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0047",
-      "totalUsdWei": "8849111128668052733",
-      "totalUsdDisplay": "8.8491"
+      "totalUsdWei": "8849866530805685722",
+      "totalUsdDisplay": "8.8498"
     },
     {
       "address": "0xc8d5811a03e64076ef6bb0cfc7a1494064af1292",
@@ -63746,8 +63719,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0037",
-      "totalUsdWei": "6948874754941959714",
-      "totalUsdDisplay": "6.9488"
+      "totalUsdWei": "6949467943881244418",
+      "totalUsdDisplay": "6.9494"
     },
     {
       "address": "0xf5d9e73627abafa524aed3c93c063deb46149ec2",
@@ -63938,8 +63911,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0013",
-      "totalUsdWei": "2518732514761994413",
-      "totalUsdDisplay": "2.5187"
+      "totalUsdWei": "2518947525727289331",
+      "totalUsdDisplay": "2.5189"
     },
     {
       "address": "0x408ba793a68b2b95eb190d25c7945eebee820673",
@@ -63950,8 +63923,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0013",
-      "totalUsdWei": "2436603000000000000",
-      "totalUsdDisplay": "2.4366"
+      "totalUsdWei": "2436811000000000000",
+      "totalUsdDisplay": "2.4368"
     },
     {
       "address": "0x2781f1b35a1fda7fa0f7dc376e9a8aec1a137cfa",
@@ -63962,8 +63935,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0012",
-      "totalUsdWei": "2341418161294988546",
-      "totalUsdDisplay": "2.3414"
+      "totalUsdWei": "2341618035865260912",
+      "totalUsdDisplay": "2.3416"
     },
     {
       "address": "0xad60c83c4b025a92f1c6db1e9fda76b9669d670e",
@@ -63974,8 +63947,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0012",
-      "totalUsdWei": "2341348608146980272",
-      "totalUsdDisplay": "2.3413"
+      "totalUsdWei": "2341548476779865716",
+      "totalUsdDisplay": "2.3415"
     },
     {
       "address": "0x88c31e08a11912faf33a9d5d3242b477eca61de3",
@@ -63998,8 +63971,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0012",
-      "totalUsdWei": "2249172000000000000",
-      "totalUsdDisplay": "2.2491"
+      "totalUsdWei": "2249364000000000000",
+      "totalUsdDisplay": "2.2493"
     },
     {
       "address": "0x8230f069607f65178a97ee7853075e303ce4ed72",
@@ -64010,8 +63983,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0011",
-      "totalUsdWei": "2245160199354644087",
-      "totalUsdDisplay": "2.2451"
+      "totalUsdWei": "2245351856888294733",
+      "totalUsdDisplay": "2.2453"
     },
     {
       "address": "0x5f67ffe9281be6eef68b0a71d5956f61f1bb1fae",
@@ -64022,8 +63995,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0011",
-      "totalUsdWei": "2224204233146980272",
-      "totalUsdDisplay": "2.2242"
+      "totalUsdWei": "2224394101779865716",
+      "totalUsdDisplay": "2.2243"
     },
     {
       "address": "0x18332e91c124027bf393f3f1a3d6d92a9735696a",
@@ -64034,8 +64007,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0011",
-      "totalUsdWei": "2210146908146980272",
-      "totalUsdDisplay": "2.2101"
+      "totalUsdWei": "2210335576779865716",
+      "totalUsdDisplay": "2.2103"
     },
     {
       "address": "0x1cfaeec28485256fbfc96c97df9dc89dca1844b5",
@@ -64058,8 +64031,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0011",
-      "totalUsdWei": "2158680327739631820",
-      "totalUsdDisplay": "2.1586"
+      "totalUsdWei": "2158864602940872992",
+      "totalUsdDisplay": "2.1588"
     },
     {
       "address": "0x2b7015d449825a1e64c2e6d0313b946b8c0f433d",
@@ -64070,8 +64043,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "2009595738146980272",
-      "totalUsdDisplay": "2.0095"
+      "totalUsdWei": "2009767286779865716",
+      "totalUsdDisplay": "2.0097"
     },
     {
       "address": "0xcc8228c379a64cafe6ae861ec1d286ce90e06cc8",
@@ -64082,8 +64055,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "2004588364888188912",
-      "totalUsdDisplay": "2.0045"
+      "totalUsdWei": "2004759486067920179",
+      "totalUsdDisplay": "2.0047"
     },
     {
       "address": "0x34aabd7fc5bd8ac00b0bcd53a1848d0366129db4",
@@ -64178,8 +64151,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "1966556161294988546",
-      "totalUsdDisplay": "1.9665"
+      "totalUsdWei": "1966724035865260912",
+      "totalUsdDisplay": "1.9667"
     },
     {
       "address": "0x78698a07537e295f0d29839b853c236029325cef",
@@ -64190,8 +64163,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "1966486608146980272",
-      "totalUsdDisplay": "1.9664"
+      "totalUsdWei": "1966654476779865716",
+      "totalUsdDisplay": "1.9666"
     },
     {
       "address": "0xfa3e74d76ec9cfb28ddf57d16c5a80048d00e645",
@@ -64202,8 +64175,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "1954770317949058474",
-      "totalUsdDisplay": "1.9547"
+      "totalUsdWei": "1954937186423788828",
+      "totalUsdDisplay": "1.9549"
     },
     {
       "address": "0xce776d5ea48fd3ef458003a9bb9d549fe31ea475",
@@ -64226,8 +64199,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "1874310000000000000",
-      "totalUsdDisplay": "1.8743"
+      "totalUsdWei": "1874470000000000000",
+      "totalUsdDisplay": "1.8744"
     },
     {
       "address": "0x6b5f73b8baf24dd6337698951500dc553821b7fe",
@@ -64238,8 +64211,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.001",
-      "totalUsdWei": "1874310000000000000",
-      "totalUsdDisplay": "1.8743"
+      "totalUsdWei": "1874470000000000000",
+      "totalUsdDisplay": "1.8744"
     },
     {
       "address": "0x8d113b2593f1e93f5da0c2cc07bfcb9bb649c0f4",
@@ -64250,8 +64223,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1836208243258793233",
-      "totalUsdDisplay": "1.8362"
+      "totalUsdWei": "1836364990711947411",
+      "totalUsdDisplay": "1.8363"
     },
     {
       "address": "0xe97ca5451b78ff4a0dd7ca488d3c7f0839cc78cf",
@@ -64262,8 +64235,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1813347189214068048",
-      "totalUsdDisplay": "1.8133"
+      "totalUsdWei": "1813501985139114733",
+      "totalUsdDisplay": "1.8135"
     },
     {
       "address": "0x54d80b907d1659f4e46c02c467ad53d4d3f2df12",
@@ -64274,8 +64247,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1779125161294988546",
-      "totalUsdDisplay": "1.7791"
+      "totalUsdWei": "1779277035865260912",
+      "totalUsdDisplay": "1.7792"
     },
     {
       "address": "0xcc506f92da729f60a1b774000b9053cbf88530b3",
@@ -64286,8 +64259,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1779055608146980272",
-      "totalUsdDisplay": "1.779"
+      "totalUsdWei": "1779207476779865716",
+      "totalUsdDisplay": "1.7792"
     },
     {
       "address": "0x15a27779a93722457f7543f48e0ff3577f6264a8",
@@ -64298,8 +64271,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1764067353485278657",
-      "totalUsdDisplay": "1.764"
+      "totalUsdWei": "1764217942649588534",
+      "totalUsdDisplay": "1.7642"
     },
     {
       "address": "0x9557b2b0c52397852857c20675a9449d7f6d92e6",
@@ -64310,8 +64283,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1690377032511981768",
-      "totalUsdDisplay": "1.6903"
+      "totalUsdWei": "1690521331120644112",
+      "totalUsdDisplay": "1.6905"
     },
     {
       "address": "0x1337cba9a86fdc9a715da0d773682ecea5ef6381",
@@ -64322,8 +64295,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1686879000000000000",
-      "totalUsdDisplay": "1.6868"
+      "totalUsdWei": "1687023000000000000",
+      "totalUsdDisplay": "1.687"
     },
     {
       "address": "0x91026b4f9cbb1ca613dd4dae0f1895acf7575d68",
@@ -64334,8 +64307,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1686879000000000000",
-      "totalUsdDisplay": "1.6868"
+      "totalUsdWei": "1687023000000000000",
+      "totalUsdDisplay": "1.687"
     },
     {
       "address": "0xb157a175a6df354f9583a1aca982a9e5eb76a4be",
@@ -64346,8 +64319,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1686879000000000000",
-      "totalUsdDisplay": "1.6868"
+      "totalUsdWei": "1687023000000000000",
+      "totalUsdDisplay": "1.687"
     },
     {
       "address": "0xcc03e64bc44e4faf1486d4e169992af746963322",
@@ -64358,8 +64331,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0009",
-      "totalUsdWei": "1686879000000000000",
-      "totalUsdDisplay": "1.6868"
+      "totalUsdWei": "1687023000000000000",
+      "totalUsdDisplay": "1.687"
     },
     {
       "address": "0xc87881df1306bd91cb66a799d800238a65163fb0",
@@ -64370,8 +64343,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1685409661294988546",
-      "totalUsdDisplay": "1.6854"
+      "totalUsdWei": "1685553535865260912",
+      "totalUsdDisplay": "1.6855"
     },
     {
       "address": "0x0ed60de96d0cf94d90bedacbb3b873e9cf7a30d9",
@@ -64382,8 +64355,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1673186520232605536",
-      "totalUsdDisplay": "1.6731"
+      "totalUsdWei": "1673329351377526716",
+      "totalUsdDisplay": "1.6733"
     },
     {
       "address": "0xbd54349181c558747cf45a232408af79aac84872",
@@ -64394,8 +64367,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1665365894664564864",
-      "totalUsdDisplay": "1.6653"
+      "totalUsdWei": "1665508058203758664",
+      "totalUsdDisplay": "1.6655"
     },
     {
       "address": "0x42bb0419c56bbf8901e4d0e2219b20217e01f355",
@@ -64406,8 +64379,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1638328468961679048",
-      "totalUsdDisplay": "1.6383"
+      "totalUsdWei": "1638468324457853037",
+      "totalUsdDisplay": "1.6384"
     },
     {
       "address": "0x74440ce36e58da9c4911013017382b51cd9a79c9",
@@ -64418,8 +64391,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1633965220716566807",
-      "totalUsdDisplay": "1.6339"
+      "totalUsdWei": "1634104703745155808",
+      "totalUsdDisplay": "1.6341"
     },
     {
       "address": "0x25e4f1f3ea127bf10cecaa2b58740d416510b166",
@@ -64430,8 +64403,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1615297492026174030",
-      "totalUsdDisplay": "1.6152"
+      "totalUsdWei": "1615435381488815849",
+      "totalUsdDisplay": "1.6154"
     },
     {
       "address": "0x3e9d73db7c0c49c5bd3ef9fc931d96deec4c3654",
@@ -64442,8 +64415,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1594513017739631820",
-      "totalUsdDisplay": "1.5945"
+      "totalUsdWei": "1594649132940872992",
+      "totalUsdDisplay": "1.5946"
     },
     {
       "address": "0x41e251cb6d730991d67cd6887e89073f8550800b",
@@ -64454,8 +64427,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1592390108422439255",
-      "totalUsdDisplay": "1.5923"
+      "totalUsdWei": "1592526042402062471",
+      "totalUsdDisplay": "1.5925"
     },
     {
       "address": "0x153081d42ab40d0699f871e45700dcaa1766c557",
@@ -64466,8 +64439,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1591694161294988546",
-      "totalUsdDisplay": "1.5916"
+      "totalUsdWei": "1591830035865260912",
+      "totalUsdDisplay": "1.5918"
     },
     {
       "address": "0x12bcf1e9563841968b0b50bbed012d760694f4a7",
@@ -64478,8 +64451,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1591410732317899956",
-      "totalUsdDisplay": "1.5914"
+      "totalUsdWei": "1591546582693329241",
+      "totalUsdDisplay": "1.5915"
     },
     {
       "address": "0xfdc7c5c689c53610d6623a17e721361cf45d2c7b",
@@ -64490,8 +64463,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1589102140074665606",
-      "totalUsdDisplay": "1.5891"
+      "totalUsdWei": "1589237793377700827",
+      "totalUsdDisplay": "1.5892"
     },
     {
       "address": "0x74a27e810297424284e66fbc03097aeaf2d91a79",
@@ -64502,8 +64475,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1559140764527631192",
-      "totalUsdDisplay": "1.5591"
+      "totalUsdWei": "1559273860185406278",
+      "totalUsdDisplay": "1.5592"
     },
     {
       "address": "0xf113150aedb5245854bc5ea2d87ae8f0cb8120c2",
@@ -64514,8 +64487,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1554640665783035550",
-      "totalUsdDisplay": "1.5546"
+      "totalUsdWei": "1554773377291017307",
+      "totalUsdDisplay": "1.5547"
     },
     {
       "address": "0x31f070200ab06c47afa0e177eac150338de51e5a",
@@ -64526,8 +64499,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0008",
-      "totalUsdWei": "1499448000000000000",
-      "totalUsdDisplay": "1.4994"
+      "totalUsdWei": "1499576000000000000",
+      "totalUsdDisplay": "1.4995"
     },
     {
       "address": "0xb258ad4125e84068f3a47fbbc4f6aced2bc148ec",
@@ -64550,8 +64523,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0007",
-      "totalUsdWei": "1465416571867353428",
-      "totalUsdDisplay": "1.4654"
+      "totalUsdWei": "1465541666783081763",
+      "totalUsdDisplay": "1.4655"
     },
     {
       "address": "0x5022d83ae7b1d5942da770d389f7a2f788a5bee7",
@@ -64562,8 +64535,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0007",
-      "totalUsdWei": "1435790433843292765",
-      "totalUsdDisplay": "1.4357"
+      "totalUsdWei": "1435912999731227486",
+      "totalUsdDisplay": "1.4359"
     },
     {
       "address": "0xa00b8f4af3bc1fa3bcd4bd596343dfa376691984",
@@ -64574,8 +64547,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0007",
-      "totalUsdWei": "1433341452054004226",
-      "totalUsdDisplay": "1.4333"
+      "totalUsdWei": "1433463808885226724",
+      "totalUsdDisplay": "1.4334"
     },
     {
       "address": "0xba1efcebd85bc37b8461ca43da40aa6235b23bc6",
@@ -64586,8 +64559,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0007",
-      "totalUsdWei": "1423302904131020039",
-      "totalUsdDisplay": "1.4233"
+      "totalUsdWei": "1423424404024133218",
+      "totalUsdDisplay": "1.4234"
     },
     {
       "address": "0x38300b7af4de562d7f9cdb3a35604c76a3c1baed",
@@ -64598,8 +64571,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0007",
-      "totalUsdWei": "1404735779898037036",
-      "totalUsdDisplay": "1.4047"
+      "totalUsdWei": "1404855694813277143",
+      "totalUsdDisplay": "1.4048"
     },
     {
       "address": "0xcf89b2628925f9c97cb2c2bb47dd59e060c50f62",
@@ -64658,8 +64631,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0006",
-      "totalUsdWei": "1215979800707094965",
-      "totalUsdDisplay": "1.2159"
+      "totalUsdWei": "1216083602515820915",
+      "totalUsdDisplay": "1.216"
     },
     {
       "address": "0x8c65d226164e34b21e3cde8aefd4db82419b4e49",
@@ -64670,8 +64643,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0006",
-      "totalUsdWei": "1202859630707094965",
-      "totalUsdDisplay": "1.2028"
+      "totalUsdWei": "1202962312515820915",
+      "totalUsdDisplay": "1.2029"
     },
     {
       "address": "0xefb963bec5828f2215de31c855b067ffd3f91b8a",
@@ -64682,8 +64655,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0006",
-      "totalUsdWei": "1124586000000000000",
-      "totalUsdDisplay": "1.1245"
+      "totalUsdWei": "1124682000000000000",
+      "totalUsdDisplay": "1.1246"
     },
     {
       "address": "0xf9a808a820578431047c013cd29b25f6be6aa250",
@@ -64694,8 +64667,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0005",
-      "totalUsdWei": "1122264300707094965",
-      "totalUsdDisplay": "1.1222"
+      "totalUsdWei": "1122360102515820915",
+      "totalUsdDisplay": "1.1223"
     },
     {
       "address": "0x06295858e947d0ebb1542d1ba06f30862201572a",
@@ -64730,8 +64703,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0005",
-      "totalUsdWei": "1028548800707094965",
-      "totalUsdDisplay": "1.0285"
+      "totalUsdWei": "1028636602515820915",
+      "totalUsdDisplay": "1.0286"
     },
     {
       "address": "0xd88b2d4b5febf8d5f440de9f4e5e216f56fea1ba",
@@ -64862,8 +64835,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0005",
-      "totalUsdWei": "937155000000000000",
-      "totalUsdDisplay": "0.9371"
+      "totalUsdWei": "937235000000000000",
+      "totalUsdDisplay": "0.9372"
     },
     {
       "address": "0x084cff21a5d34043461652fa0fa1196138394540",
@@ -64874,8 +64847,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0004",
-      "totalUsdWei": "934833300707094965",
-      "totalUsdDisplay": "0.9348"
+      "totalUsdWei": "934913102515820915",
+      "totalUsdDisplay": "0.9349"
     },
     {
       "address": "0xb9d0eea56c3bd00cb02f05e9f8e37bc0a77b28d8",
@@ -64958,7 +64931,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "447217432915105359",
+      "totalUsdWei": "447255609518370783",
       "totalUsdDisplay": "0.4472"
     },
     {
@@ -64970,7 +64943,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "438459748956799216",
+      "totalUsdWei": "438497177962584326",
       "totalUsdDisplay": "0.4384"
     },
     {
@@ -64982,7 +64955,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "438126802697904253",
+      "totalUsdWei": "438164203281816020",
       "totalUsdDisplay": "0.4381"
     },
     {
@@ -64994,7 +64967,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "435654495013192778",
+      "totalUsdWei": "435691684549183148",
       "totalUsdDisplay": "0.4356"
     },
     {
@@ -65006,8 +64979,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "434275249548964063",
-      "totalUsdDisplay": "0.4342"
+      "totalUsdWei": "434312321346013556",
+      "totalUsdDisplay": "0.4343"
     },
     {
       "address": "0x77a2422594644734ecdffe353962381adca6c982",
@@ -65018,8 +64991,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "430893568674863824",
-      "totalUsdDisplay": "0.4308"
+      "totalUsdWei": "430930351795579169",
+      "totalUsdDisplay": "0.4309"
     },
     {
       "address": "0x9d8bad16a8b55993ff1457781d5680fab82bf1a4",
@@ -65066,7 +65039,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "397028033362429650",
+      "totalUsdWei": "397061925560272050",
       "totalUsdDisplay": "0.397"
     },
     {
@@ -65078,7 +65051,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "394622074722183750",
+      "totalUsdWei": "394655761535974185",
       "totalUsdDisplay": "0.3946"
     },
     {
@@ -65102,8 +65075,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "387074132532294701",
-      "totalUsdDisplay": "0.387"
+      "totalUsdWei": "387107175017905495",
+      "totalUsdDisplay": "0.3871"
     },
     {
       "address": "0x4180a37dfa7466170c3ab35d9386013c3c8f1457",
@@ -65114,7 +65087,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0002",
-      "totalUsdWei": "381525293725598146",
+      "totalUsdWei": "381557862535984952",
       "totalUsdDisplay": "0.3815"
     },
     {
@@ -65126,7 +65099,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "366656122820486371",
+      "totalUsdWei": "366687422327852429",
       "totalUsdDisplay": "0.3666"
     },
     {
@@ -65150,8 +65123,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "356576712703800849",
-      "totalUsdDisplay": "0.3565"
+      "totalUsdWei": "356607151784866739",
+      "totalUsdDisplay": "0.3566"
     },
     {
       "address": "0x99af1c72b96933b92a7a1eccc6e024aebfbc6387",
@@ -65162,7 +65135,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "352954764734172924",
+      "totalUsdWei": "352984894628564710",
       "totalUsdDisplay": "0.3529"
     },
     {
@@ -65174,8 +65147,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "339696994368090145",
-      "totalUsdDisplay": "0.3396"
+      "totalUsdWei": "339725992516261415",
+      "totalUsdDisplay": "0.3397"
     },
     {
       "address": "0x13694c30b0e03a7d1a4fa5b56dd4daa93ea4278e",
@@ -65186,7 +65159,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "333346931324595167",
+      "totalUsdWei": "333375387401237737",
       "totalUsdDisplay": "0.3333"
     },
     {
@@ -65198,7 +65171,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "329870301748867693",
+      "totalUsdWei": "329898461043904170",
       "totalUsdDisplay": "0.3298"
     },
     {
@@ -65210,7 +65183,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "318660080786711109",
+      "totalUsdWei": "318687283124065055",
       "totalUsdDisplay": "0.3186"
     },
     {
@@ -65222,7 +65195,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "318226885524280565",
+      "totalUsdWei": "318254050882030289",
       "totalUsdDisplay": "0.3182"
     },
     {
@@ -65234,8 +65207,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "309691060788786180",
-      "totalUsdDisplay": "0.3096"
+      "totalUsdWei": "309717497488012138",
+      "totalUsdDisplay": "0.3097"
     },
     {
       "address": "0xc135b1868e9eb3a2640f52a9e508cdbdf4a3b9ec",
@@ -65246,7 +65219,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "305172994684029435",
+      "totalUsdWei": "305199045699682899",
       "totalUsdDisplay": "0.3051"
     },
     {
@@ -65258,7 +65231,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "303116051029873749",
+      "totalUsdWei": "303141926455051430",
       "totalUsdDisplay": "0.3031"
     },
     {
@@ -65270,7 +65243,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "299333119188336042",
+      "totalUsdWei": "299358671684492032",
       "totalUsdDisplay": "0.2993"
     },
     {
@@ -65282,7 +65255,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "272643205381838580",
+      "totalUsdWei": "272666479500240068",
       "totalUsdDisplay": "0.2726"
     },
     {
@@ -65294,7 +65267,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "266446652046671885",
+      "totalUsdWei": "266469397197862173",
       "totalUsdDisplay": "0.2664"
     },
     {
@@ -65306,7 +65279,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "262906474748009257",
+      "totalUsdWei": "262928917692858125",
       "totalUsdDisplay": "0.2629"
     },
     {
@@ -65318,7 +65291,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "252903794103604349",
+      "totalUsdWei": "252925383172145080",
       "totalUsdDisplay": "0.2529"
     },
     {
@@ -65330,7 +65303,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "245632543648740439",
+      "totalUsdWei": "245653512008821642",
       "totalUsdDisplay": "0.2456"
     },
     {
@@ -65354,7 +65327,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "232360505193589890",
+      "totalUsdWei": "232380340589458756",
       "totalUsdDisplay": "0.2323"
     },
     {
@@ -65366,7 +65339,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "232141223527164442",
+      "totalUsdWei": "232161040204109209",
       "totalUsdDisplay": "0.2321"
     },
     {
@@ -65378,7 +65351,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "232004571794809685",
+      "totalUsdWei": "232024376806513816",
       "totalUsdDisplay": "0.232"
     },
     {
@@ -65390,7 +65363,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "229105740356003784",
+      "totalUsdWei": "229125297909693921",
       "totalUsdDisplay": "0.2291"
     },
     {
@@ -65414,7 +65387,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "224917200000000000",
+      "totalUsdWei": "224936400000000000",
       "totalUsdDisplay": "0.2249"
     },
     {
@@ -65426,7 +65399,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "224769999442422015",
+      "totalUsdWei": "224789186876683577",
       "totalUsdDisplay": "0.2247"
     },
     {
@@ -65438,7 +65411,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "224569174288099114",
+      "totalUsdWei": "224588344578972073",
       "totalUsdDisplay": "0.2245"
     },
     {
@@ -65450,7 +65423,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "224372770687625391",
+      "totalUsdWei": "224391924212554575",
       "totalUsdDisplay": "0.2243"
     },
     {
@@ -65462,7 +65435,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "224049838157896495",
+      "totalUsdWei": "224068964115771801",
       "totalUsdDisplay": "0.224"
     },
     {
@@ -65474,7 +65447,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "223458521180705842",
+      "totalUsdWei": "223477596660956661",
       "totalUsdDisplay": "0.2234"
     },
     {
@@ -65486,7 +65459,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "222931589629476517",
+      "totalUsdWei": "222950620128348484",
       "totalUsdDisplay": "0.2229"
     },
     {
@@ -65498,7 +65471,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "222907513739092082",
+      "totalUsdWei": "222926542182731744",
       "totalUsdDisplay": "0.2229"
     },
     {
@@ -65510,7 +65483,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "222559947136893504",
+      "totalUsdWei": "222578945910597909",
       "totalUsdDisplay": "0.2225"
     },
     {
@@ -65522,8 +65495,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "222391587331783261",
-      "totalUsdDisplay": "0.2223"
+      "totalUsdWei": "222410571733495403",
+      "totalUsdDisplay": "0.2224"
     },
     {
       "address": "0x29d35a04fad9a9b92d1d1e99a64106f11031f59c",
@@ -65534,7 +65507,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "221050462060073785",
+      "totalUsdWei": "221069331976965661",
       "totalUsdDisplay": "0.221"
     },
     {
@@ -65546,7 +65519,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220931354895445650",
+      "totalUsdWei": "220950214644784484",
       "totalUsdDisplay": "0.2209"
     },
     {
@@ -65558,7 +65531,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220373341399060434",
+      "totalUsdWei": "220392153513718014",
       "totalUsdDisplay": "0.2203"
     },
     {
@@ -65570,7 +65543,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220313635797918327",
+      "totalUsdWei": "220332442815822338",
       "totalUsdDisplay": "0.2203"
     },
     {
@@ -65582,7 +65555,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220122649807400196",
+      "totalUsdWei": "220141440521833339",
       "totalUsdDisplay": "0.2201"
     },
     {
@@ -65594,7 +65567,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220012294805622318",
+      "totalUsdWei": "220031076099628592",
       "totalUsdDisplay": "0.22"
     },
     {
@@ -65606,7 +65579,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "220010592422804198",
+      "totalUsdWei": "220029373571486993",
       "totalUsdDisplay": "0.22"
     },
     {
@@ -65618,7 +65591,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "219401934891848396",
+      "totalUsdWei": "219420664082634710",
       "totalUsdDisplay": "0.2194"
     },
     {
@@ -65630,8 +65603,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "219382791364871021",
-      "totalUsdDisplay": "0.2193"
+      "totalUsdWei": "219401518921474987",
+      "totalUsdDisplay": "0.2194"
     },
     {
       "address": "0x890fd742edda257bacf6003642439b537488e5a5",
@@ -65642,7 +65615,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "219324504909430414",
+      "totalUsdWei": "219343227490425825",
       "totalUsdDisplay": "0.2193"
     },
     {
@@ -65654,7 +65627,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "219207886143260784",
+      "totalUsdWei": "219226598769124660",
       "totalUsdDisplay": "0.2192"
     },
     {
@@ -65666,7 +65639,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "219141314223384178",
+      "totalUsdWei": "219160021166352919",
       "totalUsdDisplay": "0.2191"
     },
     {
@@ -65678,7 +65651,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "218534021092597398",
+      "totalUsdWei": "218552676194141335",
       "totalUsdDisplay": "0.2185"
     },
     {
@@ -65690,8 +65663,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "218294508559257978",
-      "totalUsdDisplay": "0.2182"
+      "totalUsdWei": "218313143214874969",
+      "totalUsdDisplay": "0.2183"
     },
     {
       "address": "0x32e663c272e16f4b24182020cca78da6ce46827f",
@@ -65702,7 +65675,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "218202379495102167",
+      "totalUsdWei": "218221006286144853",
       "totalUsdDisplay": "0.2182"
     },
     {
@@ -65714,7 +65687,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "217546991821990017",
+      "totalUsdWei": "217565562666029433",
       "totalUsdDisplay": "0.2175"
     },
     {
@@ -65726,7 +65699,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "217102439603211730",
+      "totalUsdWei": "217120972498163212",
       "totalUsdDisplay": "0.2171"
     },
     {
@@ -65738,7 +65711,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "216262536187804802",
+      "totalUsdWei": "216280997384613254",
       "totalUsdDisplay": "0.2162"
     },
     {
@@ -65750,7 +65723,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "216258766926628552",
+      "totalUsdWei": "216277227801674974",
       "totalUsdDisplay": "0.2162"
     },
     {
@@ -65762,7 +65735,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "216119814466057842",
+      "totalUsdWei": "216138263479462545",
       "totalUsdDisplay": "0.2161"
     },
     {
@@ -65774,7 +65747,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "216065529990769500",
+      "totalUsdWei": "216083974370193674",
       "totalUsdDisplay": "0.216"
     },
     {
@@ -65786,7 +65759,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "216027739258025681",
+      "totalUsdWei": "216046180411453494",
       "totalUsdDisplay": "0.216"
     },
     {
@@ -65798,7 +65771,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215916123866310800",
+      "totalUsdWei": "215934555491718875",
       "totalUsdDisplay": "0.2159"
     },
     {
@@ -65810,7 +65783,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215837285615961200",
+      "totalUsdWei": "215855710511361936",
       "totalUsdDisplay": "0.2158"
     },
     {
@@ -65822,7 +65795,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215778596736201635",
+      "totalUsdWei": "215797016621640966",
       "totalUsdDisplay": "0.2157"
     },
     {
@@ -65834,7 +65807,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215713093486527743",
+      "totalUsdWei": "215731507780298701",
       "totalUsdDisplay": "0.2157"
     },
     {
@@ -65846,7 +65819,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215560769781870686",
+      "totalUsdWei": "215579171072567049",
       "totalUsdDisplay": "0.2155"
     },
     {
@@ -65858,7 +65831,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215413013309078562",
+      "totalUsdWei": "215431401986580925",
       "totalUsdDisplay": "0.2154"
     },
     {
@@ -65870,7 +65843,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215410246130025959",
+      "totalUsdWei": "215428634571308780",
       "totalUsdDisplay": "0.2154"
     },
     {
@@ -65882,7 +65855,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215376882535521756",
+      "totalUsdWei": "215395268128729755",
       "totalUsdDisplay": "0.2153"
     },
     {
@@ -65894,7 +65867,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "215262072093627562",
+      "totalUsdWei": "215280447886071170",
       "totalUsdDisplay": "0.2152"
     },
     {
@@ -65906,7 +65879,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "214966230964802332",
+      "totalUsdWei": "214984581502842661",
       "totalUsdDisplay": "0.2149"
     },
     {
@@ -65918,7 +65891,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "214574613117364169",
+      "totalUsdWei": "214592930225045811",
       "totalUsdDisplay": "0.2145"
     },
     {
@@ -65930,8 +65903,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "214097802968005691",
-      "totalUsdDisplay": "0.214"
+      "totalUsdWei": "214116079372909299",
+      "totalUsdDisplay": "0.2141"
     },
     {
       "address": "0x4f25474d08f3aac06be1e80410f501f271371e06",
@@ -65942,8 +65915,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "213998963803952560",
-      "totalUsdDisplay": "0.2139"
+      "totalUsdWei": "214017231771475880",
+      "totalUsdDisplay": "0.214"
     },
     {
       "address": "0x25c76c3f138ab1e2698220f7ef75e449cd210f1f",
@@ -65954,7 +65927,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "213747120415430856",
+      "totalUsdWei": "213765366884406889",
       "totalUsdDisplay": "0.2137"
     },
     {
@@ -65966,7 +65939,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "213013944240142689",
+      "totalUsdWei": "213032128121719602",
       "totalUsdDisplay": "0.213"
     },
     {
@@ -65978,7 +65951,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "212926890523090942",
+      "totalUsdWei": "212945066973349274",
       "totalUsdDisplay": "0.2129"
     },
     {
@@ -65990,7 +65963,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "212922522849812039",
+      "totalUsdWei": "212940698927225045",
       "totalUsdDisplay": "0.2129"
     },
     {
@@ -66002,7 +65975,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "212748499026100468",
+      "totalUsdWei": "212766660248013693",
       "totalUsdDisplay": "0.2127"
     },
     {
@@ -66014,7 +65987,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "212703216022694135",
+      "totalUsdWei": "212721373379035205",
       "totalUsdDisplay": "0.2127"
     },
     {
@@ -66026,7 +65999,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "211548616743773042",
+      "totalUsdWei": "211566675538038134",
       "totalUsdDisplay": "0.2115"
     },
     {
@@ -66038,7 +66011,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "211343590857746622",
+      "totalUsdWei": "211361632150028710",
       "totalUsdDisplay": "0.2113"
     },
     {
@@ -66050,7 +66023,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "210942574651119122",
+      "totalUsdWei": "210960581710753963",
       "totalUsdDisplay": "0.2109"
     },
     {
@@ -66062,7 +66035,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "210939896794785532",
+      "totalUsdWei": "210957903625825844",
       "totalUsdDisplay": "0.2109"
     },
     {
@@ -66074,7 +66047,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "210803340652222033",
+      "totalUsdWei": "210821335826181706",
       "totalUsdDisplay": "0.2108"
     },
     {
@@ -66086,8 +66059,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "210785993365269985",
-      "totalUsdDisplay": "0.2107"
+      "totalUsdWei": "210803987058382887",
+      "totalUsdDisplay": "0.2108"
     },
     {
       "address": "0x058378bce5bec8cc57121b7185063ce3f711f912",
@@ -66098,7 +66071,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209962752186794445",
+      "totalUsdWei": "209980675604131965",
       "totalUsdDisplay": "0.2099"
     },
     {
@@ -66110,7 +66083,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209922937416979847",
+      "totalUsdWei": "209940857435539592",
       "totalUsdDisplay": "0.2099"
     },
     {
@@ -66122,7 +66095,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209880878529778216",
+      "totalUsdWei": "209898794957991673",
       "totalUsdDisplay": "0.2098"
     },
     {
@@ -66134,7 +66107,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209847091272589902",
+      "totalUsdWei": "209865004816562678",
       "totalUsdDisplay": "0.2098"
     },
     {
@@ -66146,7 +66119,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209666188786354268",
+      "totalUsdWei": "209684086887631974",
       "totalUsdDisplay": "0.2096"
     },
     {
@@ -66158,8 +66131,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209493096982820508",
-      "totalUsdDisplay": "0.2094"
+      "totalUsdWei": "209510980308160100",
+      "totalUsdDisplay": "0.2095"
     },
     {
       "address": "0xd5d3cdfebdab8438cd7508b7ec6b56050df5b77e",
@@ -66170,7 +66143,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0.1904",
       "wethDisplay": "0",
-      "totalUsdWei": "209236100000000000",
+      "totalUsdWei": "209237700000000000",
       "totalUsdDisplay": "0.2092"
     },
     {
@@ -66182,8 +66155,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209185926015024042",
-      "totalUsdDisplay": "0.2091"
+      "totalUsdWei": "209203783118791510",
+      "totalUsdDisplay": "0.2092"
     },
     {
       "address": "0x4fe774bd563dd0f9cbd067ee89a2fdd846ac0df6",
@@ -66194,7 +66167,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "209047867681966401",
+      "totalUsdWei": "209065713000419120",
       "totalUsdDisplay": "0.209"
     },
     {
@@ -66206,7 +66179,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "208953775790885560",
+      "totalUsdWei": "208971613077207749",
       "totalUsdDisplay": "0.2089"
     },
     {
@@ -66218,7 +66191,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "208656293255391603",
+      "totalUsdWei": "208674105147192245",
       "totalUsdDisplay": "0.2086"
     },
     {
@@ -66230,8 +66203,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "208593261534104187",
-      "totalUsdDisplay": "0.2085"
+      "totalUsdWei": "208611068045217853",
+      "totalUsdDisplay": "0.2086"
     },
     {
       "address": "0x913181e9c5431d3e91473f88a5a9910f39efa616",
@@ -66242,8 +66215,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "208485373643445812",
-      "totalUsdDisplay": "0.2084"
+      "totalUsdWei": "208503170944736928",
+      "totalUsdDisplay": "0.2085"
     },
     {
       "address": "0xcf9e978525b2c5891d8f57b39865f52e198bb016",
@@ -66254,7 +66227,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "208217166106568242",
+      "totalUsdWei": "208234940512390679",
       "totalUsdDisplay": "0.2082"
     },
     {
@@ -66266,7 +66239,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "207510026310354078",
+      "totalUsdWei": "207527740351366320",
       "totalUsdDisplay": "0.2075"
     },
     {
@@ -66278,8 +66251,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "207383849945966021",
-      "totalUsdDisplay": "0.2073"
+      "totalUsdWei": "207401553215964770",
+      "totalUsdDisplay": "0.2074"
     },
     {
       "address": "0x13643c952b45bb77e7376d345a04d30a7fc888db",
@@ -66290,7 +66263,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "206505305332340535",
+      "totalUsdWei": "206522933605600121",
       "totalUsdDisplay": "0.2065"
     },
     {
@@ -66302,7 +66275,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "206267128250000479",
+      "totalUsdWei": "206284736191333556",
       "totalUsdDisplay": "0.2062"
     },
     {
@@ -66314,7 +66287,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "206110108133814106",
+      "totalUsdWei": "206127702671164603",
       "totalUsdDisplay": "0.2061"
     },
     {
@@ -66326,7 +66299,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "206103689847519847",
+      "totalUsdWei": "206121283836974955",
       "totalUsdDisplay": "0.2061"
     },
     {
@@ -66338,7 +66311,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "206040654133905273",
+      "totalUsdWei": "206058242742332601",
       "totalUsdDisplay": "0.206"
     },
     {
@@ -66350,7 +66323,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "205950847041132552",
+      "totalUsdWei": "205968427983200076",
       "totalUsdDisplay": "0.2059"
     },
     {
@@ -66362,7 +66335,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "205857557226125930",
+      "totalUsdWei": "205875130204531946",
       "totalUsdDisplay": "0.2058"
     },
     {
@@ -66374,7 +66347,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "205711481982308781",
+      "totalUsdWei": "205729042491038484",
       "totalUsdDisplay": "0.2057"
     },
     {
@@ -66386,7 +66359,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "205660522404450248",
+      "totalUsdWei": "205678078563028451",
       "totalUsdDisplay": "0.2056"
     },
     {
@@ -66398,7 +66371,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "205334120934020856",
+      "totalUsdWei": "205351649229419933",
       "totalUsdDisplay": "0.2053"
     },
     {
@@ -66410,7 +66383,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "204709785371958216",
+      "totalUsdWei": "204727260371109644",
       "totalUsdDisplay": "0.2047"
     },
     {
@@ -66422,7 +66395,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "204702650708594644",
+      "totalUsdWei": "204720125098697335",
       "totalUsdDisplay": "0.2047"
     },
     {
@@ -66434,7 +66407,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "204435568562017232",
+      "totalUsdWei": "204453020152719903",
       "totalUsdDisplay": "0.2044"
     },
     {
@@ -66446,7 +66419,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "204369462717283083",
+      "totalUsdWei": "204386908664877005",
       "totalUsdDisplay": "0.2043"
     },
     {
@@ -66458,7 +66431,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "204257366762924108",
+      "totalUsdWei": "204274803141475184",
       "totalUsdDisplay": "0.2042"
     },
     {
@@ -66470,7 +66443,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "203955602584564151",
+      "totalUsdWei": "203973013203092319",
       "totalUsdDisplay": "0.2039"
     },
     {
@@ -66482,7 +66455,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "203802967685505667",
+      "totalUsdWei": "203820365274394208",
       "totalUsdDisplay": "0.2038"
     },
     {
@@ -66494,7 +66467,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "203259446560992390",
+      "totalUsdWei": "203276797752337343",
       "totalUsdDisplay": "0.2032"
     },
     {
@@ -66506,7 +66479,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "202821911699803966",
+      "totalUsdWei": "202839225541095945",
       "totalUsdDisplay": "0.2028"
     },
     {
@@ -66518,7 +66491,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "202480216248146601",
+      "totalUsdWei": "202497500920692606",
       "totalUsdDisplay": "0.2024"
     },
     {
@@ -66530,7 +66503,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "202130640102519120",
+      "totalUsdWei": "202147894933585701",
       "totalUsdDisplay": "0.2021"
     },
     {
@@ -66542,7 +66515,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "202031247515746774",
+      "totalUsdWei": "202048493862190275",
       "totalUsdDisplay": "0.202"
     },
     {
@@ -66554,7 +66527,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "201968922955861285",
+      "totalUsdWei": "201986163981984465",
       "totalUsdDisplay": "0.2019"
     },
     {
@@ -66566,7 +66539,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "201962317037322362",
+      "totalUsdWei": "201979557499532973",
       "totalUsdDisplay": "0.2019"
     },
     {
@@ -66578,7 +66551,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "201469721399004217",
+      "totalUsdWei": "201486919810912515",
       "totalUsdDisplay": "0.2014"
     },
     {
@@ -66590,7 +66563,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "201368558542331020",
+      "totalUsdWei": "201385748318497595",
       "totalUsdDisplay": "0.2013"
     },
     {
@@ -66602,7 +66575,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "201209453985469953",
+      "totalUsdWei": "201226630179716195",
       "totalUsdDisplay": "0.2012"
     },
     {
@@ -66614,7 +66587,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200957320831323129",
+      "totalUsdWei": "200974475502286316",
       "totalUsdDisplay": "0.2009"
     },
     {
@@ -66626,7 +66599,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200948595014402126",
+      "totalUsdWei": "200965748940488155",
       "totalUsdDisplay": "0.2009"
     },
     {
@@ -66638,7 +66611,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200942020909553954",
+      "totalUsdWei": "200959174274443182",
       "totalUsdDisplay": "0.2009"
     },
     {
@@ -66650,7 +66623,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200923030835856234",
+      "totalUsdWei": "200940182579662614",
       "totalUsdDisplay": "0.2009"
     },
     {
@@ -66662,8 +66635,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200888065233219304",
-      "totalUsdDisplay": "0.2008"
+      "totalUsdWei": "200905213992195842",
+      "totalUsdDisplay": "0.2009"
     },
     {
       "address": "0x63a651424773e9a5a6581980932f5cf1947c6bad",
@@ -66674,7 +66647,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200350673934421607",
+      "totalUsdWei": "200367776819125582",
       "totalUsdDisplay": "0.2003"
     },
     {
@@ -66686,7 +66659,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "200101912749976869",
+      "totalUsdWei": "200118994399245131",
       "totalUsdDisplay": "0.2001"
     },
     {
@@ -66710,8 +66683,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "199888896391810447",
-      "totalUsdDisplay": "0.1998"
+      "totalUsdWei": "199905959856991068",
+      "totalUsdDisplay": "0.1999"
     },
     {
       "address": "0xa85786a9bd221260dd4a9a54656034fe5c699c4c",
@@ -66722,8 +66695,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "199793368110022854",
-      "totalUsdDisplay": "0.1997"
+      "totalUsdWei": "199810423420455815",
+      "totalUsdDisplay": "0.1998"
     },
     {
       "address": "0x532524b22b7ab26b2b0c509395b85b4f8edb91e4",
@@ -66734,8 +66707,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "199583770657654675",
-      "totalUsdDisplay": "0.1995"
+      "totalUsdWei": "199600808075854026",
+      "totalUsdDisplay": "0.1996"
     },
     {
       "address": "0x262847bbc9f84db4bd576ff6ac1869438baaa88d",
@@ -66746,7 +66719,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "199471324332743280",
+      "totalUsdWei": "199488352151990490",
       "totalUsdDisplay": "0.1994"
     },
     {
@@ -66758,7 +66731,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "199208086467954995",
+      "totalUsdWei": "199225091815968329",
       "totalUsdDisplay": "0.1992"
     },
     {
@@ -66770,7 +66743,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198975110444654979",
+      "totalUsdWei": "198992095904728897",
       "totalUsdDisplay": "0.1989"
     },
     {
@@ -66782,7 +66755,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198968176869499954",
+      "totalUsdWei": "198985161737690979",
       "totalUsdDisplay": "0.1989"
     },
     {
@@ -66794,7 +66767,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198675529058339338",
+      "totalUsdWei": "198692488944723840",
       "totalUsdDisplay": "0.1986"
     },
     {
@@ -66806,7 +66779,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198623407569820087",
+      "totalUsdWei": "198640363006866879",
       "totalUsdDisplay": "0.1986"
     },
     {
@@ -66818,7 +66791,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198450215380714942",
+      "totalUsdWei": "198467156033254230",
       "totalUsdDisplay": "0.1984"
     },
     {
@@ -66830,7 +66803,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198351079366332322",
+      "totalUsdWei": "198368011556150769",
       "totalUsdDisplay": "0.1983"
     },
     {
@@ -66842,7 +66815,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "198210911519915757",
+      "totalUsdWei": "198227831744341378",
       "totalUsdDisplay": "0.1982"
     },
     {
@@ -66854,7 +66827,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "197944963153376194",
+      "totalUsdWei": "197961860675186642",
       "totalUsdDisplay": "0.1979"
     },
     {
@@ -66866,7 +66839,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "197804925207526747",
+      "totalUsdWei": "197821810775033298",
       "totalUsdDisplay": "0.1978"
     },
     {
@@ -66878,7 +66851,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "197102198702781561",
+      "totalUsdWei": "197119024282217431",
       "totalUsdDisplay": "0.1971"
     },
     {
@@ -66890,7 +66863,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "196842813810528656",
+      "totalUsdWei": "196859617247638678",
       "totalUsdDisplay": "0.1968"
     },
     {
@@ -66902,7 +66875,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "196711964588596476",
+      "totalUsdWei": "196728756855795699",
       "totalUsdDisplay": "0.1967"
     },
     {
@@ -66914,7 +66887,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "196306960824504708",
+      "totalUsdWei": "196323718518659848",
       "totalUsdDisplay": "0.1963"
     },
     {
@@ -66926,7 +66899,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "196275328208126052",
+      "totalUsdWei": "196292083201970881",
       "totalUsdDisplay": "0.1962"
     },
     {
@@ -66938,7 +66911,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "196124952128294832",
+      "totalUsdWei": "196141694285323567",
       "totalUsdDisplay": "0.1961"
     },
     {
@@ -66950,7 +66923,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "195959024346731699",
+      "totalUsdWei": "195975752339377247",
       "totalUsdDisplay": "0.1959"
     },
     {
@@ -66962,8 +66935,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "195890434234647613",
-      "totalUsdDisplay": "0.1958"
+      "totalUsdWei": "195907156372115557",
+      "totalUsdDisplay": "0.1959"
     },
     {
       "address": "0x21ad26719165d7794cb70eb4e324cc254e2a241f",
@@ -66974,7 +66947,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "195811753238324102",
+      "totalUsdWei": "195828468659208658",
       "totalUsdDisplay": "0.1958"
     },
     {
@@ -66986,7 +66959,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "195626664590717969",
+      "totalUsdWei": "195643364211556846",
       "totalUsdDisplay": "0.1956"
     },
     {
@@ -66998,7 +66971,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "195043405621999173",
+      "totalUsdWei": "195060055453083423",
       "totalUsdDisplay": "0.195"
     },
     {
@@ -67010,7 +66983,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "194617310383276787",
+      "totalUsdWei": "194633923840848547",
       "totalUsdDisplay": "0.1946"
     },
     {
@@ -67022,8 +66995,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "194589474368426304",
-      "totalUsdDisplay": "0.1945"
+      "totalUsdWei": "194606085449783683",
+      "totalUsdDisplay": "0.1946"
     },
     {
       "address": "0xcf611c69dfea81f890fc1ce950e7bee07dd5bd08",
@@ -67034,7 +67007,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "194415403722021828",
+      "totalUsdWei": "194431999943882418",
       "totalUsdDisplay": "0.1944"
     },
     {
@@ -67046,7 +67019,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "194165730114393681",
+      "totalUsdWei": "194182305022929784",
       "totalUsdDisplay": "0.1941"
     },
     {
@@ -67058,8 +67031,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "193788885983117767",
-      "totalUsdDisplay": "0.1937"
+      "totalUsdWei": "193805428722449734",
+      "totalUsdDisplay": "0.1938"
     },
     {
       "address": "0xb6ca49dd1a2a1b485ee0f0b816146934d74551c4",
@@ -67070,8 +67043,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "192888505187733525",
-      "totalUsdDisplay": "0.1928"
+      "totalUsdWei": "192904971066286186",
+      "totalUsdDisplay": "0.1929"
     },
     {
       "address": "0xb2563291538a5bbb3b425dfd7adaea7a51c34d29",
@@ -67082,7 +67055,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "192140545737789430",
+      "totalUsdWei": "192156947766972460",
       "totalUsdDisplay": "0.1921"
     },
     {
@@ -67094,7 +67067,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "192104717780773863",
+      "totalUsdWei": "192121116751512387",
       "totalUsdDisplay": "0.1921"
     },
     {
@@ -67106,8 +67079,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "191985023481565794",
-      "totalUsdDisplay": "0.1919"
+      "totalUsdWei": "192001412234630682",
+      "totalUsdDisplay": "0.192"
     },
     {
       "address": "0x5ef8ada342a23591412a897517b6659fcc5fece6",
@@ -67118,7 +67091,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "191553937383700079",
+      "totalUsdWei": "191570289337209046",
       "totalUsdDisplay": "0.1915"
     },
     {
@@ -67130,7 +67103,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "191428878680744951",
+      "totalUsdWei": "191445219958649310",
       "totalUsdDisplay": "0.1914"
     },
     {
@@ -67142,7 +67115,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "191311111079251107",
+      "totalUsdWei": "191327442303953893",
       "totalUsdDisplay": "0.1913"
     },
     {
@@ -67154,7 +67127,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "191282557290400571",
+      "totalUsdWei": "191298886077616380",
       "totalUsdDisplay": "0.1912"
     },
     {
@@ -67166,7 +67139,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "190756023355701372",
+      "totalUsdWei": "190772307195480764",
       "totalUsdDisplay": "0.1907"
     },
     {
@@ -67178,7 +67151,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "190417979195714017",
+      "totalUsdWei": "190434234178439028",
       "totalUsdDisplay": "0.1904"
     },
     {
@@ -67190,7 +67163,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "190319716191788405",
+      "totalUsdWei": "190335962786316890",
       "totalUsdDisplay": "0.1903"
     },
     {
@@ -67202,7 +67175,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "190238573491075606",
+      "totalUsdWei": "190254813158877929",
       "totalUsdDisplay": "0.1902"
     },
     {
@@ -67214,7 +67187,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "189756912135674414",
+      "totalUsdWei": "189773110686576724",
       "totalUsdDisplay": "0.1897"
     },
     {
@@ -67226,7 +67199,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "189129516136127377",
+      "totalUsdWei": "189145661129528565",
       "totalUsdDisplay": "0.1891"
     },
     {
@@ -67238,7 +67211,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "189058905689450748",
+      "totalUsdWei": "189075044655208980",
       "totalUsdDisplay": "0.189"
     },
     {
@@ -67250,7 +67223,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "188420964109952658",
+      "totalUsdWei": "188437048617988998",
       "totalUsdDisplay": "0.1884"
     },
     {
@@ -67262,8 +67235,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "188394624330259312",
-      "totalUsdDisplay": "0.1883"
+      "totalUsdWei": "188410706589807008",
+      "totalUsdDisplay": "0.1884"
     },
     {
       "address": "0x3828a73fe860d750c64c3a6bdcdd151a861db7df",
@@ -67274,7 +67247,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "188369357380479217",
+      "totalUsdWei": "188385437483120123",
       "totalUsdDisplay": "0.1883"
     },
     {
@@ -67286,7 +67259,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0.0001",
-      "totalUsdWei": "187500419881512149",
+      "totalUsdWei": "187516425807522810",
       "totalUsdDisplay": "0.1875"
     },
     {
@@ -67298,7 +67271,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "187383780047903190",
+      "totalUsdWei": "187399776016983899",
       "totalUsdDisplay": "0.1873"
     },
     {
@@ -67310,8 +67283,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "187298851101127505",
-      "totalUsdDisplay": "0.1872"
+      "totalUsdWei": "187314839820270113",
+      "totalUsdDisplay": "0.1873"
     },
     {
       "address": "0xddb4ae89a3ceaf6b2aedca3d584ad77cd5c5a822",
@@ -67322,7 +67295,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "187273637691608591",
+      "totalUsdWei": "187289624258414860",
       "totalUsdDisplay": "0.1872"
     },
     {
@@ -67334,7 +67307,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "187271534767045347",
+      "totalUsdWei": "187287521154335991",
       "totalUsdDisplay": "0.1872"
     },
     {
@@ -67346,7 +67319,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186971550645933171",
+      "totalUsdWei": "186987511425155044",
       "totalUsdDisplay": "0.1869"
     },
     {
@@ -67358,7 +67331,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186922907660019340",
+      "totalUsdWei": "186938864286845000",
       "totalUsdDisplay": "0.1869"
     },
     {
@@ -67370,8 +67343,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186885831936780783",
-      "totalUsdDisplay": "0.1868"
+      "totalUsdWei": "186901785398646688",
+      "totalUsdDisplay": "0.1869"
     },
     {
       "address": "0x40c4cb7d4f8d6c59de874103f48266a4f50d4963",
@@ -67382,7 +67355,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186606871415448240",
+      "totalUsdWei": "186622801063919663",
       "totalUsdDisplay": "0.1866"
     },
     {
@@ -67394,7 +67367,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186501146662538376",
+      "totalUsdWei": "186517067285842955",
       "totalUsdDisplay": "0.1865"
     },
     {
@@ -67406,7 +67379,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186364164698691046",
+      "totalUsdWei": "186380073628564862",
       "totalUsdDisplay": "0.1863"
     },
     {
@@ -67418,7 +67391,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186220108105031540",
+      "totalUsdWei": "186236004737550603",
       "totalUsdDisplay": "0.1862"
     },
     {
@@ -67430,7 +67403,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "186022972563407569",
+      "totalUsdWei": "186038852367500887",
       "totalUsdDisplay": "0.186"
     },
     {
@@ -67442,7 +67415,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "185480379221615185",
+      "totalUsdWei": "185496212707364852",
       "totalUsdDisplay": "0.1854"
     },
     {
@@ -67454,7 +67427,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "185416813489531712",
+      "totalUsdWei": "185432641549008706",
       "totalUsdDisplay": "0.1854"
     },
     {
@@ -67466,7 +67439,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "184902903839042538",
+      "totalUsdWei": "184918688028751949",
       "totalUsdDisplay": "0.1849"
     },
     {
@@ -67478,7 +67451,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "184257396457708242",
+      "totalUsdWei": "184273125543842997",
       "totalUsdDisplay": "0.1842"
     },
     {
@@ -67490,8 +67463,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183995260978492097",
-      "totalUsdDisplay": "0.1839"
+      "totalUsdWei": "184010967687497843",
+      "totalUsdDisplay": "0.184"
     },
     {
       "address": "0xceef016676ff868cc8ce4a1d34bdb4e00a5ba7e5",
@@ -67502,7 +67475,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183806712644744786",
+      "totalUsdWei": "183822403258369618",
       "totalUsdDisplay": "0.1838"
     },
     {
@@ -67514,7 +67487,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183806114716343441",
+      "totalUsdWei": "183821805278926266",
       "totalUsdDisplay": "0.1838"
     },
     {
@@ -67526,7 +67499,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183671702974658658",
+      "totalUsdWei": "183687382063217085",
       "totalUsdDisplay": "0.1836"
     },
     {
@@ -67538,7 +67511,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183620056721512783",
+      "totalUsdWei": "183635731401301847",
       "totalUsdDisplay": "0.1836"
     },
     {
@@ -67550,7 +67523,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "183128089103598050",
+      "totalUsdWei": "183143721786695603",
       "totalUsdDisplay": "0.1831"
     },
     {
@@ -67562,8 +67535,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "182792545391843250",
-      "totalUsdDisplay": "0.1827"
+      "totalUsdWei": "182808149431336554",
+      "totalUsdDisplay": "0.1828"
     },
     {
       "address": "0xfbbf1cb1c0ba080920bba83fdc91e09b19415f07",
@@ -67574,7 +67547,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "182214632761870632",
+      "totalUsdWei": "182230187467998166",
       "totalUsdDisplay": "0.1822"
     },
     {
@@ -67586,7 +67559,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "181681850622967673",
+      "totalUsdWei": "181697359848282415",
       "totalUsdDisplay": "0.1816"
     },
     {
@@ -67598,7 +67571,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "181574753832448524",
+      "totalUsdWei": "181590253915472779",
       "totalUsdDisplay": "0.1815"
     },
     {
@@ -67610,7 +67583,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "181237784007767732",
+      "totalUsdWei": "181253255325447968",
       "totalUsdDisplay": "0.1812"
     },
     {
@@ -67622,7 +67595,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "181155872779658381",
+      "totalUsdWei": "181171337105007307",
       "totalUsdDisplay": "0.1811"
     },
     {
@@ -67646,7 +67619,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "180822898491045901",
+      "totalUsdWei": "180838334392128736",
       "totalUsdDisplay": "0.1808"
     },
     {
@@ -67658,8 +67631,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "180792705339293004",
-      "totalUsdDisplay": "0.1807"
+      "totalUsdWei": "180808138662945061",
+      "totalUsdDisplay": "0.1808"
     },
     {
       "address": "0xe7d116dc1d408bf6cc08dad85c7147d0b97d8c54",
@@ -67670,7 +67643,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "180461675525898968",
+      "totalUsdWei": "180477080591274569",
       "totalUsdDisplay": "0.1804"
     },
     {
@@ -67682,7 +67655,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "180400703384563985",
+      "totalUsdWei": "180416103245068133",
       "totalUsdDisplay": "0.1804"
     },
     {
@@ -67694,8 +67667,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "180189177986013063",
-      "totalUsdDisplay": "0.1801"
+      "totalUsdWei": "180204559789704961",
+      "totalUsdDisplay": "0.1802"
     },
     {
       "address": "0xbee2d7aa9e9f6227a3b82a413b3531b768b50c34",
@@ -67718,7 +67691,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "179734955408361922",
+      "totalUsdWei": "179750298437458143",
       "totalUsdDisplay": "0.1797"
     },
     {
@@ -67730,7 +67703,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "179661291470487472",
+      "totalUsdWei": "179676628211280232",
       "totalUsdDisplay": "0.1796"
     },
     {
@@ -67742,7 +67715,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "179476308859705422",
+      "totalUsdWei": "179491629809504310",
       "totalUsdDisplay": "0.1794"
     },
     {
@@ -67754,7 +67727,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "179278368997288593",
+      "totalUsdWei": "179293673050001093",
       "totalUsdDisplay": "0.1792"
     },
     {
@@ -67766,7 +67739,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "177429038541694676",
+      "totalUsdWei": "177444184726779679",
       "totalUsdDisplay": "0.1774"
     },
     {
@@ -67778,7 +67751,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "177201053211787133",
+      "totalUsdWei": "177216179934962001",
       "totalUsdDisplay": "0.1772"
     },
     {
@@ -67790,7 +67763,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "177102848590938639",
+      "totalUsdWei": "177117966930900839",
       "totalUsdDisplay": "0.1771"
     },
     {
@@ -67802,7 +67775,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "176863632817315190",
+      "totalUsdWei": "176878730736683262",
       "totalUsdDisplay": "0.1768"
     },
     {
@@ -67814,7 +67787,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "176778390184977664",
+      "totalUsdWei": "176793480827629944",
       "totalUsdDisplay": "0.1767"
     },
     {
@@ -67826,7 +67799,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "176349951686657885",
+      "totalUsdWei": "176365005755765912",
       "totalUsdDisplay": "0.1763"
     },
     {
@@ -67838,7 +67811,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "176309104607774750",
+      "totalUsdWei": "176324155189982199",
       "totalUsdDisplay": "0.1763"
     },
     {
@@ -67850,7 +67823,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "176221811327719018",
+      "totalUsdWei": "176236854458157651",
       "totalUsdDisplay": "0.1762"
     },
     {
@@ -67862,7 +67835,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "175079002636012014",
+      "totalUsdWei": "175093948210875170",
       "totalUsdDisplay": "0.175"
     },
     {
@@ -67874,7 +67847,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174954685891938627",
+      "totalUsdWei": "174969620854534307",
       "totalUsdDisplay": "0.1749"
     },
     {
@@ -67886,7 +67859,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174632822161921643",
+      "totalUsdWei": "174647729648701262",
       "totalUsdDisplay": "0.1746"
     },
     {
@@ -67898,8 +67871,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174292393680466977",
-      "totalUsdDisplay": "0.1742"
+      "totalUsdWei": "174307272106655214",
+      "totalUsdDisplay": "0.1743"
     },
     {
       "address": "0x567a04d9b2177563be2c6524407973e0d869fa22",
@@ -67910,8 +67883,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174189031999304700",
-      "totalUsdDisplay": "0.1741"
+      "totalUsdWei": "174203901602049117",
+      "totalUsdDisplay": "0.1742"
     },
     {
       "address": "0xbb126be34ad944c8a8f4eeced483558421f4ce11",
@@ -67922,7 +67895,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174153852186799147",
+      "totalUsdWei": "174168718786427750",
       "totalUsdDisplay": "0.1741"
     },
     {
@@ -67934,7 +67907,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "174041848602290553",
+      "totalUsdWei": "174056705640761439",
       "totalUsdDisplay": "0.174"
     },
     {
@@ -67946,7 +67919,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173881394508604364",
+      "totalUsdWei": "173896237849952048",
       "totalUsdDisplay": "0.1738"
     },
     {
@@ -67958,7 +67931,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173720005517738242",
+      "totalUsdWei": "173734835082155461",
       "totalUsdDisplay": "0.1737"
     },
     {
@@ -67970,7 +67943,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173705964137251626",
+      "totalUsdWei": "173720792503029944",
       "totalUsdDisplay": "0.1737"
     },
     {
@@ -67982,8 +67955,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173689937690979393",
-      "totalUsdDisplay": "0.1736"
+      "totalUsdWei": "173704764688664172",
+      "totalUsdDisplay": "0.1737"
     },
     {
       "address": "0xde334922768230a0399dc3c7de99667ea1faac57",
@@ -67994,7 +67967,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173608427201972513",
+      "totalUsdWei": "173623247241534974",
       "totalUsdDisplay": "0.1736"
     },
     {
@@ -68006,7 +67979,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173473139692334605",
+      "totalUsdWei": "173487948183112957",
       "totalUsdDisplay": "0.1734"
     },
     {
@@ -68018,7 +67991,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173315461759934341",
+      "totalUsdWei": "173330256790575798",
       "totalUsdDisplay": "0.1733"
     },
     {
@@ -68030,8 +68003,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "173097261365946027",
-      "totalUsdDisplay": "0.173"
+      "totalUsdWei": "173112037769965933",
+      "totalUsdDisplay": "0.1731"
     },
     {
       "address": "0x71c8f6e28f6bd6a89020c50efca1cd73ccc6f2c8",
@@ -68042,7 +68015,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "172880919270994416",
+      "totalUsdWei": "172895677207026001",
       "totalUsdDisplay": "0.1728"
     },
     {
@@ -68054,7 +68027,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "172465489361714672",
+      "totalUsdWei": "172480211834676922",
       "totalUsdDisplay": "0.1724"
     },
     {
@@ -68066,7 +68039,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "172266919776509265",
+      "totalUsdWei": "172281625298629001",
       "totalUsdDisplay": "0.1722"
     },
     {
@@ -68078,7 +68051,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "172017161908776502",
+      "totalUsdWei": "172031846110378907",
       "totalUsdDisplay": "0.172"
     },
     {
@@ -68090,7 +68063,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "171331619514981114",
+      "totalUsdWei": "171346245195430131",
       "totalUsdDisplay": "0.1713"
     },
     {
@@ -68102,7 +68075,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "171062499650095722",
+      "totalUsdWei": "171077102357195410",
       "totalUsdDisplay": "0.171"
     },
     {
@@ -68114,7 +68087,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "170708421508989980",
+      "totalUsdWei": "170722993990298535",
       "totalUsdDisplay": "0.1707"
     },
     {
@@ -68126,8 +68099,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "169686215233655277",
-      "totalUsdDisplay": "0.1696"
+      "totalUsdWei": "169700700454583183",
+      "totalUsdDisplay": "0.1697"
     },
     {
       "address": "0xb965b83fc470265d9943b3099acb52a37cda2a89",
@@ -68138,7 +68111,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "169443837842043689",
+      "totalUsdWei": "169458302372486747",
       "totalUsdDisplay": "0.1694"
     },
     {
@@ -68150,8 +68123,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "169197967214421196",
-      "totalUsdDisplay": "0.1691"
+      "totalUsdWei": "169212410756180194",
+      "totalUsdDisplay": "0.1692"
     },
     {
       "address": "0x1565f588ee649336bbd1f8453d103447e6eb338a",
@@ -68162,7 +68135,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "168911204044178007",
+      "totalUsdWei": "168925623106471368",
       "totalUsdDisplay": "0.1689"
     },
     {
@@ -68174,7 +68147,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "168901818669065022",
+      "totalUsdWei": "168916236930178205",
       "totalUsdDisplay": "0.1689"
     },
     {
@@ -68186,7 +68159,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "167120180217361927",
+      "totalUsdWei": "167134446389358436",
       "totalUsdDisplay": "0.1671"
     },
     {
@@ -68198,7 +68171,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "166372752429752190",
+      "totalUsdWei": "166386954797764291",
       "totalUsdDisplay": "0.1663"
     },
     {
@@ -68210,7 +68183,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "164979692726000713",
+      "totalUsdWei": "164993776175822867",
       "totalUsdDisplay": "0.1649"
     },
     {
@@ -68222,7 +68195,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "164580095664504923",
+      "totalUsdWei": "164594145002824796",
       "totalUsdDisplay": "0.1645"
     },
     {
@@ -68234,7 +68207,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "164350108793150789",
+      "totalUsdWei": "164364138498699447",
       "totalUsdDisplay": "0.1643"
     },
     {
@@ -68246,7 +68219,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "164251078358549257",
+      "totalUsdWei": "164265099610389864",
       "totalUsdDisplay": "0.1642"
     },
     {
@@ -68258,7 +68231,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "164042368631707196",
+      "totalUsdWei": "164056372067094658",
       "totalUsdDisplay": "0.164"
     },
     {
@@ -68270,7 +68243,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163833237660818762",
+      "totalUsdWei": "163847223243793687",
       "totalUsdDisplay": "0.1638"
     },
     {
@@ -68282,7 +68255,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163334319785880192",
+      "totalUsdWei": "163348262778856669",
       "totalUsdDisplay": "0.1633"
     },
     {
@@ -68294,7 +68267,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163250166673929686",
+      "totalUsdWei": "163264102483197005",
       "totalUsdDisplay": "0.1632"
     },
     {
@@ -68306,7 +68279,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163219478061635890",
+      "totalUsdWei": "163233411251177567",
       "totalUsdDisplay": "0.1632"
     },
     {
@@ -68318,7 +68291,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163131481838003624",
+      "totalUsdWei": "163145407515769885",
       "totalUsdDisplay": "0.1631"
     },
     {
@@ -68330,7 +68303,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "163078670865050552",
+      "totalUsdWei": "163092592034621438",
       "totalUsdDisplay": "0.163"
     },
     {
@@ -68342,7 +68315,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "162902188393265180",
+      "totalUsdWei": "162916094497454413",
       "totalUsdDisplay": "0.1629"
     },
     {
@@ -68354,7 +68327,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "162855614082117533",
+      "totalUsdWei": "162869516210502453",
       "totalUsdDisplay": "0.1628"
     },
     {
@@ -68366,7 +68339,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "162600523646936390",
+      "totalUsdWei": "162614403999590705",
       "totalUsdDisplay": "0.1626"
     },
     {
@@ -68378,7 +68351,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "161585098741387032",
+      "totalUsdWei": "161598892412550619",
       "totalUsdDisplay": "0.1615"
     },
     {
@@ -68390,7 +68363,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "161205970349547214",
+      "totalUsdWei": "161219731656511338",
       "totalUsdDisplay": "0.1612"
     },
     {
@@ -68402,7 +68375,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "160768041945671439",
+      "totalUsdWei": "160781765868987917",
       "totalUsdDisplay": "0.1607"
     },
     {
@@ -68414,7 +68387,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "160606507655617602",
+      "totalUsdWei": "160620217789600187",
       "totalUsdDisplay": "0.1606"
     },
     {
@@ -68426,7 +68399,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "160336039035297556",
+      "totalUsdWei": "160349726080794644",
       "totalUsdDisplay": "0.1603"
     },
     {
@@ -68438,7 +68411,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "160226443949520766",
+      "totalUsdWei": "160240121639461023",
       "totalUsdDisplay": "0.1602"
     },
     {
@@ -68450,7 +68423,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "159111520446240457",
+      "totalUsdWei": "159125102961017308",
       "totalUsdDisplay": "0.1591"
     },
     {
@@ -68462,8 +68435,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "159088406180460393",
-      "totalUsdDisplay": "0.159"
+      "totalUsdWei": "159101986722093780",
+      "totalUsdDisplay": "0.1591"
     },
     {
       "address": "0xd0b71b821f0bc489eae75820106a108918606033",
@@ -68474,7 +68447,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "159057583484754332",
+      "totalUsdWei": "159071161395216081",
       "totalUsdDisplay": "0.159"
     },
     {
@@ -68486,8 +68459,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158788580884482801",
-      "totalUsdDisplay": "0.1587"
+      "totalUsdWei": "158802135831605485",
+      "totalUsdDisplay": "0.1588"
     },
     {
       "address": "0x40d1e532fc237e4e8e2aaba88a5e716725bf2ef5",
@@ -68498,7 +68471,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158501312955691015",
+      "totalUsdWei": "158514843380259475",
       "totalUsdDisplay": "0.1585"
     },
     {
@@ -68510,7 +68483,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158435633971065767",
+      "totalUsdWei": "158449158788964285",
       "totalUsdDisplay": "0.1584"
     },
     {
@@ -68522,7 +68495,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158372203291433446",
+      "totalUsdWei": "158385722694588009",
       "totalUsdDisplay": "0.1583"
     },
     {
@@ -68534,7 +68507,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158271171427585268",
+      "totalUsdWei": "158284682206180278",
       "totalUsdDisplay": "0.1582"
     },
     {
@@ -68546,7 +68519,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158230816213441149",
+      "totalUsdWei": "158244323547123491",
       "totalUsdDisplay": "0.1582"
     },
     {
@@ -68558,7 +68531,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158221461131544906",
+      "totalUsdWei": "158234967666633044",
       "totalUsdDisplay": "0.1582"
     },
     {
@@ -68570,7 +68543,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "158156758150088894",
+      "totalUsdWei": "158170259161823353",
       "totalUsdDisplay": "0.1581"
     },
     {
@@ -68582,7 +68555,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "157732645776642835",
+      "totalUsdWei": "157746110584131598",
       "totalUsdDisplay": "0.1577"
     },
     {
@@ -68594,7 +68567,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "157527202116761291",
+      "totalUsdWei": "157540649386603890",
       "totalUsdDisplay": "0.1575"
     },
     {
@@ -68606,7 +68579,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "157308404261571515",
+      "totalUsdWei": "157321832853790439",
       "totalUsdDisplay": "0.1573"
     },
     {
@@ -68618,7 +68591,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "156757274165827342",
+      "totalUsdWei": "156770655710964770",
       "totalUsdDisplay": "0.1567"
     },
     {
@@ -68630,8 +68603,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "156698090613443693",
-      "totalUsdDisplay": "0.1566"
+      "totalUsdWei": "156711467106392112",
+      "totalUsdDisplay": "0.1567"
     },
     {
       "address": "0x45ea93f6604d05d71415af91d56f50578e9634aa",
@@ -68642,7 +68615,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "156358117063451367",
+      "totalUsdWei": "156371464534643514",
       "totalUsdDisplay": "0.1563"
     },
     {
@@ -68654,7 +68627,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "156027747240564538",
+      "totalUsdWei": "156041066509820152",
       "totalUsdDisplay": "0.156"
     },
     {
@@ -68666,7 +68639,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "155573919615248682",
+      "totalUsdWei": "155587200143623625",
       "totalUsdDisplay": "0.1555"
     },
     {
@@ -68678,7 +68651,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "155458523200276964",
+      "totalUsdWei": "155471793877866073",
       "totalUsdDisplay": "0.1554"
     },
     {
@@ -68690,7 +68663,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "155379480095566521",
+      "totalUsdWei": "155392744025660951",
       "totalUsdDisplay": "0.1553"
     },
     {
@@ -68702,7 +68675,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "155378317649216759",
+      "totalUsdWei": "155391581480079250",
       "totalUsdDisplay": "0.1553"
     },
     {
@@ -68714,7 +68687,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "155013577421055987",
+      "totalUsdWei": "155026810115960975",
       "totalUsdDisplay": "0.155"
     },
     {
@@ -68726,7 +68699,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "154965036288918667",
+      "totalUsdWei": "154978264840122165",
       "totalUsdDisplay": "0.1549"
     },
     {
@@ -68738,7 +68711,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "154274864322723734",
+      "totalUsdWei": "154288033957571563",
       "totalUsdDisplay": "0.1542"
     },
     {
@@ -68750,7 +68723,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "153610545779733473",
+      "totalUsdWei": "153623658705196580",
       "totalUsdDisplay": "0.1536"
     },
     {
@@ -68762,7 +68735,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "153438210097394053",
+      "totalUsdWei": "153451308311465142",
       "totalUsdDisplay": "0.1534"
     },
     {
@@ -68774,7 +68747,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "153216994562039359",
+      "totalUsdWei": "153230073892102117",
       "totalUsdDisplay": "0.1532"
     },
     {
@@ -68786,7 +68759,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152976492366297902",
+      "totalUsdWei": "152989551165951432",
       "totalUsdDisplay": "0.1529"
     },
     {
@@ -68798,7 +68771,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152958372083957877",
+      "totalUsdWei": "152971429336778080",
       "totalUsdDisplay": "0.1529"
     },
     {
@@ -68810,7 +68783,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152914988278181399",
+      "totalUsdWei": "152928041827553973",
       "totalUsdDisplay": "0.1529"
     },
     {
@@ -68822,7 +68795,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152743778002188106",
+      "totalUsdWei": "152756816936238690",
       "totalUsdDisplay": "0.1527"
     },
     {
@@ -68834,8 +68807,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152395813182090787",
-      "totalUsdDisplay": "0.1523"
+      "totalUsdWei": "152408822412212344",
+      "totalUsdDisplay": "0.1524"
     },
     {
       "address": "0xf741ff083f6f84c57efc7d5fdfeadc4331e5f51b",
@@ -68846,7 +68819,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152267749583780485",
+      "totalUsdWei": "152280747881785300",
       "totalUsdDisplay": "0.1522"
     },
     {
@@ -68858,8 +68831,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152096405236749121",
-      "totalUsdDisplay": "0.152"
+      "totalUsdWei": "152109388907987006",
+      "totalUsdDisplay": "0.1521"
     },
     {
       "address": "0x93a2c7df7246056d4ffbc33dcf12671c5ae2a44a",
@@ -68870,7 +68843,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "152051045604138966",
+      "totalUsdWei": "152064025403263264",
       "totalUsdDisplay": "0.152"
     },
     {
@@ -68882,7 +68855,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "151612294596260406",
+      "totalUsdWei": "151625236941515674",
       "totalUsdDisplay": "0.1516"
     },
     {
@@ -68894,7 +68867,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "151227958692579177",
+      "totalUsdWei": "151240868229097049",
       "totalUsdDisplay": "0.1512"
     },
     {
@@ -68906,7 +68879,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "150729145340440181",
+      "totalUsdWei": "150742012295882168",
       "totalUsdDisplay": "0.1507"
     },
     {
@@ -68918,7 +68891,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "150343245849733927",
+      "totalUsdWei": "150356079862963306",
       "totalUsdDisplay": "0.1503"
     },
     {
@@ -68930,7 +68903,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "150203284937223276",
+      "totalUsdWei": "150216107002724690",
       "totalUsdDisplay": "0.1502"
     },
     {
@@ -68942,7 +68915,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "149944800000000000",
+      "totalUsdWei": "149957600000000000",
       "totalUsdDisplay": "0.1499"
     },
     {
@@ -68954,7 +68927,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "149786974501336611",
+      "totalUsdWei": "149799761028602759",
       "totalUsdDisplay": "0.1497"
     },
     {
@@ -68966,7 +68939,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "149523040474116663",
+      "totalUsdWei": "149535804470721205",
       "totalUsdDisplay": "0.1495"
     },
     {
@@ -68978,7 +68951,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "149055818013526088",
+      "totalUsdWei": "149068542125803227",
       "totalUsdDisplay": "0.149"
     },
     {
@@ -68990,7 +68963,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "148356982523629682",
+      "totalUsdWei": "148369646979991640",
       "totalUsdDisplay": "0.1483"
     },
     {
@@ -69002,7 +68975,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "148164831552430391",
+      "totalUsdWei": "148177479605873199",
       "totalUsdDisplay": "0.1481"
     },
     {
@@ -69014,7 +68987,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "147522757744953881",
+      "totalUsdWei": "147535350987928199",
       "totalUsdDisplay": "0.1475"
     },
     {
@@ -69026,7 +68999,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "147102997171470881",
+      "totalUsdWei": "147115554581689807",
       "totalUsdDisplay": "0.1471"
     },
     {
@@ -69038,7 +69011,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "146871550327803097",
+      "totalUsdWei": "146884087980620639",
       "totalUsdDisplay": "0.1468"
     },
     {
@@ -69050,7 +69023,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "146860491521969322",
+      "totalUsdWei": "146873028230754697",
       "totalUsdDisplay": "0.1468"
     },
     {
@@ -69062,7 +69035,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "146711790844393099",
+      "totalUsdWei": "146724314859382670",
       "totalUsdDisplay": "0.1467"
     },
     {
@@ -69074,7 +69047,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "146677001598316814",
+      "totalUsdWei": "146689522643531176",
       "totalUsdDisplay": "0.1466"
     },
     {
@@ -69086,7 +69059,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "146501568080871014",
+      "totalUsdWei": "146514074150247445",
       "totalUsdDisplay": "0.1465"
     },
     {
@@ -69098,7 +69071,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "145967431352036911",
+      "totalUsdWei": "145979891824966323",
       "totalUsdDisplay": "0.1459"
     },
     {
@@ -69110,7 +69083,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "145144375321503720",
+      "totalUsdWei": "145156765534462857",
       "totalUsdDisplay": "0.1451"
     },
     {
@@ -69122,7 +69095,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "145038850097625766",
+      "totalUsdWei": "145051231302450806",
       "totalUsdDisplay": "0.145"
     },
     {
@@ -69134,8 +69107,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "144590712273893358",
-      "totalUsdDisplay": "0.1445"
+      "totalUsdWei": "144603055223546202",
+      "totalUsdDisplay": "0.1446"
     },
     {
       "address": "0xcb5fa98357f176c062475414b4e065fcf2729844",
@@ -69146,7 +69119,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "144443580066367669",
+      "totalUsdWei": "144455910456116760",
       "totalUsdDisplay": "0.1444"
     },
     {
@@ -69158,7 +69131,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "143768932522098564",
+      "totalUsdWei": "143781205320730346",
       "totalUsdDisplay": "0.1437"
     },
     {
@@ -69170,7 +69143,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "143742053435736883",
+      "totalUsdWei": "143754323939842243",
       "totalUsdDisplay": "0.1437"
     },
     {
@@ -69182,7 +69155,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "143654016562599767",
+      "totalUsdWei": "143666279551459676",
       "totalUsdDisplay": "0.1436"
     },
     {
@@ -69194,7 +69167,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "143271393426411191",
+      "totalUsdWei": "143283623752743668",
       "totalUsdDisplay": "0.1432"
     },
     {
@@ -69206,7 +69179,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "143141249338632864",
+      "totalUsdWei": "143153468555248142",
       "totalUsdDisplay": "0.1431"
     },
     {
@@ -69218,7 +69191,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "142974497652863721",
+      "totalUsdWei": "142986702634763438",
       "totalUsdDisplay": "0.1429"
     },
     {
@@ -69230,7 +69203,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "142013152655892218",
+      "totalUsdWei": "142025275572818950",
       "totalUsdDisplay": "0.142"
     },
     {
@@ -69242,7 +69215,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "141649787332476486",
+      "totalUsdWei": "141661879230814113",
       "totalUsdDisplay": "0.1416"
     },
     {
@@ -69254,7 +69227,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "141644417694289535",
+      "totalUsdWei": "141656509134249353",
       "totalUsdDisplay": "0.1416"
     },
     {
@@ -69266,7 +69239,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "141219995733619765",
+      "totalUsdWei": "141232050942906051",
       "totalUsdDisplay": "0.1412"
     },
     {
@@ -69278,7 +69251,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "140961546548494249",
+      "totalUsdWei": "140973579695331089",
       "totalUsdDisplay": "0.1409"
     },
     {
@@ -69290,7 +69263,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "140649765591315908",
+      "totalUsdWei": "140661772123050045",
       "totalUsdDisplay": "0.1406"
     },
     {
@@ -69302,7 +69275,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "140286709669587814",
+      "totalUsdWei": "140298685209144843",
       "totalUsdDisplay": "0.1402"
     },
     {
@@ -69314,7 +69287,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "140283155800758000",
+      "totalUsdWei": "140295131036939913",
       "totalUsdDisplay": "0.1402"
     },
     {
@@ -69326,7 +69299,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "139809749184819384",
+      "totalUsdWei": "139821684008765034",
       "totalUsdDisplay": "0.1398"
     },
     {
@@ -69338,7 +69311,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "139776986343457264",
+      "totalUsdWei": "139788918370611232",
       "totalUsdDisplay": "0.1397"
     },
     {
@@ -69350,7 +69323,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "139769227808865322",
+      "totalUsdWei": "139781159173713943",
       "totalUsdDisplay": "0.1397"
     },
     {
@@ -69362,8 +69335,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "139094758795360209",
-      "totalUsdDisplay": "0.139"
+      "totalUsdWei": "139106632584331755",
+      "totalUsdDisplay": "0.1391"
     },
     {
       "address": "0x295eaf8f42f0c88f4cd311d9ebac21ac25442aec",
@@ -69374,7 +69347,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "139051292250772198",
+      "totalUsdWei": "139063162329233137",
       "totalUsdDisplay": "0.139"
     },
     {
@@ -69386,7 +69359,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138980787150575668",
+      "totalUsdWei": "138992651210386527",
       "totalUsdDisplay": "0.1389"
     },
     {
@@ -69398,7 +69371,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138924534136949870",
+      "totalUsdWei": "138936393394736422",
       "totalUsdDisplay": "0.1389"
     },
     {
@@ -69410,7 +69383,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138417776749791970",
+      "totalUsdWei": "138429592748362093",
       "totalUsdDisplay": "0.1384"
     },
     {
@@ -69422,7 +69395,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138409661292326000",
+      "totalUsdWei": "138421476598122145",
       "totalUsdDisplay": "0.1384"
     },
     {
@@ -69434,7 +69407,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138080257799905522",
+      "totalUsdWei": "138092044986255690",
       "totalUsdDisplay": "0.138"
     },
     {
@@ -69446,7 +69419,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "138021924411258942",
+      "totalUsdWei": "138033706617994115",
       "totalUsdDisplay": "0.138"
     },
     {
@@ -69458,7 +69431,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "137819351816183471",
+      "totalUsdWei": "137831116730360202",
       "totalUsdDisplay": "0.1378"
     },
     {
@@ -69470,7 +69443,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "137719445007087103",
+      "totalUsdWei": "137731201392744297",
       "totalUsdDisplay": "0.1377"
     },
     {
@@ -69482,7 +69455,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "137233378216846504",
+      "totalUsdWei": "137245093109534850",
       "totalUsdDisplay": "0.1372"
     },
     {
@@ -69494,8 +69467,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "137195864377898256",
-      "totalUsdDisplay": "0.1371"
+      "totalUsdWei": "137207576068227211",
+      "totalUsdDisplay": "0.1372"
     },
     {
       "address": "0xdf61bc9e0d8f30241ed474106ab392d99e8d60b3",
@@ -69506,7 +69479,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "137042367752712979",
+      "totalUsdWei": "137054066339841273",
       "totalUsdDisplay": "0.137"
     },
     {
@@ -69518,7 +69491,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "136538681146353610",
+      "totalUsdWei": "136550336736401903",
       "totalUsdDisplay": "0.1365"
     },
     {
@@ -69530,7 +69503,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "136105494700221849",
+      "totalUsdWei": "136117113311418521",
       "totalUsdDisplay": "0.1361"
     },
     {
@@ -69542,8 +69515,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "134398185833787284",
-      "totalUsdDisplay": "0.1343"
+      "totalUsdWei": "134409658700993566",
+      "totalUsdDisplay": "0.1344"
     },
     {
       "address": "0xd053889d04bf1fa304e6412da76abb8a00bd9859",
@@ -69554,7 +69527,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "134328481626165662",
+      "totalUsdWei": "134339948543089856",
       "totalUsdDisplay": "0.1343"
     },
     {
@@ -69566,8 +69539,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "134199150511072001",
-      "totalUsdDisplay": "0.1341"
+      "totalUsdWei": "134210606387678204",
+      "totalUsdDisplay": "0.1342"
     },
     {
       "address": "0x9b2f0ee3ea6ba4409b356e9502703d8812b71a37",
@@ -69578,7 +69551,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133960403072350986",
+      "totalUsdWei": "133971838568342351",
       "totalUsdDisplay": "0.1339"
     },
     {
@@ -69590,7 +69563,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133831647806849163",
+      "totalUsdWei": "133843072311679792",
       "totalUsdDisplay": "0.1338"
     },
     {
@@ -69602,7 +69575,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133815740526918198",
+      "totalUsdWei": "133827163673827891",
       "totalUsdDisplay": "0.1338"
     },
     {
@@ -69614,7 +69587,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133734869488974198",
+      "totalUsdWei": "133746285732348152",
       "totalUsdDisplay": "0.1337"
     },
     {
@@ -69626,7 +69599,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133523577496735007",
+      "totalUsdWei": "133534975703221382",
       "totalUsdDisplay": "0.1335"
     },
     {
@@ -69638,7 +69611,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133440322697386266",
+      "totalUsdWei": "133451713796847711",
       "totalUsdDisplay": "0.1334"
     },
     {
@@ -69650,7 +69623,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "133074551211123809",
+      "totalUsdWei": "133085911086594665",
       "totalUsdDisplay": "0.133"
     },
     {
@@ -69662,7 +69635,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "132701642246848327",
+      "totalUsdWei": "132712970289039584",
       "totalUsdDisplay": "0.1327"
     },
     {
@@ -69674,7 +69647,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "132651098204952516",
+      "totalUsdWei": "132662421932464396",
       "totalUsdDisplay": "0.1326"
     },
     {
@@ -69686,7 +69659,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "132613608116396531",
+      "totalUsdWei": "132624928643576466",
       "totalUsdDisplay": "0.1326"
     },
     {
@@ -69698,7 +69671,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "132562349080585968",
+      "totalUsdWei": "132573665232051251",
       "totalUsdDisplay": "0.1325"
     },
     {
@@ -69710,7 +69683,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "131460506594877808",
+      "totalUsdWei": "131471728687837446",
       "totalUsdDisplay": "0.1314"
     },
     {
@@ -69722,8 +69695,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "131397404959490127",
-      "totalUsdDisplay": "0.1313"
+      "totalUsdWei": "131408621665794590",
+      "totalUsdDisplay": "0.1314"
     },
     {
       "address": "0xfc7a69903c1d8a2521300c5f3e832440f3799151",
@@ -69734,7 +69707,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "130981620606338121",
+      "totalUsdWei": "130992801819316238",
       "totalUsdDisplay": "0.1309"
     },
     {
@@ -69746,8 +69719,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "130190519080548809",
-      "totalUsdDisplay": "0.1301"
+      "totalUsdWei": "130201632761344882",
+      "totalUsdDisplay": "0.1302"
     },
     {
       "address": "0xad011841b061627f67dc99da437b9fb9de439b18",
@@ -69758,7 +69731,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "130059209130991186",
+      "totalUsdWei": "130070311602546563",
       "totalUsdDisplay": "0.13"
     },
     {
@@ -69770,7 +69743,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "129810111245453065",
+      "totalUsdWei": "129821192452830325",
       "totalUsdDisplay": "0.1298"
     },
     {
@@ -69782,7 +69755,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "129765194162795198",
+      "totalUsdWei": "129776271535837036",
       "totalUsdDisplay": "0.1297"
     },
     {
@@ -69794,7 +69767,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "129407318625781848",
+      "totalUsdWei": "129418365448868810",
       "totalUsdDisplay": "0.1294"
     },
     {
@@ -69806,7 +69779,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "129233990588564086",
+      "totalUsdWei": "129245022615546907",
       "totalUsdDisplay": "0.1292"
     },
     {
@@ -69818,7 +69791,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128940510500697800",
+      "totalUsdWei": "128951517474827005",
       "totalUsdDisplay": "0.1289"
     },
     {
@@ -69830,7 +69803,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128882647135605752",
+      "totalUsdWei": "128893649170243403",
       "totalUsdDisplay": "0.1288"
     },
     {
@@ -69842,8 +69815,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128789823831741704",
-      "totalUsdDisplay": "0.1287"
+      "totalUsdWei": "128800817942541454",
+      "totalUsdDisplay": "0.1288"
     },
     {
       "address": "0x1f040b77284433e7a379abf7418c96ef44a1d903",
@@ -69854,7 +69827,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128621951359161445",
+      "totalUsdWei": "128632931139569950",
       "totalUsdDisplay": "0.1286"
     },
     {
@@ -69866,7 +69839,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128333324831617429",
+      "totalUsdWei": "128344279973495272",
       "totalUsdDisplay": "0.1283"
     },
     {
@@ -69878,7 +69851,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128284519735435888",
+      "totalUsdWei": "128295470711079016",
       "totalUsdDisplay": "0.1282"
     },
     {
@@ -69890,7 +69863,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "128238806044589005",
+      "totalUsdWei": "128249753117894453",
       "totalUsdDisplay": "0.1282"
     },
     {
@@ -69902,7 +69875,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "127952201340435702",
+      "totalUsdWei": "127963123947802931",
       "totalUsdDisplay": "0.1279"
     },
     {
@@ -69914,7 +69887,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "127751848152835733",
+      "totalUsdWei": "127762753657103679",
       "totalUsdDisplay": "0.1277"
     },
     {
@@ -69926,7 +69899,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "127727880682282487",
+      "totalUsdWei": "127738784140573359",
       "totalUsdDisplay": "0.1277"
     },
     {
@@ -69938,7 +69911,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "126874105755722766",
+      "totalUsdWei": "126884936331732559",
       "totalUsdDisplay": "0.1268"
     },
     {
@@ -69950,7 +69923,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "126625282612480384",
+      "totalUsdWei": "126636091947765368",
       "totalUsdDisplay": "0.1266"
     },
     {
@@ -69962,7 +69935,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "125314622133303199",
+      "totalUsdWei": "125325319584387239",
       "totalUsdDisplay": "0.1253"
     },
     {
@@ -69974,7 +69947,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "125049348931632122",
+      "totalUsdWei": "125060023737736267",
       "totalUsdDisplay": "0.125"
     },
     {
@@ -69986,7 +69959,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "124488488070766528",
+      "totalUsdWei": "124499114999124869",
       "totalUsdDisplay": "0.1244"
     },
     {
@@ -69998,7 +69971,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "124458738803658321",
+      "totalUsdWei": "124469363192477986",
       "totalUsdDisplay": "0.1244"
     },
     {
@@ -70010,8 +69983,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "123799404402741681",
-      "totalUsdDisplay": "0.1237"
+      "totalUsdWei": "123809972507646654",
+      "totalUsdDisplay": "0.1238"
     },
     {
       "address": "0xb74de5ccabb1f5779dd2f9e327881ef20241a4e5",
@@ -70022,7 +69995,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "123426395357640752",
+      "totalUsdWei": "123436931620722751",
       "totalUsdDisplay": "0.1234"
     },
     {
@@ -70034,7 +70007,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "122930782189215608",
+      "totalUsdWei": "122941276144404598",
       "totalUsdDisplay": "0.1229"
     },
     {
@@ -70046,7 +70019,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "122903943901788143",
+      "totalUsdWei": "122914435565933501",
       "totalUsdDisplay": "0.1229"
     },
     {
@@ -70058,7 +70031,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "122854089773175778",
+      "totalUsdWei": "122864577181536032",
       "totalUsdDisplay": "0.1228"
     },
     {
@@ -70070,7 +70043,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "122828556673036322",
+      "totalUsdWei": "122839041901769928",
       "totalUsdDisplay": "0.1228"
     },
     {
@@ -70082,7 +70055,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "121956633498921564",
+      "totalUsdWei": "121967044296153520",
       "totalUsdDisplay": "0.1219"
     },
     {
@@ -70094,7 +70067,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "121525823672756686",
+      "totalUsdWei": "121536197694016584",
       "totalUsdDisplay": "0.1215"
     },
     {
@@ -70106,7 +70079,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "121457053148026394",
+      "totalUsdWei": "121467421298707810",
       "totalUsdDisplay": "0.1214"
     },
     {
@@ -70118,7 +70091,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "121049159792423266",
+      "totalUsdWei": "121059493123391349",
       "totalUsdDisplay": "0.121"
     },
     {
@@ -70130,7 +70103,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120842127066110946",
+      "totalUsdWei": "120852442723782610",
       "totalUsdDisplay": "0.1208"
     },
     {
@@ -70142,7 +70115,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120449627344157700",
+      "totalUsdWei": "120459909496189682",
       "totalUsdDisplay": "0.1204"
     },
     {
@@ -70154,7 +70127,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120372126631285607",
+      "totalUsdWei": "120382402167488799",
       "totalUsdDisplay": "0.1203"
     },
     {
@@ -70166,7 +70139,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120364961865367603",
+      "totalUsdWei": "120375236789952362",
       "totalUsdDisplay": "0.1203"
     },
     {
@@ -70178,7 +70151,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120362146228451559",
+      "totalUsdWei": "120372420912680183",
       "totalUsdDisplay": "0.1203"
     },
     {
@@ -70190,7 +70163,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120136266808483862",
+      "totalUsdWei": "120146522210572822",
       "totalUsdDisplay": "0.1201"
     },
     {
@@ -70202,7 +70175,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "120082493797611075",
+      "totalUsdWei": "120092744609380536",
       "totalUsdDisplay": "0.12"
     },
     {
@@ -70214,7 +70187,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "119845021620451666",
+      "totalUsdWei": "119855252160468671",
       "totalUsdDisplay": "0.1198"
     },
     {
@@ -70226,7 +70199,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "119543283684581543",
+      "totalUsdWei": "119553488466815823",
       "totalUsdDisplay": "0.1195"
     },
     {
@@ -70238,7 +70211,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "119484379472933285",
+      "totalUsdWei": "119494579226824407",
       "totalUsdDisplay": "0.1194"
     },
     {
@@ -70250,7 +70223,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "119335736521792163",
+      "totalUsdWei": "119345923586815285",
       "totalUsdDisplay": "0.1193"
     },
     {
@@ -70262,8 +70235,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "119099000422372052",
-      "totalUsdDisplay": "0.119"
+      "totalUsdWei": "119109167278477808",
+      "totalUsdDisplay": "0.1191"
     },
     {
       "address": "0xdb3a8169fb27e5a4c1675e41c1c5dd300cffdb30",
@@ -70274,7 +70247,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "118906704556794771",
+      "totalUsdWei": "118916854997612505",
       "totalUsdDisplay": "0.1189"
     },
     {
@@ -70286,7 +70259,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "118623736069142434",
+      "totalUsdWei": "118633862354426652",
       "totalUsdDisplay": "0.1186"
     },
     {
@@ -70298,7 +70271,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "118584809409482983",
+      "totalUsdWei": "118594932371802726",
       "totalUsdDisplay": "0.1185"
     },
     {
@@ -70310,8 +70283,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "118298062079745843",
-      "totalUsdDisplay": "0.1182"
+      "totalUsdWei": "118308160563952169",
+      "totalUsdDisplay": "0.1183"
     },
     {
       "address": "0x3558cfe31931422448937ddaac59695ac04b1866",
@@ -70322,7 +70295,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "117308653483428908",
+      "totalUsdWei": "117318667507020176",
       "totalUsdDisplay": "0.1173"
     },
     {
@@ -70334,7 +70307,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "117258015548826458",
+      "totalUsdWei": "117268025249723221",
       "totalUsdDisplay": "0.1172"
     },
     {
@@ -70346,7 +70319,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "117057491389438519",
+      "totalUsdWei": "117067483972641036",
       "totalUsdDisplay": "0.117"
     },
     {
@@ -70358,7 +70331,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "116629087351869390",
+      "totalUsdWei": "116639043364469387",
       "totalUsdDisplay": "0.1166"
     },
     {
@@ -70370,7 +70343,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "116611865968377812",
+      "totalUsdWei": "116621820510878754",
       "totalUsdDisplay": "0.1166"
     },
     {
@@ -70382,7 +70355,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "116429986013783582",
+      "totalUsdWei": "116439925030148113",
       "totalUsdDisplay": "0.1164"
     },
     {
@@ -70394,7 +70367,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "116080230263757351",
+      "totalUsdWei": "116090139423310574",
       "totalUsdDisplay": "0.116"
     },
     {
@@ -70406,7 +70379,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "115638535640277490",
+      "totalUsdWei": "115648407094680680",
       "totalUsdDisplay": "0.1156"
     },
     {
@@ -70418,7 +70391,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "115545663873972936",
+      "totalUsdWei": "115555527400401240",
       "totalUsdDisplay": "0.1155"
     },
     {
@@ -70442,7 +70415,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "114925815597155165",
+      "totalUsdWei": "114935626210391793",
       "totalUsdDisplay": "0.1149"
     },
     {
@@ -70454,7 +70427,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "114310633895115677",
+      "totalUsdWei": "114320391993521607",
       "totalUsdDisplay": "0.1143"
     },
     {
@@ -70466,7 +70439,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113535454377907691",
+      "totalUsdWei": "113545146303309821",
       "totalUsdDisplay": "0.1135"
     },
     {
@@ -70478,7 +70451,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113321642464200360",
+      "totalUsdWei": "113331316137602450",
       "totalUsdDisplay": "0.1133"
     },
     {
@@ -70490,7 +70463,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113182701208639064",
+      "totalUsdWei": "113192363021355947",
       "totalUsdDisplay": "0.1131"
     },
     {
@@ -70502,7 +70475,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113134103412551130",
+      "totalUsdWei": "113143761076729418",
       "totalUsdDisplay": "0.1131"
     },
     {
@@ -70514,7 +70487,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113057452434414662",
+      "totalUsdWei": "113067103555301552",
       "totalUsdDisplay": "0.113"
     },
     {
@@ -70526,7 +70499,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "113003176637331565",
+      "totalUsdWei": "113012823124978739",
       "totalUsdDisplay": "0.113"
     },
     {
@@ -70538,7 +70511,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "112849759622447662",
+      "totalUsdWei": "112859393013690088",
       "totalUsdDisplay": "0.1128"
     },
     {
@@ -70550,7 +70523,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "112824517405488788",
+      "totalUsdWei": "112834148641935736",
       "totalUsdDisplay": "0.1128"
     },
     {
@@ -70562,7 +70535,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "112458600000000000",
+      "totalUsdWei": "112468200000000000",
       "totalUsdDisplay": "0.1124"
     },
     {
@@ -70574,7 +70547,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "112428808792066074",
+      "totalUsdWei": "112438406248947129",
       "totalUsdDisplay": "0.1124"
     },
     {
@@ -70586,8 +70559,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "112299898504434646",
-      "totalUsdDisplay": "0.1122"
+      "totalUsdWei": "112309484956921539",
+      "totalUsdDisplay": "0.1123"
     },
     {
       "address": "0x7ea5f05622610767c4769168499394c996f23df2",
@@ -70598,8 +70571,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "111899439551690973",
-      "totalUsdDisplay": "0.1118"
+      "totalUsdWei": "111908991819100458",
+      "totalUsdDisplay": "0.1119"
     },
     {
       "address": "0xa70f5771cc46eee52ddc5fa084ef877f12b30f83",
@@ -70610,7 +70583,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "111609484679659560",
+      "totalUsdWei": "111619012195144589",
       "totalUsdDisplay": "0.1116"
     },
     {
@@ -70622,7 +70595,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "111186065616295840",
+      "totalUsdWei": "111195556986719414",
       "totalUsdDisplay": "0.1111"
     },
     {
@@ -70634,7 +70607,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "110883983721839074",
+      "totalUsdWei": "110893449305117984",
       "totalUsdDisplay": "0.1108"
     },
     {
@@ -70646,7 +70619,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "110637590233276491",
+      "totalUsdWei": "110647034783237449",
       "totalUsdDisplay": "0.1106"
     },
     {
@@ -70658,7 +70631,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "110382005342070275",
+      "totalUsdWei": "110391428074091515",
       "totalUsdDisplay": "0.1103"
     },
     {
@@ -70670,8 +70643,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "110097416445799707",
-      "totalUsdDisplay": "0.11"
+      "totalUsdWei": "110106814883961659",
+      "totalUsdDisplay": "0.1101"
     },
     {
       "address": "0xbdf0ecc0593166c2679eaa0b3c2de4a2330e6ee3",
@@ -70682,7 +70655,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "110056595847588098",
+      "totalUsdWei": "110065990801109988",
       "totalUsdDisplay": "0.11"
     },
     {
@@ -70694,7 +70667,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "108959560074344816",
+      "totalUsdWei": "108968861379684859",
       "totalUsdDisplay": "0.1089"
     },
     {
@@ -70706,7 +70679,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "108928028667341774",
+      "totalUsdWei": "108937327281011218",
       "totalUsdDisplay": "0.1089"
     },
     {
@@ -70718,7 +70691,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "108810453924639767",
+      "totalUsdWei": "108819742501570981",
       "totalUsdDisplay": "0.1088"
     },
     {
@@ -70730,7 +70703,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "108762138662626018",
+      "totalUsdWei": "108771423115137086",
       "totalUsdDisplay": "0.1087"
     },
     {
@@ -70742,7 +70715,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "108408654726310538",
+      "totalUsdWei": "108417909003754616",
       "totalUsdDisplay": "0.1084"
     },
     {
@@ -70754,7 +70727,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107932293155032057",
+      "totalUsdWei": "107941506767990855",
       "totalUsdDisplay": "0.1079"
     },
     {
@@ -70766,7 +70739,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107901434799292470",
+      "totalUsdWei": "107910645778035520",
       "totalUsdDisplay": "0.1079"
     },
     {
@@ -70778,7 +70751,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107780532740832176",
+      "totalUsdWei": "107789733398801526",
       "totalUsdDisplay": "0.1077"
     },
     {
@@ -70790,7 +70763,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107637910600594479",
+      "totalUsdWei": "107647099083660832",
       "totalUsdDisplay": "0.1076"
     },
     {
@@ -70802,7 +70775,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107480118283067813",
+      "totalUsdWei": "107489293296232813",
       "totalUsdDisplay": "0.1074"
     },
     {
@@ -70814,7 +70787,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107468374317213872",
+      "totalUsdWei": "107477548327858192",
       "totalUsdDisplay": "0.1074"
     },
     {
@@ -70826,7 +70799,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107402113262877883",
+      "totalUsdWei": "107411281617164026",
       "totalUsdDisplay": "0.1074"
     },
     {
@@ -70838,7 +70811,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107288243078227268",
+      "totalUsdWei": "107297401712013843",
       "totalUsdDisplay": "0.1072"
     },
     {
@@ -70850,7 +70823,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107251346897079773",
+      "totalUsdWei": "107260502381233159",
       "totalUsdDisplay": "0.1072"
     },
     {
@@ -70862,7 +70835,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107157502167682448",
+      "totalUsdWei": "107166649640804199",
       "totalUsdDisplay": "0.1071"
     },
     {
@@ -70874,7 +70847,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "107107976814459950",
+      "totalUsdWei": "107117120059862425",
       "totalUsdDisplay": "0.1071"
     },
     {
@@ -70886,7 +70859,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "106981055967270547",
+      "totalUsdWei": "106990188378106941",
       "totalUsdDisplay": "0.1069"
     },
     {
@@ -70898,7 +70871,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "106481642249555542",
+      "totalUsdWei": "106490732028065996",
       "totalUsdDisplay": "0.1064"
     },
     {
@@ -70910,7 +70883,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "106226045310367116",
+      "totalUsdWei": "106235113269909379",
       "totalUsdDisplay": "0.1062"
     },
     {
@@ -70922,7 +70895,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "106048512937413857",
+      "totalUsdWei": "106057565741949919",
       "totalUsdDisplay": "0.106"
     },
     {
@@ -70934,7 +70907,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "105986844338297190",
+      "totalUsdWei": "105995891878508856",
       "totalUsdDisplay": "0.1059"
     },
     {
@@ -70946,7 +70919,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "105366387728112262",
+      "totalUsdWei": "105375382303202027",
       "totalUsdDisplay": "0.1053"
     },
     {
@@ -70958,7 +70931,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "105170247769878728",
+      "totalUsdWei": "105179225601530472",
       "totalUsdDisplay": "0.1051"
     },
     {
@@ -70970,7 +70943,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104961360000000000",
+      "totalUsdWei": "104970320000000000",
       "totalUsdDisplay": "0.1049"
     },
     {
@@ -70982,7 +70955,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104914894227473562",
+      "totalUsdWei": "104923850260934620",
       "totalUsdDisplay": "0.1049"
     },
     {
@@ -70994,7 +70967,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104837025983726996",
+      "totalUsdWei": "104845975369985084",
       "totalUsdDisplay": "0.1048"
     },
     {
@@ -71006,7 +70979,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104405259025200868",
+      "totalUsdWei": "104414171553781536",
       "totalUsdDisplay": "0.1044"
     },
     {
@@ -71018,7 +70991,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104240920018725765",
+      "totalUsdWei": "104249818518548631",
       "totalUsdDisplay": "0.1042"
     },
     {
@@ -71030,7 +71003,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "104137675296483010",
+      "totalUsdWei": "104146564982846225",
       "totalUsdDisplay": "0.1041"
     },
     {
@@ -71042,7 +71015,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103528028840073874",
+      "totalUsdWei": "103536866484121237",
       "totalUsdDisplay": "0.1035"
     },
     {
@@ -71054,7 +71027,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103448626069164943",
+      "totalUsdWei": "103457456935014811",
       "totalUsdDisplay": "0.1034"
     },
     {
@@ -71066,7 +71039,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103257780495579358",
+      "totalUsdWei": "103266595069945014",
       "totalUsdDisplay": "0.1032"
     },
     {
@@ -71078,8 +71051,8 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103193652126400683",
-      "totalUsdDisplay": "0.1031"
+      "totalUsdWei": "103202461226464293",
+      "totalUsdDisplay": "0.1032"
     },
     {
       "address": "0x8a0afe6f778c254e8281481345057381e46f2052",
@@ -71090,7 +71063,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103087050000000000",
+      "totalUsdWei": "103095850000000000",
       "totalUsdDisplay": "0.103"
     },
     {
@@ -71102,7 +71075,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "103087050000000000",
+      "totalUsdWei": "103095850000000000",
       "totalUsdDisplay": "0.103"
     },
     {
@@ -71114,7 +71087,7 @@
       "usdcDisplay": "0",
       "usdtDisplay": "0",
       "wethDisplay": "0",
-      "totalUsdWei": "102230042461904883",
+      "totalUsdWei": "102238769303672736",
       "totalUsdDisplay": "0.1022"
     },
     {
